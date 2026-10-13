@@ -32,7 +32,7 @@ Your data lives in Electron's user-data folder (shown in **Settings → About**)
 
 ```bash
 npm test            # 73 unit tests incl. seeded fuzzing (plain Node, about 10 s)
-npm run test:e2e    # 51 end-to-end tests: real app against a local server; only tls.test.js (5 tests) uses the internet (badssl.com) and skips when offline
+npm run test:e2e    # 55 end-to-end tests: real app against a local server; only tls.test.js (5 tests) uses the internet (badssl.com) and skips when offline
 npm run audit       # npm audit for production dependencies
 node scripts/bench.js   # reproducible performance baseline vs. installed Chrome (see docs/PERFORMANCE.md)
 ```
@@ -62,6 +62,7 @@ docs          research ledger, ADR, architecture, security, design, roadmap, ben
 | | |
 |---|---|
 | [Research ledger](docs/research/LEDGER.md) | 40+ projects checked against primary sources on 2026-10-11, with confidence levels and scores |
+| [**What only you can do**](docs/OWNER-STEPS.md) | exact ordered steps for the things that need a person: signing certificate, trademark opinion, screen-reader and real-machine tests, security review |
 | [**HANDOFF**](HANDOFF.md) | start here if you are picking the project up: status, how to run and verify, traps, and the full to-do list |
 | [Releases](https://github.com/shipking-ai/pelorus/releases) | pre-release builds (unsigned), with SHA-256 sums, an SBOM and a build-provenance attestation you can verify with `gh attestation verify` |
 | [Trademark checks](docs/TRADEMARK.md) | why the project was renamed from Nadir to Pelorus, and the US register search for the new name (not legal advice) |

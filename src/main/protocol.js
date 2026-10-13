@@ -18,7 +18,7 @@ const CSP = [
   "default-src 'none'",
   'script-src pelorus://assets',
   'style-src pelorus://assets',
-  "img-src pelorus://assets data: https: http:",
+  "img-src pelorus://assets data:",
   'font-src pelorus://assets',
   "connect-src 'none'",
   "base-uri 'none'",

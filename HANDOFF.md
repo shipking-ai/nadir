@@ -1,6 +1,6 @@
 # Pelorus — handoff
 
-**Written:** 2026-10-13 (updated later the same day) · **Covers work from:** 2026-10-11 to 2026-10-13 · **Version:** 0.2.0 (pre-release, Windows primary, unsigned)
+**Written:** 2026-10-13 (updated later the same day) · **Covers work from:** 2026-10-11 to 2026-10-13 · **Version:** 0.3.0 (pre-release, Windows primary, unsigned)
 
 This file is for anyone picking the project up: what exists, how to run and verify it, what was learned the hard way, and exactly what is left. It states what was **measured** and what was only **reasoned**. When this file and a deeper document disagree, trust the deeper document and fix this one. Every claim here points at a file that holds the evidence.
 
@@ -9,7 +9,7 @@ This file is for anyone picking the project up: what exists, how to run and veri
 ## 1. TL;DR
 
 * **Pelorus** is an open-source, privacy-focused desktop browser built on **Electron 44.7.0 (Chromium 152.0.7977.130, Node 24.21.0)**, with workspaces, vertical tabs, a command palette, local-only suggestions, tracker blocking, HTTPS-first, a permission broker, safe downloads, sleeping tabs, split view and lazy session restore. Licence: **GPL-3.0-or-later**.
-* **It works and is tested:** 73 unit tests (including seeded fuzzing of the input-handling code) and 51 end-to-end tests pass on Windows in CI and locally. On **Ubuntu** (xvfb) and **macOS (arm64)** the same 73 + 51 passed in the most recent full CI run (Ubuntu and macOS are an informational CI job, not a required check). One macOS oddity remains: after `a11y.test.js` the app did not exit when asked (20 s timeout in the test helper); no other test file shows it. `npm audit` shows 0 vulnerabilities; the packaged build and the installer build and launch.
+* **It works and is tested:** 73 unit tests (including seeded fuzzing of the input-handling code) and 55 end-to-end tests pass on Windows in CI and locally. On **Ubuntu** (xvfb) and **macOS (arm64)** the same 73 + 55 passed in the most recent full CI run (Ubuntu and macOS are an informational CI job, not a required check). One macOS oddity remains: after `a11y.test.js` the app did not exit when asked (20 s timeout in the test helper); no other test file shows it. `npm audit` shows 0 vulnerabilities; the packaged build and the installer build and launch.
 * **It is not releasable yet.** Missing, in order of importance: a code-signing certificate, a public repository, an installer and auto-update, a screen-reader pass, a real third-party security review, and anything other than Windows verification. See §9.
 * **Nothing about it is "completely secure" or "completely private"**, and no document claims that. Known gaps are in [docs/SECURITY.md](docs/SECURITY.md).
 * **A catalog of 772 open-source browser-related projects** was built and classified, with its blind spots written down ([docs/research/CATALOG.md](docs/research/CATALOG.md), [SWEEP.md](docs/research/SWEEP.md)). "Every possible project" is not achievable and is not claimed.
@@ -23,6 +23,8 @@ The project was called **Nadir** until 2026-10-13 and is now **Pelorus** (a pelo
 
 ---
 
+> **Next actions for the owner are in [docs/OWNER-STEPS.md](docs/OWNER-STEPS.md)** (exact, ordered steps).
+
 ## 2. Quick start
 
 Prerequisites: Windows 11, Node.js (the project was developed on v26.8.2), Git Bash or PowerShell. For some scripts also: Google Chrome installed at `C:\Program Files\Google\Chrome\Application\chrome.exe` (benchmark comparison), and the GitHub CLI `gh` logged in (research scripts only; GitHub search is limited to 30 requests per minute).
@@ -31,7 +33,7 @@ Prerequisites: Windows 11, Node.js (the project was developed on v26.8.2), Git B
 npm install
 npm start                 # run the browser from source
 npm test                  # 73 unit tests incl. fuzzing, about 10 s
-npm run test:e2e          # 51 end-to-end tests, about two minutes; tls.test.js needs internet and skips offline
+npm run test:e2e          # 55 end-to-end tests, about two minutes; tls.test.js needs internet and skips offline
 npm run audit             # npm audit --omit=dev
 npm run package           # builds out/Pelorus-win32-x64/
 node scripts/verify-package.js      # launches the packaged build like a user would
@@ -84,6 +86,8 @@ test/
     a11y.test.js             axe-core scan of every pelorus:// page and the browser chrome
     tls.test.js              badssl.com certificate-error tests (internet; skips offline)
     background.test.js       background tabs are hidden and render 0 frames
+    favicon.test.js          favicons are fetched by the main process via the tab session; UI CSP blocks http(s) images
+    quit.test.js             app exits promptly, also after accessibility mode was used
     updates.test.js          update-check button: no request until pressed, newer/up-to-date/error paths
 scripts/                     make-installer.js (Squirrel installer), launch-probe.js (can the app start here?), bench.js, proctree.ps1, sign.ps1, verify-package.js, smoke.js, live-demo.js, capture-window.ps1,
                              license-inventory.js, mem-breakdown.js, and the research pipeline (discover*.js, verify-repos.js,
@@ -128,7 +132,7 @@ The project is **not** a git repository in this checkout (`Is a git repository: 
 | Research | Primary-source ledger of engines, shells, blockers and tools, with confidence levels (V = verified that day, S = secondary, M = from memory) | [docs/research/LEDGER.md](docs/research/LEDGER.md) |
 | Architecture | Four options scored; Electron chosen behind a replaceable seam | [ADR-0001](docs/adr/0001-architecture.md), [DECISIONS.md](docs/DECISIONS.md) |
 | Implementation | 0.1.0 as described in §1 | `src/`, [FEATURE-MATRIX.md](docs/FEATURE-MATRIX.md) |
-| Tests | 73 unit + 51 e2e, see section 7 | `test/` |
+| Tests | 73 unit + 55 e2e, see section 7 | `test/` |
 | Security review | Threat model T1–T13, each mapped to a test; Electron linter run (1 real finding fixed, dead code removed) | [SECURITY.md](docs/SECURITY.md) |
 | Design system | Name, logo, tokens, light/dark themes | [DESIGN.md](docs/DESIGN.md), `docs/screenshots/` |
 | Benchmarks | Pelorus vs Chrome 154, two runs, corrected method | [PERFORMANCE.md](docs/PERFORMANCE.md) |
@@ -217,8 +221,8 @@ Ordered by how much each item blocks a public release. "Exit" is what must be de
 * **OAuth popups:** test `window.open` flows against at least three real providers. Not done (needs real provider accounts).
 * **Benchmarks:** repeat on a quiet machine with at least 5 samples and confidence intervals; add a mixed-origin workload (different sites, a video, a heavy SPA) for both browsers; add Speedometer/JetStream/MotionMark from the WebKit org (catalogued as High-value); add a `bench.js --assert` regression check; measure shutdown time, background network and keyboard-to-paint latency.
 * ~~CI gating~~ Done: `ci.yml` runs on every push. Windows (required check on `main`): unit + e2e (including `a11y`, `tls`, `updates`, `background`), `npm audit`, the licence gate, packaging, the installer build, the packaged-app smoke test and an SBOM. Ubuntu and macOS run unit + e2e as an **informational** job (it cannot fail the build; read its log). Branch protection on `main` requires the Windows check, blocks force-push and deletion, and does not apply to the admin. Still to add: a scheduled run so dependency or runner changes are noticed.
-* **Cross-platform:** evidence now exists from CI. Ubuntu: 73 unit + 51 e2e pass. macOS arm64: 73 unit + 51 e2e pass in the latest run (an earlier run failed on a Ctrl-vs-Cmd test bug, since fixed, and a session-restore timeout that did not recur). Open: on macOS the app did not exit after `a11y.test.js` (helper kills it after 20 s); cause unknown, and whether Cmd+Q ever hangs for a real user is untested. Not done: macOS/Linux packaging, installers, signing/notarisation, manual testing on real hardware, Linux/macOS CI as a required check.
-* **Per-tab favicon fetch** currently uses the default session; proxy it through the tab's session. Not started.
+* **Cross-platform:** evidence now exists from CI. Ubuntu: 73 unit + 55 e2e pass. macOS arm64: 73 unit + 55 e2e pass in the latest run (an earlier run failed on a Ctrl-vs-Cmd test bug, since fixed, and a session-restore timeout that did not recur). Open: on macOS the app did not exit after `a11y.test.js` (helper kills it after 20 s); cause unknown, and whether Cmd+Q ever hangs for a real user is untested. Not done: macOS/Linux packaging, installers, signing/notarisation, manual testing on real hardware, Linux/macOS CI as a required check.
+* ~~Per-tab favicon fetch~~ **Fixed 2026-10-13:** fetched by the main process through the tab's session, shown as `data:` URLs; the UI CSP forbids http(s) images (`favicon.test.js`).
 * **Untested features:** find-in-page counting, zoom, native menus, pinning, drag-reorder, workspace rename/delete, auto-sleep timer path, clear-on-exit.
 * **Replace the hard-coded tracking-parameter list with ClearURLs rules** (LGPL-3.0; check the data licence before bundling). Not started.
 * **Widevine/DRM:** absent. Decide whether to evaluate castlabs ECS and the cost of production signing before promising streaming-service support.

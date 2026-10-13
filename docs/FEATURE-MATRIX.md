@@ -1,6 +1,6 @@
 # Feature matrix
 
-As of 2026-10-13, Pelorus 0.3.0 (73 unit + 51 e2e tests). Status vocabulary: **Implemented & tested** · **Implemented, not fully tested** · **Partially implemented** · **Planned** · **Blocked**
+As of 2026-10-13, Pelorus 0.3.0 (73 unit + 55 e2e tests). Status vocabulary: **Implemented & tested** · **Implemented, not fully tested** · **Partially implemented** · **Planned** · **Blocked**
 "Tested" means an automated test exercises the behaviour (unit = plain Node, e2e = the real app driven by Playwright against a local server). Test names are in `test/`.
 
 ## Implemented and tested
@@ -46,7 +46,7 @@ As of 2026-10-13, Pelorus 0.3.0 (73 unit + 51 e2e tests). Status vocabulary: **I
 | Popups via `window.open` (OAuth-style) | allowed with sandboxed prefs; not tested against real providers |
 | Fullscreen video handling | code path exists; not exercised |
 | Clear-on-exit, history retention at startup | store parts unit-tested; exit path not e2e-tested |
-| Collapsed sidebar, light/dark theme | verified by screenshots, not by assertions |
+| Collapsed sidebar, light/dark theme | verified by screenshots, not by assertions (screenshots in docs/screenshots were retaken with the Pelorus name on 2026-10-13) |
 | Accessibility (roles, focus rings, roving tabindex, reduced motion) | axe-core 4.14.0 automated scan: no serious/critical violations on the 6 internal pages, new-tab page and browser chrome (e2e `a11y.test.js`). **Not tested with a screen reader**; automated scans catch only a fraction of real problems |
 | Auto-sleep timer (`tabSleepMinutes`) | logic present; the timer-driven path is not e2e-tested |
 

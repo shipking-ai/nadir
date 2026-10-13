@@ -186,6 +186,25 @@ class TabHost extends EventEmitter {
   setBounds(b) { this.view.setBounds(b); }
   setVisible(v) { this.view.setVisible(v); }
   focus() { if (!this.destroyed) this.wc.focus(); }
+  /**
+   * Fetch a page's favicon through THIS tab's session (so it carries the workspace's storage rules and passes the
+   * blocker) and return it as a small data: URL. The browser UI never requests favicons itself: its CSP only allows
+   * pelorus:// and data: images, so a site cannot learn which tabs are open from requests made by the chrome.
+   * Returns null for anything that is not a small image.
+   */
+  async fetchFavicon(url) {
+    if (typeof url !== 'string') return null;
+    if (url.startsWith('data:image/')) return url.length < 90000 ? url : null;
+    if (!/^https?:/i.test(url)) return null;
+    const res = await this.wc.session.fetch(url, { credentials: 'omit', redirect: 'follow', headers: { accept: 'image/*' }, signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const type = (res.headers.get('content-type') || '').split(';')[0].trim().toLowerCase();
+    if (!/^image\/(png|x-icon|vnd\.microsoft\.icon|jpeg|gif|webp|svg\+xml)$/.test(type)) return null;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length === 0 || buf.length > 65536) return null;
+    return `data:${type};base64,${buf.toString('base64')}`;
+  }
+
   navState() {
     const h = this.wc.navigationHistory;
     return { canGoBack: h.canGoBack(), canGoForward: h.canGoForward() };

@@ -157,7 +157,9 @@ class TabManager extends EventEmitter {
       upd({ title });
       if (tab.workspaceId !== PRIVATE) this.o.store.updateTitle({ workspaceId: tab.workspaceId, url: tab.url, title });
     });
-    host.on('favicon', (favicon) => upd({ favicon }));
+    host.on('favicon', (url) => {
+      host.fetchFavicon(url).then((data) => { if (data && tab.host === host) upd({ favicon: data }); }, () => { /* no favicon: the tab shows a letter */ });
+    });
     host.on('audio', (audible) => upd({ audible }));
     host.on('zoom', (zoom) => upd({ zoom }));
     host.on('crashed', () => upd({ crashed: true, loading: false }));

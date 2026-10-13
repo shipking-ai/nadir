@@ -69,6 +69,8 @@ function startServer() {
     switch (u.pathname) {
       case '/': return html('Home Page', '<h1>hello</h1><a id="l" href="/page2">two</a>');
       case '/page2': return html('Second Page', 'second');
+      case '/fav': return html('Favicon Page', 'icon', '<link rel="icon" type="image/png" href="/icon.png">');
+      case '/icon.png': res.writeHead(200, { 'content-type': 'image/png' }); return res.end(Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==', 'base64'));
       case '/cookie-set': res.setHeader('set-cookie', 'sid=abc123; Path=/'); return html('Cookie Set');
       case '/cookie-read': return html('Cookie Read', `<pre id="c">${req.headers.cookie || 'none'}</pre>`);
       case '/tracked': return html('Tracked', '<img id="px" src="/blocked-pixel.png?x=1"><img id="ok" src="/ok.png">');
