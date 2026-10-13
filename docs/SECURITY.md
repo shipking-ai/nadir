@@ -38,7 +38,7 @@ Nadir is **not** completely secure or completely private, and nothing in this do
 3. **Per-tab favicon fetch:** the shell renders favicon URLs with the default session (no cookies, but the site sees the request from the shell). Planned: proxy through the tab's session as data URLs.
 4. **Popups:** `window.open` popups (needed for OAuth) are allowed with sandboxed prefs but are not yet routed through the workspace UI; untested against real OAuth providers.
 5. **Local `file:` pages** can be opened by typing `file://…`; they run in a workspace partition like any page.
-6. **Builds are unsigned and there is no auto-update** yet. `scripts/sign.ps1` is ready but no certificate exists, so Windows SmartScreen will warn on download. See [RELEASE.md](RELEASE.md).
+6. **Builds are unsigned and there is no auto-update** yet. `scripts/sign.ps1` is ready but no certificate exists, so Windows SmartScreen will warn on download. Releases carry a SHA-256 file and a GitHub build-provenance attestation as a substitute check (see [CODE-SIGNING-POLICY.md](CODE-SIGNING-POLICY.md)); an attestation proves where a file was built, not that the code is free of vulnerabilities.
 7. **Not audited.** No third-party security audit or fuzzing has been done. Unit/e2e tests are not a substitute.
 8. **`node:sqlite`** is a Node built-in whose stability tier is "experimental/release-candidate" depending on version; pinned by Electron's Node (24.21.0). Re-check on Electron upgrades.
 9. DNS-over-HTTPS is configured through Chromium's resolver API; we verified the call succeeds but have **not** verified with packet capture that lookups are encrypted.
