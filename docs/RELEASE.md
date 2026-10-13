@@ -12,6 +12,12 @@
 2. ~~A release process~~ **Done 2026-10-13:** public repository <https://github.com/shipking-ai/nadir>; CI ([`ci.yml`](../.github/workflows/ci.yml)) runs unit tests, production audit, licence gate, all e2e tests, packaging, the packaged-app smoke test and an SBOM on every push; the tag-triggered [`release.yml`](../.github/workflows/release.yml) built and published **v0.1.0** (a pre-release, unsigned) with `SHA256SUMS.txt`, an SBOM and a build-provenance attestation; [CODE-SIGNING-POLICY.md](CODE-SIGNING-POLICY.md) is published. Verified after the fact: the downloaded zip matches its checksum, and `gh attestation verify` confirms it was built from `shipking-ai/nadir` by `release.yml` at `refs/tags/v0.1.0`, commit `10146ac`.
 3. ~~An installer~~ **Done:** `npm run installer` builds a per-user Squirrel.Windows setup (`out/installer/Nadir-Setup-<version>.exe`, no administrator rights). Verified locally on Windows: silent install, first launch of the installed app, shortcut and uninstall-entry creation, silent uninstall (3 leftover files under `%LOCALAPPDATA%Nadir` had to be removed by hand: a Squirrel behaviour). The release workflow builds it, signs it when a certificate exists, attests it and attaches it. **Auto-update is deliberately not built:** an automatic installer for an unsigned browser is a way to push unsigned code to users. The About page has a user-initiated "Check for updates" instead. Revisit after signing exists, with signature verification of update payloads (TLS alone is not enough).
 
+## Release history
+| Version | Date | Notes |
+|---|---|---|
+| [v0.1.0](https://github.com/shipking-ai/nadir/releases/tag/v0.1.0) | 2026-10-13 | first pre-release, zip only (391 MB), unsigned |
+| [v0.2.0](https://github.com/shipking-ai/nadir/releases/tag/v0.2.0) | 2026-10-13 | zip (147 MB, 7-Zip) and per-user installer (147 MB), unsigned. Both verified after publication: SHA-256 matches, and `gh attestation verify` confirms they were built from this repository by `release.yml` at tag `v0.2.0` (commit `429a4a6`). The CI-built installer was then downloaded and run on Windows: silent install, first launch, shortcut and uninstall entry, silent uninstall (4 leftover files removed by hand). Not tested: a clean VM, an upgrade from 0.1.0 (0.1.0 had no installer), SmartScreen behaviour. |
+
 ## Using `scripts/sign.ps1`
 Set one of these environment variables (never put a password on a command line or in the repository):
 

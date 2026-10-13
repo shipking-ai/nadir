@@ -10,7 +10,7 @@
     "test": "node --test \"test/unit/*.test.js\"",
     "test:e2e": "node --test --test-force-exit --test-concurrency=1 --test-timeout=240000 \"test/e2e/*.test.js\"",
     "audit": "npm audit --omit=dev",
-    "package": "electron-packager . Nadir --platform=win32 --arch=x64 --out=out --overwrite --prune=true --ignore=\"^/(docs|test|scripts|out|\\.smoke|\\.git|README\\.md)\" --extra-resource=LICENSE --app-copyright=\"GPL-3.0-or-later\"",
+    "package": "electron-packager . Nadir --platform=win32 --arch=x64 --out=out --overwrite --prune=true --ignore=\"^/(docs|test|scripts|out|\\.smoke|\\.git|README\\.md)\" --extra-resource=LICENSE --app-copyright=\"GPL-3.0-or-later\" --win32metadata.CompanyName=Nadir --win32metadata.ProductName=Nadir",
     "sign": "powershell -NoProfile -File scripts/sign.ps1",
     "package:signed": "npm run package && npm run sign",
     "installer": "node scripts/make-installer.js"
