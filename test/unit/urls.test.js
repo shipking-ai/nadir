@@ -58,3 +58,12 @@ test('displayHost', () => {
   assert.equal(u.displayHost('https://www.example.com/a'), 'example.com');
   assert.equal(u.displayHost('nadir://history'), 'nadir://history');
 });
+
+test('guessed addresses with an invalid port fall back to a search instead of an unnavigable URL (found by fuzzing)', () => {
+  const tpl = 'https://duckduckgo.com/?q=%s';
+  for (const bad of ['example.com:99999', 'localhost:70000', '127.0.0.1AND1.2.3:99999', '192.168.1.1:65536']) {
+    const r = u.resolveInput(bad, tpl);
+    assert.equal(r.kind, 'search', bad);
+  }
+  assert.equal(u.resolveInput("example.com:65535", tpl).url, 'https://example.com:65535');
+});

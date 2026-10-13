@@ -36,11 +36,13 @@ function resolveInput(raw, searchTemplate) {
   if (!input) return { kind: 'empty', url: '' };
 
   const search = () => ({ kind: 'search', url: searchTemplate.replace('%s', encodeURIComponent(input.toWellFormed())) });
+  // A guessed URL (host:port, bare domain, IP) must actually parse, e.g. "example.com:99999" has an invalid port.
+  const guessed = (u) => { try { new URL(u); return { kind: 'url', url: u }; } catch { return search(); } };
 
   // "localhost:3000", "192.168.1.1:8080", "example.com:8443" parse as a scheme; treat as host:port first.
   if (HOST_PORT_RE.test(input) && !/^(https?|file|about|nadir):/i.test(input)) {
     const host = input.startsWith('[') ? input.slice(0, input.indexOf(']') + 1) : input.split(/[:/?#]/)[0];
-    return { kind: 'url', url: `${isLocalHost(host) ? 'http' : 'https'}://${input}` };
+    return guessed(`${isLocalHost(host) ? 'http' : 'https'}://${input}`);
   }
 
   const sm = input.match(SCHEME_RE);
@@ -60,9 +62,9 @@ function resolveInput(raw, searchTemplate) {
   if (/\s/.test(input)) return search();
 
   if (LOCAL_RE.test(input) || IPV4_RE.test(input) || IPV6_RE.test(input)) {
-    return { kind: 'url', url: `http://${input}` };
+    return guessed(`http://${input}`);
   }
-  if (DOMAIN_RE.test(input)) return { kind: 'url', url: `https://${input}` };
+  if (DOMAIN_RE.test(input)) return guessed(`https://${input}`);
   return search();
 }
 

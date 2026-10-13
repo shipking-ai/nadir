@@ -25,6 +25,11 @@ Newest last. Each entry: what was decided, why, and what evidence changed our mi
 | 2026-10-12 | Close buttons on tabs are mouse-only aria-hidden spans; workspace switcher is a group of toggle buttons; decorative glyphs are drawn with CSS | axe-core flagged nested-interactive, aria-required-children and label-content-name-mismatch in the browser chrome. Keyboard users close tabs with Delete or the context menu. |
 | 2026-10-12 | Certificate-error tests run against badssl.com and skip when offline | Real bad certificates are better evidence than a local fake; the other e2e tests stay offline. |
 | 2026-10-12 | Signing pipeline built without a certificate (scripts/sign.ps1) | No certificate can be obtained from inside the repo. Tested with a throwaway self-signed cert on a copy of the exe; real signing untested. See docs/RELEASE.md. |
+| 2026-10-13 | No auto-update; a user-initiated update check instead | An automatic installer for an unsigned browser is a channel for pushing unsigned code. Revisit after signing, with payload signature verification. |
+| 2026-10-13 | Per-user Squirrel installer | Installs without administrator rights; install/launch/uninstall tested on Windows. |
+| 2026-10-13 | Linux/macOS CI is informational, Windows is the required check | Ubuntu passes everything; macOS has a Cmd-vs-Ctrl test bug (fixed) and a quit hang (open). Promote to required once green. |
+| 2026-10-13 | Branch protection on main: require the Windows check, no force-push/deletion, admin not enforced | A solo maintainer must still be able to push; the check still stops accidents. |
+| 2026-10-13 | "Nadir" is a working name until the trademark question is decided | USPTO search found NADIR (042) and NADIRROC (009/042) pending nearby; see docs/TRADEMARK.md. |
 
 ## Bugs found by tests/inspection and fixed (kept for the record)
 
@@ -37,3 +42,8 @@ Newest last. Each entry: what was decided, why, and what evidence changed our mi
 7. The benchmark harness inflated Nadir's memory (background tabs stayed "visible" under Playwright); first reported as a Nadir problem, then traced to the harness. — found by measuring document.visibilityState and requestAnimationFrame in background tabs; regression test `background.test.js`.
 8. Three serious/critical accessibility violations in the browser chrome (nested interactive control in a tab, tablist containing a non-tab button, visible text not in the accessible name). — found by axe-core, test `a11y.test.js`.
 9. My first `tls.test.js` passed vacuously: the tab still showed the previous test's error page. Fixed by waiting for the specific host's page.
+10. Fuzzing found five bugs in input handling (an invalid port such as example.com:99999 yielded an unnavigable URL; lone surrogate in the address bar, `upgradeUrl` throwing, filename ending in dot/space after truncation, error-page link for any scheme). Fixed, covered by `fuzz.test.js`.
+11. Contrast: tertiary text missed 4.5:1 in the command palette in both themes (the CI runner used the light theme, the developer machine the dark one, so the first CI run caught what local runs could not). Fixed; both themes are now scanned.
+12. The overlay suggestions list had no accessible name. Fixed.
+13. Test portability: the shortcut test used Ctrl on macOS (Cmd there). Fixed in the tests.
+14. Open: on macOS the app did not exit when the test harness asked it to quit (20 s timeout). Cause unknown.

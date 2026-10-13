@@ -342,6 +342,8 @@ const press = (target, keyCode, modifiers = []) => b.ctl(`(() => {
   wc.sendInputEvent({ type: 'keyDown', keyCode: a.k, modifiers: a.m });
   wc.sendInputEvent({ type: 'keyUp', keyCode: a.k, modifiers: a.m });
   return true; })()`, { k: keyCode, m: modifiers });
+// Browser shortcuts use Ctrl on Windows/Linux and Cmd on macOS.
+const MOD = process.platform === 'darwin' ? 'meta' : 'control';
 const PAGE = 'c.tabs.active().host.wc';
 const SHELL = 'c.win.webContents';
 const OVERLAY = 'c.overlay.webContents';
@@ -352,29 +354,29 @@ test('keyboard shortcuts work from the page, the chrome and the overlay; plain t
   const count = async () => (await b.state()).tabs.length;
   const n0 = await count();
 
-  await press(PAGE, 'T', ['control']);
+  await press(PAGE, 'T', [MOD]);
   await until(async () => (await count()) === n0 + 1, { what: 'Ctrl+T from a web page' });
-  await press(SHELL, 'T', ['control']);
+  await press(SHELL, 'T', [MOD]);
   await until(async () => (await count()) === n0 + 2, { what: 'Ctrl+T from the chrome' });
-  await press(SHELL, 'W', ['control']);
+  await press(SHELL, 'W', [MOD]);
   await until(async () => (await count()) === n0 + 1, { what: 'Ctrl+W' });
 
-  await press(PAGE, 'K', ['control']);
+  await press(PAGE, 'K', [MOD]);
   await until(async () => (await b.ctl('c.ov.kind')) === 'palette', { what: 'palette via Ctrl+K' });
   await press(OVERLAY, 'Escape');
   await until(async () => (await b.ctl('c.ov.kind')) === null, { what: 'palette closed by Escape' });
 
   const web = (await b.state()).tabs.find((t) => t.url === `${srv.origin}/page2`);
   await b.invoke('tab:activate', web.id);       // find-in-page only opens on web pages, not nadir:// pages
-  await press(PAGE, 'F', ['control']);
+  await press(PAGE, 'F', [MOD]);
   await until(async () => (await b.ctl('c.ov.kind')) === 'find', { what: 'find bar via Ctrl+F' });
   await press(OVERLAY, 'Escape');
   await until(async () => (await b.ctl('c.ov.kind')) === null);
 
   const before = await count();
   await press(PAGE, 'T');                       // plain "t"
-  await press(PAGE, 'C', ['control']);          // copy must stay with the page
-  await press(PAGE, 'A', ['control']);          // select-all must stay with the page
+  await press(PAGE, 'C', [MOD]);          // copy must stay with the page
+  await press(PAGE, 'A', [MOD]);          // select-all must stay with the page
   await sleep(300);
   assert.equal(await count(), before);
 

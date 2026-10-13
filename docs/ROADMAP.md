@@ -6,7 +6,7 @@ Ordering reflects risk and dependency, not dates. "Exit criteria" are what must 
 Done: engine seam, workspaces, vertical tabs, command palette, local suggestions, blocking/HTTPS-first, permissions, downloads, sleeping tabs, split view, session restore, settings, privacy dashboard. See [FEATURE-MATRIX](FEATURE-MATRIX.md).
 
 ## 0.2 — "Shippable on Windows"
-- Installer + **code signing** + auto-update. Signing pipeline is ready (`npm run package:signed`, `scripts/sign.ps1`, tested with a throwaway self-signed certificate on a copy of the exe); it still needs a real certificate (see docs/RELEASE.md). Installer and auto-update are not started.
+- ~~Installer~~ done (Squirrel, per user). **Code signing**: pipeline ready, no certificate. **Auto-update**: deliberately not built until signing exists (see RELEASE.md); a user-initiated update check ships instead.
 - Packaged-build smoke test in CI; SBOM; `npm audit` gate.
 - ~~Verify codec support and DRM absence~~ — **done 2026-10-12** (H.264/AAC/VP9/AV1/Opus/MP3 supported; Widevine absent).
 - Verify secure DNS with a packet capture.

@@ -42,5 +42,5 @@ The repository root contains `LICENSE`, the canonical GPL-3.0 text downloaded fr
 2. Ship Electron's `LICENSE` and `LICENSES.chromium.html` next to the executable; add an in-app "Open-source licences" page.
 3. Offer corresponding source (repository link in About).
 4. Re-run `scripts/license-inventory.js` on every dependency change; fail CI on `UNKNOWN`/`UNLICENSED`.
-5. Trademark: a **preliminary, non-legal** check on 2026-10-12 (web search, `gh search repos`, npm) found no browser called Nadir. Other uses exist: a French window-ventilation app "NADIR", the German site nadir.org, an unrelated npm package `nadir`, and small GitHub repos. The USPTO/EUIPO/WIPO databases were **not** searched directly, so this is not clearance. Do that (class 9 and 42) or ask a trademark attorney before a public launch.
+5. Trademark: **not clear.** A USPTO search on 2026-10-13 found live pending applications for NADIR (class 042) and NADIRROC (classes 009/042) near Nadir's field; see [TRADEMARK.md](TRADEMARK.md). Only the US register was searched; this is not legal advice. Decide before a public launch.
 6. Review filter-list licences if lists are ever bundled.

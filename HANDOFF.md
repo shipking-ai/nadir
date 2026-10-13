@@ -1,6 +1,6 @@
 # Nadir — handoff
 
-**Written:** 2026-10-13 · **Covers work from:** 2026-10-11 to 2026-10-12 · **Version:** 0.1.0 (pre-release, Windows only, unsigned)
+**Written:** 2026-10-13 (updated later the same day) · **Covers work from:** 2026-10-11 to 2026-10-13 · **Version:** 0.2.0 (pre-release, Windows primary, unsigned)
 
 This file is for anyone picking the project up: what exists, how to run and verify it, what was learned the hard way, and exactly what is left. It states what was **measured** and what was only **reasoned**. When this file and a deeper document disagree, trust the deeper document and fix this one. Every claim here points at a file that holds the evidence.
 
@@ -9,7 +9,7 @@ This file is for anyone picking the project up: what exists, how to run and veri
 ## 1. TL;DR
 
 * **Nadir** is an open-source, privacy-focused desktop browser built on **Electron 44.7.0 (Chromium 152.0.7977.130, Node 24.21.0)**, with workspaces, vertical tabs, a command palette, local-only suggestions, tracker blocking, HTTPS-first, a permission broker, safe downloads, sleeping tabs, split view and lazy session restore. Licence: **GPL-3.0-or-later**.
-* **It works and is tested:** 57 unit tests and 42 end-to-end tests pass, `npm audit` shows 0 vulnerabilities, and the packaged build launches (`scripts/verify-package.js` prints `PACKAGED APP OK`).
+* **It works and is tested:** 73 unit tests (including seeded fuzzing of the input-handling code) and 51 end-to-end tests pass on Windows in CI and locally; on **Ubuntu** all 72 + 51 pass in CI; on **macOS (arm64)** the app starts and 50 of 51 e2e tests passed in the last full run (the failures were a Ctrl-vs-Cmd test bug, now fixed, and an app-quit hang, still open, see section 9). `npm audit` shows 0 vulnerabilities, the packaged build and the installer build and launch.
 * **It is not releasable yet.** Missing, in order of importance: a code-signing certificate, a public repository, an installer and auto-update, a screen-reader pass, a real third-party security review, and anything other than Windows verification. See §9.
 * **Nothing about it is "completely secure" or "completely private"**, and no document claims that. Known gaps are in [docs/SECURITY.md](docs/SECURITY.md).
 * **A catalog of 772 open-source browser-related projects** was built and classified, with its blind spots written down ([docs/research/CATALOG.md](docs/research/CATALOG.md), [SWEEP.md](docs/research/SWEEP.md)). "Every possible project" is not achievable and is not claimed.
@@ -24,8 +24,8 @@ Prerequisites: Windows 11, Node.js (the project was developed on v26.8.2), Git B
 ```bash
 npm install
 npm start                 # run the browser from source
-npm test                  # 57 unit tests, about 6 s
-npm run test:e2e          # 42 end-to-end tests, about a minute; tls.test.js needs internet and skips offline
+npm test                  # 73 unit tests incl. fuzzing, about 10 s
+npm run test:e2e          # 51 end-to-end tests, about two minutes; tls.test.js needs internet and skips offline
 npm run audit             # npm audit --omit=dev
 npm run package           # builds out/Nadir-win32-x64/
 node scripts/verify-package.js      # launches the packaged build like a user would
@@ -68,6 +68,7 @@ src/
     sessions.js              per-workspace partitions, UA cleanup, secure-DNS config
     protocol.js              nadir:// file server (host allowlist, traversal-safe, strict CSP)
     suggest.js, error-page.js
+    updates.js               user-initiated "is there a newer release?" check (semver compare, fixed URL, no download)
   shared/                    pure code, unit-tested: urls.js, shortcuts.js, fuzzy.js, filenames.js
   ui/                        shell/ (tabs+toolbar), overlay/ (omnibox dropdown, palette, find, prompts), newtab/, app/ (history, bookmarks, downloads, privacy, settings, about); assets/ has CSS, JS and the two preloads
 test/
@@ -77,10 +78,12 @@ test/
     a11y.test.js             axe-core scan of every nadir:// page and the browser chrome
     tls.test.js              badssl.com certificate-error tests (internet; skips offline)
     background.test.js       background tabs are hidden and render 0 frames
-scripts/                     bench.js, proctree.ps1, sign.ps1, verify-package.js, smoke.js, live-demo.js, capture-window.ps1,
+    updates.test.js          update-check button: no request until pressed, newer/up-to-date/error paths
+scripts/                     make-installer.js (Squirrel installer), launch-probe.js (can the app start here?), bench.js, proctree.ps1, sign.ps1, verify-package.js, smoke.js, live-demo.js, capture-window.ps1,
                              license-inventory.js, mem-breakdown.js, and the research pipeline (discover*.js, verify-repos.js,
                              triage-discovery.js, build-catalog.js, catalog-classification.js, catalog-additions.js)
-docs/                        ARCHITECTURE, SECURITY, DESIGN, PERFORMANCE, ROADMAP, FEATURE-MATRIX, SIGNATURE-FEATURES, LICENSES,
+.github/                     workflows/ci.yml, workflows/release.yml (tag-triggered; builds, tests, attests, publishes), dependabot.yml
+docs/                        TRADEMARK, ACCESSIBILITY, CODE-SIGNING-POLICY, ARCHITECTURE, SECURITY, DESIGN, PERFORMANCE, ROADMAP, FEATURE-MATRIX, SIGNATURE-FEATURES, LICENSES,
                              LICENSE-INVENTORY, DECISIONS, RELEASE, adr/0001-architecture.md, research/, benchmarks/, screenshots/
 out/                         build output (git-ignored, about 374 MB)
 ```
@@ -119,7 +122,7 @@ The project is **not** a git repository in this checkout (`Is a git repository: 
 | Research | Primary-source ledger of engines, shells, blockers and tools, with confidence levels (V = verified that day, S = secondary, M = from memory) | [docs/research/LEDGER.md](docs/research/LEDGER.md) |
 | Architecture | Four options scored; Electron chosen behind a replaceable seam | [ADR-0001](docs/adr/0001-architecture.md), [DECISIONS.md](docs/DECISIONS.md) |
 | Implementation | 0.1.0 as described in §1 | `src/`, [FEATURE-MATRIX.md](docs/FEATURE-MATRIX.md) |
-| Tests | 57 unit + 42 e2e, see §7 | `test/` |
+| Tests | 73 unit + 51 e2e, see section 7 | `test/` |
 | Security review | Threat model T1–T13, each mapped to a test; Electron linter run (1 real finding fixed, dead code removed) | [SECURITY.md](docs/SECURITY.md) |
 | Design system | Name, logo, tokens, light/dark themes | [DESIGN.md](docs/DESIGN.md), `docs/screenshots/` |
 | Benchmarks | Nadir vs Chrome 154, two runs, corrected method | [PERFORMANCE.md](docs/PERFORMANCE.md) |
@@ -196,22 +199,22 @@ Ordered by how much each item blocks a public release. "Exit" is what must be de
 |---|---|---|---|
 | 1 | **Code-signing certificate** | Cannot be created from inside the repo. Options and terms are in [RELEASE.md](docs/RELEASE.md) (SignPath Foundation for open source, commercial OV/EV, Azure Trusted Signing; terms not independently verified). SignPath requires a public repository and a released build first. | `npm run package:signed` exits 0 on a clean machine and SmartScreen no longer shows "unknown publisher" (verify by downloading the build, not by `Get-AuthenticodeSignature` alone) |
 | 2 | ~~Code-signing policy page, tagged releases, CI build~~ **Done 2026-10-13** | Public repo <https://github.com/shipking-ai/nadir>; private vulnerability reporting enabled; CI and release workflows in `.github/workflows/`; [CODE-SIGNING-POLICY.md](docs/CODE-SIGNING-POLICY.md); pre-release [v0.1.0](https://github.com/shipking-ai/nadir/releases/tag/v0.1.0) with checksums, SBOM and a verified provenance attestation. Still unsigned. | (met) |
-| 3 | **Installer and auto-update** | Not started. Installers must be signed too; update payloads need an integrity check beyond TLS | clean-VM test: install, browse, update, uninstall, scripted |
-| 4 | **Trademark clearance for "Nadir"** | Only a preliminary web/GitHub/npm check was done (no browser of that name found; other uses exist: a French ventilation app, nadir.org, an unrelated npm package). USPTO/EUIPO/WIPO databases were not searched. Not legal advice. | search classes 9 and 42 in the national databases, or ask a trademark attorney |
-| 5 | **Third-party security review** | None done; unit/e2e tests are not a substitute | external review or at least a fuzzing pass of URL parsing, the `nadir://` server and IPC |
+| 3 | **Installer: done. Auto-update: deliberately NOT built.** | A per-user Squirrel installer is built by `npm run installer` and attached to releases; install, first launch and uninstall were exercised on Windows (uninstall left 3 files under LocalAppData that I deleted by hand). Instead of silent auto-update, the About page has a user-initiated "Check for updates" that reads the public release list. Reason: an automatic installer for an UNSIGNED browser is a channel for pushing unsigned code to users; build it only after code signing exists and the update integrity story (signature verification, not just TLS) is designed. | signed releases first, then an update design review |
+| 4 | **Trademark: the name is NOT clear** | USPTO search on 2026-10-13 found two live pending applications near Nadir's field: standard-character NADIR (class 042, software design for learning applications, Notice of Allowance issued 2026-06-02) and NADIRROC (classes 009/042, downloadable networking software). Details and options in [docs/TRADEMARK.md](docs/TRADEMARK.md). Only the US register was searched; this is not legal advice. | decide: attorney opinion, rename while it is cheap, or accept risk; treat "Nadir" as a working name until then |
+| 5 | **Third-party security review** | Cannot be done by the project itself. Seeded fuzzing of URL resolution, filenames, the nadir:// resolver, history search, permission policy and error-page escaping was added and found 5 real bugs (fixed). That is the project testing itself, not an independent review. | an external review before any claim of security assurance |
 | 6 | **Chromium patch lag** | Electron 44.7 ships Chromium 152 while upstream builds at 155/156 exist. Largest structural risk of the approach. | a documented update cadence (follow Electron's ~8-week majors) and the Chromium version visible in About (already shown) |
 
 ### P1 — quality and verification gaps
 
-* **Screen-reader pass** with NVDA and Narrator on all `nadir://` pages and the chrome. The automated scan is clean for serious/critical issues but only finds a fraction of real problems. Also scan the overlay window (omnibox dropdown, palette, find bar, prompts), which the axe test does not reach.
-* **Secure DNS:** verify with a packet capture that lookups are actually encrypted (only the API call is verified).
-* **OAuth popups:** test `window.open` flows against at least three real providers.
+* **Screen-reader pass** with NVDA and Narrator: **not done** (no screen reader could be run or observed from here). What exists instead: axe scans of every page and overlay surface in both themes, assertions on the accessibility tree, a Tab-order check ([docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md)), and an 11-task manual test plan for a person to run.
+* **Secure DNS:** verify with a packet capture that lookups are actually encrypted (only the API call is verified). Not done: it needs an elevated capture on the machine.
+* **OAuth popups:** test `window.open` flows against at least three real providers. Not done (needs real provider accounts).
 * **Benchmarks:** repeat on a quiet machine with at least 5 samples and confidence intervals; add a mixed-origin workload (different sites, a video, a heavy SPA) for both browsers; add Speedometer/JetStream/MotionMark from the WebKit org (catalogued as High-value); add a `bench.js --assert` regression check; measure shutdown time, background network and keyboard-to-paint latency.
-* ~~CI gating~~ Done: `ci.yml` runs unit + e2e (including `a11y` and `tls`), `npm audit`, the licence gate, packaging, the packaged-app smoke test and an SBOM on every push. Still to add: a CI job on Linux/macOS, required status checks / branch protection on `main`, and a scheduled run so a dependency or runner change is noticed.
-* **Cross-platform:** Linux and macOS builds, CI and a per-platform test matrix. The code is written to be portable but has only ever run on Windows.
-* **Per-tab favicon fetch** currently uses the default session; proxy it through the tab's session.
+* ~~CI gating~~ Done: `ci.yml` runs on every push. Windows (required check on `main`): unit + e2e (including `a11y`, `tls`, `updates`, `background`), `npm audit`, the licence gate, packaging, the installer build, the packaged-app smoke test and an SBOM. Ubuntu and macOS run unit + e2e as an **informational** job (it cannot fail the build; read its log). Branch protection on `main` requires the Windows check, blocks force-push and deletion, and does not apply to the admin. Still to add: a scheduled run so dependency or runner changes are noticed.
+* **Cross-platform:** evidence now exists. Ubuntu (xvfb): 73 unit + 51 e2e pass. macOS arm64: app starts, a11y/background/tls/updates e2e pass, browser.test.js had 2 failures: the shortcut test used Ctrl instead of Cmd (fixed in the tests) and **the app does not exit when told to quit under the test harness** (`app.close()` times out after 20 s, so the session-restore test, which restarts the app, fails). Whether Cmd+Q hangs for a real macOS user is unknown. Not done: macOS/Linux packaging, installers, signing/notarisation, manual testing on real hardware.
+* **Per-tab favicon fetch** currently uses the default session; proxy it through the tab's session. Not started.
 * **Untested features:** find-in-page counting, zoom, native menus, pinning, drag-reorder, workspace rename/delete, auto-sleep timer path, clear-on-exit.
-* **Replace the hard-coded tracking-parameter list with ClearURLs rules** (LGPL-3.0; check the data licence before bundling).
+* **Replace the hard-coded tracking-parameter list with ClearURLs rules** (LGPL-3.0; check the data licence before bundling). Not started.
 * **Widevine/DRM:** absent. Decide whether to evaluate castlabs ECS and the cost of production signing before promising streaming-service support.
 
 ### P2 — features (see [ROADMAP.md](docs/ROADMAP.md) and [SIGNATURE-FEATURES.md](docs/SIGNATURE-FEATURES.md))
@@ -251,8 +254,8 @@ Passwords, sync and AI are **not implemented**; their design constraints (OS key
 * Performance figures are from two runs on one machine with a simple same-origin workload.
 * The catalog is a wide net, not a census. The sweep is GitHub-centric and English-only; its classifications are my judgement.
 * Signing was tested with a throwaway self-signed certificate; real signing, timestamping and SmartScreen behaviour are untested.
-* The accessibility result is an automated scan only.
-* The trademark check is preliminary and non-legal.
+* The accessibility result is automated scans plus accessibility-tree assertions; no screen reader was run.
+* The trademark search covered the US federal register only, on one date, and is not legal advice; it found nearby marks (see docs/TRADEMARK.md).
 
 ## 12. Where to look first
 

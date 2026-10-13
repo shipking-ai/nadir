@@ -31,8 +31,8 @@ Your data lives in Electron's user-data folder (shown in **Settings → About**)
 ## Test
 
 ```bash
-npm test            # 57 unit tests (plain Node, <2 s)
-npm run test:e2e    # 42 end-to-end tests: real app against a local server; only tls.test.js (5 tests) uses the internet (badssl.com) and skips when offline
+npm test            # 73 unit tests incl. seeded fuzzing (plain Node, about 10 s)
+npm run test:e2e    # 51 end-to-end tests: real app against a local server; only tls.test.js (5 tests) uses the internet (badssl.com) and skips when offline
 npm run audit       # npm audit for production dependencies
 node scripts/bench.js   # reproducible performance baseline vs. installed Chrome (see docs/PERFORMANCE.md)
 ```
@@ -64,6 +64,8 @@ docs          research ledger, ADR, architecture, security, design, roadmap, ben
 | [Research ledger](docs/research/LEDGER.md) | 40+ projects checked against primary sources on 2026-10-11, with confidence levels and scores |
 | [**HANDOFF**](HANDOFF.md) | start here if you are picking the project up: status, how to run and verify, traps, and the full to-do list |
 | [Releases](https://github.com/shipking-ai/nadir/releases) | pre-release builds (unsigned), with SHA-256 sums, an SBOM and a build-provenance attestation you can verify with `gh attestation verify` |
+| [Trademark check](docs/TRADEMARK.md) | the name "Nadir" is not clear in software-adjacent US classes; options listed |
+| [Accessibility](docs/ACCESSIBILITY.md) | what is scanned automatically, what is not (no screen reader run), and a manual test plan |
 | [Code signing policy](docs/CODE-SIGNING-POLICY.md) | what will be signed and how to verify a build today (builds are currently unsigned; check the build-provenance attestation) |
 | [Release notes and signing](docs/RELEASE.md) | what is tested for packaging and signing, and what still needs a certificate, a public repository and an installer |
 | [Project catalog](docs/research/CATALOG.md) | 772 open-source browser-related projects verified against the GitHub API and classified (Core / High-value / Optional / Experimental / Reference / Rejected / Out-of-scope) |

@@ -1,6 +1,6 @@
 # Feature matrix
 
-As of 2026-10-13, Nadir 0.1.0 (57 unit + 42 e2e tests). Status vocabulary: **Implemented & tested** · **Implemented, not fully tested** · **Partially implemented** · **Planned** · **Blocked**.
+As of 2026-10-13, Nadir 0.2.0 (73 unit + 51 e2e tests). Status vocabulary: **Implemented & tested** · **Implemented, not fully tested** · **Partially implemented** · **Planned** · **Blocked**
 "Tested" means an automated test exercises the behaviour (unit = plain Node, e2e = the real app driven by Playwright against a local server). Test names are in `test/`.
 
 ## Implemented and tested

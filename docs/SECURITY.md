@@ -31,6 +31,14 @@ Nadir is **not** completely secure or completely private, and nothing in this do
 - **AI:** not implemented. Design constraints for when it is added: local-first (Ollama on loopback); any cloud provider is opt-in per provider with an explicit "this page's text will be sent to X" consent; page content is treated as **data, never instructions**; read-only tools by default; any navigation, form submission or download requested by a model needs a user click; allow-listed tool schema; tests with a corpus of injection pages.
 - **Telemetry:** none. The only network request Nadir itself makes is the filter-list download from Ghostery's CDN (no user identifiers sent), which can be disabled by turning blocking off.
 
+## Fuzzing (added 2026-10-13)
+
+`test/unit/fuzz.test.js` generates thousands of hostile strings from a seeded generator and checks invariants for: URL resolution (never throws, never an executable scheme), URL helpers, download file names (single safe path component), the `nadir://` path resolver (never leaves the UI directory), history search (data, not SQL), permission policy (allow-list only, subframes never prompt) and error-page escaping (no raw markup, only http(s) links). It found and fixed five real bugs (the fifth, an invalid port such as `example.com:99999` producing an unnavigable URL, only showed up at 100,000 iterations): a lone surrogate typed into the address bar threw in `resolveInput`; `upgradeUrl` threw on invalid URLs; `sanitizeFilename` could return a name ending in a dot or space after truncation; the error page rendered a "Try again" link for any URL scheme. This is the project testing itself, **not** an independent review, and covers only those functions. Run longer with `FUZZ_ITERATIONS=100000 npm test`.
+
+## Updates
+
+Nadir never updates itself and never checks in the background. The About page's button asks `api.github.com` for the public release list (fixed URL, no cookies, redirects refused) and shows the newest version and its release page, which carries checksums and a build-provenance attestation. See [RELEASE.md](RELEASE.md) for why auto-update is not built.
+
 ## Known gaps and risks (unresolved)
 
 1. **Chromium patch lag.** Electron 44.7 ships Chromium 152; upstream Chromium builds at ≥155/156 exist today (inferred from ungoogled-chromium/Thorium releases). Electron backports security fixes but we have not measured completeness. *Mitigation:* ship updates on Electron's cadence; show the Chromium version in **About**. This is the largest risk of the Electron approach.
