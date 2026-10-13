@@ -26,6 +26,27 @@
           "html"
         ]
       }
+    ],
+    "overlay-palette": [],
+    "overlay-suggestions": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "help": "All page content should be contained by landmarks",
+        "nodes": [
+          "#root"
+        ]
+      }
+    ],
+    "overlay-find": [
+      {
+        "id": "region",
+        "impact": "moderate",
+        "help": "All page content should be contained by landmarks",
+        "nodes": [
+          "input"
+        ]
+      }
     ]
   }
 }

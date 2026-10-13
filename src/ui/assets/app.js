@@ -165,10 +165,24 @@
   async function about() {
     const i = await api.invoke('about:info');
     const row = (k, v) => h('tr', null, h('td', { text: k }), h('td', { class: 'mono', text: v }));
+    const status = h('p', { id: 'update-status', role: 'status', 'aria-live': 'polite', text: '' });
+    const btn = h('button', { class: 'btn', id: 'update-check', text: 'Check for updates', onclick: async () => {
+      btn.disabled = true; status.replaceChildren('Checking GitHub…');
+      try {
+        const r = await api.invoke('update:check');
+        if (!r.latest) status.replaceChildren('No releases were found.');
+        else if (r.newer) status.replaceChildren(`Version ${r.latest}${r.prerelease ? ' (pre-release)' : ''} is available. You have ${r.current}. `, r.url ? link('View the release, checksums and attestation', r.url) : '');
+        else status.replaceChildren(`You are up to date (${r.current}; newest release ${r.latest}).`);
+      } catch (e) { status.replaceChildren(`Could not check: ${e.message}`); }
+      btn.disabled = false;
+    } });
     return h('section', { class: 'view' }, h('h2', { text: 'About Nadir' }),
       h('p', { class: 'sub', text: 'A privacy-first, workspace-centric browser. Open source, GPL-3.0-or-later.' }),
       h('table', { class: 'kv' }, row('Nadir', i.app), row('Chromium', i.chromium), row('Electron', i.electron), row('Node.js', i.node), row('V8', i.v8), row('SQLite', i.sqlite), row('Platform', i.platform), row('Data folder', i.userData)),
-      h('div', { class: 'note', text: 'Nadir embeds Chromium through Electron, which trails Google Chrome’s release by a few versions. Keep Nadir updated. Chrome Web Store extensions are not supported yet.' }));
+      h('div', { class: 'note', text: 'Nadir embeds Chromium through Electron, which trails Google Chrome’s release by a few versions. Keep Nadir updated. Chrome Web Store extensions are not supported yet.' }),
+      h('h3', { text: 'Updates' }),
+      h('p', { class: 'sub', text: 'Nadir does not update itself and never checks in the background. This button asks GitHub (api.github.com) for the list of releases and shows you where to download and verify a newer build. Releases are not code-signed yet; verify the checksum or the build attestation.' }),
+      btn, status);
   }
 
   // ---------------- router ----------------

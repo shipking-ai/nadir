@@ -214,7 +214,7 @@ test('IPC trust boundaries: each surface can only call its own channels', async 
     const w = new BrowserWindow({ show: false, webPreferences: { preload: preloadPath, sandbox: true, contextIsolation: false } });
     await w.loadURL('about:blank');
     const out = {};
-    for (const [ch, arg] of [['settings:set', { key: 'theme', value: 'dark' }], ['history:clear', {}], ['tab:close', 1], ['cmd', 'new-tab'], ['downloads:open', { id: 1 }], ['data:clear', {}], ['omnibox:pick', 0], ['permission:answer', { decision: 'allow', remember: true }]]) {
+    for (const [ch, arg] of [['settings:set', { key: 'theme', value: 'dark' }], ['history:clear', {}], ['tab:close', 1], ['cmd', 'new-tab'], ['downloads:open', { id: 1 }], ['data:clear', {}], ['omnibox:pick', 0], ['permission:answer', { decision: 'allow', remember: true }], ['update:check', null]]) {
       out[ch] = await w.webContents.executeJavaScript(`raw.invoke('nadir:${ch}', ${JSON.stringify(arg)}).then(() => 'ALLOWED', (e) => String(e.message))`);
     }
     w.destroy();

@@ -19,13 +19,13 @@ async function until(fn, { timeout = 15000, step = 100, what = 'condition' } = {
 }
 
 /** Launch Nadir against an isolated profile. NADIR_OFFLINE keeps tests off the network. */
-async function launch({ userData, downloadDir, args = [], headless = true } = {}) {
+async function launch({ userData, downloadDir, args = [], headless = true, env = {} } = {}) {
   userData ||= fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-e2e-'));
   downloadDir ||= fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-dl-'));
   const app = await electron.launch({
     colorScheme: null, // do not let Playwright emulate prefers-color-scheme; we test the real theme
     args: [ROOT, '--host-resolver-rules=MAP *.example.net 127.0.0.1', ...args],
-    env: { ...process.env, NADIR_USER_DATA: userData, NADIR_DOWNLOAD_DIR: downloadDir, NADIR_TEST: '1', NADIR_OFFLINE: '1', NADIR_HEADLESS: headless ? '1' : '0' },
+    env: { ...process.env, ...env, NADIR_USER_DATA: userData, NADIR_DOWNLOAD_DIR: downloadDir, NADIR_TEST: '1', NADIR_OFFLINE: '1', NADIR_HEADLESS: headless ? '1' : '0' },
   });
   const shell = await until(() => app.windows().find((p) => p.url() === 'nadir://shell/'), { what: 'shell window' });
   await shell.waitForLoadState('domcontentloaded');

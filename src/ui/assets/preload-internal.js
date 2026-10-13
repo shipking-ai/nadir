@@ -9,7 +9,7 @@ if (location.protocol === 'nadir:') {
   const INVOKE = new Set([
     'settings:get', 'settings:set', 'history:list', 'history:delete', 'history:clear', 'bookmarks:list', 'bookmarks:add', 'bookmarks:remove',
     'downloads:list', 'downloads:open', 'downloads:show', 'downloads:cancel', 'downloads:clear', 'privacy:summary', 'permissions:clear',
-    'data:clear', 'nav:open', 'nav:go', 'newtab:data', 'workspace:remove', 'workspace:rename', 'about:info', 'blocklist:refresh',
+    'data:clear', 'nav:open', 'nav:go', 'newtab:data', 'workspace:remove', 'workspace:rename', 'about:info', 'update:check', 'blocklist:refresh',
   ]);
   const ON = new Set(['downloads:update', 'settings:changed']);
   contextBridge.exposeInMainWorld('nadir', {

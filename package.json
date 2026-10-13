@@ -1,7 +1,7 @@
 {
   "name": "nadir-browser",
   "version": "0.1.0",
-  "description": "Nadir — a privacy-first, workspace-centric browser shell on Chromium (via Electron).",
+  "description": "Nadir: an open-source, privacy-focused desktop browser",
   "main": "src/main/main.js",
   "license": "GPL-3.0-or-later",
   "private": true,
@@ -12,7 +12,8 @@
     "audit": "npm audit --omit=dev",
     "package": "electron-packager . Nadir --platform=win32 --arch=x64 --out=out --overwrite --prune=true --ignore=\"^/(docs|test|scripts|out|\\.smoke|\\.git|README\\.md)\" --extra-resource=LICENSE --app-copyright=\"GPL-3.0-or-later\"",
     "sign": "powershell -NoProfile -File scripts/sign.ps1",
-    "package:signed": "npm run package && npm run sign"
+    "package:signed": "npm run package && npm run sign",
+    "installer": "node scripts/make-installer.js"
   },
   "dependencies": {
     "@ghostery/adblocker-electron": "2.20.1",
@@ -22,6 +23,16 @@
     "@electron/packager": "20.3.0",
     "axe-core": "^4.14.0",
     "electron": "44.7.0",
+    "electron-winstaller": "^5.4.4",
     "playwright-core": "1.64.0"
+  },
+  "author": "Nadir contributors",
+  "homepage": "https://github.com/shipking-ai/nadir",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shipking-ai/nadir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shipking-ai/nadir/issues"
   }
 }

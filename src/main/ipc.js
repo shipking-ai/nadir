@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 'use strict';
-const { ipcMain, dialog, app } = require('electron');
+const { ipcMain, dialog, app, net } = require('electron');
+const { checkForUpdate, RELEASES_URL } = require('./updates');
 const { DEFAULT_SETTINGS } = require('./store');
 const { COMMANDS } = require('../shared/shortcuts');
 const { displayHost, isInternalUrl } = require('../shared/urls');
@@ -134,6 +135,12 @@ function registerIpc(c) {
     if (key === 'historyRetentionDays') store.enforceRetention(value);
     return { ok: true, value };
   });
+  // User-initiated only (a button on the About page). The URL is fixed; tests may point it at a local server, nothing else may.
+  handle('update:check', 'internal', () => checkForUpdate({
+    fetchFn: (u, o) => net.fetch(u, o),
+    current: app.getVersion(),
+    url: process.env.NADIR_TEST === '1' && process.env.NADIR_UPDATE_URL ? process.env.NADIR_UPDATE_URL : RELEASES_URL,
+  }));
   handle('about:info', 'internal', () => ({
     app: app.getVersion(), electron: process.versions.electron, chromium: process.versions.chrome, node: process.versions.node,
     v8: process.versions.v8, sqlite: store.db.prepare('select sqlite_version() v').get().v, platform: `${process.platform} ${process.arch}`,

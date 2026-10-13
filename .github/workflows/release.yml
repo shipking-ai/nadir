@@ -46,6 +46,8 @@ jobs:
       - run: npm run test:e2e
       - run: npm run package
       - run: node scripts/verify-package.js
+      - name: Build the installer
+        run: npm run installer
       - name: Detect signing certificate
         id: cert
         shell: bash
@@ -67,17 +69,25 @@ jobs:
           $code = $LASTEXITCODE
           [IO.File]::Delete($pfx)
           if ($code -ne 0) { throw "signing failed or signature not valid (exit $code)" }
+          # the installer is signed too (it is what users run first)
+          Get-ChildItem out/installer -Filter 'Nadir-Setup-*.exe' | ForEach-Object { powershell -NoProfile -File scripts/sign.ps1 -Path $_.FullName; if ($LASTEXITCODE -ne 0) { throw "installer signing failed (exit $LASTEXITCODE)" } }
       - name: Archive, checksums, SBOM
         shell: bash
         run: |
           zip="Nadir-${VERSION}-win32-x64.zip"
-          tar -a -c -f "$zip" -C out Nadir-win32-x64
-          sha256sum "$zip" > SHA256SUMS.txt
+          cp out/installer/Nadir-Setup-*.exe .
+          setup="$(ls Nadir-Setup-*.exe)"
+          # 7-Zip (preinstalled on the runner) compresses far better than tar's zip writer did for v0.1.0 (391 MB)
+          "/c/Program Files/7-Zip/7z.exe" a -tzip -mx=9 -bso0 -bsp0 "$zip" ./out/Nadir-win32-x64
+          sha256sum "$zip" "$setup" > SHA256SUMS.txt
+          echo "SETUP=${setup}" >> "$GITHUB_ENV"
           npm sbom --sbom-format cyclonedx --omit dev > "nadir-${VERSION}-sbom.cdx.json"
           echo "ZIP=${zip}" >> "$GITHUB_ENV"
       - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
-          subject-path: Nadir-*-win32-x64.zip
+          subject-path: |
+            Nadir-*-win32-x64.zip
+            Nadir-Setup-*.exe
       - name: Publish pre-release
         shell: bash
         env:
@@ -86,16 +96,17 @@ jobs:
         run: |
           if [ "$SIGNED" = "true" ]; then sigline="Nadir.exe is Authenticode-signed (see the signing policy)."; else sigline="**This build is NOT code-signed.** Windows SmartScreen will warn about an unknown publisher. Verify the download instead (below)."; fi
           cat > notes.md <<EOF
-          Nadir ${VERSION} - pre-release for Windows x64. Not production-ready: no third-party security review, no installer, no auto-update, only tested on Windows.
+          Nadir ${VERSION} - pre-release for Windows x64. Not production-ready: no third-party security review, no automatic updates, only tested on Windows.
+          Two ways to install: run \`${SETUP}\` (per-user installer, no administrator rights) or unzip \`${ZIP}\` anywhere and run Nadir.exe.
 
           ${sigline}
 
           **Verify this download**
           - SHA-256: see \`SHA256SUMS.txt\`
-          - Build provenance (proves it was built from this repository by this workflow): \`gh attestation verify ${ZIP} --repo ${GITHUB_REPOSITORY}\`
+          - Build provenance (proves it was built from this repository by this workflow): \`gh attestation verify ${ZIP} --repo ${GITHUB_REPOSITORY}\` (and the same for \`${SETUP}\`)
           - Dependencies: \`nadir-${VERSION}-sbom.cdx.json\` (CycloneDX)
 
           Known gaps and the full to-do list: HANDOFF.md. Security reports: docs/SECURITY.md. Signing policy: docs/CODE-SIGNING-POLICY.md.
           EOF
-          gh release create "${GITHUB_REF_NAME}" "${ZIP}" SHA256SUMS.txt "nadir-${VERSION}-sbom.cdx.json" \
+          gh release create "${GITHUB_REF_NAME}" "${ZIP}" "${SETUP}" SHA256SUMS.txt "nadir-${VERSION}-sbom.cdx.json" \
             --title "Nadir ${VERSION} (pre-release)" --notes-file notes.md --prerelease --verify-tag

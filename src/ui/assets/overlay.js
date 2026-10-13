@@ -19,6 +19,7 @@
     reset();
     const box = el('div', 'omni-list panel');
     box.setAttribute('role', 'listbox');
+    box.setAttribute('aria-label', 'Suggestions');
     items.forEach((s, i) => {
       const row = el('div', 'row'); row.setAttribute('role', 'option'); row.id = `s${i}`;
       row.setAttribute('aria-selected', String(i === selected));

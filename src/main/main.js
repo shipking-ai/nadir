@@ -3,6 +3,22 @@
 const path = require('node:path');
 const { app, protocol, session } = require('electron');
 
+// Windows installer lifecycle (Squirrel.Windows): the installer launches the app with --squirrel-* flags to let it create or
+// remove its shortcuts. Handle that and exit before anything else starts. A normal launch never has these flags.
+if (process.platform === 'win32' && /^--squirrel-/.test(process.argv[1] || '')) {
+  const { spawn } = require('node:child_process');
+  const updateExe = path.resolve(path.dirname(process.execPath), '..', 'Update.exe');
+  const exeName = path.basename(process.execPath);
+  const run = (args) => new Promise((resolve) => { try { spawn(updateExe, args, { detached: true, stdio: 'ignore' }).on('close', resolve).on('error', resolve); } catch { resolve(); } });
+  const ev = process.argv[1];
+  (async () => {
+    if (ev === '--squirrel-install' || ev === '--squirrel-updated') await run(['--createShortcut', exeName]);
+    else if (ev === '--squirrel-uninstall') await run(['--removeShortcut', exeName]);
+    app.quit();   // --squirrel-obsolete and --squirrel-firstrun need no work
+  })();
+  return;
+}
+
 // Must happen before 'ready'.
 protocol.registerSchemesAsPrivileged([{ scheme: 'nadir', privileges: { standard: true, secure: true, supportFetchAPI: true } }]);
 app.setName('Nadir');
