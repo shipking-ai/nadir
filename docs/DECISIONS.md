@@ -46,4 +46,4 @@ Newest last. Each entry: what was decided, why, and what evidence changed our mi
 11. Contrast: tertiary text missed 4.5:1 in the command palette in both themes (the CI runner used the light theme, the developer machine the dark one, so the first CI run caught what local runs could not). Fixed; both themes are now scanned.
 12. The overlay suggestions list had no accessible name. Fixed.
 13. Test portability: the shortcut test used Ctrl on macOS (Cmd there). Fixed in the tests.
-14. Open: on macOS the app did not exit when the test harness asked it to quit (20 s timeout). Cause unknown.
+14. Open: on macOS the app did not exit after the accessibility test file (the harness kills it after 20 s); other files, including the one that restarts the app, are fine. Cause unknown. An earlier macOS run also failed the session-restore test; it passed in the next run.
