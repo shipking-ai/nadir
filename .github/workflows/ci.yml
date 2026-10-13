@@ -33,8 +33,15 @@ jobs:
         run: npm run audit
       - name: Licence gate (fails on unknown production licences)
         run: node scripts/license-inventory.js
+      # One file at a time with a 60 s per-test limit: a hang in one test shows up as a failure with the other files' results
+      # still visible, instead of a silent 20-minute stall.
       - name: End-to-end tests (includes axe accessibility scan and badssl.com TLS tests)
-        run: npm run test:e2e
+        timeout-minutes: 20
+        shell: bash
+        run: |
+          failed=0
+          for f in test/e2e/*.test.js; do echo "::group::$f"; node --test --test-timeout=60000 "$f" || { echo "FILE FAILED: $f"; failed=1; }; echo "::endgroup::"; done
+          exit $failed
       - name: Package
         run: npm run package
       - name: Packaged-app smoke test
