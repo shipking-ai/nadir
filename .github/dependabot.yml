@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    # Electron major bumps change the bundled Chromium (the main security-relevant dependency): review each one.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

@@ -63,6 +63,7 @@ docs          research ledger, ADR, architecture, security, design, roadmap, ben
 |---|---|
 | [Research ledger](docs/research/LEDGER.md) | 40+ projects checked against primary sources on 2026-10-11, with confidence levels and scores |
 | [**HANDOFF**](HANDOFF.md) | start here if you are picking the project up: status, how to run and verify, traps, and the full to-do list |
+| [Code signing policy](docs/CODE-SIGNING-POLICY.md) | what will be signed and how to verify a build today (builds are currently unsigned; check the build-provenance attestation) |
 | [Release notes and signing](docs/RELEASE.md) | what is tested for packaging and signing, and what still needs a certificate, a public repository and an installer |
 | [Project catalog](docs/research/CATALOG.md) | 772 open-source browser-related projects verified against the GitHub API and classified (Core / High-value / Optional / Experimental / Reference / Rejected / Out-of-scope) |
 | [Discovery sweep](docs/research/SWEEP.md) | how the catalog was built, and an explicit list of what it does **not** cover — "every possible project" is not achievable |

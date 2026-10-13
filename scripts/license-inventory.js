@@ -45,5 +45,7 @@ ${table(dev)}
 fs.writeFileSync(path.join(root, 'docs', 'LICENSE-INVENTORY.md'), out);
 const unknown = rows.filter((r) => /UNKNOWN|UNLICENSED/i.test(r.license));
 console.log(`prod=${prod.length} dev=${dev.length} unknown=${unknown.length}`, unknown.map((u) => u.name).join(', '));
+// CI gate: a shipped (production) dependency with an unknown or missing licence fails the build.
+if (unknown.some((u) => prod.includes(u))) { console.error('FAIL: production dependency with UNKNOWN/UNLICENSED licence'); process.exitCode = 1; }
 const copyleft = prod.filter((r) => /GPL|AGPL|LGPL|MPL|EPL|CC-BY-SA/i.test(r.license));
 console.log('copyleft/weak-copyleft in prod:', copyleft.map((r) => `${r.name}@${r.version} (${r.license})`).join(', ') || 'none');
