@@ -25,7 +25,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-0: #ecebe7; --bg-1: #f7f6f3; --bg-2: #ffffff; --bg-3: #e1dfd9; --line: #d6d3cb;
-    --fg: #1c1e23; --fg-2: #4d5460; --fg-3: #5f6672;
+    --fg: #1c1e23; --fg-2: #4d5460; --fg-3: #565d69;
     --accent: #2f7d5b; --accent-fg: #ffffff; --accent-soft: rgba(47, 125, 91, .12);
     --danger: #b3392f; --warn: #8a6410;
     --shadow: 0 8px 28px rgba(30, 28, 20, .16), 0 0 0 1px rgba(30, 28, 20, .04);

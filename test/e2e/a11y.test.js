@@ -85,7 +85,10 @@ test('find bar (overlay) has no serious/critical violations', async () => {
   await ov.keyboard.press('Escape');
 });
 
-test('accessibility tree of the browser chrome: names, roles and states a screen reader would announce', async () => {
+// The tree is rebuilt asynchronously after tab changes, so retry briefly instead of reading it mid-update (one flaky run seen).
+async function eventually(fn, tries = 8) { let last; for (let i = 0; i < tries; i++) { try { return await fn(); } catch (e) { last = e; await new Promise((r) => setTimeout(r, 400)); } } throw last; }
+
+test('accessibility tree of the browser chrome: names, roles and states a screen reader would announce', async () => eventually(async () => {
   const cdp = await b.shell.context().newCDPSession(b.shell);
   await cdp.send('Accessibility.enable');
   const { nodes } = await cdp.send('Accessibility.getFullAXTree');
@@ -106,7 +109,8 @@ test('accessibility tree of the browser chrome: names, roles and states a screen
   for (const wanted of ['New tab', 'Reload']) assert.ok(names('button').some((n) => new RegExp(wanted, 'i').test(n)), `a "${wanted}" button is exposed`);
   assert.ok(names('group').includes('Workspaces'), 'workspace switcher is a named group');
   assert.ok(named('button').filter((n) => (n.properties || []).some((p) => p.name === 'pressed')).length >= 1, 'workspace buttons expose their pressed state');
-});
+  await cdp.detach();
+}));
 
 test('keyboard only: the toolbar and address box can be reached with Tab', async () => {
   await b.shell.focus('#omni');
@@ -117,4 +121,29 @@ test('keyboard only: the toolbar and address box can be reached with Tab', async
     seen.add(id);
   }
   assert.ok(seen.size >= 5, `Tab visits several distinct controls (saw ${[...seen].join(', ')})`);
+});
+
+// The same surfaces again in the LIGHT theme: contrast problems differ per theme (the first CI run caught one that
+// the dark theme on the developer's machine did not).
+test('light theme: every surface has no serious/critical violations', async () => {
+  await b.ctl("c.setSetting('theme', 'light')");
+  await new Promise((r) => setTimeout(r, 800));
+  for (const route of ['history', 'bookmarks', 'downloads', 'privacy', 'settings', 'about']) {
+    await b.navigate(`nadir://app/#/${route}`);
+    const page = await b.page('nadir://app');
+    await page.waitForSelector('nav a[aria-current="page"]');
+    check(`light-${route}`, await scan(page));
+  }
+  check('light-shell', await scan(b.shell));
+  await b.ctl('c.runCommand("command-palette")');
+  const ov = await b.page('nadir://overlay');
+  await ov.waitForSelector('.palette .row');
+  check('light-overlay-palette', await scan(ov));
+  await ov.keyboard.press('Escape');
+  await b.shell.focus('#omni');
+  await b.shell.fill('#omni', 'nadir');
+  await ov.waitForSelector('.omni-list .row', { timeout: 8000 });
+  check('light-overlay-suggestions', await scan(ov));
+  await b.shell.keyboard.press('Escape');
+  await b.ctl("c.setSetting('theme', 'system')");
 });

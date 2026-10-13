@@ -92,11 +92,15 @@ jobs:
         timeout-minutes: 3
         continue-on-error: true
         run: node scripts/launch-probe.js
+      # Each e2e file runs separately with a short per-test timeout so that one hanging test cannot hide the rest, and the
+      # results of every file are printed as soon as that file finishes. Failures do not fail this informational job.
       - name: End-to-end tests (Linux, virtual display)
         if: runner.os == 'Linux'
-        timeout-minutes: 12
-        run: xvfb-run -a npm run test:e2e -- --test-timeout=60000
+        timeout-minutes: 25
+        run: |
+          for f in test/e2e/*.test.js; do echo "::group::$f"; xvfb-run -a node --test --test-timeout=30000 "$f" || echo "FILE FAILED: $f"; echo "::endgroup::"; done
       - name: End-to-end tests (macOS)
         if: runner.os == 'macOS'
-        timeout-minutes: 12
-        run: npm run test:e2e -- --test-timeout=60000
+        timeout-minutes: 25
+        run: |
+          for f in test/e2e/*.test.js; do echo "::group::$f"; node --test --test-timeout=30000 "$f" || echo "FILE FAILED: $f"; echo "::endgroup::"; done
