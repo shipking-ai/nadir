@@ -3,7 +3,7 @@
 // Page-derived strings are only ever assigned through textContent.
 (() => {
   'use strict';
-  const api = window.nadir;
+  const api = window.pelorus;
   const root = document.getElementById('root');
   let cleanup = null;
 

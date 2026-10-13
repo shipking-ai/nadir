@@ -44,7 +44,7 @@ class TabHost extends EventEmitter {
       },
     });
     // Web pages without their own background must render on white (as in every other browser);
-    // Nadir's internal pages paint their own theme-aware background.
+    // Pelorus's internal pages paint their own theme-aware background.
     this.view.setBackgroundColor(kind === 'web' ? '#ffffff' : '#00000000');
     this._wire();
   }
@@ -116,7 +116,7 @@ class TabHost extends EventEmitter {
 
   /** Block page-initiated navigation to internal or dangerous schemes; handle our own control URLs. */
   _policy(e, url) {
-    if (url.startsWith('nadir://allow-http')) {
+    if (url.startsWith('pelorus://allow-http')) {
       e.preventDefault();
       // Only honoured from our own error page (a data: document we generated).
       if (this.wc.getURL().startsWith('data:text/html')) {
@@ -131,7 +131,7 @@ class TabHost extends EventEmitter {
       }
       return;
     }
-    // Internal pages may only navigate within nadir://; anything else is routed through the tab manager.
+    // Internal pages may only navigate within pelorus://; anything else is routed through the tab manager.
     if (!isInternalUrl(url)) { e.preventDefault(); this.emit('open-url', { url, background: false, replace: true }); }
   }
 

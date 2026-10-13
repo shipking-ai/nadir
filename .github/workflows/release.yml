@@ -3,10 +3,10 @@ name: Release
 # Runs when a tag like v0.1.0 is pushed. Builds from the tagged commit on a GitHub-hosted runner, runs the full
 # test suite, packages, (optionally) signs, publishes a GitHub pre-release with checksums and an SBOM, and records a
 # build-provenance attestation so anyone can check that the zip came from this repository and this workflow:
-#     gh attestation verify Nadir-<version>-win32-x64.zip --repo shipking-ai/nadir
+#     gh attestation verify Pelorus-<version>-win32-x64.zip --repo shipking-ai/pelorus
 #
-# SIGNING: the signing step is skipped unless the repository secret NADIR_SIGN_PFX_B64 (base64 .pfx) and
-# NADIR_SIGN_PFX_PASSWORD exist. That step has NEVER been run with a real certificate. Until one exists, every
+# SIGNING: the signing step is skipped unless the repository secret PELORUS_SIGN_PFX_B64 (base64 .pfx) and
+# PELORUS_SIGN_PFX_PASSWORD exist. That step has NEVER been run with a real certificate. Until one exists, every
 # release from this workflow is UNSIGNED and the release notes say so.
 
 on:
@@ -52,61 +52,61 @@ jobs:
         id: cert
         shell: bash
         env:
-          PRESENT: ${{ secrets.NADIR_SIGN_PFX_B64 != '' }}
+          PRESENT: ${{ secrets.PELORUS_SIGN_PFX_B64 != '' }}
         run: echo "present=${PRESENT}" >> "$GITHUB_OUTPUT"
-      - name: Sign Nadir.exe (only when a certificate secret exists; untested with a real certificate)
+      - name: Sign Pelorus.exe (only when a certificate secret exists; untested with a real certificate)
         if: steps.cert.outputs.present == 'true'
         shell: pwsh
         env:
-          PFX_B64: ${{ secrets.NADIR_SIGN_PFX_B64 }}
-          NADIR_SIGN_PFX_PASSWORD: ${{ secrets.NADIR_SIGN_PFX_PASSWORD }}
-          NADIR_TIMESTAMP_URL: ${{ vars.NADIR_TIMESTAMP_URL }}
+          PFX_B64: ${{ secrets.PELORUS_SIGN_PFX_B64 }}
+          PELORUS_SIGN_PFX_PASSWORD: ${{ secrets.PELORUS_SIGN_PFX_PASSWORD }}
+          PELORUS_TIMESTAMP_URL: ${{ vars.PELORUS_TIMESTAMP_URL }}
         run: |
           $pfx = Join-Path $env:RUNNER_TEMP 'sign.pfx'
           [IO.File]::WriteAllBytes($pfx, [Convert]::FromBase64String($env:PFX_B64))
-          $env:NADIR_SIGN_PFX = $pfx
+          $env:PELORUS_SIGN_PFX = $pfx
           powershell -NoProfile -File scripts/sign.ps1
           $code = $LASTEXITCODE
           [IO.File]::Delete($pfx)
           if ($code -ne 0) { throw "signing failed or signature not valid (exit $code)" }
           # the installer is signed too (it is what users run first)
-          Get-ChildItem out/installer -Filter 'Nadir-Setup-*.exe' | ForEach-Object { powershell -NoProfile -File scripts/sign.ps1 -Path $_.FullName; if ($LASTEXITCODE -ne 0) { throw "installer signing failed (exit $LASTEXITCODE)" } }
+          Get-ChildItem out/installer -Filter 'Pelorus-Setup-*.exe' | ForEach-Object { powershell -NoProfile -File scripts/sign.ps1 -Path $_.FullName; if ($LASTEXITCODE -ne 0) { throw "installer signing failed (exit $LASTEXITCODE)" } }
       - name: Archive, checksums, SBOM
         shell: bash
         run: |
-          zip="Nadir-${VERSION}-win32-x64.zip"
-          cp out/installer/Nadir-Setup-*.exe .
-          setup="$(ls Nadir-Setup-*.exe)"
+          zip="Pelorus-${VERSION}-win32-x64.zip"
+          cp out/installer/Pelorus-Setup-*.exe .
+          setup="$(ls Pelorus-Setup-*.exe)"
           # 7-Zip (preinstalled on the runner) compresses far better than tar's zip writer did for v0.1.0 (391 MB)
-          "/c/Program Files/7-Zip/7z.exe" a -tzip -mx=9 -bso0 -bsp0 "$zip" ./out/Nadir-win32-x64
+          "/c/Program Files/7-Zip/7z.exe" a -tzip -mx=9 -bso0 -bsp0 "$zip" ./out/Pelorus-win32-x64
           sha256sum "$zip" "$setup" > SHA256SUMS.txt
           echo "SETUP=${setup}" >> "$GITHUB_ENV"
-          npm sbom --sbom-format cyclonedx --omit dev > "nadir-${VERSION}-sbom.cdx.json"
+          npm sbom --sbom-format cyclonedx --omit dev > "pelorus-${VERSION}-sbom.cdx.json"
           echo "ZIP=${zip}" >> "$GITHUB_ENV"
       - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
           subject-path: |
-            Nadir-*-win32-x64.zip
-            Nadir-Setup-*.exe
+            Pelorus-*-win32-x64.zip
+            Pelorus-Setup-*.exe
       - name: Publish pre-release
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           SIGNED: ${{ steps.cert.outputs.present }}
         run: |
-          if [ "$SIGNED" = "true" ]; then sigline="Nadir.exe is Authenticode-signed (see the signing policy)."; else sigline="**This build is NOT code-signed.** Windows SmartScreen will warn about an unknown publisher. Verify the download instead (below)."; fi
+          if [ "$SIGNED" = "true" ]; then sigline="Pelorus.exe is Authenticode-signed (see the signing policy)."; else sigline="**This build is NOT code-signed.** Windows SmartScreen will warn about an unknown publisher. Verify the download instead (below)."; fi
           cat > notes.md <<EOF
-          Nadir ${VERSION} - pre-release for Windows x64. Not production-ready: no third-party security review, no automatic updates, only tested on Windows.
-          Two ways to install: run \`${SETUP}\` (per-user installer, no administrator rights) or unzip \`${ZIP}\` anywhere and run Nadir.exe.
+          Pelorus ${VERSION} - pre-release for Windows x64. Not production-ready: no third-party security review, no automatic updates, only tested on Windows.
+          Two ways to install: run \`${SETUP}\` (per-user installer, no administrator rights) or unzip \`${ZIP}\` anywhere and run Pelorus.exe.
 
           ${sigline}
 
           **Verify this download**
           - SHA-256: see \`SHA256SUMS.txt\`
           - Build provenance (proves it was built from this repository by this workflow): \`gh attestation verify ${ZIP} --repo ${GITHUB_REPOSITORY}\` (and the same for \`${SETUP}\`)
-          - Dependencies: \`nadir-${VERSION}-sbom.cdx.json\` (CycloneDX)
+          - Dependencies: \`pelorus-${VERSION}-sbom.cdx.json\` (CycloneDX)
 
           Known gaps and the full to-do list: HANDOFF.md. Security reports: docs/SECURITY.md. Signing policy: docs/CODE-SIGNING-POLICY.md.
           EOF
-          gh release create "${GITHUB_REF_NAME}" "${ZIP}" "${SETUP}" SHA256SUMS.txt "nadir-${VERSION}-sbom.cdx.json" \
-            --title "Nadir ${VERSION} (pre-release)" --notes-file notes.md --prerelease --verify-tag
+          gh release create "${GITHUB_REF_NAME}" "${ZIP}" "${SETUP}" SHA256SUMS.txt "pelorus-${VERSION}-sbom.cdx.json" \
+            --title "Pelorus ${VERSION} (pre-release)" --notes-file notes.md --prerelease --verify-tag

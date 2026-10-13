@@ -29,11 +29,11 @@ const isCert = (code) => code <= -200 && code >= -299;
  */
 function errorPageHtml({ url, code, desc, httpFallback }) {
   const [title, text] = isCert(code)
-    ? ['Your connection isn’t private', 'Nadir blocked this page because the site’s security certificate could not be verified. Attackers might be trying to read or alter what you send to this site.']
+    ? ['Your connection isn’t private', 'Pelorus blocked this page because the site’s security certificate could not be verified. Attackers might be trying to read or alter what you send to this site.']
     : (REASONS[String(code)] || ['This page can’t be loaded', 'The page could not be loaded.']);
   const fallback = httpFallback
-    ? `<p class="warn">Nadir tried the secure version of this address first. The site may not support HTTPS.</p>
-       <p><a class="btn danger" href="nadir://allow-http?u=${encodeURIComponent(httpFallback)}">Continue over insecure HTTP</a></p>`
+    ? `<p class="warn">Pelorus tried the secure version of this address first. The site may not support HTTPS.</p>
+       <p><a class="btn danger" href="pelorus://allow-http?u=${encodeURIComponent(httpFallback)}">Continue over insecure HTTP</a></p>`
     : '';
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">

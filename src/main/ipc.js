@@ -50,14 +50,14 @@ function registerIpc(c) {
   const isOverlay = (e) => e.sender === c.overlay?.webContents && e.senderFrame === e.sender.mainFrame;
   const internalTab = (e) => {
     const t = c.tabs.byWebContentsId(e.sender.id);
-    return t && t.kind === 'internal' && e.senderFrame === e.sender.mainFrame && /^nadir:\/\//.test(e.senderFrame.url) ? t : null;
+    return t && t.kind === 'internal' && e.senderFrame === e.sender.mainFrame && /^pelorus:\/\//.test(e.senderFrame.url) ? t : null;
   };
   const SCOPES = {
     shell: isShell, overlay: isOverlay, chrome: (e) => isShell(e) || isOverlay(e), internal: (e) => !!internalTab(e),
   };
 
   const handle = (channel, scope, fn) => {
-    ipcMain.handle(`nadir:${channel}`, async (event, payload) => {
+    ipcMain.handle(`pelorus:${channel}`, async (event, payload) => {
       if (!SCOPES[scope](event)) throw new Error(`Forbidden: ${channel}`);
       return fn(payload, event);
     });
@@ -139,7 +139,7 @@ function registerIpc(c) {
   handle('update:check', 'internal', () => checkForUpdate({
     fetchFn: (u, o) => net.fetch(u, o),
     current: app.getVersion(),
-    url: process.env.NADIR_TEST === '1' && process.env.NADIR_UPDATE_URL ? process.env.NADIR_UPDATE_URL : RELEASES_URL,
+    url: process.env.PELORUS_TEST === '1' && process.env.PELORUS_UPDATE_URL ? process.env.PELORUS_UPDATE_URL : RELEASES_URL,
   }));
   handle('about:info', 'internal', () => ({
     app: app.getVersion(), electron: process.versions.electron, chromium: process.versions.chrome, node: process.versions.node,
@@ -203,7 +203,7 @@ function registerIpc(c) {
   handle('nav:open', 'internal', (p, event) => {
     const t = internalTab(event);
     const url = str(p.url);
-    if (!/^(https?:|nadir:)/i.test(url)) throw new Error('Unsupported URL');
+    if (!/^(https?:|pelorus:)/i.test(url)) throw new Error('Unsupported URL');
     const target = p.newTab ? c.tabs.createTab({ url, afterId: t.id, workspaceId: t.workspaceId }) : t.id;
     if (!p.newTab) c.tabs.navigate(t.id, url);
     return target;

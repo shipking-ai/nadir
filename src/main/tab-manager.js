@@ -4,7 +4,7 @@ const { EventEmitter } = require('node:events');
 const { TabHost } = require('./tab-host');
 const { resolveInput, isInternalUrl } = require('../shared/urls');
 
-const NEWTAB = 'nadir://newtab/';
+const NEWTAB = 'pelorus://newtab/';
 const PRIVATE = 'private';
 const MAX_CLOSED = 25;
 
@@ -380,7 +380,7 @@ class TabManager extends EventEmitter {
       v: 1,
       currentWorkspace: this.currentWorkspace === PRIVATE ? 'default' : this.currentWorkspace,
       active: Object.fromEntries([...this.activeBy].filter(([w]) => w !== PRIVATE)),
-      tabs: this.order.map((id) => this.tabs.get(id)).filter((t) => t.workspaceId !== PRIVATE && /^https?:|^nadir:/i.test(t.url))
+      tabs: this.order.map((id) => this.tabs.get(id)).filter((t) => t.workspaceId !== PRIVATE && /^https?:|^pelorus:/i.test(t.url))
         .map((t) => ({ ref: t.id, url: t.url, title: t.title, favicon: t.favicon, pinned: t.pinned, workspaceId: t.workspaceId })),
     };
   }
@@ -450,8 +450,8 @@ class TabManager extends EventEmitter {
 
   /** Open (or focus) an internal page in the current workspace. */
   openInternal(page) {
-    const url = `nadir://app/#/${page}`;
-    const existing = this.inWorkspace().find((t) => t.url.startsWith('nadir://app/'));
+    const url = `pelorus://app/#/${page}`;
+    const existing = this.inWorkspace().find((t) => t.url.startsWith('pelorus://app/'));
     if (existing) { this.navigate(existing.id, url); this.activate(existing.id); } else this.createTab({ url });
   }
 }

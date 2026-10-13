@@ -49,17 +49,17 @@ jobs:
       - name: Installer builds
         run: npm run installer
       - name: SBOM (CycloneDX, production dependencies)
-        run: npm sbom --sbom-format cyclonedx --omit dev > nadir-sbom.cdx.json
+        run: npm sbom --sbom-format cyclonedx --omit dev > pelorus-sbom.cdx.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: nadir-ci-${{ github.sha }}
+          name: pelorus-ci-${{ github.sha }}
           path: |
-            nadir-sbom.cdx.json
+            pelorus-sbom.cdx.json
             docs/benchmarks/a11y-axe-latest.json
           if-no-files-found: error
           retention-days: 14
 
-  # Linux and macOS: unit + end-to-end tests only. Nadir is developed and packaged on Windows; these jobs exist to find
+  # Linux and macOS: unit + end-to-end tests only. Pelorus is developed and packaged on Windows; these jobs exist to find
   # out what does and does not work elsewhere. Failures here are information, not yet a gate (continue-on-error).
   other-platforms:
     name: ${{ matrix.os }} tests (informational)

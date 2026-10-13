@@ -52,11 +52,11 @@ test('https upgrade rules', () => {
 test('stripTracking removes only tracking params', () => {
   assert.equal(u.stripTracking('https://a.com/p?id=3&utm_source=x&fbclid=y'), 'https://a.com/p?id=3');
   assert.equal(u.stripTracking('https://a.com/p?id=3'), 'https://a.com/p?id=3');
-  assert.equal(u.stripTracking('nadir://x?utm_a=1'), 'nadir://x?utm_a=1');
+  assert.equal(u.stripTracking('pelorus://x?utm_a=1'), 'pelorus://x?utm_a=1');
 });
 test('displayHost', () => {
   assert.equal(u.displayHost('https://www.example.com/a'), 'example.com');
-  assert.equal(u.displayHost('nadir://history'), 'nadir://history');
+  assert.equal(u.displayHost('pelorus://history'), 'pelorus://history');
 });
 
 test('guessed addresses with an invalid port fall back to a search instead of an unnavigable URL (found by fuzzing)', () => {

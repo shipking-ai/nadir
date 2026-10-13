@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
-/* Nadir design tokens. One accent, warm-neutral surfaces, no gradients, no glass.
+/* Pelorus design tokens. One accent, warm-neutral surfaces, no gradients, no glass.
    Text colours meet WCAG AA (4.5:1) on the surfaces they are used on; --fg-3 is for non-essential text only. */
 :root {
   color-scheme: dark light;

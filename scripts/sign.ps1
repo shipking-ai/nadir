@@ -1,13 +1,13 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Authenticode-signs the packaged Nadir.exe and verifies the result. Needs a code-signing certificate, which this
+# Authenticode-signs the packaged Pelorus.exe and verifies the result. Needs a code-signing certificate, which this
 # repository does not and cannot contain. Configure ONE of:
-#   NADIR_SIGN_PFX (+ NADIR_SIGN_PFX_PASSWORD)   path to a .pfx file; the password is read from the environment only
-#   NADIR_SIGN_THUMBPRINT                        SHA-1 thumbprint of a certificate in Cert:\CurrentUser\My or LocalMachine\My
-# Optional: NADIR_TIMESTAMP_URL (RFC 3161 server; without a timestamp the signature stops validating when the cert expires).
-# Usage:  powershell -File scripts/sign.ps1 [-Path out\Nadir-win32-x64\Nadir.exe] [-VerifyOnly]
+#   PELORUS_SIGN_PFX (+ PELORUS_SIGN_PFX_PASSWORD)   path to a .pfx file; the password is read from the environment only
+#   PELORUS_SIGN_THUMBPRINT                        SHA-1 thumbprint of a certificate in Cert:\CurrentUser\My or LocalMachine\My
+# Optional: PELORUS_TIMESTAMP_URL (RFC 3161 server; without a timestamp the signature stops validating when the cert expires).
+# Usage:  powershell -File scripts/sign.ps1 [-Path out\Pelorus-win32-x64\Pelorus.exe] [-VerifyOnly]
 # Exit codes: 0 signed and valid · 1 error · 2 no certificate configured · 3 signed but not trusted/valid
 param(
-  [string]$Path = (Join-Path $PSScriptRoot '..\out\Nadir-win32-x64\Nadir.exe'),
+  [string]$Path = (Join-Path $PSScriptRoot '..\out\Pelorus-win32-x64\Pelorus.exe'),
   [switch]$VerifyOnly
 )
 $ErrorActionPreference = 'Stop'
@@ -28,15 +28,15 @@ function Show-Signature($p) {
 if ($VerifyOnly) { $s = Show-Signature $Path; if ($s.Status -eq 'Valid') { exit 0 } else { exit 3 } }
 
 $cert = $null
-if ($env:NADIR_SIGN_PFX) {
-  $pw = if ($env:NADIR_SIGN_PFX_PASSWORD) { ConvertTo-SecureString $env:NADIR_SIGN_PFX_PASSWORD -AsPlainText -Force } else { $null }
+if ($env:PELORUS_SIGN_PFX) {
+  $pw = if ($env:PELORUS_SIGN_PFX_PASSWORD) { ConvertTo-SecureString $env:PELORUS_SIGN_PFX_PASSWORD -AsPlainText -Force } else { $null }
   # Windows PowerShell 5.1's Get-PfxCertificate has no -Password parameter, so use the .NET type directly.
-  $cert = if ($pw) { New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($env:NADIR_SIGN_PFX, $pw) } else { New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($env:NADIR_SIGN_PFX) }
-} elseif ($env:NADIR_SIGN_THUMBPRINT) {
-  $cert = Get-ChildItem Cert:\CurrentUser\My, Cert:\LocalMachine\My | Where-Object Thumbprint -eq $env:NADIR_SIGN_THUMBPRINT | Select-Object -First 1
-  if (-not $cert) { Write-Error "No certificate with thumbprint $env:NADIR_SIGN_THUMBPRINT"; exit 1 }
+  $cert = if ($pw) { New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($env:PELORUS_SIGN_PFX, $pw) } else { New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($env:PELORUS_SIGN_PFX) }
+} elseif ($env:PELORUS_SIGN_THUMBPRINT) {
+  $cert = Get-ChildItem Cert:\CurrentUser\My, Cert:\LocalMachine\My | Where-Object Thumbprint -eq $env:PELORUS_SIGN_THUMBPRINT | Select-Object -First 1
+  if (-not $cert) { Write-Error "No certificate with thumbprint $env:PELORUS_SIGN_THUMBPRINT"; exit 1 }
 } else {
-  Write-Host 'No signing certificate configured (set NADIR_SIGN_PFX or NADIR_SIGN_THUMBPRINT). Nothing was signed.'
+  Write-Host 'No signing certificate configured (set PELORUS_SIGN_PFX or PELORUS_SIGN_THUMBPRINT). Nothing was signed.'
   exit 2
 }
 if (-not ($cert.EnhancedKeyUsageList | Where-Object { $_.ObjectId -eq '1.3.6.1.5.5.7.3.3' })) {
@@ -44,7 +44,7 @@ if (-not ($cert.EnhancedKeyUsageList | Where-Object { $_.ObjectId -eq '1.3.6.1.5
 }
 
 $args2 = @{ FilePath = $Path; Certificate = $cert; HashAlgorithm = 'SHA256' }
-if ($env:NADIR_TIMESTAMP_URL) { $args2.TimestampServer = $env:NADIR_TIMESTAMP_URL }
+if ($env:PELORUS_TIMESTAMP_URL) { $args2.TimestampServer = $env:PELORUS_TIMESTAMP_URL }
 $null = Set-AuthenticodeSignature @args2
 $s = Show-Signature $Path
 if ($s.Status -eq 'Valid') { exit 0 }

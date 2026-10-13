@@ -1,10 +1,10 @@
-# Nadir
+# Pelorus
 
 A privacy-first, workspace-centric desktop browser built on Chromium (via Electron). Open source, **GPL-3.0-or-later**.
 
 > **Status: 0.1.0, a working foundation — not a Chrome replacement.** It browses, isolates workspaces, blocks trackers, restores sessions and has a command palette. It has **no extension support, no sync, no password manager, no AI features yet**, and has **not been security-audited or packaged/signed**. [FEATURE-MATRIX](docs/FEATURE-MATRIX.md) says exactly what is built and tested.
 
-![Nadir](docs/screenshots/window-dark.png)
+![Pelorus](docs/screenshots/window-dark.png)
 
 ## What makes it different (what exists today)
 
@@ -26,7 +26,7 @@ npm ci
 npm start
 ```
 
-Your data lives in Electron's user-data folder (shown in **Settings → About**). To use a throwaway profile: `NADIR_USER_DATA=/tmp/nadir-test npm start`.
+Your data lives in Electron's user-data folder (shown in **Settings → About**). To use a throwaway profile: `PELORUS_USER_DATA=/tmp/pelorus-test npm start`.
 
 ## Test
 
@@ -51,7 +51,7 @@ node scripts/verify-package.js   # launches the packaged exe and checks it brows
 ```
 src/main      main process (controller, tabs, store, blocker, permissions, downloads, IPC)
 src/shared    pure logic shared by everything (URLs, shortcuts, fuzzy match, filenames)
-src/ui        nadir:// pages and the design system (tokens.css)
+src/ui        pelorus:// pages and the design system (tokens.css)
 test/unit     test/e2e
 scripts       benchmark, capture and inventory tools
 docs          research ledger, ADR, architecture, security, design, roadmap, benchmarks
@@ -63,8 +63,8 @@ docs          research ledger, ADR, architecture, security, design, roadmap, ben
 |---|---|
 | [Research ledger](docs/research/LEDGER.md) | 40+ projects checked against primary sources on 2026-10-11, with confidence levels and scores |
 | [**HANDOFF**](HANDOFF.md) | start here if you are picking the project up: status, how to run and verify, traps, and the full to-do list |
-| [Releases](https://github.com/shipking-ai/nadir/releases) | pre-release builds (unsigned), with SHA-256 sums, an SBOM and a build-provenance attestation you can verify with `gh attestation verify` |
-| [Trademark check](docs/TRADEMARK.md) | the name "Nadir" is not clear in software-adjacent US classes; options listed |
+| [Releases](https://github.com/shipking-ai/pelorus/releases) | pre-release builds (unsigned), with SHA-256 sums, an SBOM and a build-provenance attestation you can verify with `gh attestation verify` |
+| [Trademark checks](docs/TRADEMARK.md) | why the project was renamed from Nadir to Pelorus, and the US register search for the new name (not legal advice) |
 | [Accessibility](docs/ACCESSIBILITY.md) | what is scanned automatically, what is not (no screen reader run), and a manual test plan |
 | [Code signing policy](docs/CODE-SIGNING-POLICY.md) | what will be signed and how to verify a build today (builds are currently unsigned; check the build-provenance attestation) |
 | [Release notes and signing](docs/RELEASE.md) | what is tested for packaging and signing, and what still needs a certificate, a public repository and an installer |
@@ -82,7 +82,7 @@ docs          research ledger, ADR, architecture, security, design, roadmap, ben
 
 ## Known limitations (short list)
 
-Electron's Chromium trails upstream by a few majors (keep Nadir updated) · no Chrome-extension support · no sync/passwords/AI yet · unsigned, no auto-update · single window · Windows only verified · accessibility not audited · "Nadir" is not trademark-cleared.
+Electron's Chromium trails upstream by a few majors (keep Pelorus updated) · no Chrome-extension support · no sync/passwords/AI yet · unsigned, no auto-update · single window · Windows only verified · accessibility not audited · "Nadir" is not trademark-cleared.
 
 ## License
 

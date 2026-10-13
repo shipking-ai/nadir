@@ -10,12 +10,12 @@ Done: engine seam, workspaces, vertical tabs, command palette, local suggestions
 - Packaged-build smoke test in CI; SBOM; `npm audit` gate.
 - ~~Verify codec support and DRM absence~~ — **done 2026-10-12** (H.264/AAC/VP9/AV1/Opus/MP3 supported; Widevine absent).
 - Verify secure DNS with a packet capture.
-- Screen-reader pass (NVDA/Narrator) and axe run on `nadir://` pages; fix findings.
+- Screen-reader pass (NVDA/Narrator) and axe run on `pelorus://` pages; fix findings.
 - Popup/OAuth compatibility test against 3 real providers.
 - Exit: install on a clean Windows VM, browse, update, uninstall — scripted.
 
 ## 0.2 additions from the 2026-10-12 sweep
-- ~~Run **axe-core** (MPL-2.0) against every `nadir://` page~~ — **done 2026-10-12** (`test/e2e/a11y.test.js`; fixed 3 serious/critical issues in the browser chrome; result in `docs/benchmarks/a11y-axe-latest.json`). Still to do: wire it into CI; run **electronegativity** as a supplementary Electron linter (unmaintained since 2023 — never a gate).
+- ~~Run **axe-core** (MPL-2.0) against every `pelorus://` page~~ — **done 2026-10-12** (`test/e2e/a11y.test.js`; fixed 3 serious/critical issues in the browser chrome; result in `docs/benchmarks/a11y-axe-latest.json`). Still to do: wire it into CI; run **electronegativity** as a supplementary Electron linter (unmaintained since 2023 — never a gate).
 - Replace the hard-coded tracking-parameter list with **ClearURLs** rule data (check data licence).
 - Decide on Widevine: evaluate castlabs ECS and the cost of production VMP signing before promising DRM streaming.
 - Extend `scripts/bench.js` with **browsertime**/Speedometer and a mixed-origin workload.

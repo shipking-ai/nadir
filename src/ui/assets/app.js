@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// nadir://app — history, bookmarks, downloads, privacy, settings, about.
+// pelorus://app — history, bookmarks, downloads, privacy, settings, about.
 // DOM is built with h(); page-derived text is only ever set via textContent.
 (() => {
   'use strict';
-  const api = window.nadir;
+  const api = window.pelorus;
   const main = document.getElementById('main');
   document.querySelectorAll('[data-i]').forEach((s) => Icons.set(s, s.dataset.i));
 
@@ -86,7 +86,7 @@
     if (offDownloads) offDownloads();
     offDownloads = api.on('downloads:update', paint);
     return h('section', { class: 'view' }, h('h2', { text: 'Downloads' }),
-      h('p', { class: 'sub', text: 'Files are saved to your Downloads folder. Nadir flags risky file types by name and never launches programs or scripts itself.' }),
+      h('p', { class: 'sub', text: 'Files are saved to your Downloads folder. Pelorus flags risky file types by name and never launches programs or scripts itself.' }),
       h('div', { class: 'bar' }, h('button', { class: 'btn', onclick: () => api.invoke('downloads:clear') }, 'Clear list')), msg, list);
   }
 
@@ -117,7 +117,7 @@
     retention.style.setProperty('width', '80px');
     const updated = blocker.updatedAt ? new Date(blocker.updatedAt).toLocaleString() : 'never';
     return h('section', { class: 'view' }, h('h2', { text: 'Privacy & security' }),
-      h('p', { class: 'sub', text: 'Nadir reduces tracking and limits what sites can do. It does not make you anonymous: sites, your network and your DNS resolver can still see where you connect.' }),
+      h('p', { class: 'sub', text: 'Pelorus reduces tracking and limits what sites can do. It does not make you anonymous: sites, your network and your DNS resolver can still see where you connect.' }),
       h('div', { class: 'stat' }, h('div', null, h('b', { text: sum.blocked.total.toLocaleString() }), h('span', { text: 'requests blocked, last 30 days' })), h('div', null, h('b', { text: blocker.listsLoaded ? 'On' : 'Not loaded' }), h('span', { text: `filter lists · updated ${updated}` }))),
       blocker.error ? h('div', { class: 'note', text: `Blocker notice: ${blocker.error}` }) : null,
       h('h3', { text: 'Protection' }),
@@ -125,14 +125,14 @@
       toggle('HTTPS first', 'Tries the secure version of http:// pages. If a site has no HTTPS you are asked before continuing over HTTP.', s.httpsUpgrade, (v) => set('httpsUpgrade', v, err)),
       toggle('Strip tracking parameters', 'Removes utm_*, fbclid, gclid and similar from links you open.', s.stripTrackingParams, (v) => set('stripTrackingParams', v, err)),
       h('div', { class: 'row-set' }, h('div', null, h('div', { text: 'Global Privacy Control' }), h('div', { class: 'd', text: 'Always sent (Sec-GPC: 1) so sites that honour it can treat you as opted out of data sale/sharing.' })), h('div', { class: 'ctl' }, h('span', { class: 'pill', text: 'always on' }))),
-      h('div', { class: 'row-set' }, h('div', null, h('div', { text: 'Secure DNS (DNS-over-HTTPS)' }), h('div', { class: 'd', text: sum.dnsError ? `Could not apply: ${sum.dnsError}` : 'Encrypts hostname lookups between Nadir and your DNS provider.' })), h('div', { class: 'ctl' }, dnsMode, dnsServer, h('button', { class: 'btn', onclick: () => set('secureDns', { mode: dnsMode.value, server: dnsServer.value }, err) }, 'Apply'))),
+      h('div', { class: 'row-set' }, h('div', null, h('div', { text: 'Secure DNS (DNS-over-HTTPS)' }), h('div', { class: 'd', text: sum.dnsError ? `Could not apply: ${sum.dnsError}` : 'Encrypts hostname lookups between Pelorus and your DNS provider.' })), h('div', { class: 'ctl' }, dnsMode, dnsServer, h('button', { class: 'btn', onclick: () => set('secureDns', { mode: dnsMode.value, server: dnsServer.value }, err) }, 'Apply'))),
       err,
       h('h3', { text: 'Blocked most often' }), top,
       h('div', { class: 'bar' }, h('button', { class: 'btn', onclick: async (e) => { e.target.disabled = true; const r = await api.invoke('blocklist:refresh'); err.textContent = r.ok ? '' : `Update failed: ${r.error}`; render(); } }, 'Update filter lists now')),
       h('h3', { text: 'Site permissions' }), perms,
       h('h3', { text: 'Data' }),
       h('div', { class: 'row-set' }, h('div', null, h('div', { text: 'Keep history for (days)' }), h('div', { class: 'd', text: '0 keeps history until you clear it.' })), h('div', { class: 'ctl' }, retention, h('button', { class: 'btn', onclick: () => set('historyRetentionDays', Number(retention.value), err) }, 'Save'))),
-      toggle('Clear browsing data when Nadir closes', 'History, cookies, site storage and cache in every workspace.', s.clearOnExit, (v) => set('clearOnExit', v, err)),
+      toggle('Clear browsing data when Pelorus closes', 'History, cookies, site storage and cache in every workspace.', s.clearOnExit, (v) => set('clearOnExit', v, err)),
       h('div', { class: 'bar' }, h('button', { class: 'btn danger', onclick: async () => { const r = await api.invoke('data:clear'); if (r.ok) render(); } }, 'Clear browsing data…')));
   }
 
@@ -176,12 +176,12 @@
       } catch (e) { status.replaceChildren(`Could not check: ${e.message}`); }
       btn.disabled = false;
     } });
-    return h('section', { class: 'view' }, h('h2', { text: 'About Nadir' }),
+    return h('section', { class: 'view' }, h('h2', { text: 'About Pelorus' }),
       h('p', { class: 'sub', text: 'A privacy-first, workspace-centric browser. Open source, GPL-3.0-or-later.' }),
-      h('table', { class: 'kv' }, row('Nadir', i.app), row('Chromium', i.chromium), row('Electron', i.electron), row('Node.js', i.node), row('V8', i.v8), row('SQLite', i.sqlite), row('Platform', i.platform), row('Data folder', i.userData)),
-      h('div', { class: 'note', text: 'Nadir embeds Chromium through Electron, which trails Google Chrome’s release by a few versions. Keep Nadir updated. Chrome Web Store extensions are not supported yet.' }),
+      h('table', { class: 'kv' }, row('Pelorus', i.app), row('Chromium', i.chromium), row('Electron', i.electron), row('Node.js', i.node), row('V8', i.v8), row('SQLite', i.sqlite), row('Platform', i.platform), row('Data folder', i.userData)),
+      h('div', { class: 'note', text: 'Pelorus embeds Chromium through Electron, which trails Google Chrome’s release by a few versions. Keep Pelorus updated. Chrome Web Store extensions are not supported yet.' }),
       h('h3', { text: 'Updates' }),
-      h('p', { class: 'sub', text: 'Nadir does not update itself and never checks in the background. This button asks GitHub (api.github.com) for the list of releases and shows you where to download and verify a newer build. Releases are not code-signed yet; verify the checksum or the build attestation.' }),
+      h('p', { class: 'sub', text: 'Pelorus does not update itself and never checks in the background. This button asks GitHub (api.github.com) for the list of releases and shows you where to download and verify a newer build. Releases are not code-signed yet; verify the checksum or the build attestation.' }),
       btn, status);
   }
 
@@ -194,7 +194,7 @@
     const name = (location.hash.match(/^#\/(\w+)/) || [])[1];
     const route = Object.hasOwn(ROUTES, name) ? name : 'history';
     document.querySelectorAll('nav a').forEach((a) => (a.dataset.r === route ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
-    document.title = `${route[0].toUpperCase()}${route.slice(1)} — Nadir`;
+    document.title = `${route[0].toUpperCase()}${route.slice(1)} — Pelorus`;
     try {
       const view = await ROUTES[route]();
       if (mine === token) main.replaceChildren(view);

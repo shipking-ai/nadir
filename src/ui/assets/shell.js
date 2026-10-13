@@ -4,7 +4,7 @@
 (() => {
   'use strict';
   const $ = (id) => document.getElementById(id);
-  const api = window.nadir;
+  const api = window.pelorus;
   let state = null;
   let omniFocused = false;
   let suggestions = [];
@@ -19,8 +19,8 @@
   // ---------- helpers ----------
   const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
   function displayUrl(url) {
-    if (!url || url.startsWith('nadir://newtab')) return '';
-    if (url.startsWith('nadir://app/')) return 'nadir://' + (url.split('#/')[1] || 'settings');
+    if (!url || url.startsWith('pelorus://newtab')) return '';
+    if (url.startsWith('pelorus://app/')) return 'pelorus://' + (url.split('#/')[1] || 'settings');
     try {
       const u = new URL(url);
       if (u.protocol === 'http:' || u.protocol === 'https:') {
@@ -31,7 +31,7 @@
     return url;
   }
   const activeTab = () => state && state.tabs.find((t) => t.id === state.activeId);
-  const titleOf = (t) => t.title || (t.url.startsWith('nadir://newtab') ? 'New tab' : hostOf(t.url) || t.url || 'New tab');
+  const titleOf = (t) => t.title || (t.url.startsWith('pelorus://newtab') ? 'New tab' : hostOf(t.url) || t.url || 'New tab');
 
   // ---------- rendering ----------
   function render(s) {
@@ -124,7 +124,7 @@
         all[(i + all.length) % all.length]?.focus();
       }
     });
-    el.addEventListener('dragstart', (e) => { dragId = t.id; e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/x-nadir-tab', String(t.id)); });
+    el.addEventListener('dragstart', (e) => { dragId = t.id; e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/x-pelorus-tab', String(t.id)); });
     el.addEventListener('dragover', (e) => { if (dragId != null && dragId !== t.id) { e.preventDefault(); el.classList.add('drop-before'); } });
     el.addEventListener('dragleave', () => el.classList.remove('drop-before'));
     el.addEventListener('drop', (e) => { e.preventDefault(); el.classList.remove('drop-before'); if (dragId != null && dragId !== t.id) api.invoke('tab:reorder', { id: dragId, beforeId: t.id }); dragId = null; });
@@ -151,7 +151,7 @@
     if (!t) icon = 'search';
     else if (t.url.startsWith('https:')) { icon = 'lock'; el.classList.add('secure'); }
     else if (t.url.startsWith('http:')) { icon = 'unlock'; text = 'Not secure'; el.classList.add('insecure'); }
-    else if (t.url.startsWith('nadir:')) icon = 'search';
+    else if (t.url.startsWith('pelorus:')) icon = 'search';
     else if (t.url.startsWith('file:')) icon = 'page';
     el.innerHTML = Icons.svg(icon) + (text ? `<span class="txt">${text}</span>` : '');
     el.title = text ? 'This connection is not encrypted' : (t && t.url.startsWith('https:') ? 'Connection is encrypted (HTTPS)' : '');
@@ -193,7 +193,7 @@
   omni.addEventListener('focus', () => {
     omniFocused = true;
     const t = activeTab();
-    omni.value = t && !t.url.startsWith('nadir://newtab') ? (t.url.startsWith('nadir://') ? displayUrl(t.url) : t.url) : '';
+    omni.value = t && !t.url.startsWith('pelorus://newtab') ? (t.url.startsWith('pelorus://') ? displayUrl(t.url) : t.url) : '';
     omni.select();
     omni.setAttribute('aria-expanded', 'false');
   });

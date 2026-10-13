@@ -23,9 +23,9 @@ test('background tabs are hidden and render no frames; the foreground tab render
   });
   await new Promise((r) => srv.listen(0, '127.0.0.1', r));
   const port = srv.address().port;
-  const b = await launchPlain({ userData: fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-bg-')), port: 9557 });
+  const b = await launchPlain({ userData: fs.mkdtempSync(path.join(os.tmpdir(), 'pelorus-bg-')), port: 9557 });
   try {
-    await until(async () => (await b.active())?.url === 'nadir://newtab/', { what: 'first tab' });
+    await until(async () => (await b.active())?.url === 'pelorus://newtab/', { what: 'first tab' });
     await b.invoke('tab:new', { url: `http://127.0.0.1:${port}/A` });
     await until(async () => (log.A || []).length >= 1, { timeout: 15000, what: 'A reporting' });
     await b.invoke('tab:new', { url: `http://127.0.0.1:${port}/B` }); // B becomes the foreground tab, A goes to the background

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Automated accessibility scan (axe-core, MPL-2.0) of every nadir:// page and the browser chrome.
+// Automated accessibility scan (axe-core, MPL-2.0) of every pelorus:// page and the browser chrome.
 // Automated tools find roughly a third of real accessibility problems at best: a clean result here is NOT
 // evidence of screen-reader usability. A manual NVDA/Narrator pass is still open in docs/ROADMAP.md.
 const test = require('node:test');
@@ -30,15 +30,15 @@ const check = (name, v) => {
 };
 
 test('new-tab page', async () => {
-  const page = await b.page('nadir://newtab');
+  const page = await b.page('pelorus://newtab');
   await page.waitForSelector('input.search');
   check('newtab', await scan(page));
 });
 
 for (const route of ['history', 'bookmarks', 'downloads', 'privacy', 'settings', 'about']) {
-  test(`nadir://app/#/${route}`, async () => {
-    await b.navigate(`nadir://app/#/${route}`);
-    const page = await b.page('nadir://app');
+  test(`pelorus://app/#/${route}`, async () => {
+    await b.navigate(`pelorus://app/#/${route}`);
+    const page = await b.page('pelorus://app');
     await page.waitForSelector('nav a[aria-current="page"]');
     await page.waitForLoadState('networkidle').catch(() => {});
     check(route, await scan(page));
@@ -58,7 +58,7 @@ test.after(() => {
 
 test('command palette (overlay) has no serious/critical violations', async () => {
   await b.ctl('c.runCommand("command-palette")');
-  const ov = await b.page('nadir://overlay');
+  const ov = await b.page('pelorus://overlay');
   await ov.waitForSelector('.palette input');
   await ov.waitForSelector('.palette .row');
   check('overlay-palette', await scan(ov));
@@ -66,10 +66,10 @@ test('command palette (overlay) has no serious/critical violations', async () =>
 });
 
 test('address-bar suggestions (overlay) have no serious/critical violations', async () => {
-  await b.navigate('nadir://app/#/history');
+  await b.navigate('pelorus://app/#/history');
   await b.shell.focus('#omni');
-  await b.shell.fill('#omni', 'nadir');
-  const ov = await b.page('nadir://overlay');
+  await b.shell.fill('#omni', 'pelorus');
+  const ov = await b.page('pelorus://overlay');
   await ov.waitForSelector('.omni-list .row', { timeout: 8000 });
   check('overlay-suggestions', await scan(ov));
   await b.shell.keyboard.press('Escape');
@@ -79,7 +79,7 @@ test('find bar (overlay) has no serious/critical violations', async () => {
   await b.navigate('about:blank'); // find needs a web page, not an internal one
   await until(async () => (await b.active()).kind === 'web', { what: 'a web tab' });
   await b.ctl('c.runCommand("find")');
-  const ov = await b.page('nadir://overlay');
+  const ov = await b.page('pelorus://overlay');
   await ov.waitForSelector('input');
   check('overlay-find', await scan(ov));
   await ov.keyboard.press('Escape');
@@ -130,19 +130,19 @@ test('light theme: every surface has no serious/critical violations', async () =
   await b.ctl("c.setSetting('theme', 'light')");
   await new Promise((r) => setTimeout(r, 800));
   for (const route of ['history', 'bookmarks', 'downloads', 'privacy', 'settings', 'about']) {
-    await b.navigate(`nadir://app/#/${route}`);
-    const page = await b.page('nadir://app');
+    await b.navigate(`pelorus://app/#/${route}`);
+    const page = await b.page('pelorus://app');
     await page.waitForSelector('nav a[aria-current="page"]');
     check(`light-${route}`, await scan(page));
   }
   check('light-shell', await scan(b.shell));
   await b.ctl('c.runCommand("command-palette")');
-  const ov = await b.page('nadir://overlay');
+  const ov = await b.page('pelorus://overlay');
   await ov.waitForSelector('.palette .row');
   check('light-overlay-palette', await scan(ov));
   await ov.keyboard.press('Escape');
   await b.shell.focus('#omni');
-  await b.shell.fill('#omni', 'nadir');
+  await b.shell.fill('#omni', 'pelorus');
   await ov.waitForSelector('.omni-list .row', { timeout: 8000 });
   check('light-overlay-suggestions', await scan(ov));
   await b.shell.keyboard.press('Escape');

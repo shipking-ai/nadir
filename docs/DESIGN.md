@@ -1,10 +1,10 @@
-# Nadir — Design System
+# Pelorus — Design System
 
 ## Identity
 
-- **Name:** *Nadir* — the lowest point beneath you; the ground under everything else. A browser that is a quiet foundation rather than a feed.
-- **Name check (2026-10-11):** no browser project named "Nadir" in GitHub search; `nadir-browser` and `@nadir/browser` are unclaimed on npm (bare `nadir` is an unrelated npm package). **This is not a trademark clearance.** Run USPTO / EUIPO / WIPO searches before any public release.
-- **Mark:** an inverted triangle (the nadir, pointing down) cut by a single horizontal line (the horizon). One stroke weight, no fill, works at 16 px and in one colour.
+- **Name:** *Pelorus* — the lowest point beneath you; the ground under everything else. A browser that is a quiet foundation rather than a feed.
+- **Name:** Pelorus (renamed from Nadir on 2026-10-13 after a trademark search found nearby marks for Nadir; see [TRADEMARK.md](TRADEMARK.md)). A pelorus is the sighting instrument that gives the bearing of an object relative to a ship's heading.
+- **Mark:** an inverted triangle (the pelorus, pointing down) cut by a single horizontal line (the horizon). One stroke weight, no fill, works at 16 px and in one colour.
 - **Voice:** plain, specific, never alarmist. Errors say what happened and what to do next.
 
 ## Principles
@@ -38,17 +38,17 @@ No gradients, no blur or glass. Elevation is a 1 px border plus one shadow.
 
 | Surface | Implementation | Notes |
 |---|---|---|
-| Browser chrome | `nadir://shell` | vertical tabs + workspace chips; native window controls via title-bar overlay |
+| Browser chrome | `pelorus://shell` | vertical tabs + workspace chips; native window controls via title-bar overlay |
 | Address bar | shell input + overlay dropdown | suggestions are **local only**; "Not secure" label for http |
 | Vertical tabs | implemented | **Horizontal tabs: not implemented** (planned) |
 | Workspaces / groups | workspaces implemented (isolated storage) | tab *groups* inside a workspace: planned |
 | Command palette | overlay | tabs, history, bookmarks, workspaces, commands, "go to URL", web search |
 | Split view | implemented (two panes) | resizable divider planned |
-| Bookmarks / history / downloads / privacy / settings / about | `nadir://app` | one page, hash-routed |
+| Bookmarks / history / downloads / privacy / settings / about | `pelorus://app` | one page, hash-routed |
 | Permission prompts | overlay card | per-workspace remember; private tabs never remember |
 | Context menus | native (Electron `Menu`) | OS-themed by design — keeps them above web content and accessible |
 | AI panel, extension manager | **not built** | see roadmap |
 
 ## Accessibility (implemented, not yet audited)
 
-Landmarks and roles (`tablist`/`tab`, `combobox`/`listbox`/`option`, `dialog`/`alertdialog`, `aria-live` regions), visible `:focus-visible` rings, `aria-pressed` toggles, roving arrow-key navigation in the tab list, contrast-checked text tokens, `prefers-reduced-motion` and `forced-colors` handling, system theme following. **Not yet done:** a screen-reader pass (NVDA/Narrator), automated axe run on `nadir://` pages, high-contrast theme review, text-scaling test at 200 %.
+Landmarks and roles (`tablist`/`tab`, `combobox`/`listbox`/`option`, `dialog`/`alertdialog`, `aria-live` regions), visible `:focus-visible` rings, `aria-pressed` toggles, roving arrow-key navigation in the tab list, contrast-checked text tokens, `prefers-reduced-motion` and `forced-colors` handling, system theme following. **Not yet done:** a screen-reader pass (NVDA/Narrator), automated axe run on `pelorus://` pages, high-contrast theme review, text-scaling test at 200 %.

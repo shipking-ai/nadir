@@ -12,9 +12,9 @@ const N = Number(process.argv[2] || 10);
   const para = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ';
   const srv = http.createServer((q, r) => { const m = q.url.match(/^\/p\/(\d+)/); r.writeHead(200, { 'content-type': 'text/html' }); r.end(`<!doctype html><title>Article ${m ? m[1] : 'x'}</title><body>${Array.from({ length: 400 }, (_, i) => `<p>${i} ${para}</p>`).join('')}<script>window.__ready=1</script>`); });
   await new Promise((r) => srv.listen(0, '127.0.0.1', r));
-  const userData = fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-mem-'));
+  const userData = fs.mkdtempSync(path.join(os.tmpdir(), 'pelorus-mem-'));
   const b = await launch({ userData, headless: false, args: process.argv.slice(3) });
-  await until(async () => (await b.active())?.url === 'nadir://newtab/', { what: 'first tab' });
+  await until(async () => (await b.active())?.url === 'pelorus://newtab/', { what: 'first tab' });
   for (let i = 0; i < N; i++) { await b.invoke('tab:new', { url: `http://127.0.0.1:${srv.address().port}/p/${i}` }); await until(async () => (await b.active()).title === `Article ${i}`, { timeout: 20000, what: 'tab' }); }
   await sleep(8000);
   if (process.env.MEM_MODE === 'detach') { await b.ctl('[...c.tabs.tabs.values()].filter((t) => t.host && t.id !== c.tabs.active().id).map((t) => c.win.contentView.removeChildView(t.host.view)).length'); await sleep(8000); }

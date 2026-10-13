@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Deterministic fuzzing of the input-handling code that sits on trust boundaries: URL resolution, download file
-// names, the nadir:// path resolver, the full-text-search query builder, permission policy and HTML escaping.
+// names, the pelorus:// path resolver, the full-text-search query builder, permission policy and HTML escaping.
 // Each test generates a few thousand hostile strings from a seeded generator and checks INVARIANTS (never throws,
 // never produces a dangerous result). This is the project's own fuzzing, not an independent security review, and it
 // finds crashes/invariant violations in these functions only; it says nothing about the rest of the browser.
@@ -27,7 +27,7 @@ const N = Number(process.env.FUZZ_ITERATIONS || 3000);
 
 function prng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
 const PIECES = [
-  'http://', 'https://', 'javascript:', 'data:text/html,', 'vbscript:', 'blob:', 'file:///', 'nadir://', 'view-source:', 'about:', 'ftp://', 'chrome://', 'JaVaScRiPt:', ' javascript:', '\tjavascript:', 'java\nscript:',
+  'http://', 'https://', 'javascript:', 'data:text/html,', 'vbscript:', 'blob:', 'file:///', 'pelorus://', 'view-source:', 'about:', 'ftp://', 'chrome://', 'JaVaScRiPt:', ' javascript:', '\tjavascript:', 'java\nscript:',
   'example.com', 'localhost', '127.0.0.1', '[::1]', '[fe80::1]', '10.0.0.1', '192.168.1.1', '0x7f.1', '1.2.3', 'xn--e1afmkfd.xn--p1ai', 'пример.рф', '日本語.jp', 'a'.repeat(200), 'a'.repeat(5000),
   ':8080', ':99999', ':', '@', '#', '?', '&', '=', '%', '%00', '%2e%2e', '%2f', '%5c', '%u0041', '%zz', '/', '//', '\\', '..', '../', '..\\', '.', '/./', '\u0000', '\u0001', '\u007f', '‮', '‭', '⁦', '​', '﻿',
   ' ', '  ', '\n', '\r\n', '\t', '"', "'", '<', '>', '<script>alert(1)</script>', '"><img src=x onerror=alert(1)>', '`', '$', '{', '}', '(', ')', '*', '|', ';', '--', "' OR 1=1 --", '"; DROP TABLE history; --', 'NEAR/3', 'AND', 'OR', 'NOT',
@@ -84,11 +84,11 @@ test('fuzz: sanitizeFilename always yields a safe single path component', () => 
   });
 });
 
-test('fuzz: nadir:// resolver never escapes the UI directory', () => {
+test('fuzz: pelorus:// resolver never escapes the UI directory', () => {
   const hosts = ['shell', 'overlay', 'newtab', 'app', 'assets', 'evil', '', 'SHELL'];
   forAll('resolveUiPath', 4, (input) => {
     for (const h of hosts) {
-      for (const u of [`nadir://${h}/${input}`, `nadir://${h}${input}`, `nadir://${input}/`]) {
+      for (const u of [`pelorus://${h}/${input}`, `pelorus://${h}${input}`, `pelorus://${input}/`]) {
         const p = resolveUiPath(u);
         if (p !== null) {
           const abs = path.resolve(p);
@@ -131,7 +131,7 @@ test('fuzz: HTML escaping and the error page never emit raw markup from input', 
     // Quoted attribute values are removed first: escaped input may legitimately contain the text " onerror=" inside one.
     const bare = html.replace(/<style[\s\S]*?<\/style>/i, '').replace(/"[^"]*"/g, '""');
     assert.ok(!/<[^>]*\son\w+\s*=/i.test(bare), 'no inline event handlers on any tag');
-    for (const m of html.matchAll(/href="([^"]*)"/g)) assert.ok(/^(https?:|nadir:\/\/allow-http\?)/i.test(m[1]) , `href must be http(s) or the allow-http link, got ${m[1].slice(0, 40)}`);
+    for (const m of html.matchAll(/href="([^"]*)"/g)) assert.ok(/^(https?:|pelorus:\/\/allow-http\?)/i.test(m[1]) , `href must be http(s) or the allow-http link, got ${m[1].slice(0, 40)}`);
   });
 });
 

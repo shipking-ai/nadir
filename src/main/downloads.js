@@ -72,7 +72,7 @@ class DownloadManager {
   async open(id, { confirmed = false } = {}) {
     const d = this._row(id);
     if (!d || d.state !== 'completed' || !fs.existsSync(d.path)) return { ok: false, reason: 'File not found' };
-    if (NEVER_OPEN.has(d.risk)) return { ok: false, reason: 'Nadir does not launch this type of file. Show it in its folder instead.' };
+    if (NEVER_OPEN.has(d.risk)) return { ok: false, reason: 'Pelorus does not launch this type of file. Show it in its folder instead.' };
     if (d.risk && !confirmed) return { ok: false, needsConfirm: true, reason: `This ${d.risk.replace('_', ' ')} file can contain active content.` };
     const err = await shell.openPath(d.path);
     return err ? { ok: false, reason: err } : { ok: true };

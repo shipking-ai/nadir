@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 (async () => {
   'use strict';
-  const api = window.nadir;
+  const api = window.pelorus;
   const $ = (id) => document.getElementById(id);
   Icons.set($('sic'), 'search');
 
@@ -26,7 +26,7 @@
     tiles($('top'), d.topSites, 'Sites you visit often will appear here.');
     tiles($('bm'), d.bookmarks, 'Press Ctrl+D on a page to bookmark it.');
     $('foot').textContent = d.blockedTotal
-      ? `Nadir blocked ${d.blockedTotal.toLocaleString()} tracker and ad requests in the last 30 days.`
+      ? `Pelorus blocked ${d.blockedTotal.toLocaleString()} tracker and ad requests in the last 30 days.`
       : 'Ad and tracker blocking is on. Counts appear here as you browse.';
   } catch (e) {
     $('foot').textContent = 'Could not load page data.';

@@ -11,26 +11,26 @@ const MIME = {
 };
 
 /**
- * Strict CSP for all Nadir UI. No inline script, no inline style attributes, no network
+ * Strict CSP for all Pelorus UI. No inline script, no inline style attributes, no network
  * access from UI code (connect-src 'none'); privileged work happens over IPC only.
  */
 const CSP = [
   "default-src 'none'",
-  'script-src nadir://assets',
-  'style-src nadir://assets',
-  "img-src nadir://assets data: https: http:",
-  'font-src nadir://assets',
+  'script-src pelorus://assets',
+  'style-src pelorus://assets',
+  "img-src pelorus://assets data: https: http:",
+  'font-src pelorus://assets',
   "connect-src 'none'",
   "base-uri 'none'",
   "form-action 'none'",
   "frame-ancestors 'none'",
 ].join('; ');
 
-/** Resolve nadir://<host>/<path> to a file inside src/ui/<host>, or null. Pure; exported for tests. */
+/** Resolve pelorus://<host>/<path> to a file inside src/ui/<host>, or null. Pure; exported for tests. */
 function resolveUiPath(urlString) {
   let u;
   try { u = new URL(urlString); } catch { return null; }
-  if (u.protocol !== 'nadir:' || !HOSTS.has(u.hostname)) return null;
+  if (u.protocol !== 'pelorus:' || !HOSTS.has(u.hostname)) return null;
   let rel;
   try { rel = decodeURIComponent(u.pathname); } catch { return null; }
   if (rel.includes('\0') || rel.includes('\\')) return null;
@@ -42,7 +42,7 @@ function resolveUiPath(urlString) {
 }
 
 function register(ses) {
-  ses.protocol.handle('nadir', async (request) => {
+  ses.protocol.handle('pelorus', async (request) => {
     const file = resolveUiPath(request.url);
     const headers = { 'Content-Security-Policy': CSP, 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'no-store' };
     if (!file) return new Response('Not found', { status: 404, headers });

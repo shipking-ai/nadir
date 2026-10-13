@@ -3,7 +3,7 @@
 **Generated** by `node scripts/build-catalog.js` · data pulled **2026-10-11/12** · sources and method: [SWEEP.md](SWEEP.md).
 Every row below was **verified against the GitHub API** (existence, archived flag, last push, licence). 322 rows came from the discovery sweep / curated-list cross-check rather than my original seed list. "Activity": *active* = pushed ≤ 120 days ago, *slow* ≤ 1 year, *stale* > 1 year. Stars are a liveness signal only. The **class** and **note** columns are my judgement from the project's README/status, not measurements.
 
-Classes: **Core** shipped in Nadir · **High-value** worth integrating next · **Optional** useful later/for a scenario · **Experimental** promising, unproven for us · **Reference** study/borrow ideas · **Rejected** unsuitable (abandoned, redundant, purpose or licence conflict) · **Out-of-scope** different product category.
+Classes: **Core** shipped in Pelorus · **High-value** worth integrating next · **Optional** useful later/for a scenario · **Experimental** promising, unproven for us · **Reference** study/borrow ideas · **Rejected** unsuitable (abandoned, redundant, purpose or licence conflict) · **Out-of-scope** different product category.
 
 | Class | Count |
 |---|---|
@@ -34,7 +34,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [mxmgorin/retsurf](https://github.com/mxmgorin/retsurf) | 63 | gpl-3.0 | 2026-10-11 | active | **Experimental** | Servo + SDL2 browser for gamepad/keyboard control (GPL-3.0, active) |
 | [starling-browser/starling](https://github.com/starling-browser/starling) | 62 | apache-2.0 | 2026-07-07 | active | **Experimental** | Managed-first .NET browser engine built from primitives (Apache-2.0, active); the real home of "Starling" |
 | [FENBROWSER/fenbrowser](https://github.com/FENBROWSER/fenbrowser) | 41 | mit | 2026-10-04 | active | **Experimental** | Independent browser engine "focused on correctness" (MIT, active); the real home of the "Fen" name I could not find earlier. Not evaluated beyond its description |
-| [goddv/Zervo](https://github.com/goddv/Zervo) | 38 | MPL-2.0 | 2026-08-23 | active | **Experimental** | Workspace-oriented browser on the Servo engine (MPL-2.0, active); the same idea as Nadir workspaces on a different engine - worth following |
+| [goddv/Zervo](https://github.com/goddv/Zervo) | 38 | MPL-2.0 | 2026-08-23 | active | **Experimental** | Workspace-oriented browser on the Servo engine (MPL-2.0, active); the same idea as Pelorus workspaces on a different engine - worth following |
 | [orinium-browser/orinium](https://github.com/orinium-browser/orinium) | 27 | apache-2.0 | 2026-10-12 | active | **Experimental** | Japanese-language from-scratch engine (Apache-2.0, active) |
 | [SerenityOS/serenity](https://github.com/SerenityOS/serenity) | 33.9k | BSD-2-Clause | 2026-10-08 | active | **Reference** | OS project where LibWeb/LibJS originated. |
 | [google/skia](https://github.com/google/skia) | 11.0k | BSD-3-Clause | 2026-10-11 | active | **Reference** | 2D graphics library inside Chromium; not used directly. |
@@ -117,7 +117,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [brave/brave-browser](https://github.com/brave/brave-browser) | 23.9k | MPL-2.0 | 2026-10-12 | active | **Reference** | Largest open Chromium fork; shows what a patch-set costs to maintain. |
 | [imputnet/helium](https://github.com/imputnet/helium) | 21.5k | GPL-3.0 | 2026-10-11 | active | **Reference** | Beta Chromium-based browser on ungoogled-chromium, GPL-3.0, bundles a uBlock Origin fork. Closest "fork track" prior art. |
 | [fathyb/carbonyl](https://github.com/fathyb/carbonyl) | 19.5k | BSD-3-Clause | 2024-07-01 | stale | **Reference** | Chromium in a terminal; stale since mid-2024. |
-| [browseros-ai/BrowserOS](https://github.com/browseros-ai/BrowserOS) | 13.9k | AGPL-3.0 | 2026-10-11 | active | **Reference** | Agentic Chromium fork (AGPL-3.0) with local-model support and MCP; closest prior art for Nadir's AI roadmap. AGPL network clause matters if code were reused. |
+| [browseros-ai/BrowserOS](https://github.com/browseros-ai/BrowserOS) | 13.9k | AGPL-3.0 | 2026-10-11 | active | **Reference** | Agentic Chromium fork (AGPL-3.0) with local-model support and MCP; closest prior art for Pelorus's AI roadmap. AGPL network clause matters if code were reused. |
 | [uazo/cromite](https://github.com/uazo/cromite) | 8.3k | GPL-3.0 | 2026-10-11 | active | **Reference** | Android Chromium fork with adblock; GPL-3.0. |
 | [Alex313031/thorium](https://github.com/Alex313031/thorium) | 7.6k | BSD-3-Clause | 2026-10-11 | active | **Reference** | Optimised Chromium builds; tracks M156 today. |
 | [duckduckgo/Android](https://github.com/duckduckgo/Android) | 4.8k | Apache-2.0 | 2026-10-11 | active | **Reference** | Apache-2.0 privacy browser; tracker-blocking design reference. |
@@ -175,7 +175,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [Floorp-Projects/Floorp](https://github.com/Floorp-Projects/Floorp) | 8.4k | MPL-2.0 | 2026-10-10 | active | **Reference** | Firefox fork with vertical tabs/workspaces. |
 | [BrowserWorks/waterfox](https://github.com/BrowserWorks/waterfox) | 6.4k | NOASSERTION | 2026-10-08 | active | **Reference** | Firefox fork, independent since 2023. |
 | [torproject/tor](https://github.com/torproject/tor) | 5.1k | — | 2024-03-05 | stale | **Reference** | Tor daemon (mirror); Tor Browser itself is developed on the Tor Project GitLab. |
-| [mullvad/mullvad-browser](https://github.com/mullvad/mullvad-browser) | 2.6k | — | 2026-10-01 | active | **Reference** | Anti-fingerprinting by *uniformity* (same fingerprint for all users) — the model Nadir should follow rather than spoofing. |
+| [mullvad/mullvad-browser](https://github.com/mullvad/mullvad-browser) | 2.6k | — | 2026-10-01 | active | **Reference** | Anti-fingerprinting by *uniformity* (same fingerprint for all users) — the model Pelorus should follow rather than spoofing. |
 | [Alex313031/Mercury](https://github.com/Alex313031/Mercury) | 1.5k | MPL-2.0 | 2026-08-09 | active | **Reference** | Optimised Firefox fork. |
 | [Alex313031/Mercury](https://github.com/Alex313031/Mercury) | 1.5k | MPL-2.0 | 2026-08-09 | active | **Reference** | Firefox fork with compiler optimisations plus patches from LibreWolf/Waterfox/others |
 | [glide-browser/glide](https://github.com/glide-browser/glide) | 1.5k | mpl-2.0 | 2026-10-11 | active | **Reference** | MPL-2.0, active; "extensible and keyboard-focused" Firefox-based browser; strongest recent keyboard-first design reference |
@@ -211,7 +211,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | Project | ★ | Licence | Last push | Activity | Class | Note |
 |---|---|---|---|---|---|---|
 | [qt/qtwebengine](https://github.com/qt/qtwebengine) | 441 | BSD-3-Clause | 2026-10-09 | active | **Optional** | Alternative shell (Qt/C++, LGPL-3) — Chromium-based; heavier integration than Electron. |
-| [Igalia/cog](https://github.com/Igalia/cog) | 348 | MIT | 2026-09-01 | active | **Optional** | WPE launcher / web-app container for embedded kiosks; relevant if Nadir ever targets embedded displays |
+| [Igalia/cog](https://github.com/Igalia/cog) | 348 | MIT | 2026-09-01 | active | **Optional** | WPE launcher / web-app container for embedded kiosks; relevant if Pelorus ever targets embedded displays |
 | [qutebrowser/qutebrowser](https://github.com/qutebrowser/qutebrowser) | 11.7k | GPL-3.0 | 2026-10-05 | active | **Reference** | Keyboard-driven browser (GPL-3.0, Python on QtWebEngine); command-mode UX reference. |
 | [atlas-engineer/nyxt](https://github.com/atlas-engineer/nyxt) | 11.0k | — | 2026-02-26 | slow | **Reference** | Hackable Common Lisp browser; programmable-browser UX reference. |
 | [WebKit/WebKit](https://github.com/WebKit/WebKit) | 10.2k | — | 2026-10-12 | active | **Reference** | Engine for Safari; macOS-only embedding relevance. |
@@ -246,11 +246,11 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 
 | Project | ★ | Licence | Last push | Activity | Class | Note |
 |---|---|---|---|---|---|---|
-| [samuelmaddock/electron-browser-shell](https://github.com/samuelmaddock/electron-browser-shell) | 739 | GPL-3.0 | 2026-09-01 | active | **Experimental** | GPL-3.0 `electron-chrome-extensions` + web-store installer; actively maintained (Sep 2026) and used by Flow Browser. Candidate for Nadir's optional extension module. |
+| [samuelmaddock/electron-browser-shell](https://github.com/samuelmaddock/electron-browser-shell) | 739 | GPL-3.0 | 2026-09-01 | active | **Experimental** | GPL-3.0 `electron-chrome-extensions` + web-store installer; actively maintained (Sep 2026) and used by Flow Browser. Candidate for Pelorus's optional extension module. |
 | [browsh-org/browsh](https://github.com/browsh-org/browsh) | 19.1k | LGPL-2.1 | 2025-07-11 | stale | **Reference** | Terminal front-end over Firefox (LGPL-2.1). |
 | [atlas-engineer/nyxt](https://github.com/atlas-engineer/nyxt) | 11.0k | — | 2026-02-26 | slow | **Reference** | Programmable keyboard-driven browser in Lisp (11k stars); strongest "browser as a programmable environment" prior art |
 | [minbrowser/min](https://github.com/minbrowser/min) | 9.2k | Apache-2.0 | 2026-08-30 | active | **Reference** | Apache-2.0 Electron minimal browser; permissive prior art for tab/search UX. |
-| [zenbu-labs/terminal-browser](https://github.com/zenbu-labs/terminal-browser) | 3.8k | mit | 2026-10-07 | active | **Reference** | A browser rendered inside a terminal (per description); interesting for SSH/remote use, not for Nadir |
+| [zenbu-labs/terminal-browser](https://github.com/zenbu-labs/terminal-browser) | 3.8k | mit | 2026-10-07 | active | **Reference** | A browser rendered inside a terminal (per description); interesting for SSH/remote use, not for Pelorus |
 | [yokoffing/filterlists](https://github.com/yokoffing/filterlists) | 3.6k | — | 2026-09-07 | active | **Reference** | Curated filter-list guidance. |
 | [OnionBrowser/OnionBrowser](https://github.com/OnionBrowser/OnionBrowser) | 2.7k | NOASSERTION | 2026-10-09 | active | **Reference** | iOS Tor browser. |
 | [anthonycr/Lightning-Browser](https://github.com/anthonycr/Lightning-Browser) | 2.4k | MPL-2.0 | 2026-10-10 | active | **Reference** | Android browser (MPL-2.0). |
@@ -287,7 +287,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [wailsapp/wails](https://github.com/wailsapp/wails) | 36.5k | MIT | 2026-10-12 | active | **Optional** | Go + system webview shell; same limits as Tauri for a browser core. |
 | [blackboardsh/electrobun](https://github.com/blackboardsh/electrobun) | 12.9k | MIT | 2026-10-12 | active | **Experimental** | MIT Bun-based desktop framework using the system webview, with an optional `bundleCEF` to bundle Chromium and composable isolated webviews. A possible alternative shell behind TabHost; maturity/Windows behaviour not evaluated. |
 | [blackboardsh/electrobun](https://github.com/blackboardsh/electrobun) | 12.9k | MIT | 2026-10-12 | active | **Experimental** | Bun-based desktop app framework (12.9k stars); the "Electron alternative" to watch for the shell layer, not engine |
-| [responsively-org/responsively-app](https://github.com/responsively-org/responsively-app) | 25.2k | agpl-3.0 | 2026-10-03 | active | **Reference** | Electron-based multi-viewport dev browser (AGPL-3.0); AGPL means no code reuse in Nadir; UX reference for responsive testing |
+| [responsively-org/responsively-app](https://github.com/responsively-org/responsively-app) | 25.2k | agpl-3.0 | 2026-10-03 | active | **Reference** | Electron-based multi-viewport dev browser (AGPL-3.0); AGPL means no code reuse in Pelorus; UX reference for responsive testing |
 | [meetfranz/franz](https://github.com/meetfranz/franz) | 4.7k | Apache-2.0 | 2026-06-12 | slow | **Reference** | Multi-service app. |
 | [ferdium/ferdium-app](https://github.com/ferdium/ferdium-app) | 4.7k | Apache-2.0 | 2026-10-08 | active | **Reference** | Multi-service Electron app (Apache-2.0). |
 | [ferdium/ferdium-app](https://github.com/ferdium/ferdium-app) | 4.7k | Apache-2.0 | 2026-10-08 | active | **Reference** | Community successor to Ferdi/Franz multi-service app; workspace UX reference |
@@ -296,14 +296,14 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [sharpbrowser/SharpBrowser](https://github.com/sharpbrowser/SharpBrowser) | 1.0k | MIT | 2025-04-22 | stale | **Reference** | C#/CefSharp browser (MIT); pattern for a CEF-based Windows shell |
 | [saucer/saucer](https://github.com/saucer/saucer) | 949 | MIT | 2026-09-06 | active | **Reference** | C++ webview library (MIT). |
 | [HeyPuter/browser.js](https://github.com/HeyPuter/browser.js) | 246 | agpl-3.0 | 2026-10-06 | active | **Reference** | Configurable browser environment that runs in the web page itself (AGPL-3.0, active); AGPL means no code reuse |
-| [niutech/splitbrowser](https://github.com/niutech/splitbrowser) | 138 | MIT | 2026-02-11 | slow | **Reference** | Minimal split-view browser (MIT); relevant to Nadir split view |
+| [niutech/splitbrowser](https://github.com/niutech/splitbrowser) | 138 | MIT | 2026-02-11 | slow | **Reference** | Minimal split-view browser (MIT); relevant to Pelorus split view |
 | [Rajaniraiyn/awesome-electron-browsers](https://github.com/Rajaniraiyn/awesome-electron-browsers) | 96 | CC0-1.0 | 2026-10-06 | active | **Reference** | Curated list (used in this sweep). |
 | [CatalystDevOrg/Catalyst](https://github.com/CatalystDevOrg/Catalyst) | 81 | MIT | 2026-08-13 | active | **Reference** | Minimal customizable browser (MIT, active); did not read the code to see which engine it uses |
 | [beamlegacy/beam](https://github.com/beamlegacy/beam) | 71 | NOASSERTION | 2026-10-09 | active | **Reference** | Beam: note-taking browser; licence NOASSERTION so cannot be assumed reusable |
 | [snaildos/Fifo-Browser](https://github.com/snaildos/Fifo-Browser) | 70 | GPL-3.0 | 2026-09-30 | active | **Reference** | GPL-3.0, active; description is one word, so no feature claims |
 | [gamingdoom/neutron](https://github.com/gamingdoom/neutron) | 66 | mit | 2026-03-10 | slow | **Reference** | PWA tool using Firefox/Gecko (MIT, last push 2026-03) |
 | [leonaaraujo/companion](https://github.com/leonaaraujo/companion) | 63 | MIT | 2026-09-12 | active | **Reference** | Tiny floating mini-browser (MIT, active); quick-lookup window idea |
-| [YSamed/yalqen](https://github.com/YSamed/yalqen) | 32 | mit | 2026-10-11 | active | **Reference** | Vertical tabs + command bar browser (MIT, active) - the same UX shape as Nadir, so a useful comparison |
+| [YSamed/yalqen](https://github.com/YSamed/yalqen) | 32 | mit | 2026-10-11 | active | **Reference** | Vertical tabs + command bar browser (MIT, active) - the same UX shape as Pelorus, so a useful comparison |
 | [james-see/elector](https://github.com/james-see/elector) | 31 | gpl-3.0 | 2025-10-04 | stale | **Reference** | Tor Browser wrapped in Electron (GPL-3.0); a data point on how others have combined Electron and Tor |
 | [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | 111.8k | Apache-2.0 | 2026-10-12 | active | **Rejected** | Core: multi-webview still unstable; OS webview differs per platform (ADR-0001). |
 | [nwjs/nw.js](https://github.com/nwjs/nw.js) | 41.1k | MIT | 2026-10-10 | active | **Rejected** | Redundant with Electron; weaker per-view isolation APIs. |
@@ -319,30 +319,30 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [will-stone/browserosaurus](https://github.com/will-stone/browserosaurus) | 2.0k | GPL-3.0 | 2025-08-02 | archived | **Rejected** | Archived. |
 | [Boscop/web-view](https://github.com/Boscop/web-view) | 2.0k | MIT | 2024-05-09 | stale | **Rejected** | Stale binding. |
 | [yessGlory17/programmer-browser](https://github.com/yessGlory17/programmer-browser) | 595 | mit | 2023-06-03 | stale | **Rejected** | No pushes since 2023-06 |
-| [lirios/browser](https://github.com/lirios/browser) | 219 | NOASSERTION | 2024-06-28 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
+| [lirios/browser](https://github.com/lirios/browser) | 219 | NOASSERTION | 2024-06-28 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
 | [webview/webview_rust](https://github.com/webview/webview_rust) | 122 | MIT | 2022-05-14 | stale | **Rejected** | Stale binding. |
 | [elzabrowser/elza](https://github.com/elzabrowser/elza) | 81 | GPL-3.0 | 2023-05-14 | stale | **Rejected** | Electron privacy browser, no pushes since 2023-05 |
-| [PolySuite/PolyBrowser](https://github.com/PolySuite/PolyBrowser) | 81 | NOASSERTION | 2016-11-25 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [MystPi/ninetails](https://github.com/MystPi/ninetails) | 69 | MIT | 2022-06-18 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [cachyos/cachyos-browser-settings](https://github.com/cachyos/cachyos-browser-settings) | 66 | MPL-2.0 | 2025-03-05 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [unstoppabledomains/unstoppable-demo-browser](https://github.com/unstoppabledomains/unstoppable-demo-browser) | 53 | MIT | 2022-03-02 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [skyebrowser/skye](https://github.com/skyebrowser/skye) | 52 | GPL-3.0 | 2023-07-29 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
+| [PolySuite/PolyBrowser](https://github.com/PolySuite/PolyBrowser) | 81 | NOASSERTION | 2016-11-25 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [MystPi/ninetails](https://github.com/MystPi/ninetails) | 69 | MIT | 2022-06-18 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [cachyos/cachyos-browser-settings](https://github.com/cachyos/cachyos-browser-settings) | 66 | MPL-2.0 | 2025-03-05 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [unstoppabledomains/unstoppable-demo-browser](https://github.com/unstoppabledomains/unstoppable-demo-browser) | 53 | MIT | 2022-03-02 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [skyebrowser/skye](https://github.com/skyebrowser/skye) | 52 | GPL-3.0 | 2023-07-29 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
 | [ModuleArt/ferny](https://github.com/ModuleArt/ferny) | 50 | gpl-3.0 | 2020-12-11 | archived | **Rejected** | Archived Electron/Chromium browser (2020) |
-| [octalmage/minum](https://github.com/octalmage/minum) | 44 | — | 2018-07-02 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
+| [octalmage/minum](https://github.com/octalmage/minum) | 44 | — | 2018-07-02 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
 | [raluvy95/FelidaBrowser](https://github.com/raluvy95/FelidaBrowser) | 43 | GPL-3.0 | 2025-02-07 | archived | **Rejected** | Archived Electron browser |
-| [kevinjosethomas/turbo](https://github.com/kevinjosethomas/turbo) | 42 | NOASSERTION | 2023-04-22 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [cprussin/minichrome](https://github.com/cprussin/minichrome) | 32 | — | 2019-02-17 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [kingbri1/Asobi](https://github.com/kingbri1/Asobi) | 31 | Apache-2.0 | 2024-10-04 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [BonBon-exchange/bonbon-browser](https://github.com/BonBon-exchange/bonbon-browser) | 26 | GPL-3.0 | 2024-11-20 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [octalmage/Ninja-Browser](https://github.com/octalmage/Ninja-Browser) | 24 | GPL-3.0 | 2018-09-28 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [revblaze/Glow](https://github.com/revblaze/Glow) | 12 | — | 2019-11-13 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [PocketStudios/Pocket-Browser](https://github.com/PocketStudios/Pocket-Browser) | 11 | MIT | 2023-02-05 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [makdosx/nexus-browser](https://github.com/makdosx/nexus-browser) | 9 | AGPL-3.0 | 2021-08-19 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [pioplo/Borneo](https://github.com/pioplo/Borneo) | 5 | NOASSERTION | 2013-12-23 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [raphipod/LightBrowser-2020](https://github.com/raphipod/LightBrowser-2020) | 4 | MIT | 2020-12-18 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [vicr123/theweb](https://github.com/vicr123/theweb) | 3 | GPL-3.0 | 2021-03-09 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [crucial-synthesis/Mitra](https://github.com/crucial-synthesis/Mitra) | 1 | — | 2021-06-28 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
-| [bengl/yaeb](https://github.com/bengl/yaeb) | 1 | MIT | 2020-07-07 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show |
+| [kevinjosethomas/turbo](https://github.com/kevinjosethomas/turbo) | 42 | NOASSERTION | 2023-04-22 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [cprussin/minichrome](https://github.com/cprussin/minichrome) | 32 | — | 2019-02-17 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [kingbri1/Asobi](https://github.com/kingbri1/Asobi) | 31 | Apache-2.0 | 2024-10-04 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [BonBon-exchange/bonbon-browser](https://github.com/BonBon-exchange/bonbon-browser) | 26 | GPL-3.0 | 2024-11-20 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [octalmage/Ninja-Browser](https://github.com/octalmage/Ninja-Browser) | 24 | GPL-3.0 | 2018-09-28 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [revblaze/Glow](https://github.com/revblaze/Glow) | 12 | — | 2019-11-13 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [PocketStudios/Pocket-Browser](https://github.com/PocketStudios/Pocket-Browser) | 11 | MIT | 2023-02-05 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [makdosx/nexus-browser](https://github.com/makdosx/nexus-browser) | 9 | AGPL-3.0 | 2021-08-19 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [pioplo/Borneo](https://github.com/pioplo/Borneo) | 5 | NOASSERTION | 2013-12-23 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [raphipod/LightBrowser-2020](https://github.com/raphipod/LightBrowser-2020) | 4 | MIT | 2020-12-18 | archived | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [vicr123/theweb](https://github.com/vicr123/theweb) | 3 | GPL-3.0 | 2021-03-09 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [crucial-synthesis/Mitra](https://github.com/crucial-synthesis/Mitra) | 1 | — | 2021-06-28 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
+| [bengl/yaeb](https://github.com/bengl/yaeb) | 1 | MIT | 2020-07-07 | stale | **Rejected** | Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show |
 | [flutter/flutter](https://github.com/flutter/flutter) | 179.8k | BSD-3-Clause | 2026-10-11 | active | **Out-of-scope** | UI toolkit. |
 | [pavlobu/deskreen](https://github.com/pavlobu/deskreen) | 21.5k | agpl-3.0 | 2026-07-08 | active | **Out-of-scope** | Screen-sharing to a browser; not a browser |
 | [ionic-team/capacitor](https://github.com/ionic-team/capacitor) | 16.8k | MIT | 2026-10-09 | active | **Out-of-scope** | Mobile app runtime. |
@@ -362,7 +362,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [cliqz-oss/adblocker](https://github.com/cliqz-oss/adblocker) | 1.0k | MPL-2.0 | 2026-10-11 | active | **Core** | Network + cosmetic blocking engine (MPL-2.0). |
 | [ghostery/adblocker](https://github.com/ghostery/adblocker) | 1.0k | MPL-2.0 | 2026-10-11 | active | **Core** | Network + cosmetic blocking engine (MPL-2.0). |
 | [uBlockOrigin/uAssets](https://github.com/uBlockOrigin/uAssets) | 6.1k | GPL-3.0 | 2026-10-12 | active | **High-value** | Filter lists (data) maintained alongside uBO; candidate additional list source (GPL-3.0 data, fetched at runtime). |
-| [ClearURLs/Addon](https://github.com/ClearURLs/Addon) | 5.1k | LGPL-3.0 | 2025-07-27 | stale | **High-value** | LGPL-3.0 rules for stripping tracking parameters; replace Nadir's hard-coded list with its rule data (check data licence). |
+| [ClearURLs/Addon](https://github.com/ClearURLs/Addon) | 5.1k | LGPL-3.0 | 2025-07-27 | stale | **High-value** | LGPL-3.0 rules for stripping tracking parameters; replace Pelorus's hard-coded list with its rule data (check data licence). |
 | [ClearURLs/Addon](https://github.com/ClearURLs/Addon) | 5.1k | LGPL-3.0 | 2025-07-27 | stale | **High-value** | Maintained tracking-parameter rule set (LGPL-3.0); planned replacement for the hard-coded list; data licence still to be checked before bundling |
 | [easylist/easylist](https://github.com/easylist/easylist) | 3.2k | — | 2026-10-12 | active | **High-value** | The canonical filter list (data, via Ghostery bundles). |
 | [gorhill/uBlock](https://github.com/gorhill/uBlock) | 68.5k | GPL-3.0 | 2026-10-11 | active | **Optional** | GPL-3.0; usable as an extension if an extension host ships; not embeddable as a library. |
@@ -384,7 +384,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [EFForg/privacybadger](https://github.com/EFForg/privacybadger) | 3.9k | NOASSERTION | 2026-10-09 | active | **Reference** | Learning-based tracker blocking idea (GPL-3.0). |
 | [corbindavenport/just-the-browser](https://github.com/corbindavenport/just-the-browser) | 3.0k | mit | 2026-10-07 | active | **Reference** | Scripts that apply enterprise policies to strip AI/telemetry/sponsored content from desktop browsers (MIT); policy list is a hardening checklist |
 | [pyllyukko/user.js](https://github.com/pyllyukko/user.js) | 2.9k | mit | 2026-04-07 | slow | **Reference** | Firefox hardening prefs (MIT, active); a checklist for Gecko-side hardening |
-| [Cookie-AutoDelete/Cookie-AutoDelete](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete) | 2.0k | MIT | 2025-12-26 | slow | **Reference** | Cookie lifecycle UX (MIT); Nadir's per-workspace storage covers similar needs. |
+| [Cookie-AutoDelete/Cookie-AutoDelete](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete) | 2.0k | MIT | 2025-12-26 | slow | **Reference** | Cookie lifecycle UX (MIT); Pelorus's per-workspace storage covers similar needs. |
 | [ghostery/ghostery-extension](https://github.com/ghostery/ghostery-extension) | 1.8k | GPL-3.0 | 2026-10-09 | active | **Reference** | GPL-3.0 extension. |
 | [kkapsner/CanvasBlocker](https://github.com/kkapsner/CanvasBlocker) | 1.5k | MPL-2.0 | 2026-09-07 | active | **Reference** | Fingerprint-noise techniques (MPL-2.0); note: randomisation can itself be a fingerprint. |
 | [hackademix/noscript](https://github.com/hackademix/noscript) | 1.2k | GPL-3.0 | 2026-10-05 | active | **Reference** | Script-blocking UX (GPL-3.0). |
@@ -396,7 +396,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [adblockplus/adblockpluscore](https://github.com/adblockplus/adblockpluscore) | 116 | GPL-3.0 | 2023-10-04 | stale | **Reference** | ABP core (GPL-3.0). |
 | [rustybird/qubes-app-split-browser](https://github.com/rustybird/qubes-app-split-browser) | 49 | 0bsd | 2026-02-25 | slow | **Reference** | Tor Browser/Firefox in a Qubes disposable VM (0BSD); isolation-model reference |
 | [uBlock-LLC/uBlock](https://github.com/uBlock-LLC/uBlock) | 8.3k | gpl-3.0 | 2022-09-08 | archived | **Rejected** | Not the upstream uBlock Origin (gorhill/uBlock); no pushes since 2022-09 - do not rely on it |
-| [EFForg/https-everywhere](https://github.com/EFForg/https-everywhere) | 3.4k | NOASSERTION | 2023-01-25 | archived | **Rejected** | Archived; superseded by browser HTTPS-first modes (which Nadir implements). |
+| [EFForg/https-everywhere](https://github.com/EFForg/https-everywhere) | 3.4k | NOASSERTION | 2023-01-25 | archived | **Rejected** | Archived; superseded by browser HTTPS-first modes (which Pelorus implements). |
 | [Synzvato/decentraleyes](https://github.com/Synzvato/decentraleyes) | 1.5k | MPL-2.0 | 2019-02-23 | archived | **Rejected** | Archived since 2019. |
 | [adblockplus/adblockpluschrome](https://github.com/adblockplus/adblockpluschrome) | 547 | GPL-3.0 | 2021-02-21 | archived | **Rejected** | Archived. |
 | [AdguardTeam/CoreLibs](https://github.com/AdguardTeam/CoreLibs) | 49 | Apache-2.0 | 2024-05-17 | stale | **Rejected** | Stale. |
@@ -409,7 +409,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [v2fly/v2ray-core](https://github.com/v2fly/v2ray-core) | 34.7k | MIT | 2026-10-09 | active | **Out-of-scope** | Proxy platform. |
 | [projectdiscovery/katana](https://github.com/projectdiscovery/katana) | 17.6k | MIT | 2026-10-08 | active | **Out-of-scope** | Crawler. |
 | [cloudflare/cloudflared](https://github.com/cloudflare/cloudflared) | 16.1k | Apache-2.0 | 2026-10-08 | active | **Out-of-scope** | Tunnel client. |
-| [zaproxy/zaproxy](https://github.com/zaproxy/zaproxy) | 15.9k | Apache-2.0 | 2026-10-08 | active | **Out-of-scope** | Security testing tool; useful for testing Nadir, not integrating. |
+| [zaproxy/zaproxy](https://github.com/zaproxy/zaproxy) | 15.9k | Apache-2.0 | 2026-10-08 | active | **Out-of-scope** | Security testing tool; useful for testing Pelorus, not integrating. |
 | [coredns/coredns](https://github.com/coredns/coredns) | 14.4k | Apache-2.0 | 2026-10-09 | active | **Out-of-scope** | DNS server. |
 | [shadowsocks/shadowsocks-rust](https://github.com/shadowsocks/shadowsocks-rust) | 10.9k | MIT | 2026-10-12 | active | **Out-of-scope** | Proxy. |
 | [0xERR0R/blocky](https://github.com/0xERR0R/blocky) | 7.0k | Apache-2.0 | 2026-10-09 | active | **Out-of-scope** | DNS server. |
@@ -423,12 +423,12 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 
 | Project | ★ | Licence | Last push | Activity | Class | Note |
 |---|---|---|---|---|---|---|
-| [fingerprintjs/fingerprintjs](https://github.com/fingerprintjs/fingerprintjs) | 28.6k | MIT | 2026-10-07 | active | **Reference** | MIT; use as a *test oracle* to measure what Nadir exposes. |
+| [fingerprintjs/fingerprintjs](https://github.com/fingerprintjs/fingerprintjs) | 28.6k | MIT | 2026-10-07 | active | **Reference** | MIT; use as a *test oracle* to measure what Pelorus exposes. |
 | [niespodd/browser-fingerprinting](https://github.com/niespodd/browser-fingerprinting) | 5.2k | — | 2026-07-27 | active | **Reference** | Research notes on fingerprinting and bot detection. |
 | [abrahamjuliot/creepjs](https://github.com/abrahamjuliot/creepjs) | 2.5k | MIT | 2026-06-11 | slow | **Reference** | Fingerprint test oracle. |
-| [omegaee/my-fingerprint](https://github.com/omegaee/my-fingerprint) | 1.5k | apache-2.0 | 2026-09-27 | active | **Reference** | Extension that protects against browser fingerprinting (Apache-2.0, active); candidate approach for future Nadir fingerprint work, to be evaluated against Mullvad-style uniformity |
+| [omegaee/my-fingerprint](https://github.com/omegaee/my-fingerprint) | 1.5k | apache-2.0 | 2026-09-27 | active | **Reference** | Extension that protects against browser fingerprinting (Apache-2.0, active); candidate approach for future Pelorus fingerprint work, to be evaluated against Mullvad-style uniformity |
 | [ultrafunkamsterdam/undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) | 12.9k | GPL-3.0 | 2025-07-05 | stale | **Rejected** | Bot-detection evasion. |
-| [daijro/camoufox](https://github.com/daijro/camoufox) | 12.5k | MPL-2.0 | 2026-10-11 | active | **Rejected** | Anti-detect Firefox for scraping/agents; spoofing for bot-evasion conflicts with Nadir's uniformity-based privacy goal. Engineering is interesting reference only. |
+| [daijro/camoufox](https://github.com/daijro/camoufox) | 12.5k | MPL-2.0 | 2026-10-11 | active | **Rejected** | Anti-detect Firefox for scraping/agents; spoofing for bot-evasion conflicts with Pelorus's uniformity-based privacy goal. Engineering is interesting reference only. |
 | [berstend/puppeteer-extra](https://github.com/berstend/puppeteer-extra) | 7.4k | MIT | 2024-07-18 | stale | **Rejected** | Stealth plugins for scraping; stale. |
 | [Kaliiiiiiiiii-Vinyzu/patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright) | 4.8k | Apache-2.0 | 2026-10-11 | active | **Rejected** | Bot-detection evasion for Playwright. |
 | [adryfish/fingerprint-chromium](https://github.com/adryfish/fingerprint-chromium) | 3.1k | BSD-3-Clause | 2026-10-02 | active | **Rejected** | Fingerprint-spoofing Chromium patches. |
@@ -478,13 +478,13 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [brookhong/Surfingkeys](https://github.com/brookhong/Surfingkeys) | 6.2k | MIT | 2026-10-02 | active | **Optional** | MIT keyboard extension. |
 | [gdh1995/vimium-c](https://github.com/gdh1995/vimium-c) | 4.6k | NOASSERTION | 2026-02-03 | slow | **Optional** | Vimium variant. |
 | [gildas-lormeau/single-file-cli](https://github.com/gildas-lormeau/single-file-cli) | 1.7k | AGPL-3.0 | 2026-10-10 | active | **Optional** | AGPL-3.0 CLI. |
-| [Robbendebiene/Gesturefy](https://github.com/Robbendebiene/Gesturefy) | 1.0k | gpl-3.0 | 2026-10-06 | active | **Optional** | Mouse gestures extension (GPL-3.0, active); gestures could become a Nadir setting |
+| [Robbendebiene/Gesturefy](https://github.com/Robbendebiene/Gesturefy) | 1.0k | gpl-3.0 | 2026-10-06 | active | **Optional** | Mouse gestures extension (GPL-3.0, active); gestures could become a Pelorus setting |
 | [kepano/defuddle](https://github.com/kepano/defuddle) | 9.7k | MIT | 2026-10-10 | active | **Experimental** | MIT article extractor (active, 9.6k★); evaluate against Readability on a labelled set. |
 | [darkreader/darkreader](https://github.com/darkreader/darkreader) | 22.5k | mit | 2026-10-09 | active | **Reference** | Dark mode extension (MIT, active); algorithm reference for a built-in forced-dark option |
 | [omnivore-app/omnivore](https://github.com/omnivore-app/omnivore) | 16.3k | AGPL-3.0 | 2026-10-11 | active | **Reference** | Read-it-later (AGPL-3.0); project history is unstable. |
 | [zotero/zotero](https://github.com/zotero/zotero) | 15.6k | NOASSERTION | 2026-10-09 | active | **Reference** | Research/annotation tool (AGPL-3.0). |
 | [ajayyy/SponsorBlock](https://github.com/ajayyy/SponsorBlock) | 13.9k | GPL-3.0 | 2026-10-03 | active | **Reference** | Crowd-sourced skip segments. |
-| [floccusaddon/floccus](https://github.com/floccusaddon/floccus) | 8.6k | MPL-2.0 | 2026-10-11 | active | **Reference** | MPL-2.0 bookmark sync over WebDAV/Nextcloud/etc. — design reference for Nadir's sync. |
+| [floccusaddon/floccus](https://github.com/floccusaddon/floccus) | 8.6k | MPL-2.0 | 2026-10-11 | active | **Reference** | MPL-2.0 bookmark sync over WebDAV/Nextcloud/etc. — design reference for Pelorus's sync. |
 | [tridactyl/tridactyl](https://github.com/tridactyl/tridactyl) | 6.4k | NOASSERTION | 2026-10-07 | active | **Reference** | Firefox-only vim extension. |
 | [obsidianmd/obsidian-clipper](https://github.com/obsidianmd/obsidian-clipper) | 5.3k | MIT | 2026-09-22 | active | **Reference** | Clipper (MIT). |
 | [mbnuqw/sidebery](https://github.com/mbnuqw/sidebery) | 4.7k | MIT | 2026-09-18 | active | **Reference** | MIT vertical tab/panel UX. |
@@ -492,25 +492,25 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [deathau/markdownload](https://github.com/deathau/markdownload) | 4.0k | Apache-2.0 | 2025-06-11 | stale | **Reference** | Clipper extension. |
 | [piroor/treestyletab](https://github.com/piroor/treestyletab) | 3.8k | NOASSERTION | 2026-10-09 | active | **Reference** | Tree-style vertical tab UX. |
 | [hypothesis/h](https://github.com/hypothesis/h) | 3.2k | BSD-2-Clause | 2026-10-09 | active | **Reference** | Annotation server. |
-| [mozilla/multi-account-containers](https://github.com/mozilla/multi-account-containers) | 3.2k | mpl-2.0 | 2026-09-22 | active | **Reference** | Prior art for Nadir workspaces (cookie/storage isolation per context); MPL-2.0 |
+| [mozilla/multi-account-containers](https://github.com/mozilla/multi-account-containers) | 3.2k | mpl-2.0 | 2026-09-22 | active | **Reference** | Prior art for Pelorus workspaces (cookie/storage isolation per context); MPL-2.0 |
 | [filips123/PWAsForFirefox](https://github.com/filips123/PWAsForFirefox) | 3.1k | mpl-2.0 | 2026-10-09 | active | **Reference** | PWA install/manage for Firefox (MPL-2.0, active); informs a future PWA mode |
 | [joelshepherd/tabliss](https://github.com/joelshepherd/tabliss) | 2.8k | gpl-3.0 | 2024-08-19 | stale | **Reference** | New-tab page extension (GPL-3.0) |
 | [salarcode/SmartProxy](https://github.com/salarcode/SmartProxy) | 2.8k | gpl-3.0 | 2026-10-03 | active | **Reference** | Per-site proxy switching extension (GPL-3.0, active); per-workspace proxy is a candidate feature |
-| [sienori/Tab-Session-Manager](https://github.com/sienori/Tab-Session-Manager) | 2.5k | MPL-2.0 | 2026-08-17 | active | **Reference** | Save/restore window and tab sessions; informs Nadir session snapshots |
+| [sienori/Tab-Session-Manager](https://github.com/sienori/Tab-Session-Manager) | 2.5k | MPL-2.0 | 2026-08-17 | active | **Reference** | Save/restore window and tab sessions; informs Pelorus session snapshots |
 | [zotero/translators](https://github.com/zotero/translators) | 1.7k | — | 2026-10-09 | active | **Reference** | Site metadata extractors. |
 | [webrecorder/pywb](https://github.com/webrecorder/pywb) | 1.7k | GPL-3.0 | 2026-10-09 | active | **Reference** | Web archive replay (GPL-3.0). |
 | [webrecorder/archiveweb.page](https://github.com/webrecorder/archiveweb.page) | 1.6k | AGPL-3.0 | 2026-09-04 | active | **Reference** | Archiving extension (AGPL). |
-| [rNeomy/auto-tab-discard](https://github.com/rNeomy/auto-tab-discard) | 1.2k | MPL-2.0 | 2026-10-11 | active | **Reference** | MPL-2.0; tab discard heuristics (compare with Nadir's sleeping tabs). |
+| [rNeomy/auto-tab-discard](https://github.com/rNeomy/auto-tab-discard) | 1.2k | MPL-2.0 | 2026-10-11 | active | **Reference** | MPL-2.0; tab discard heuristics (compare with Pelorus's sleeping tabs). |
 | [JingMatrix/ChromeXt](https://github.com/JingMatrix/ChromeXt) | 1.1k | gpl-3.0 | 2026-08-20 | active | **Reference** | Userscripts + DevTools for Android Chromium/WebView browsers (GPL-3.0) |
 | [josh-berry/tab-stash](https://github.com/josh-berry/tab-stash) | 1.1k | mpl-2.0 | 2026-10-07 | active | **Reference** | Tabs saved as bookmarks (MPL-2.0); informs tab groups |
 | [webrecorder/replayweb.page](https://github.com/webrecorder/replayweb.page) | 994 | AGPL-3.0 | 2026-09-03 | active | **Reference** | WARC replay in browser (AGPL). |
-| [stoically/temporary-containers](https://github.com/stoically/temporary-containers) | 907 | mit | 2023-08-14 | stale | **Reference** | Disposable containers; analogue of Nadir private tabs |
+| [stoically/temporary-containers](https://github.com/stoically/temporary-containers) | 907 | mit | 2023-08-14 | stale | **Reference** | Disposable containers; analogue of Pelorus private tabs |
 | [hypothesis/client](https://github.com/hypothesis/client) | 737 | NOASSERTION | 2026-10-04 | active | **Reference** | Web annotation client. |
 | [tabwrangler/tabwrangler](https://github.com/tabwrangler/tabwrangler) | 654 | GPL-3.0 | 2026-10-12 | active | **Reference** | GPL-3.0 tab auto-close. |
 | [b0o/surfingkeys-conf](https://github.com/b0o/surfingkeys-conf) | 472 | mit | 2026-05-07 | slow | **Reference** | Config for the SurfingKeys extension (MIT); keybinding ideas |
 | [eoger/tabcenter-redux](https://github.com/eoger/tabcenter-redux) | 371 | mpl-2.0 | 2020-03-11 | archived | **Reference** | Vertical tabs extension for Firefox (stale since 2020) |
 | [projectdelphai/panorama-tab-groups](https://github.com/projectdelphai/panorama-tab-groups) | 329 | mpl-2.0 | 2023-01-07 | stale | **Reference** | Tab Groups for Firefox (MPL-2.0, stale since 2023) |
-| [internet4000/find](https://github.com/internet4000/find) | 45 | gpl-3.0 | 2025-12-11 | slow | **Reference** | URL- and local-first omnibox actions (GPL-3.0); related to Nadir command palette ideas |
+| [internet4000/find](https://github.com/internet4000/find) | 45 | gpl-3.0 | 2025-12-11 | slow | **Reference** | URL- and local-first omnibox actions (GPL-3.0); related to Pelorus command palette ideas |
 | [postlight/parser](https://github.com/postlight/parser) | 5.8k | Apache-2.0 | 2024-07-10 | stale | **Rejected** | Stale since mid-2024. |
 | [postlight/mercury-parser](https://github.com/postlight/mercury-parser) | 5.8k | Apache-2.0 | 2024-07-10 | stale | **Rejected** | Stale since mid-2024. |
 | [go-shiori/go-readability](https://github.com/go-shiori/go-readability) | 939 | MIT | 2025-12-05 | archived | **Rejected** | Archived. |
@@ -575,16 +575,16 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [jsdom/jsdom](https://github.com/jsdom/jsdom) | 21.7k | MIT | 2026-10-07 | active | **Optional** | DOM implementation in Node (MIT, active); useful for unit-testing extraction code without a browser |
 | [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) | 5.8k | CC0-1.0 | 2026-10-10 | active | **Optional** | CC0 feature-compat DB; useful for compatibility reporting. |
 | [sitespeedio/sitespeed.io](https://github.com/sitespeedio/sitespeed.io) | 5.0k | MIT | 2026-10-11 | active | **Optional** | MIT page-perf measurement. |
-| [WebKit/Speedometer](https://github.com/WebKit/Speedometer) | 704 | NOASSERTION | 2026-09-23 | active | **Optional** | Responsiveness benchmark (measures the engine, which Nadir shares with Chrome). |
+| [WebKit/Speedometer](https://github.com/WebKit/Speedometer) | 704 | NOASSERTION | 2026-09-23 | active | **Optional** | Responsiveness benchmark (measures the engine, which Pelorus shares with Chrome). |
 | [sitespeedio/browsertime](https://github.com/sitespeedio/browsertime) | 653 | Apache-2.0 | 2026-10-05 | active | **Optional** | Apache-2.0 measurement harness for browsers — candidate for extending scripts/bench.js. |
 | [browser-use/browser-use](https://github.com/browser-use/browser-use) | 117.7k | MIT | 2026-10-09 | active | **Reference** | MIT agent loop for browsers (Python). |
-| [puppeteer/puppeteer](https://github.com/puppeteer/puppeteer) | 95.7k | Apache-2.0 | 2026-10-11 | active | **Reference** | Apache-2.0; Chrome and Firefox automation. Nadir tests use Playwright instead |
+| [puppeteer/puppeteer](https://github.com/puppeteer/puppeteer) | 95.7k | Apache-2.0 | 2026-10-11 | active | **Reference** | Apache-2.0; Chrome and Firefox automation. Pelorus tests use Playwright instead |
 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 43.8k | Apache-2.0 | 2026-10-11 | active | **Reference** | Apache-2.0 CLI for agent-driven browsing; verify scope before drawing conclusions. |
 | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 38.0k | Apache-2.0 | 2026-10-08 | active | **Reference** | Apache-2.0; accessibility-snapshot tool design for agent control. |
 | [browserbase/stagehand](https://github.com/browserbase/stagehand) | 25.6k | MIT | 2026-10-10 | active | **Reference** | MIT AI browser-automation SDK. |
 | [Skyvern-AI/skyvern](https://github.com/Skyvern-AI/skyvern) | 23.2k | AGPL-3.0 | 2026-10-12 | active | **Reference** | AGPL-3.0 vision-based automation. |
 | [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 18.4k | mit | 2026-10-09 | active | **Reference** | MIT, active; LLM browser-task harness - prior art for the agent roadmap item |
-| [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) | 17.1k | mit | 2026-10-10 | active | **Reference** | MIT; browser automation sharing a logged-in session - exactly the capability that needs strict consent in Nadir; claims not verified |
+| [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) | 17.1k | mit | 2026-10-10 | active | **Reference** | MIT; browser automation sharing a logged-in session - exactly the capability that needs strict consent in Pelorus; claims not verified |
 | [browser-use/web-ui](https://github.com/browser-use/web-ui) | 16.6k | MIT | 2026-09-25 | active | **Reference** | UI around browser-use. |
 | [lexmount/moli](https://github.com/lexmount/moli) | 16.4k | apache-2.0 | 2026-10-12 | active | **Reference** | Rust headless browser for agents (Apache-2.0, very active). Claims in its README were not verified |
 | [GoogleChrome/web-vitals](https://github.com/GoogleChrome/web-vitals) | 8.6k | Apache-2.0 | 2026-10-11 | active | **Reference** | Metric definitions. |
@@ -594,7 +594,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [magnitudedev/magnitude](https://github.com/magnitudedev/magnitude) | 6.7k | Apache-2.0 | 2026-10-12 | active | **Reference** | Vision-first browser agent. |
 | [WPO-Foundation/webpagetest](https://github.com/WPO-Foundation/webpagetest) | 3.3k | NOASSERTION | 2025-09-19 | stale | **Reference** | Perf testing. |
 | [nottelabs/notte](https://github.com/nottelabs/notte) | 2.0k | NOASSERTION | 2026-10-11 | active | **Reference** | Agent framework. |
-| [web-arena-x/webarena](https://github.com/web-arena-x/webarena) | 1.6k | Apache-2.0 | 2025-11-26 | slow | **Reference** | Benchmark for web agents — use to evaluate Nadir's AI safety. |
+| [web-arena-x/webarena](https://github.com/web-arena-x/webarena) | 1.6k | Apache-2.0 | 2025-11-26 | slow | **Reference** | Benchmark for web agents — use to evaluate Pelorus's AI safety. |
 | [platonai/Browser4](https://github.com/platonai/Browser4) | 1.2k | apache-2.0 | 2026-10-11 | active | **Reference** | Apache-2.0, active; "AI-native browser engine" for agents per description |
 | [MinorJerry/WebVoyager](https://github.com/MinorJerry/WebVoyager) | 1.1k | Apache-2.0 | 2024-03-04 | stale | **Reference** | Web-agent benchmark. |
 | [OSU-NLP-Group/Mind2Web](https://github.com/OSU-NLP-Group/Mind2Web) | 1.0k | MIT | 2025-11-05 | slow | **Reference** | Web-agent dataset. |
@@ -735,7 +735,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [sqlite/sqlite](https://github.com/sqlite/sqlite) | 10.6k | NOASSERTION | 2026-10-11 | active | **Core** | Via node:sqlite (SQLite 3.53.4). |
 | [searxng/searxng](https://github.com/searxng/searxng) | 38.2k | AGPL-3.0 | 2026-10-11 | active | **Optional** | AGPL-3.0 metasearch; supported as a user-configured provider URL (no code embedded). |
 | [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy) | 16.2k | MIT | 2026-10-11 | active | **Optional** | MIT Rust FTS; FTS5 already suffices. |
-| [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy) | 16.2k | MIT | 2026-10-11 | active | **Optional** | Rust full-text search library; FTS5 is enough for Nadir history today |
+| [quickwit-oss/tantivy](https://github.com/quickwit-oss/tantivy) | 16.2k | MIT | 2026-10-11 | active | **Optional** | Rust full-text search library; FTS5 is enough for Pelorus history today |
 | [MarginaliaSearch/MarginaliaSearch](https://github.com/MarginaliaSearch/MarginaliaSearch) | 2.2k | NOASSERTION | 2026-10-09 | active | **Optional** | Independent index of text-oriented sites; interesting provider for the search list |
 | [mat-1/metasearch2](https://github.com/mat-1/metasearch2) | 172 | CC0-1.0 | 2026-09-01 | active | **Optional** | Small Rust metasearch engine; usable as a self-hosted custom search provider |
 | [YaCy/yacy_search_server](https://github.com/YaCy/yacy_search_server) | 4.1k | NOASSERTION | 2026-09-23 | active | **Reference** | P2P search engine. |
@@ -756,7 +756,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 |---|---|---|---|---|---|---|
 | [electron/packager](https://github.com/electron/packager) | 303 | BSD-2-Clause | 2026-10-10 | active | **Core** | Used by `npm run package` (BSD-2-Clause). |
 | [electron-userland/electron-builder](https://github.com/electron-userland/electron-builder) | 14.7k | MIT | 2026-10-11 | active | **High-value** | MIT installer/auto-update builder; planned for 0.2. |
-| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | 7.6k | MPL-2.0 | 2026-10-09 | active | **High-value** | MPL-2.0 accessibility engine — run it against every nadir:// page in CI (roadmap 0.2). |
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | 7.6k | MPL-2.0 | 2026-10-09 | active | **High-value** | MPL-2.0 accessibility engine — run it against every pelorus:// page in CI (roadmap 0.2). |
 | [doyensec/electronegativity](https://github.com/doyensec/electronegativity) | 1.1k | Apache-2.0 | 2025-08-23 | stale | **High-value** | Apache-2.0 Electron security linter. Run in this sweep (with the correct `-e 44.7.0`): 3 medium findings, 1 real (dead `openExternal` helper, removed). Maintenance stopped 2023, so use as a supplement, not a gate. |
 | [electron/forge](https://github.com/electron/forge) | 7.2k | MIT | 2026-10-10 | active | **Optional** | Alternative packaging toolchain. |
 | [pa11y/pa11y](https://github.com/pa11y/pa11y) | 4.6k | LGPL-3.0 | 2026-09-28 | active | **Optional** | LGPL-3.0 a11y CLI. |
@@ -803,7 +803,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 | [Mercandj/browser](https://github.com/Mercandj/browser) | 63 | — | 2019-10-27 | stale | **Rejected** | Kotlin Android browser, last push 2019 |
 | [ricky9090/EasyBrowser](https://github.com/ricky9090/EasyBrowser) | 49 | — | 2022-02-01 | stale | **Rejected** | Teaching Android browser, last push 2022 |
 | [VladThodo/behe-explorer](https://github.com/VladThodo/behe-explorer) | 49 | apache-2.0 | 2021-10-03 | stale | **Rejected** | Small Android browser, last push 2021 |
-| [ghostery/user-agent-android](https://github.com/ghostery/user-agent-android) | 36 | mpl-2.0 | 2024-12-02 | archived | **Rejected** | Archived Ghostery Android browser; Ghostery now ships extensions and the adblocker library Nadir uses |
+| [ghostery/user-agent-android](https://github.com/ghostery/user-agent-android) | 36 | mpl-2.0 | 2024-12-02 | archived | **Rejected** | Archived Ghostery Android browser; Ghostery now ships extensions and the adblocker library Pelorus uses |
 | [TeamNewPipe/NewPipe](https://github.com/TeamNewPipe/NewPipe) | 40.1k | GPL-3.0 | 2026-10-11 | active | **Out-of-scope** | Android media client. |
 | [apache/cordova](https://github.com/apache/cordova) | 712 | — | 2026-05-19 | slow | **Out-of-scope** | Hybrid mobile app framework |
 
@@ -811,7 +811,7 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 
 | Project | ★ | Licence | Last push | Activity | Class | Note |
 |---|---|---|---|---|---|---|
-| [chromium/badssl.com](https://github.com/chromium/badssl.com) | 3.1k | apache-2.0 | 2026-06-01 | slow | **High-value** | Test site for bad TLS configurations (Apache-2.0, active) - should back Nadir certificate-error e2e tests |
+| [chromium/badssl.com](https://github.com/chromium/badssl.com) | 3.1k | apache-2.0 | 2026-06-01 | slow | **High-value** | Test site for bad TLS configurations (Apache-2.0, active) - should back Pelorus certificate-error e2e tests |
 | [publicsuffix/list](https://github.com/publicsuffix/list) | 3.0k | MPL-2.0 | 2026-10-07 | active | **High-value** | MPL-2.0 Public Suffix List (consumed through tldts in our dependency tree). |
 | [w3c/webextensions](https://github.com/w3c/webextensions) | 712 | NOASSERTION | 2026-10-08 | active | **High-value** | WECG: the cross-browser extension specification; required reading before any extension work. |
 | [curl/curl](https://github.com/curl/curl) | 43.2k | NOASSERTION | 2026-10-11 | active | **Reference** | Network library. |
@@ -870,29 +870,29 @@ Classes: **Core** shipped in Nadir · **High-value** worth integrating next · *
 
 | Project | ★ | Licence | Last push | Activity | Class | Note |
 |---|---|---|---|---|---|---|
-| [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | 32.1k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser) | 11.5k | mit | 2026-10-07 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [Virtual-Browser/VirtualBrowser](https://github.com/Virtual-Browser/VirtualBrowser) | 3.2k | bsd-3-clause | 2026-07-30 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [feder-cr/invisible_playwright](https://github.com/feder-cr/invisible_playwright) | 3.1k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [feder-cr/invisible_selenium](https://github.com/feder-cr/invisible_selenium) | 2.8k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [feder-cr/invisible_playwright_mcp](https://github.com/feder-cr/invisible_playwright_mcp) | 2.7k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [botswin/BotBrowser](https://github.com/botswin/BotBrowser) | 2.6k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [saifyxpro/HeadlessX](https://github.com/saifyxpro/HeadlessX) | 2.3k | other | 2026-10-04 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [AffPapa/neantik](https://github.com/AffPapa/neantik) | 1.5k | mpl-2.0 | 2026-10-12 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [feder-cr/invisible_puppeteer](https://github.com/feder-cr/invisible_puppeteer) | 1.4k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
+| [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | 32.1k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser) | 11.5k | mit | 2026-10-07 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [Virtual-Browser/VirtualBrowser](https://github.com/Virtual-Browser/VirtualBrowser) | 3.2k | bsd-3-clause | 2026-07-30 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [feder-cr/invisible_playwright](https://github.com/feder-cr/invisible_playwright) | 3.1k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [feder-cr/invisible_selenium](https://github.com/feder-cr/invisible_selenium) | 2.8k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [feder-cr/invisible_playwright_mcp](https://github.com/feder-cr/invisible_playwright_mcp) | 2.7k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [botswin/BotBrowser](https://github.com/botswin/BotBrowser) | 2.6k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [saifyxpro/HeadlessX](https://github.com/saifyxpro/HeadlessX) | 2.3k | other | 2026-10-04 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [AffPapa/neantik](https://github.com/AffPapa/neantik) | 1.5k | mpl-2.0 | 2026-10-12 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [feder-cr/invisible_puppeteer](https://github.com/feder-cr/invisible_puppeteer) | 1.4k | mit | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
 | [sardanioss/httpcloak](https://github.com/sardanioss/httpcloak) | 1.3k | mit | 2026-09-02 | active | **Rejected** | Go HTTP client that imitates browser TLS/HTTP2 fingerprints to bypass bot detection (per description) |
-| [ProxyShard/ShardBrowser](https://github.com/ProxyShard/ShardBrowser) | 1.2k | mit | 2026-09-13 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [CloakHQ/CloakBrowser-Manager](https://github.com/CloakHQ/CloakBrowser-Manager) | 978 | other | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [ovobrowsersupport/ovobrowser](https://github.com/ovobrowsersupport/ovobrowser) | 881 | mit | 2026-08-27 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [sheying2013/OpenBrowser](https://github.com/sheying2013/OpenBrowser) | 753 | mit | 2026-10-09 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [tiliondev/fortress](https://github.com/tiliondev/fortress) | 748 | other | 2026-10-05 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [DFarm6/Prism-Browser-Community](https://github.com/DFarm6/Prism-Browser-Community) | 676 | mit | 2026-10-03 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [xiaozhou26/Chromix](https://github.com/xiaozhou26/Chromix) | 437 | bsd-3-clause | 2026-10-12 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [kameleo-io/kameleo](https://github.com/kameleo-io/kameleo) | 212 | — | 2026-10-05 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [rayobyte-data/rayobrowse](https://github.com/rayobyte-data/rayobrowse) | 211 | mit | 2026-07-05 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [clearcotelabs/clearcote-browser](https://github.com/clearcotelabs/clearcote-browser) | 199 | bsd-3-clause | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [multizenteam/multizen-browser](https://github.com/multizenteam/multizen-browser) | 195 | mit | 2026-10-09 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
-| [arman-bd/chromiumfish](https://github.com/arman-bd/chromiumfish) | 163 | other | 2026-08-19 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only |
+| [ProxyShard/ShardBrowser](https://github.com/ProxyShard/ShardBrowser) | 1.2k | mit | 2026-09-13 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [CloakHQ/CloakBrowser-Manager](https://github.com/CloakHQ/CloakBrowser-Manager) | 978 | other | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [ovobrowsersupport/ovobrowser](https://github.com/ovobrowsersupport/ovobrowser) | 881 | mit | 2026-08-27 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [sheying2013/OpenBrowser](https://github.com/sheying2013/OpenBrowser) | 753 | mit | 2026-10-09 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [tiliondev/fortress](https://github.com/tiliondev/fortress) | 748 | other | 2026-10-05 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [DFarm6/Prism-Browser-Community](https://github.com/DFarm6/Prism-Browser-Community) | 676 | mit | 2026-10-03 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [xiaozhou26/Chromix](https://github.com/xiaozhou26/Chromix) | 437 | bsd-3-clause | 2026-10-12 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [kameleo-io/kameleo](https://github.com/kameleo-io/kameleo) | 212 | — | 2026-10-05 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [rayobyte-data/rayobrowse](https://github.com/rayobyte-data/rayobrowse) | 211 | mit | 2026-07-05 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [clearcotelabs/clearcote-browser](https://github.com/clearcotelabs/clearcote-browser) | 199 | bsd-3-clause | 2026-10-11 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [multizenteam/multizen-browser](https://github.com/multizenteam/multizen-browser) | 195 | mit | 2026-10-09 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
+| [arman-bd/chromiumfish](https://github.com/arman-bd/chromiumfish) | 163 | other | 2026-08-19 | active | **Rejected** | Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only |
 
 ## Names that GitHub could not find (89 first-pass misses)
 

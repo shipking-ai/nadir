@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 'use strict';
-// "Is there a newer Nadir?" — a user-initiated check, nothing more. Nadir never downloads or installs an update by
+// "Is there a newer Pelorus?" — a user-initiated check, nothing more. Pelorus never downloads or installs an update by
 // itself: builds are not yet code-signed, so an automatic installer would be a way to push unsigned code onto the
 // user's machine. The check only reads the public GitHub releases list and shows where to download and verify.
 
-const RELEASES_URL = 'https://api.github.com/repos/shipking-ai/nadir/releases?per_page=20';
-const RELEASE_PAGE_PREFIX = 'https://github.com/shipking-ai/nadir/releases/';
+const RELEASES_URL = 'https://api.github.com/repos/shipking-ai/pelorus/releases?per_page=20';
+const RELEASE_PAGE_PREFIX = 'https://github.com/shipking-ai/pelorus/releases/';
 
 /** Parse "v1.2.3" / "1.2.3-beta.1" into comparable parts, or null. Build metadata (+x) is ignored per semver. */
 function parseVersion(v) {
@@ -41,7 +41,7 @@ function compareVersions(a, b) {
  * @returns {Promise<{current:string, latest:string|null, newer:boolean, url:string|null, prerelease:boolean}>}
  */
 async function checkForUpdate({ fetchFn, current, url = RELEASES_URL }) {
-  const res = await fetchFn(url, { headers: { accept: 'application/vnd.github+json', 'user-agent': 'Nadir-update-check' }, credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(10000) });
+  const res = await fetchFn(url, { headers: { accept: 'application/vnd.github+json', 'user-agent': 'Pelorus-update-check' }, credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(10000) });
   if (!res.ok) throw new Error(`The release list could not be read (HTTP ${res.status}).`);
   const list = await res.json();
   if (!Array.isArray(list)) throw new Error('Unexpected response from the release list.');

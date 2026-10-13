@@ -1,4 +1,4 @@
-# Nadir — handoff
+# Pelorus — handoff
 
 **Written:** 2026-10-13 (updated later the same day) · **Covers work from:** 2026-10-11 to 2026-10-13 · **Version:** 0.2.0 (pre-release, Windows primary, unsigned)
 
@@ -8,12 +8,18 @@ This file is for anyone picking the project up: what exists, how to run and veri
 
 ## 1. TL;DR
 
-* **Nadir** is an open-source, privacy-focused desktop browser built on **Electron 44.7.0 (Chromium 152.0.7977.130, Node 24.21.0)**, with workspaces, vertical tabs, a command palette, local-only suggestions, tracker blocking, HTTPS-first, a permission broker, safe downloads, sleeping tabs, split view and lazy session restore. Licence: **GPL-3.0-or-later**.
+* **Pelorus** is an open-source, privacy-focused desktop browser built on **Electron 44.7.0 (Chromium 152.0.7977.130, Node 24.21.0)**, with workspaces, vertical tabs, a command palette, local-only suggestions, tracker blocking, HTTPS-first, a permission broker, safe downloads, sleeping tabs, split view and lazy session restore. Licence: **GPL-3.0-or-later**.
 * **It works and is tested:** 73 unit tests (including seeded fuzzing of the input-handling code) and 51 end-to-end tests pass on Windows in CI and locally. On **Ubuntu** (xvfb) and **macOS (arm64)** the same 73 + 51 passed in the most recent full CI run (Ubuntu and macOS are an informational CI job, not a required check). One macOS oddity remains: after `a11y.test.js` the app did not exit when asked (20 s timeout in the test helper); no other test file shows it. `npm audit` shows 0 vulnerabilities; the packaged build and the installer build and launch.
 * **It is not releasable yet.** Missing, in order of importance: a code-signing certificate, a public repository, an installer and auto-update, a screen-reader pass, a real third-party security review, and anything other than Windows verification. See §9.
 * **Nothing about it is "completely secure" or "completely private"**, and no document claims that. Known gaps are in [docs/SECURITY.md](docs/SECURITY.md).
 * **A catalog of 772 open-source browser-related projects** was built and classified, with its blind spots written down ([docs/research/CATALOG.md](docs/research/CATALOG.md), [SWEEP.md](docs/research/SWEEP.md)). "Every possible project" is not achievable and is not claimed.
 * **The biggest trap found:** Playwright-driven runs make background tabs look visible, which inflated the first memory benchmark by about 30%. **Never take memory, CPU or timing numbers from Playwright runs** (§8).
+
+---
+
+## Name history
+
+The project was called **Nadir** until 2026-10-13 and is now **Pelorus** (a pelorus is the sighting instrument that gives the bearing of an object relative to a ship's heading). The rename was forced by a trademark search (see [docs/TRADEMARK.md](docs/TRADEMARK.md)). What changed: product and window title, the internal page scheme `nadir://` -> `pelorus://`, the preload API `window.nadir` -> `window.pelorus`, the IPC prefix, the `NADIR_*` environment variables -> `PELORUS_*`, the npm package (`pelorus-browser`), the installer and exe names, and the GitHub repository (`shipking-ai/nadir` -> `shipking-ai/pelorus`; GitHub redirects the old address). Not changed: the git history, [DECISIONS.md](docs/DECISIONS.md) entries written before the rename, the trademark records, the research data files, `docs/screenshots/` (they still show the old name) and the two published releases v0.1.0/v0.2.0 (files named `Nadir-*`, verified with the old repository name, see [RELEASE.md](docs/RELEASE.md)). **Profiles created by Nadir builds are not migrated** (pre-release, no known users). Version is 0.3.0 in `package.json` but **no release has been published under the new name yet**.
 
 ---
 
@@ -27,9 +33,9 @@ npm start                 # run the browser from source
 npm test                  # 73 unit tests incl. fuzzing, about 10 s
 npm run test:e2e          # 51 end-to-end tests, about two minutes; tls.test.js needs internet and skips offline
 npm run audit             # npm audit --omit=dev
-npm run package           # builds out/Nadir-win32-x64/
+npm run package           # builds out/Pelorus-win32-x64/
 node scripts/verify-package.js      # launches the packaged build like a user would
-node scripts/bench.js --tabs 10 --runs 3   # Nadir vs installed Chrome (takes several minutes, writes docs/benchmarks/)
+node scripts/bench.js --tabs 10 --runs 3   # Pelorus vs installed Chrome (takes several minutes, writes docs/benchmarks/)
 node scripts/license-inventory.js   # regenerates docs/LICENSE-INVENTORY.md
 node scripts/build-catalog.js       # regenerates docs/research/CATALOG.md from the research data
 npm run package:signed    # package + Authenticode sign; fails with exit code 2 until a certificate is configured (docs/RELEASE.md)
@@ -39,11 +45,11 @@ Environment variables the app reads (all are for tests/benchmarks; none is neede
 
 | Variable | Effect |
 |---|---|
-| `NADIR_USER_DATA` | profile directory (tests use temp dirs) |
-| `NADIR_TEST=1` | exposes `global.__nadir` (the controller) to the test harness. **Absent in packaged builds and benchmarks.** |
-| `NADIR_OFFLINE=1` | skip the filter-list network refresh |
-| `NADIR_HEADLESS=1` | keep the window hidden |
-| `NADIR_DOWNLOAD_DIR` | fixed download folder (honoured only with the test hook) |
+| `PELORUS_USER_DATA` | profile directory (tests use temp dirs) |
+| `PELORUS_TEST=1` | exposes `global.__pelorus` (the controller) to the test harness. **Absent in packaged builds and benchmarks.** |
+| `PELORUS_OFFLINE=1` | skip the filter-list network refresh |
+| `PELORUS_HEADLESS=1` | keep the window hidden |
+| `PELORUS_DOWNLOAD_DIR` | fixed download folder (honoured only with the test hook) |
 
 ---
 
@@ -56,7 +62,7 @@ HANDOFF.md                   this file
 package.json                 scripts; deps: @ghostery/adblocker-electron(+preload) 2.20.1 only
 src/
   main/                      the privileged process
-    main.js                  app bootstrap: privileged nadir:// scheme, sandbox, single instance, test hook
+    main.js                  app bootstrap: privileged pelorus:// scheme, sandbox, single instance, test hook
     controller.js            window, overlay view, layout, palette/find/prompts, native menus, settings side effects
     tab-manager.js           tabs, workspaces, sleeping, split view, session save/restore (lazy)
     tab-host.js              THE ONLY module that touches WebContents (engine seam, see ADR-0001)
@@ -66,7 +72,7 @@ src/
     permissions.js           pure policy function (deny by default)
     downloads.js             safe filenames, risk classes, never launches executables
     sessions.js              per-workspace partitions, UA cleanup, secure-DNS config
-    protocol.js              nadir:// file server (host allowlist, traversal-safe, strict CSP)
+    protocol.js              pelorus:// file server (host allowlist, traversal-safe, strict CSP)
     suggest.js, error-page.js
     updates.js               user-initiated "is there a newer release?" check (semver compare, fixed URL, no download)
   shared/                    pure code, unit-tested: urls.js, shortcuts.js, fuzzy.js, filenames.js
@@ -75,7 +81,7 @@ test/
   unit/                      plain node:test, 5 files
   e2e/                       Playwright-driven real-app tests (helpers.js), plus:
     plain.js                 un-attached launcher (CDP to the shell page only). USE THIS FOR ANY MEASUREMENT.
-    a11y.test.js             axe-core scan of every nadir:// page and the browser chrome
+    a11y.test.js             axe-core scan of every pelorus:// page and the browser chrome
     tls.test.js              badssl.com certificate-error tests (internet; skips offline)
     background.test.js       background tabs are hidden and render 0 frames
     updates.test.js          update-check button: no request until pressed, newer/up-to-date/error paths
@@ -96,8 +102,8 @@ The project is **not** a git repository in this checkout (`Is a git repository: 
 
 * **Foundation:** Chromium through Electron, chosen after comparing four options (Chromium fork, alternative engine, OS-webview framework, Electron). Building Chromium or Gecko from source was infeasible here (no cmake/ninja, 100+ GB, hours per build, permanent rebase burden). The ADR lists *revisit triggers* (for example Ladybird shipping a Windows alpha, or Electron falling too far behind Chromium).
 * **Engine seam:** only `tab-host.js` touches `WebContents`. Keep it that way; it is what makes a future engine swap possible.
-* **Each tab** is a `WebContentsView`; each **workspace** is its own Chromium partition (`persist:ws-<id>`); **private tabs** use a memory-only partition; internal pages use `persist:nadir-internal`.
-* **Internal pages** are served from a privileged `nadir://` scheme (hosts `shell`, `overlay`, `newtab`, `app`, `assets`) with a strict CSP (no inline script or style, `connect-src 'none'`). Navigating between an internal and a web page **swaps the renderer** so web content never inherits an internal preload.
+* **Each tab** is a `WebContentsView`; each **workspace** is its own Chromium partition (`persist:ws-<id>`); **private tabs** use a memory-only partition; internal pages use `persist:pelorus-internal`.
+* **Internal pages** are served from a privileged `pelorus://` scheme (hosts `shell`, `overlay`, `newtab`, `app`, `assets`) with a strict CSP (no inline script or style, `connect-src 'none'`). Navigating between an internal and a web page **swaps the renderer** so web content never inherits an internal preload.
 * **Renderers** are sandboxed and context-isolated. Web tabs have **no preload and no IPC**. The two privileged preloads expose an allowlisted API; `ipc.js` re-checks the sender and that the call came from the main frame, per channel.
 * **Data:** `node:sqlite` with FTS5 (Electron's built-in Node 24.21.0; stability tier "release candidate", re-check on Electron upgrades). All SQL is parameterised; full-text queries are tokenised and quoted.
 * **Privacy features:** Ghostery adblocker (MPL-2.0) for network and cosmetic filtering, wrapped in our own `webRequest` handler (HTTPS-first upgrade with an explicit HTTP fallback page, tracking-parameter stripping, per-tab block counters), Global Privacy Control header, user agent without Electron/app tokens, deny-by-default permission broker (prompt per workspace + origin + permission; cross-origin subframes never prompt). Filter lists are downloaded at runtime from Ghostery's CDN, not bundled.
@@ -125,7 +131,7 @@ The project is **not** a git repository in this checkout (`Is a git repository: 
 | Tests | 73 unit + 51 e2e, see section 7 | `test/` |
 | Security review | Threat model T1–T13, each mapped to a test; Electron linter run (1 real finding fixed, dead code removed) | [SECURITY.md](docs/SECURITY.md) |
 | Design system | Name, logo, tokens, light/dark themes | [DESIGN.md](docs/DESIGN.md), `docs/screenshots/` |
-| Benchmarks | Nadir vs Chrome 154, two runs, corrected method | [PERFORMANCE.md](docs/PERFORMANCE.md) |
+| Benchmarks | Pelorus vs Chrome 154, two runs, corrected method | [PERFORMANCE.md](docs/PERFORMANCE.md) |
 | Packaging | Windows x64 build, smoke-verified, licences shipped | `npm run package`, `verify-package.js` |
 | Wide discovery sweep | 772 classified projects; method and blind spots | [CATALOG.md](docs/research/CATALOG.md), [SWEEP.md](docs/research/SWEEP.md) |
 | Licence | GPL-3.0 text added, shipped in packages | [LICENSES.md](docs/LICENSES.md) |
@@ -160,8 +166,8 @@ The numbers above are single runs on one machine without confidence intervals. T
 
 ## 7. Tests: how they work and how to extend them
 
-* **Unit** (`test/unit`): plain `node:test`; covers URL resolution, store (FTS5), shortcuts, error page, filenames, fuzzy matching, the `nadir://` server, CSP and traversal.
-* **E2E** (`test/e2e`): `helpers.js` launches the real app via Playwright against an isolated profile, with the `NADIR_TEST` hook and a local server that has routes for cookies, headers, codecs, downloads and so on. Run with `--test-concurrency=1`; each file starts its own app.
+* **Unit** (`test/unit`): plain `node:test`; covers URL resolution, store (FTS5), shortcuts, error page, filenames, fuzzy matching, the `pelorus://` server, CSP and traversal.
+* **E2E** (`test/e2e`): `helpers.js` launches the real app via Playwright against an isolated profile, with the `PELORUS_TEST` hook and a local server that has routes for cookies, headers, codecs, downloads and so on. Run with `--test-concurrency=1`; each file starts its own app.
 * **Conventions that cost real time to learn:**
   * Send keyboard shortcuts with `webContents.sendInputEvent`, **not** Playwright keys (CDP-synthesised keys bypass Electron's `before-input-event`).
   * Launch with `colorScheme: null`; otherwise Playwright emulates a colour scheme and focus and gives false observations.
@@ -169,7 +175,7 @@ The numbers above are single runs on one machine without confidence intervals. T
   * Use `noWaitAfter` on clicks that start navigation, or a 30 s timeout fires.
   * To eval strings against the controller use `b.ctl('<single expression>')`; statements with `;` fail because it wraps the code in `return (…)`.
   * A test that passes in 10 ms probably tested nothing. `tls.test.js` first passed vacuously because the previous test's error page was still showing; each test now waits for its own host.
-* **Do not use Playwright for measurements.** Use `test/e2e/plain.js` (`launchPlain`): it starts Nadir without the test hook and talks CDP to the shell page only.
+* **Do not use Playwright for measurements.** Use `test/e2e/plain.js` (`launchPlain`): it starts Pelorus without the test hook and talks CDP to the shell page only.
 * **Screenshots:** capture per window by HWND with `scripts/capture-window.ps1`. Never capture the whole desktop (an early capture included unrelated windows and was deleted).
 * **Not covered by tests** (from [FEATURE-MATRIX.md](docs/FEATURE-MATRIX.md)): secure-DNS encryption, find-in-page matching, native menus and dialogs, OAuth popups, fullscreen video, the timer-driven auto-sleep path, clear-on-exit, light/dark by assertion, screen-reader behaviour, any non-Windows platform.
 
@@ -185,7 +191,7 @@ The numbers above are single runs on one machine without confidence intervals. T
 6. **Line endings:** several source files use CRLF; scripted edits that match multi-line strings must normalise `\r\n` first.
 7. **Windows PowerShell 5.1 specifics:** `Get-PfxCertificate` has no `-Password`; use the .NET `X509Certificate2` constructor (done in `sign.ps1`). `New-Item`/`Remove-Item` on `Cert:` and `Env:` paths can be blocked by the sandbox; use the .NET store API and `$env:X = $null`.
 8. **`rm -rf` of a sibling directory was blocked by the safety check.** A leftover folder `C:\.dl-gpl` (holds a duplicate of the licence text from the download step) still exists; it is safe to delete by hand.
-9. **Electron's packaged `Nadir.exe` is unsigned** (re-branding invalidates Electron's own signature), and the packaged root `LICENSE` is Electron's, which is why the GPL text is shipped as `resources/LICENSE`.
+9. **Electron's packaged `Pelorus.exe` is unsigned** (re-branding invalidates Electron's own signature), and the packaged root `LICENSE` is Electron's, which is why the GPL text is shipped as `resources/LICENSE`.
 
 ---
 
@@ -198,10 +204,10 @@ Ordered by how much each item blocks a public release. "Exit" is what must be de
 | # | Item | Why it is not done | Exit |
 |---|---|---|---|
 | 1 | **Code-signing certificate** | Cannot be created from inside the repo. Options and terms are in [RELEASE.md](docs/RELEASE.md) (SignPath Foundation for open source, commercial OV/EV, Azure Trusted Signing; terms not independently verified). SignPath requires a public repository and a released build first. | `npm run package:signed` exits 0 on a clean machine and SmartScreen no longer shows "unknown publisher" (verify by downloading the build, not by `Get-AuthenticodeSignature` alone) |
-| 2 | ~~Code-signing policy page, tagged releases, CI build~~ **Done 2026-10-13** | Public repo <https://github.com/shipking-ai/nadir>; private vulnerability reporting enabled; CI and release workflows in `.github/workflows/`; [CODE-SIGNING-POLICY.md](docs/CODE-SIGNING-POLICY.md); pre-releases [v0.1.0](https://github.com/shipking-ai/nadir/releases/tag/v0.1.0) and [v0.2.0](https://github.com/shipking-ai/nadir/releases/tag/v0.2.0) (zip + installer, checksums, SBOM, verified provenance attestations). Still unsigned. | (met) |
+| 2 | ~~Code-signing policy page, tagged releases, CI build~~ **Done 2026-10-13** | Public repo <https://github.com/shipking-ai/pelorus>; private vulnerability reporting enabled; CI and release workflows in `.github/workflows/`; [CODE-SIGNING-POLICY.md](docs/CODE-SIGNING-POLICY.md); pre-releases [v0.1.0](https://github.com/shipking-ai/pelorus/releases/tag/v0.1.0) and [v0.2.0](https://github.com/shipking-ai/pelorus/releases/tag/v0.2.0) (zip + installer, checksums, SBOM, verified provenance attestations). Still unsigned. | (met) |
 | 3 | **Installer: done. Auto-update: deliberately NOT built.** | A per-user Squirrel installer is built by `npm run installer` and attached to releases; install, first launch and uninstall were exercised on Windows (uninstall left 3 files under LocalAppData that I deleted by hand). Instead of silent auto-update, the About page has a user-initiated "Check for updates" that reads the public release list. Reason: an automatic installer for an UNSIGNED browser is a channel for pushing unsigned code to users; build it only after code signing exists and the update integrity story (signature verification, not just TLS) is designed. | signed releases first, then an update design review |
-| 4 | **Trademark: the name is NOT clear** | USPTO search on 2026-10-13 found two live pending applications near Nadir's field: standard-character NADIR (class 042, software design for learning applications, Notice of Allowance issued 2026-06-02) and NADIRROC (classes 009/042, downloadable networking software). Details and options in [docs/TRADEMARK.md](docs/TRADEMARK.md). Only the US register was searched; this is not legal advice. | decide: attorney opinion, rename while it is cheap, or accept risk; treat "Nadir" as a working name until then |
-| 5 | **Third-party security review** | Cannot be done by the project itself. Seeded fuzzing of URL resolution, filenames, the nadir:// resolver, history search, permission policy and error-page escaping was added and found 5 real bugs (fixed). That is the project testing itself, not an independent review. | an external review before any claim of security assurance |
+| 4 | **Trademark: the former name Nadir was NOT clear; renamed to Pelorus** | USPTO search on 2026-10-13 found two live pending applications near the old name's field (standard-character NADIR, class 042, Notice of Allowance issued 2026-06-02; NADIRROC, classes 009/042). The project was renamed to Pelorus; a search for the new name found no LIVE mark in classes 009 or 042 (only dead ones), but did find live marks for Pelorus in wine, medical services, building materials, consulting, finance and shipping. Details in [docs/TRADEMARK.md](docs/TRADEMARK.md). US register only; not legal advice; no attorney has reviewed either name. | an attorney opinion for Pelorus before a wide launch; check EUIPO/WIPO/UK if shipping there |
+| 5 | **Third-party security review** | Cannot be done by the project itself. Seeded fuzzing of URL resolution, filenames, the pelorus:// resolver, history search, permission policy and error-page escaping was added and found 5 real bugs (fixed). That is the project testing itself, not an independent review. | an external review before any claim of security assurance |
 | 6 | **Chromium patch lag** | Electron 44.7 ships Chromium 152 while upstream builds at 155/156 exist. Largest structural risk of the approach. | a documented update cadence (follow Electron's ~8-week majors) and the Chromium version visible in About (already shown) |
 
 ### P1 — quality and verification gaps

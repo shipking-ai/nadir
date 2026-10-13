@@ -2,7 +2,7 @@
 'use strict';
 
 /** Schemes a user may type into the address bar and have navigated. */
-const NAVIGABLE = new Set(['http:', 'https:', 'file:', 'about:', 'nadir:']);
+const NAVIGABLE = new Set(['http:', 'https:', 'file:', 'about:', 'pelorus:']);
 /** Schemes that execute or embed content and are never navigated from the omnibox. */
 const BLOCKED = new Set(['javascript:', 'data:', 'vbscript:', 'blob:', 'filesystem:', 'view-source:']);
 
@@ -40,7 +40,7 @@ function resolveInput(raw, searchTemplate) {
   const guessed = (u) => { try { new URL(u); return { kind: 'url', url: u }; } catch { return search(); } };
 
   // "localhost:3000", "192.168.1.1:8080", "example.com:8443" parse as a scheme; treat as host:port first.
-  if (HOST_PORT_RE.test(input) && !/^(https?|file|about|nadir):/i.test(input)) {
+  if (HOST_PORT_RE.test(input) && !/^(https?|file|about|pelorus):/i.test(input)) {
     const host = input.startsWith('[') ? input.slice(0, input.indexOf(']') + 1) : input.split(/[:/?#]/)[0];
     return guessed(`${isLocalHost(host) ? 'http' : 'https'}://${input}`);
   }
@@ -72,13 +72,13 @@ function resolveInput(raw, searchTemplate) {
 function displayHost(url) {
   try {
     const u = new URL(url);
-    if (u.protocol === 'nadir:') return `nadir://${u.hostname}`;
+    if (u.protocol === 'pelorus:') return `pelorus://${u.hostname}`;
     if (u.protocol === 'file:') return 'file';
     return u.hostname.replace(/^www\./, '');
   } catch { return ''; }
 }
 
-function isInternalUrl(url) { return /^nadir:\/\//i.test(url); }
+function isInternalUrl(url) { return /^pelorus:\/\//i.test(url); }
 
 /** True if an http:// URL should be attempted over https first. */
 function shouldUpgrade(url) {

@@ -26,8 +26,8 @@ Re-run everything with: `node scripts/discover.js`, `node scripts/triage-discove
 The seed list was built from memory plus the earlier research, and the sweep shows its limits. **322 of the 772 catalog rows came from steps 2–7**, including real projects I had either missed or mis-spelled:
 
 * From-scratch / alternative engines: **Gosub**, **Fen** (FENBROWSER/fenbrowser), **Starling** (.NET), **Hastur**, a Rust engine by lucid-softworks, **Orinium**, **Retsurf** (Servo + SDL2), **Zervo** (workspace-oriented browser on Servo).
-* Browsers with ideas close to Nadir's: **Glide** (keyboard-first, Gecko), **Yalqen** (vertical tabs + command bar), **kovidgoyal/vise** (tree tabs), **Nyxt** (programmable), **DuckDuckGo's Apple browsers**, **Agregore** and **Peersky** (alt-protocol).
-* Tooling Nadir should adopt: **badssl.com** (TLS error test site), **WebKit Speedometer / JetStream / MotionMark** (benchmarks), **ClearURLs** rules.
+* Browsers with ideas close to Pelorus's: **Glide** (keyboard-first, Gecko), **Yalqen** (vertical tabs + command bar), **kovidgoyal/vise** (tree tabs), **Nyxt** (programmable), **DuckDuckGo's Apple browsers**, **Agregore** and **Peersky** (alt-protocol).
+* Tooling Pelorus should adopt: **badssl.com** (TLS error test site), **WebKit Speedometer / JetStream / MotionMark** (benchmarks), **ClearURLs** rules.
 * Mobile: **WebLibre**, **Reynard** (Gecko on iOS), **Nira**, **Candy**, **Omni**, **Bare** and others (separate investigation).
 * 29 of 30 corrected spellings of names I had guessed wrongly resolved to real, verified repos (for example `versotile-org/verso`, `atlas-engineer/nyxt`, `fanglingsu/vimb`, `Igalia/cog`, `ggml-org/whisper.cpp`, `mattsse/chromiumoxide`).
 
@@ -35,7 +35,7 @@ The seed list was built from memory plus the earlier research, and the sweep sho
 
 | Class | Count |
 |---|---|
-| Core (shipped in Nadir) | 9 |
+| Core (shipped in Pelorus) | 9 |
 | High-value | 22 |
 | Optional | 78 |
 | Experimental | 16 |
@@ -46,7 +46,7 @@ The seed list was built from memory plus the earlier research, and the sweep sho
 (The exact current numbers are at the top of CATALOG.md; this table is a snapshot and the generator is authoritative.)
 
 ### Policy decisions made while classifying
-* **Anti-detect / stealth browsers** (about 25 projects whose purpose is to defeat bot detection or spoof fingerprints for scraping or multi-accounting) are catalogued once, as **Rejected**, so nobody re-discovers them and wonders. Nadir will not integrate detection evasion. Fingerprint *uniformity* (Mullvad-style) and fingerprint *test oracles* are a different matter and remain on the roadmap.
+* **Anti-detect / stealth browsers** (about 25 projects whose purpose is to defeat bot detection or spoof fingerprints for scraping or multi-accounting) are catalogued once, as **Rejected**, so nobody re-discovers them and wonders. Pelorus will not integrate detection evasion. Fingerprint *uniformity* (Mullvad-style) and fingerprint *test oracles* are a different matter and remain on the roadmap.
 * **Credential-stealing and DRM-circumvention tools** (browser password dumpers, Widevine key extractors) turned up in the sweep. They are **not catalogued**.
 * **AGPL / "other" / no-licence** projects are marked in the notes. Nothing is reusable until its licence has been read; see [LICENSES.md](../LICENSES.md).
 * A lookalike **uBlock-LLC/uBlock** appeared with 8k stars and was explicitly marked as *not* the upstream uBlock Origin and stale since 2022.

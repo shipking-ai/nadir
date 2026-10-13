@@ -18,27 +18,27 @@ async function until(fn, { timeout = 15000, step = 100, what = 'condition' } = {
   throw new Error(`Timed out waiting for ${what}${last ? `: ${last.message}` : ''}`);
 }
 
-/** Launch Nadir against an isolated profile. NADIR_OFFLINE keeps tests off the network. */
+/** Launch Pelorus against an isolated profile. PELORUS_OFFLINE keeps tests off the network. */
 async function launch({ userData, downloadDir, args = [], headless = true, env = {} } = {}) {
-  userData ||= fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-e2e-'));
-  downloadDir ||= fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-dl-'));
+  userData ||= fs.mkdtempSync(path.join(os.tmpdir(), 'pelorus-e2e-'));
+  downloadDir ||= fs.mkdtempSync(path.join(os.tmpdir(), 'pelorus-dl-'));
   const app = await electron.launch({
     colorScheme: null, // do not let Playwright emulate prefers-color-scheme; we test the real theme
     args: [ROOT, '--host-resolver-rules=MAP *.example.net 127.0.0.1', ...args],
-    env: { ...process.env, ...env, NADIR_USER_DATA: userData, NADIR_DOWNLOAD_DIR: downloadDir, NADIR_TEST: '1', NADIR_OFFLINE: '1', NADIR_HEADLESS: headless ? '1' : '0' },
+    env: { ...process.env, ...env, PELORUS_USER_DATA: userData, PELORUS_DOWNLOAD_DIR: downloadDir, PELORUS_TEST: '1', PELORUS_OFFLINE: '1', PELORUS_HEADLESS: headless ? '1' : '0' },
   });
-  const shell = await until(() => app.windows().find((p) => p.url() === 'nadir://shell/'), { what: 'shell window' });
+  const shell = await until(() => app.windows().find((p) => p.url() === 'pelorus://shell/'), { what: 'shell window' });
   await shell.waitForLoadState('domcontentloaded');
   const api = {
     app, shell, userData, downloadDir,
     pages: () => app.windows(),
     page: (prefix) => until(() => app.windows().find((p) => p.url().startsWith(prefix)), { what: `page ${prefix}` }),
-    state: () => shell.evaluate(() => window.nadir.invoke('state:get')),
-    invoke: (ch, payload) => shell.evaluate(([c, p]) => window.nadir.invoke(c, p), [ch, payload]),
-    navigate: (input) => shell.evaluate((i) => window.nadir.invoke('tab:navigate', { input: i }), input),
+    state: () => shell.evaluate(() => window.pelorus.invoke('state:get')),
+    invoke: (ch, payload) => shell.evaluate(([c, p]) => window.pelorus.invoke(c, p), [ch, payload]),
+    navigate: (input) => shell.evaluate((i) => window.pelorus.invoke('tab:navigate', { input: i }), input),
     active: async () => { const s = await api.state(); return s.tabs.find((t) => t.id === s.activeId); },
     main: (fn, arg) => app.evaluate(fn, arg),
-    ctl: (expr, arg) => app.evaluate((_e, [code, a]) => { const f = new Function('c', 'a', `return (${code})`); return f(global.__nadir, a); }, [expr, arg]),
+    ctl: (expr, arg) => app.evaluate((_e, [code, a]) => { const f = new Function('c', 'a', `return (${code})`); return f(global.__pelorus, a); }, [expr, arg]),
     // Bounded close: a quit that never finishes must not stall the whole test run. If it times out, say what was open
     // (so the cause can be found) and kill the process.
     close: async () => {
@@ -87,8 +87,8 @@ function startServer() {
         const done = (w) => { window.__codecs.widevine = w; document.title = 'codecs:' + JSON.stringify(window.__codecs); };
         (navigator.requestMediaKeySystemAccess ? navigator.requestMediaKeySystemAccess('com.widevine.alpha', [{ initDataTypes: ['cenc'], videoCapabilities: [{ contentType: 'video/mp4; codecs="avc1.42E01E"' }] }]).then(() => done(true), () => done(false)) : Promise.resolve(done(false)));</script>`);
       case '/query': return html('Query', `<pre id="q">${u.search}</pre>`);
-      case '/probe': return html('Probe', '', '<script>document.title=[typeof window.nadir,typeof require,typeof process,typeof window.electron].join(",")</script>');
-      case '/to-internal': return html('To Internal', '<a id="a" href="nadir://app/#/settings">x</a>');
+      case '/probe': return html('Probe', '', '<script>document.title=[typeof window.pelorus,typeof require,typeof process,typeof window.electron].join(",")</script>');
+      case '/to-internal': return html('To Internal', '<a id="a" href="pelorus://app/#/settings">x</a>');
       default: res.writeHead(404); return res.end('nope');
     }
   });

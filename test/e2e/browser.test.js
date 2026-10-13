@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// End-to-end tests: a real Nadir process browsing a local server. No external network.
+// End-to-end tests: a real Pelorus process browsing a local server. No external network.
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -18,8 +18,8 @@ test('starts with one new-tab page in the default workspace', async () => {
   const s = await b.state();
   assert.equal(s.tabs.length, 1);
   assert.equal(s.currentWorkspace, 'default');
-  assert.equal(s.tabs[0].url, 'nadir://newtab/');
-  const nt = await b.page('nadir://newtab');
+  assert.equal(s.tabs[0].url, 'pelorus://newtab/');
+  const nt = await b.page('pelorus://newtab');
   assert.match(await nt.locator('input.search').getAttribute('placeholder'), /DuckDuckGo/);
 });
 
@@ -92,7 +92,7 @@ test('every request carries Global Privacy Control and a UA without Electron/app
   const info = JSON.parse(await (await b.page(srv.origin + '/headers')).locator('#h').innerText());
   assert.equal(info.gpc, '1');
   assert.match(info.ua, /Chrome\/\d+/);
-  assert.ok(!/Electron|nadir/i.test(info.ua), `UA leaks the shell: ${info.ua}`);
+  assert.ok(!/Electron|pelorus/i.test(info.ua), `UA leaks the shell: ${info.ua}`);
 });
 
 test('media codec probe (recorded, not asserted): what this build can decode', async () => {
@@ -164,7 +164,7 @@ test('permissions: denied by default until the user answers; prompt is shown; re
   await b.navigate(`${srv.origin}/geo`);
   await until(async () => b.ctl('!!c.permCurrent'), { what: 'permission prompt queued' });
   assert.equal(await b.ctl('c.overlay.webContents.isDestroyed() === false && c.ov.kind'), 'permission');
-  const ov = await b.page('nadir://overlay');
+  const ov = await b.page('pelorus://overlay');
   assert.match(await ov.locator('.perm h2').innerText(), /wants to know your location/);
   assert.equal(await ov.evaluate(() => document.activeElement.textContent), 'Block', 'safe choice has focus');
   await ov.click('text=Block');
@@ -184,7 +184,7 @@ test('permissions: cross-origin subframes are denied without prompting', async (
   assert.equal(await b.ctl('!!c.permCurrent'), false, 'a subframe must not be able to raise a prompt');
 });
 
-test('web content has no access to privileged APIs and cannot reach nadir:// pages', async () => {
+test('web content has no access to privileged APIs and cannot reach pelorus:// pages', async () => {
   await b.navigate(`${srv.origin}/probe`);
   await until(async () => (await tabTitle()).startsWith('undefined'));
   assert.equal(await tabTitle(), 'undefined,undefined,undefined,undefined');
@@ -193,7 +193,7 @@ test('web content has no access to privileged APIs and cannot reach nadir:// pag
   const page = await b.page(srv.origin + '/to-internal');
   await page.click('#a', { timeout: 3000, noWaitAfter: true }).catch(() => {});
   await sleep(800);
-  assert.equal(await tabUrl(), `${srv.origin}/to-internal`, 'web page navigated into nadir://');
+  assert.equal(await tabUrl(), `${srv.origin}/to-internal`, 'web page navigated into pelorus://');
   assert.equal((await b.active()).kind, 'web');
 });
 
@@ -202,10 +202,10 @@ test('IPC trust boundaries: each surface can only call its own channels', async 
   await assert.rejects(b.invoke('settings:set', { key: 'theme', value: 'dark' }), /Blocked channel/);
   await assert.rejects(b.invoke('history:clear', {}), /Blocked channel/);
   // internal page cannot call shell channels
-  await b.navigate('nadir://app/#/settings');
-  const app = await b.page('nadir://app');
-  await assert.rejects(app.evaluate(() => window.nadir.invoke('tab:close', 1)), /Blocked channel/);
-  await assert.rejects(app.evaluate(() => window.nadir.invoke('cmd', 'new-tab')), /Blocked channel/);
+  await b.navigate('pelorus://app/#/settings');
+  const app = await b.page('pelorus://app');
+  await assert.rejects(app.evaluate(() => window.pelorus.invoke('tab:close', 1)), /Blocked channel/);
+  await assert.rejects(app.evaluate(() => window.pelorus.invoke('cmd', 'new-tab')), /Blocked channel/);
   // Main-side enforcement, independent of the preload allowlist: a window with RAW ipcRenderer access
   // (a stand-in for a compromised renderer) must still be rejected for every privileged channel.
   const preload = path.join(b.userData, 'raw-preload.js');
@@ -215,32 +215,32 @@ test('IPC trust boundaries: each surface can only call its own channels', async 
     await w.loadURL('about:blank');
     const out = {};
     for (const [ch, arg] of [['settings:set', { key: 'theme', value: 'dark' }], ['history:clear', {}], ['tab:close', 1], ['cmd', 'new-tab'], ['downloads:open', { id: 1 }], ['data:clear', {}], ['omnibox:pick', 0], ['permission:answer', { decision: 'allow', remember: true }], ['update:check', null]]) {
-      out[ch] = await w.webContents.executeJavaScript(`raw.invoke('nadir:${ch}', ${JSON.stringify(arg)}).then(() => 'ALLOWED', (e) => String(e.message))`);
+      out[ch] = await w.webContents.executeJavaScript(`raw.invoke('pelorus:${ch}', ${JSON.stringify(arg)}).then(() => 'ALLOWED', (e) => String(e.message))`);
     }
     w.destroy();
     return out;
   }, preload);
   for (const [ch, r] of Object.entries(results)) assert.match(r, /Forbidden/, `${ch} was reachable from an untrusted renderer: ${r}`);
   // settings validation
-  await assert.rejects(app.evaluate(() => window.nadir.invoke('settings:set', { key: '__proto__', value: 1 })), /not editable/);
-  await assert.rejects(app.evaluate(() => window.nadir.invoke('settings:set', { key: 'theme', value: 'pink' })), /Invalid theme/);
-  await assert.rejects(app.evaluate(() => window.nadir.invoke('settings:set', { key: 'secureDns', value: { mode: 'secure', server: 'http://insecure' } })), /DoH|https/);
-  await assert.rejects(app.evaluate(() => window.nadir.invoke('settings:set', { key: 'searchProviders', value: { custom: { url: 'http://evil.example/?q=%s' } } })), /https/);
-  const ok = await app.evaluate(() => window.nadir.invoke('settings:set', { key: 'theme', value: 'light' }));
+  await assert.rejects(app.evaluate(() => window.pelorus.invoke('settings:set', { key: '__proto__', value: 1 })), /not editable/);
+  await assert.rejects(app.evaluate(() => window.pelorus.invoke('settings:set', { key: 'theme', value: 'pink' })), /Invalid theme/);
+  await assert.rejects(app.evaluate(() => window.pelorus.invoke('settings:set', { key: 'secureDns', value: { mode: 'secure', server: 'http://insecure' } })), /DoH|https/);
+  await assert.rejects(app.evaluate(() => window.pelorus.invoke('settings:set', { key: 'searchProviders', value: { custom: { url: 'http://evil.example/?q=%s' } } })), /https/);
+  const ok = await app.evaluate(() => window.pelorus.invoke('settings:set', { key: 'theme', value: 'light' }));
   assert.equal(ok.ok, true);
   assert.equal(await b.ctl('c.cfg.theme'), 'light');
 });
 
-test('nadir:// pages render and are navigable; swapping between internal and web swaps the renderer', async () => {
-  await b.navigate('nadir://app/#/privacy');
-  const app = await b.page('nadir://app');
+test('pelorus:// pages render and are navigable; swapping between internal and web swaps the renderer', async () => {
+  await b.navigate('pelorus://app/#/privacy');
+  const app = await b.page('pelorus://app');
   await app.waitForSelector('text=Privacy & security');
   assert.equal((await b.active()).kind, 'internal');
   await b.navigate(`${srv.origin}/`);
   await waitTitle('Home Page');
   assert.equal((await b.active()).kind, 'web');
   const page = await b.page(srv.origin);
-  assert.equal(await page.evaluate(() => typeof window.nadir), 'undefined');
+  assert.equal(await page.evaluate(() => typeof window.pelorus), 'undefined');
 });
 
 test('downloads: saved to the configured folder, listed, risky files flagged and never launchable', async () => {
@@ -313,12 +313,12 @@ test('split view shows two tabs side by side', async () => {
 
 test('command palette finds tabs, history and commands; Enter runs the selection', async () => {
   await b.ctl('c.runCommand("command-palette")');
-  const ov = await b.page('nadir://overlay');
+  const ov = await b.page('pelorus://overlay');
   await ov.waitForSelector('.palette input');
   await ov.fill('.palette input', 'settings');
   await ov.waitForSelector('.palette .row:has-text("Open settings")');
   await ov.keyboard.press('Enter');
-  await until(async () => (await b.active()).url.startsWith('nadir://app/#/settings'), { what: 'settings opened by palette' });
+  await until(async () => (await b.active()).url.startsWith('pelorus://app/#/settings'), { what: 'settings opened by palette' });
   assert.equal(await b.ctl('c.ov.kind'), null, 'palette closed after running');
 });
 
@@ -327,7 +327,7 @@ test('address-bar suggestions come from local data and render in the overlay', a
   await waitTitle('Home Page');
   await b.shell.focus('#omni');
   await b.shell.fill('#omni', 'Home');
-  const ov = await b.page('nadir://overlay');
+  const ov = await b.page('pelorus://overlay');
   await ov.waitForSelector('.omni-list .row:has-text("Home Page")', { timeout: 8000 });
   const rows = await ov.locator('.omni-list .row').allInnerTexts();
   assert.ok(rows.some((r) => /Search DuckDuckGo/.test(r)), 'search row is present');
@@ -367,7 +367,7 @@ test('keyboard shortcuts work from the page, the chrome and the overlay; plain t
   await until(async () => (await b.ctl('c.ov.kind')) === null, { what: 'palette closed by Escape' });
 
   const web = (await b.state()).tabs.find((t) => t.url === `${srv.origin}/page2`);
-  await b.invoke('tab:activate', web.id);       // find-in-page only opens on web pages, not nadir:// pages
+  await b.invoke('tab:activate', web.id);       // find-in-page only opens on web pages, not pelorus:// pages
   await press(PAGE, 'F', [MOD]);
   await until(async () => (await b.ctl('c.ov.kind')) === 'find', { what: 'find bar via Ctrl+F' });
   await press(OVERLAY, 'Escape');

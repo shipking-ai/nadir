@@ -62,7 +62,7 @@ let out = `# Catalog of open-source browser-related projects
 **Generated** by \`node scripts/build-catalog.js\` · data pulled **2026-10-11/12** · sources and method: [SWEEP.md](SWEEP.md).
 Every row below was **verified against the GitHub API** (existence, archived flag, last push, licence). ${addCount} rows came from the discovery sweep / curated-list cross-check rather than my original seed list. "Activity": *active* = pushed ≤ 120 days ago, *slow* ≤ 1 year, *stale* > 1 year. Stars are a liveness signal only. The **class** and **note** columns are my judgement from the project's README/status, not measurements.
 
-Classes: **Core** shipped in Nadir · **High-value** worth integrating next · **Optional** useful later/for a scenario · **Experimental** promising, unproven for us · **Reference** study/borrow ideas · **Rejected** unsuitable (abandoned, redundant, purpose or licence conflict) · **Out-of-scope** different product category.
+Classes: **Core** shipped in Pelorus · **High-value** worth integrating next · **Optional** useful later/for a scenario · **Experimental** promising, unproven for us · **Reference** study/borrow ideas · **Rejected** unsuitable (abandoned, redundant, purpose or licence conflict) · **Out-of-scope** different product category.
 
 | Class | Count |
 |---|---|

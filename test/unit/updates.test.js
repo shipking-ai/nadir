@@ -18,11 +18,11 @@ test('semver precedence follows the spec examples', () => {
 });
 
 const reply = (body, ok = true, status = 200) => async () => ({ ok, status, json: async () => body });
-const rel = (tag, extra = {}) => ({ tag_name: tag, draft: false, prerelease: true, html_url: `https://github.com/shipking-ai/nadir/releases/tag/${tag}`, ...extra });
+const rel = (tag, extra = {}) => ({ tag_name: tag, draft: false, prerelease: true, html_url: `https://github.com/shipking-ai/pelorus/releases/tag/${tag}`, ...extra });
 
 test('update check: newer release is reported with its page', async () => {
   const r = await checkForUpdate({ fetchFn: reply([rel('v0.1.0'), rel('v0.2.0')]), current: '0.1.0' });
-  assert.deepEqual(r, { current: '0.1.0', latest: '0.2.0', newer: true, url: 'https://github.com/shipking-ai/nadir/releases/tag/v0.2.0', prerelease: true });
+  assert.deepEqual(r, { current: '0.1.0', latest: '0.2.0', newer: true, url: 'https://github.com/shipking-ai/pelorus/releases/tag/v0.2.0', prerelease: true });
 });
 
 test('update check: same or older release is not an update', async () => {
@@ -47,5 +47,5 @@ test('update check never follows redirects and sends no credentials', async () =
   await checkForUpdate({ fetchFn: async (u, o) => { seen = { u, o }; return { ok: true, status: 200, json: async () => [] }; }, current: '0.1.0' });
   assert.equal(seen.o.redirect, 'error');
   assert.equal(seen.o.credentials, 'omit');
-  assert.match(seen.u, /^https:\/\/api\.github\.com\/repos\/shipking-ai\/nadir\/releases/);
+  assert.match(seen.u, /^https:\/\/api\.github\.com\/repos\/shipking-ai\/pelorus\/releases/);
 });

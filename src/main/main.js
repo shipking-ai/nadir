@@ -20,12 +20,12 @@ if (process.platform === 'win32' && /^--squirrel-/.test(process.argv[1] || '')) 
 }
 
 // Must happen before 'ready'.
-protocol.registerSchemesAsPrivileged([{ scheme: 'nadir', privileges: { standard: true, secure: true, supportFetchAPI: true } }]);
-app.setName('Nadir');
-if (process.env.NADIR_USER_DATA) app.setPath('userData', process.env.NADIR_USER_DATA);
+protocol.registerSchemesAsPrivileged([{ scheme: 'pelorus', privileges: { standard: true, secure: true, supportFetchAPI: true } }]);
+app.setName('Pelorus');
+if (process.env.PELORUS_USER_DATA) app.setPath('userData', process.env.PELORUS_USER_DATA);
 app.enableSandbox(); // every renderer, including ones we forget about, runs sandboxed
 
-const IS_TEST = process.env.NADIR_TEST === '1';
+const IS_TEST = process.env.PELORUS_TEST === '1';
 if (!app.requestSingleInstanceLock()) { app.quit(); return; }
 
 const { Store } = require('./store');
@@ -56,10 +56,10 @@ app.on('second-instance', (_e, argv) => {
 
 app.whenReady().then(() => {
   const userData = app.getPath('userData');
-  store = new Store(path.join(userData, 'nadir.db'));
+  store = new Store(path.join(userData, 'pelorus.db'));
   store.enforceRetention(store.settings().historyRetentionDays);
 
-  // Chrome surfaces (shell + overlay) live in the default session and may use nothing but the nadir:// scheme.
+  // Chrome surfaces (shell + overlay) live in the default session and may use nothing but the pelorus:// scheme.
   const ds = session.defaultSession;
   protocolHandler.register(ds);
   ds.setPermissionRequestHandler((_wc, _p, cb) => cb(false));
@@ -72,7 +72,7 @@ app.whenReady().then(() => {
   });
   const downloads = new DownloadManager({
     store, onChange: () => controller?.broadcastDownloads(),
-    dir: IS_TEST && process.env.NADIR_DOWNLOAD_DIR ? () => process.env.NADIR_DOWNLOAD_DIR : undefined,
+    dir: IS_TEST && process.env.PELORUS_DOWNLOAD_DIR ? () => process.env.PELORUS_DOWNLOAD_DIR : undefined,
   });
   const broker = new PermissionBroker({
     store, privateId: PRIVATE_ID,
@@ -88,11 +88,11 @@ app.whenReady().then(() => {
   registerIpc(controller);
   const win = controller.create();
   controller.applySecureDns();
-  blocker.init({ refresh: process.env.NADIR_OFFLINE !== '1' });
-  win.once('ready-to-show', () => { if (process.env.NADIR_HEADLESS !== '1') win.show(); });
+  blocker.init({ refresh: process.env.PELORUS_OFFLINE !== '1' });
+  win.once('ready-to-show', () => { if (process.env.PELORUS_HEADLESS !== '1') win.show(); });
   controller.restoreOrNew(urlFromArgs(process.argv));
 
-  if (IS_TEST) global.__nadir = controller; // test hook, never set in normal runs
+  if (IS_TEST) global.__pelorus = controller; // test hook, never set in normal runs
 });
 
 app.on('window-all-closed', () => app.quit());

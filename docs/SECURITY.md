@@ -1,16 +1,16 @@
-# Nadir — Security & Privacy Model
+# Pelorus — Security & Privacy Model
 
-Nadir is **not** completely secure or completely private, and nothing in this document claims otherwise. This describes the protections that exist, how each is tested, and the gaps.
+Pelorus is **not** completely secure or completely private, and nothing in this document claims otherwise. This describes the protections that exist, how each is tested, and the gaps.
 
 ## Threat model (what we defend against)
 
 | # | Threat | Defence | Verified by |
 |---|---|---|---|
-| T1 | A malicious web page calls privileged browser functions | Tab renderers have **no preload and no IPC**; `sandbox`, `contextIsolation`, no Node; `<webview>` banned | e2e: page sees `undefined` for `nadir`, `require`, `process`, `electron` |
+| T1 | A malicious web page calls privileged browser functions | Tab renderers have **no preload and no IPC**; `sandbox`, `contextIsolation`, no Node; `<webview>` banned | e2e: page sees `undefined` for `pelorus`, `require`, `process`, `electron` |
 | T2 | A compromised renderer calls IPC channels directly | Main re-validates `event.sender` + `senderFrame === mainFrame` per channel | e2e: 8 privileged channels called with raw `ipcRenderer` all rejected `Forbidden` |
-| T3 | A web page navigates a tab into `nadir://` to gain the internal preload | Page-initiated navigation to `nadir:`/`javascript:`/`file:` is cancelled; internal↔web navigation swaps the renderer; internal preload self-checks `location.protocol` | e2e: link to `nadir://app` does not navigate |
-| T4 | XSS in Nadir's own UI via page titles/URLs | All page-derived text set with `textContent`; strict CSP on `nadir://` (no inline script/style, `connect-src 'none'`) | unit: CSP assertions; code review (no `innerHTML` with page data) |
-| T5 | Path traversal in the `nadir://` file server | Host allowlist + resolved-path containment | unit: 6 encodings tried |
+| T3 | A web page navigates a tab into `pelorus://` to gain the internal preload | Page-initiated navigation to `pelorus:`/`javascript:`/`file:` is cancelled; internal↔web navigation swaps the renderer; internal preload self-checks `location.protocol` | e2e: link to `pelorus://app` does not navigate |
+| T4 | XSS in Pelorus's own UI via page titles/URLs | All page-derived text set with `textContent`; strict CSP on `pelorus://` (no inline script/style, `connect-src 'none'`) | unit: CSP assertions; code review (no `innerHTML` with page data) |
+| T5 | Path traversal in the `pelorus://` file server | Host allowlist + resolved-path containment | unit: 6 encodings tried |
 | T6 | Settings/IPC abuse (prototype keys, bad values) | `Object.hasOwn` allowlist, per-key validators (DoH must be `https://`, custom search must be `https://` or localhost and contain `%s`) | unit + e2e |
 | T7 | Sites silently using camera/mic/location/etc. | Deny-by-default policy; prompt per *(workspace, origin, permission)*; **cross-origin subframes never prompt**; Block is focused by default; USB/HID/serial/screen-capture denied | unit (policy) + e2e (prompt, remembered, subframe) |
 | T8 | Cross-site tracking & ad networks | Ghostery filter engine (network + cosmetic), tracking-parameter stripping, GPC header, per-workspace storage partitions | e2e (blocking with a test list; workspace cookie isolation) |
@@ -26,18 +26,18 @@ Nadir is **not** completely secure or completely private, and nothing in this do
 
 ## Credential storage, sync, AI — status
 
-- **Passwords:** not implemented. Nadir does not store passwords; use an external manager. *(Planned: OS keychain via Electron `safeStorage`.)*
+- **Passwords:** not implemented. Pelorus does not store passwords; use an external manager. *(Planned: OS keychain via Electron `safeStorage`.)*
 - **Sync:** not implemented. *(Planned: end-to-end encrypted blob over a user-chosen transport; keys never leave the device.)*
 - **AI:** not implemented. Design constraints for when it is added: local-first (Ollama on loopback); any cloud provider is opt-in per provider with an explicit "this page's text will be sent to X" consent; page content is treated as **data, never instructions**; read-only tools by default; any navigation, form submission or download requested by a model needs a user click; allow-listed tool schema; tests with a corpus of injection pages.
-- **Telemetry:** none. The only network request Nadir itself makes is the filter-list download from Ghostery's CDN (no user identifiers sent), which can be disabled by turning blocking off.
+- **Telemetry:** none. The only network request Pelorus itself makes is the filter-list download from Ghostery's CDN (no user identifiers sent), which can be disabled by turning blocking off.
 
 ## Fuzzing (added 2026-10-13)
 
-`test/unit/fuzz.test.js` generates thousands of hostile strings from a seeded generator and checks invariants for: URL resolution (never throws, never an executable scheme), URL helpers, download file names (single safe path component), the `nadir://` path resolver (never leaves the UI directory), history search (data, not SQL), permission policy (allow-list only, subframes never prompt) and error-page escaping (no raw markup, only http(s) links). It found and fixed five real bugs (the fifth, an invalid port such as `example.com:99999` producing an unnavigable URL, only showed up at 100,000 iterations): a lone surrogate typed into the address bar threw in `resolveInput`; `upgradeUrl` threw on invalid URLs; `sanitizeFilename` could return a name ending in a dot or space after truncation; the error page rendered a "Try again" link for any URL scheme. This is the project testing itself, **not** an independent review, and covers only those functions. Run longer with `FUZZ_ITERATIONS=100000 npm test`.
+`test/unit/fuzz.test.js` generates thousands of hostile strings from a seeded generator and checks invariants for: URL resolution (never throws, never an executable scheme), URL helpers, download file names (single safe path component), the `pelorus://` path resolver (never leaves the UI directory), history search (data, not SQL), permission policy (allow-list only, subframes never prompt) and error-page escaping (no raw markup, only http(s) links). It found and fixed five real bugs (the fifth, an invalid port such as `example.com:99999` producing an unnavigable URL, only showed up at 100,000 iterations): a lone surrogate typed into the address bar threw in `resolveInput`; `upgradeUrl` threw on invalid URLs; `sanitizeFilename` could return a name ending in a dot or space after truncation; the error page rendered a "Try again" link for any URL scheme. This is the project testing itself, **not** an independent review, and covers only those functions. Run longer with `FUZZ_ITERATIONS=100000 npm test`.
 
 ## Updates
 
-Nadir never updates itself and never checks in the background. The About page's button asks `api.github.com` for the public release list (fixed URL, no cookies, redirects refused) and shows the newest version and its release page, which carries checksums and a build-provenance attestation. See [RELEASE.md](RELEASE.md) for why auto-update is not built.
+Pelorus never updates itself and never checks in the background. The About page's button asks `api.github.com` for the public release list (fixed URL, no cookies, redirects refused) and shows the newest version and its release page, which carries checksums and a build-provenance attestation. See [RELEASE.md](RELEASE.md) for why auto-update is not built.
 
 ## Known gaps and risks (unresolved)
 
@@ -53,18 +53,18 @@ Nadir never updates itself and never checks in the background. The About page's 
 
 ## Reporting
 
-**Repository:** <https://github.com/shipking-ai/nadir>
+**Repository:** <https://github.com/shipking-ai/pelorus>
 
 **Report a vulnerability privately:** use GitHub's private vulnerability reporting at
-<https://github.com/shipking-ai/nadir/security/advisories/new>. Only you and the maintainers can see the report. Please do **not** open a public issue, pull request or discussion for a suspected vulnerability.
+<https://github.com/shipking-ai/pelorus/security/advisories/new>. Only you and the maintainers can see the report. Please do **not** open a public issue, pull request or discussion for a suspected vulnerability.
 
-A useful report contains: the Nadir version (About page, or `package.json`), the operating system, the steps to reproduce, what you expected and what happened, and the impact you believe it has. A minimal proof of concept helps; please do not include real personal data.
+A useful report contains: the Pelorus version (About page, or `package.json`), the operating system, the steps to reproduce, what you expected and what happened, and the impact you believe it has. A minimal proof of concept helps; please do not include real personal data.
 
 **What to expect, honestly:**
-- Nadir is a pre-release project (0.1.0) with a very small maintainer team. There is **no guaranteed response time** and **no bug bounty**.
+- Pelorus is a pre-release project (0.1.0) with a very small maintainer team. There is **no guaranteed response time** and **no bug bounty**.
 - Only the latest commit on `main` is supported; there are no maintained older versions yet and no signed release builds (see [RELEASE.md](RELEASE.md)).
 - Reports are triaged, fixed in private where practical, and disclosed in a GitHub security advisory once a fix exists. Reporters are credited if they wish.
 
-**In scope:** Nadir's own code in this repository (the `nadir://` pages, IPC boundaries, permission and download handling, URL handling, storage). **Out of scope here, report upstream instead:** vulnerabilities in Chromium, Electron, Node.js or the Ghostery adblocker library. If you are unsure, report it here and we will route it. Nadir tracks Electron releases to pick up Chromium fixes, and the gap to upstream Chromium is a known risk (see "Known gaps" above).
+**In scope:** Pelorus's own code in this repository (the `pelorus://` pages, IPC boundaries, permission and download handling, URL handling, storage). **Out of scope here, report upstream instead:** vulnerabilities in Chromium, Electron, Node.js or the Ghostery adblocker library. If you are unsure, report it here and we will route it. Pelorus tracks Electron releases to pick up Chromium fixes, and the gap to upstream Chromium is a known risk (see "Known gaps" above).
 
 Testing guidance: please test only against your own installation and profile. Do not test against other people's data or third-party services, and do not run denial-of-service tests.

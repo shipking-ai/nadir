@@ -26,7 +26,7 @@ test('history: dedupes per workspace, counts visits, only stores web URLs', () =
   const s = fresh();
   s.addVisit({ workspaceId: 'default', url: 'https://a.com/', title: 'A' });
   s.addVisit({ workspaceId: 'default', url: 'https://a.com/', title: 'A2' });
-  s.addVisit({ workspaceId: 'default', url: 'nadir://settings', title: 'x' });
+  s.addVisit({ workspaceId: 'default', url: 'pelorus://settings', title: 'x' });
   s.addVisit({ workspaceId: 'default', url: 'javascript:alert(1)', title: 'x' });
   const rows = s.recentHistory('default');
   assert.equal(rows.length, 1);

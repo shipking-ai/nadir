@@ -1,9 +1,9 @@
 # Code signing policy
 
-**Status (2026-10-13): Nadir releases are NOT code-signed.** No signing certificate exists yet, and no signing service has agreed to sign Nadir. This page states the policy that will apply when one does, so that users and any certificate provider can see the rules in advance. If this page and a release's notes disagree, the release notes say what that specific build is.
+**Status (2026-10-13): Pelorus releases are NOT code-signed.** No signing certificate exists yet, and no signing service has agreed to sign Pelorus. This page states the policy that will apply when one does, so that users and any certificate provider can see the rules in advance. If this page and a release's notes disagree, the release notes say what that specific build is.
 
 ## What gets signed, and from where
-- Only `Nadir.exe` (and a future installer) built by the **public GitHub Actions workflow** [`release.yml`](../.github/workflows/release.yml) from a **tagged commit of the public repository** <https://github.com/shipking-ai/nadir>.
+- Only `Pelorus.exe` (and a future installer) built by the **public GitHub Actions workflow** [`release.yml`](../.github/workflows/release.yml) from a **tagged commit of the public repository** <https://github.com/shipking-ai/pelorus>.
 - Never a build made on a developer machine, never a build from an untagged or unreviewed branch, never a binary supplied from outside the repository.
 - Electron's other binaries keep their upstream signatures and are not re-signed.
 - The signing step in `release.yml` uses a certificate held as a repository secret (or, if a signing service is adopted, the service's own origin-verification flow). It has **never been run with a real certificate**; see [RELEASE.md](RELEASE.md).
@@ -12,13 +12,13 @@
 Every release publishes `SHA256SUMS.txt`, a CycloneDX SBOM, and a GitHub **build-provenance attestation**. To check that a zip came from this repository's workflow:
 
 ```
-gh attestation verify Nadir-<version>-win32-x64.zip --repo shipking-ai/nadir
+gh attestation verify Pelorus-<version>-win32-x64.zip --repo shipking-ai/pelorus
 ```
 
 This works for unsigned releases too, and is the recommended check until a signing certificate exists.
 
 ## Roles
-Nadir currently has **one maintainer** (GitHub account `shipking-ai`), who holds every role below. This is a weakness, not a feature; the roles are listed so that they can be split as contributors join.
+Pelorus currently has **one maintainer** (GitHub account `shipking-ai`), who holds every role below. This is a weakness, not a feature; the roles are listed so that they can be split as contributors join.
 
 | Role | Responsibility | Held by |
 |---|---|---|
@@ -33,16 +33,16 @@ Rules that apply regardless of who holds the roles:
 - Third-party code is limited to dependencies listed in the SBOM; `scripts/license-inventory.js` fails the build on unknown production licences.
 
 ## Privacy policy for the program
-Nadir does **not** send telemetry, crash reports, usage statistics or identifiers to the maintainers or anyone else. The only network requests Nadir makes by itself are:
+Pelorus does **not** send telemetry, crash reports, usage statistics or identifiers to the maintainers or anyone else. The only network requests Pelorus makes by itself are:
 - downloading ad/tracker filter lists from Ghostery's CDN (no user identifiers; switch blocking off to stop it);
 - DNS-over-HTTPS lookups to the resolver the user configures, if the user turns that on;
-- **only when the user presses "Check for updates" on the About page:** one request to `api.github.com` for the project's public release list (no cookies, no identifiers beyond the IP address and a fixed `Nadir-update-check` user agent). Nadir never checks in the background and never downloads or installs an update by itself;
+- **only when the user presses "Check for updates" on the About page:** one request to `api.github.com` for the project's public release list (no cookies, no identifiers beyond the IP address and a fixed `Pelorus-update-check` user agent). Pelorus never checks in the background and never downloads or installs an update by itself;
 - requests the user asks for by browsing (including favicons for pages they visit and search-engine pages they choose).
 
-Nadir stores history, bookmarks and settings locally on the user's computer; it does not upload them. Details and the known gaps are in [SECURITY.md](SECURITY.md).
+Pelorus stores history, bookmarks and settings locally on the user's computer; it does not upload them. Details and the known gaps are in [SECURITY.md](SECURITY.md).
 
 ## Reporting a problem with a signed or unsigned build
 Use private vulnerability reporting as described in [SECURITY.md](SECURITY.md). If you believe a published binary does not match this repository, say so there and include the output of the attestation check above.
 
 ## Acknowledgements (to be added when true)
-If a third-party signing service or foundation signs Nadir, its required attribution will be added here **only after** it has actually done so.
+If a third-party signing service or foundation signs Pelorus, its required attribution will be added here **only after** it has actually done so.

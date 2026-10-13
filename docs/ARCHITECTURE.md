@@ -1,4 +1,4 @@
-# Nadir — Architecture
+# Pelorus — Architecture
 
 Decision rationale: [ADR-0001](adr/0001-architecture.md). Evidence: [research ledger](research/LEDGER.md).
 Everything below describes **what is built today** unless marked *(planned)*.
@@ -16,7 +16,7 @@ flowchart TB
     PB[PermissionBroker]
     DM[DownloadManager]
     SF[SessionFactory<br/>1 partition / workspace]
-    PR[nadir:// protocol + CSP]
+    PR[pelorus:// protocol + CSP]
     IPC[IPC router<br/>sender + schema validation]
   end
   subgraph CHROME["Browser chrome renderers (sandboxed, bundled UI only)"]
@@ -62,13 +62,13 @@ No cycles. `src/shared/*` is pure (no Electron imports) and unit-tested in plain
 | Surface | Trust | Loads | Sandbox | Node | Preload | Can call IPC |
 |---|---|---|---|---|---|---|
 | Main | full | — | n/a | yes | — | — |
-| Shell (toolbar/sidebar) | trusted UI | `nadir://shell` | yes | no | `preload-chrome.js` (allowlist) | shell + shared channels only |
-| Overlay | trusted UI | `nadir://overlay` | yes | no | `preload-chrome.js` | overlay + shared channels only |
-| Internal pages | trusted UI | `nadir://newtab`, `nadir://app` | yes | no | `preload-internal.js` (self-checks `location.protocol`) | internal channels only |
+| Shell (toolbar/sidebar) | trusted UI | `pelorus://shell` | yes | no | `preload-chrome.js` (allowlist) | shell + shared channels only |
+| Overlay | trusted UI | `pelorus://overlay` | yes | no | `preload-chrome.js` | overlay + shared channels only |
+| Internal pages | trusted UI | `pelorus://newtab`, `pelorus://app` | yes | no | `preload-internal.js` (self-checks `location.protocol`) | internal channels only |
 | **Web tabs** | **untrusted** | any http(s)/file | yes | no | **none** | **none** |
 | Popups from tabs | untrusted | http(s) | yes | no | none | none |
 
-Enforcement is layered: (1) preload allowlist, (2) the main process re-checks `event.sender` **and** `event.senderFrame === mainFrame` for every channel — proven by an e2e test that calls every privileged channel from a window with raw `ipcRenderer`, (3) per-setting validators, (4) CSP on all `nadir://` content (no inline script, no `connect-src`).
+Enforcement is layered: (1) preload allowlist, (2) the main process re-checks `event.sender` **and** `event.senderFrame === mainFrame` for every channel — proven by an e2e test that calls every privileged channel from a window with raw `ipcRenderer`, (3) per-setting validators, (4) CSP on all `pelorus://` content (no inline script, no `connect-src`).
 
 Internal ↔ web navigation **swaps the renderer** (`TabManager.navigate`) so web content can never inherit an internal page's preload.
 
@@ -78,7 +78,7 @@ Internal ↔ web navigation **swaps the renderer** (`TabManager.navigate`) so we
 
 **Permission** — page API → `setPermissionRequestHandler` → `policyFor()` (deny-by-default; subframes never prompt) → stored decision for *(workspace, origin, permission)* or overlay prompt (focus on **Block**) → persisted only if "remember" and not private.
 
-**Download** — `will-download` → sanitise name (strip path, bidi, reserved names) → unique path in Downloads → risk class by extension (+ disguised double-extension) → DB row → progress to internal pages. Executable/script/shortcut/disk-image types are never launched by Nadir, only revealed in the folder.
+**Download** — `will-download` → sanitise name (strip path, bidi, reserved names) → unique path in Downloads → risk class by extension (+ disguised double-extension) → DB row → progress to internal pages. Executable/script/shortcut/disk-image types are never launched by Pelorus, only revealed in the folder.
 
 **Session** — every state change → debounced `serialize()` → `kv` table. Restore recreates tabs **asleep**; only the active tab per workspace loads.
 

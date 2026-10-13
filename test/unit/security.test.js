@@ -39,17 +39,17 @@ test('originOf', () => {
   assert.equal(originOf('not a url'), null);
 });
 
-test('nadir:// resolves only known hosts and stays inside src/ui', () => {
-  const ok = resolveUiPath('nadir://assets/js/x.js');
+test('pelorus:// resolves only known hosts and stays inside src/ui', () => {
+  const ok = resolveUiPath('pelorus://assets/js/x.js');
   assert.equal(ok, path.join(UI_ROOT, 'assets', 'js', 'x.js'));
-  assert.equal(resolveUiPath('nadir://shell/'), path.join(UI_ROOT, 'shell', 'index.html'));
-  assert.equal(resolveUiPath('nadir://evil/index.html'), null);
+  assert.equal(resolveUiPath('pelorus://shell/'), path.join(UI_ROOT, 'shell', 'index.html'));
+  assert.equal(resolveUiPath('pelorus://evil/index.html'), null);
   assert.equal(resolveUiPath('https://assets/x.js'), null);
 });
-test('nadir:// blocks traversal in every encoding we can think of', () => {
+test('pelorus:// blocks traversal in every encoding we can think of', () => {
   for (const u of [
-    'nadir://assets/../shell/index.html', 'nadir://assets/%2e%2e/shell/index.html', 'nadir://assets/..%2fshell/index.html',
-    'nadir://assets/%2e%2e%2f%2e%2e%2f%2e%2e%2fpackage.json', 'nadir://assets/..%5cshell%5cindex.html', 'nadir://assets/a%00.js',
+    'pelorus://assets/../shell/index.html', 'pelorus://assets/%2e%2e/shell/index.html', 'pelorus://assets/..%2fshell/index.html',
+    'pelorus://assets/%2e%2e%2f%2e%2e%2f%2e%2e%2fpackage.json', 'pelorus://assets/..%5cshell%5cindex.html', 'pelorus://assets/a%00.js',
   ]) {
     const r = resolveUiPath(u);
     assert.ok(r === null || r.startsWith(path.join(UI_ROOT, 'assets') + path.sep), `${u} -> ${r}`);
@@ -57,7 +57,7 @@ test('nadir:// blocks traversal in every encoding we can think of', () => {
 });
 test('CSP forbids inline script, remote script and network from UI code', () => {
   assert.ok(!/unsafe-inline|unsafe-eval/.test(CSP));
-  assert.match(CSP, /script-src nadir:\/\/assets(;|$)/);
+  assert.match(CSP, /script-src pelorus:\/\/assets(;|$)/);
   assert.match(CSP, /connect-src 'none'/);
   assert.match(CSP, /default-src 'none'/);
 });

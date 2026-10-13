@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Preload for Nadir's own chrome surfaces (toolbar/sidebar and overlay). Sandboxed: only `electron` is available.
+// Preload for Pelorus's own chrome surfaces (toolbar/sidebar and overlay). Sandboxed: only `electron` is available.
 // Web pages never get this preload. The main process re-validates every sender, so this allowlist is defence in depth.
 'use strict';
 const { contextBridge, ipcRenderer } = require('electron');
@@ -12,13 +12,13 @@ const INVOKE = new Set([
 ]);
 const ON = new Set(['state', 'focus-address', 'overlay:render', 'find:result', 'theme']);
 
-contextBridge.exposeInMainWorld('nadir', {
-  invoke: (channel, payload) => (INVOKE.has(channel) ? ipcRenderer.invoke(`nadir:${channel}`, payload) : Promise.reject(new Error(`Blocked channel: ${channel}`))),
+contextBridge.exposeInMainWorld('pelorus', {
+  invoke: (channel, payload) => (INVOKE.has(channel) ? ipcRenderer.invoke(`pelorus:${channel}`, payload) : Promise.reject(new Error(`Blocked channel: ${channel}`))),
   on: (channel, cb) => {
     if (!ON.has(channel) || typeof cb !== 'function') return () => {};
     const h = (_e, data) => cb(data);
-    ipcRenderer.on(`nadir:${channel}`, h);
-    return () => ipcRenderer.removeListener(`nadir:${channel}`, h);
+    ipcRenderer.on(`pelorus:${channel}`, h);
+    return () => ipcRenderer.removeListener(`pelorus:${channel}`, h);
   },
   platform: process.platform,
 });

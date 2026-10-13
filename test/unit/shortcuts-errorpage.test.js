@@ -48,5 +48,5 @@ test('certificate errors offer no proceed-anyway path', () => {
 test('http fallback link only when provided', () => {
   assert.ok(!errorPageHtml({ url: 'https://a.test/', code: -102, desc: 'x' }).includes('allow-http'));
   const html = errorPageHtml({ url: 'https://a.test/', code: -102, desc: 'x', httpFallback: 'http://a.test/p?q=1' });
-  assert.ok(html.includes('nadir://allow-http?u=http%3A%2F%2Fa.test%2Fp%3Fq%3D1'));
+  assert.ok(html.includes('pelorus://allow-http?u=http%3A%2F%2Fa.test%2Fp%3Fq%3D1'));
 });

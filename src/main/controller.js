@@ -59,7 +59,7 @@ class Controller {
     const isDark = nativeTheme.shouldUseDarkColors;
     const t = isDark ? THEME.dark : THEME.light;
     const win = new BrowserWindow({
-      width: 1440, height: 900, minWidth: 760, minHeight: 480, show: false, title: 'Nadir', backgroundColor: t.bar,
+      width: 1440, height: 900, minWidth: 760, minHeight: 480, show: false, title: 'Pelorus', backgroundColor: t.bar,
       titleBarStyle: 'hidden',
       ...(isMac ? { trafficLightPosition: { x: 14, y: 14 } } : { titleBarOverlay: { color: t.bar, symbolColor: t.symbol, height: TOOLBAR_H } }),
       webPreferences: {
@@ -101,11 +101,11 @@ class Controller {
       wc.setWindowOpenHandler(() => ({ action: 'deny' }));
     }
 
-    this.tabs.on('state', (snap) => { if (this.chromeReady && !win.isDestroyed()) win.webContents.send('nadir:state', snap); this._saveSoon(); });
+    this.tabs.on('state', (snap) => { if (this.chromeReady && !win.isDestroyed()) win.webContents.send('pelorus:state', snap); this._saveSoon(); });
     this.tabs.on('view-added', () => win.contentView.addChildView(this.overlay)); // keep overlay on top
     this.tabs.on('command', (c) => this.runCommand(c));
     this.tabs.on('focus-address', () => this.send('focus-address'));
-    this.tabs.on('found', (r) => { if (this.ov.kind === 'find') this.overlay.webContents.send('nadir:find:result', { active: r.activeMatchOrdinal, total: r.matches }); });
+    this.tabs.on('found', (r) => { if (this.ov.kind === 'find') this.overlay.webContents.send('pelorus:find:result', { active: r.activeMatchOrdinal, total: r.matches }); });
     this.tabs.on('fullscreen', (v) => { win.setFullScreen(v); setTimeout(() => this.layout(), 50); });
     this.tabs.on('closed', (id) => this.cancelPermissionsFor(id));
     this.tabs.on('navigated', (tab) => this.cancelPermissionsFor(tab.id));
@@ -118,8 +118,8 @@ class Controller {
     win.on('closed', () => { this.win = null; });
     nativeTheme.on('updated', () => this.applyTheme());
 
-    win.loadURL('nadir://shell/');
-    this.overlay.webContents.loadURL('nadir://overlay/');
+    win.loadURL('pelorus://shell/');
+    this.overlay.webContents.loadURL('pelorus://overlay/');
     this.layout();
     this.applyTheme();
     this.sleepTimer = setInterval(() => this.tabs.sleepIdle(this.cfg.tabSleepMinutes), 60000);
@@ -127,7 +127,7 @@ class Controller {
     return win;
   }
 
-  send(channel, data) { if (this.win && !this.win.isDestroyed()) this.win.webContents.send(`nadir:${channel}`, data); }
+  send(channel, data) { if (this.win && !this.win.isDestroyed()) this.win.webContents.send(`pelorus:${channel}`, data); }
 
   // ---- layout ---------------------------------------------------------------------------
   sidebarWidth() { return this.cfg.sidebarCollapsed ? SIDEBAR_W_COLLAPSED : SIDEBAR_W; }
@@ -149,7 +149,7 @@ class Controller {
     this.win.contentView.addChildView(this.overlay);
     this.overlay.setBounds(rect || { x: 0, y: 0, width: w, height: h });
     this.overlay.setVisible(true);
-    this.overlay.webContents.send('nadir:overlay:render', { kind, data });
+    this.overlay.webContents.send('pelorus:overlay:render', { kind, data });
     if (focus) this.overlay.webContents.focus();
   }
   hideOverlay({ restoreFocus = true } = {}) {
@@ -417,11 +417,11 @@ class Controller {
     this.tabs._changed();
   }
   broadcastSettings(key) {
-    for (const t of this.tabs.tabs.values()) if (t.kind === 'internal' && t.host && !t.host.destroyed) t.host.wc.send('nadir:settings:changed', { key });
+    for (const t of this.tabs.tabs.values()) if (t.kind === 'internal' && t.host && !t.host.destroyed) t.host.wc.send('pelorus:settings:changed', { key });
   }
   broadcastDownloads() {
     const list = this.downloads.list();
-    for (const t of this.tabs.tabs.values()) if (t.kind === 'internal' && t.host && !t.host.destroyed) t.host.wc.send('nadir:downloads:update', list);
+    for (const t of this.tabs.tabs.values()) if (t.kind === 'internal' && t.host && !t.host.destroyed) t.host.wc.send('pelorus:downloads:update', list);
     this.send('state', this.tabs.snapshot());
   }
 

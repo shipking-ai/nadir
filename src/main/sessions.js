@@ -8,7 +8,7 @@ const PRIVATE_ID = 'private';
 
 /**
  * One Chromium storage partition per workspace (cookies, cache, localStorage, IndexedDB are
- * all isolated), one non-persistent partition for private tabs, and one for Nadir's own pages.
+ * all isolated), one non-persistent partition for private tabs, and one for Pelorus's own pages.
  */
 function createSessionFactory({ blocker, broker, downloads }) {
   const cache = new Map();
@@ -16,7 +16,7 @@ function createSessionFactory({ blocker, broker, downloads }) {
 
   function cleanUserAgent(ses) {
     // Truthful about the engine, but without the Electron/app tokens that break sites and aid fingerprinting.
-    ses.setUserAgent(ses.getUserAgent().replace(/\sElectron\/\S+/i, '').replace(/\s(Nadir|nadir-browser)\/\S+/i, ''));
+    ses.setUserAgent(ses.getUserAgent().replace(/\sElectron\/\S+/i, '').replace(/\s(Pelorus|pelorus-browser)\/\S+/i, ''));
   }
 
   function configureWeb(ses) {
@@ -44,11 +44,11 @@ function createSessionFactory({ blocker, broker, downloads }) {
     let ses = cache.get(key);
     if (ses) return ses;
     if (key === 'internal') {
-      ses = session.fromPartition('persist:nadir-internal');
+      ses = session.fromPartition('persist:pelorus-internal');
       configureInternal(ses);
     } else {
       ses = workspaceId === PRIVATE_ID
-        ? session.fromPartition(`nadir-private-${runId}`)       // no "persist:" prefix => memory only
+        ? session.fromPartition(`pelorus-private-${runId}`)       // no "persist:" prefix => memory only
         : session.fromPartition(`persist:ws-${workspaceId}`);
       configureWeb(ses);
     }

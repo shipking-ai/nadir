@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Reproducible baseline: Nadir vs. the locally installed Chrome, same machine, same pages, same measurement method.
+// Reproducible baseline: Pelorus vs. the locally installed Chrome, same machine, same pages, same measurement method.
 // Usage: node scripts/bench.js [--tabs 10] [--runs 3] [--skip-chrome]
 // Results are written to docs/benchmarks/. Nothing here is a synthetic score; see docs/PERFORMANCE.md for caveats.
 const { spawn, execFileSync } = require('node:child_process');
@@ -47,10 +47,10 @@ async function cpuPercent(pid, seconds = 10) {
   return round((delta / ((Date.now() - t0) / 1000)) * 100, 2); // % of one logical core
 }
 
-async function benchNadir(srv) {
+async function benchPelorus(srv) {
   const out = { runs: [] };
   // 1) warm the filter-list cache once (needs network); later runs load it from disk.
-  const userData = fs.mkdtempSync(path.join(os.tmpdir(), 'nadir-bench-'));
+  const userData = fs.mkdtempSync(path.join(os.tmpdir(), 'pelorus-bench-'));
   {
     const w = await launch({ userData, headless: false });
     await w.main(() => {}); // ensure up
@@ -61,7 +61,7 @@ async function benchNadir(srv) {
   }
   // 2) seed 5,000 history rows for suggestion latency
   {
-    const st = new Store(path.join(userData, 'nadir.db'));
+    const st = new Store(path.join(userData, 'pelorus.db'));
     st.db.exec('BEGIN');
     for (let i = 0; i < 5000; i++) st.addVisit({ workspaceId: 'default', url: `https://site${i % 700}.example.org/section/${i}/page`, title: `Article ${i} about topic ${i % 97} and subject ${i % 31}` });
     st.db.exec('COMMIT');
@@ -71,7 +71,7 @@ async function benchNadir(srv) {
   for (let r = 0; r < RUNS; r++) {
     const t0 = Date.now();
     const b = await launchPlain({ userData });
-    await until(async () => { const t = await b.active(); return t && !t.loading && t.url === 'nadir://newtab/'; }, { timeout: 20000, step: 50, what: 'first tab ready' });
+    await until(async () => { const t = await b.active(); return t && !t.loading && t.url === 'pelorus://newtab/'; }, { timeout: 20000, step: 50, what: 'first tab ready' });
     const startMs = Date.now() - t0;
     const pid = b.pid;
     await sleep(6000);
@@ -89,14 +89,14 @@ async function benchNadir(srv) {
       const ids = (await b.state()).tabs.map((x) => x.id);
       const lat = await b.eval(`(async (list) => {
         const out = [];
-        for (let k = 0; k < 40; k++) { const t0 = performance.now(); await window.nadir.invoke('tab:activate', list[k % list.length]); out.push(performance.now() - t0); }
+        for (let k = 0; k < 40; k++) { const t0 = performance.now(); await window.pelorus.invoke('tab:activate', list[k % list.length]); out.push(performance.now() - t0); }
         return out;
       })(${JSON.stringify(ids)})`);
       run.tabSwitchMs = { p50: round(median(lat), 2), p95: round(pct(lat, 0.95), 2) };
       // suggestion latency against 5,000 history rows
       const sug = await b.eval(`(async () => {
         const out = []; const qs = ['article', 'topic 4', 'site1', 'subject 2', 'exam'];
-        for (let k = 0; k < 50; k++) { const t0 = performance.now(); await window.nadir.invoke('omnibox:suggest', qs[k % qs.length]); out.push(performance.now() - t0); }
+        for (let k = 0; k < 50; k++) { const t0 = performance.now(); await window.pelorus.invoke('omnibox:suggest', qs[k % qs.length]); out.push(performance.now() - t0); }
         return out;
       })()`);
       run.suggestMs = { p50: round(median(sug), 2), p95: round(pct(sug, 0.95), 2) };
@@ -110,9 +110,9 @@ async function benchNadir(srv) {
   }
   // 3) session restore with many tabs (its own phase so timing runs above stay clean)
   {
-    const st = new Store(path.join(userData, 'nadir.db')); st.setSetting('restoreSession', true); st.close();
+    const st = new Store(path.join(userData, 'pelorus.db')); st.setSetting('restoreSession', true); st.close();
     let b = await launchPlain({ userData });
-    await until(async () => (await b.active())?.url === 'nadir://newtab/', { what: 'fresh tab' });
+    await until(async () => (await b.active())?.url === 'pelorus://newtab/', { what: 'fresh tab' });
     for (let i = 0; i < TABS; i++) {
       await b.invoke('tab:new', { url: `http://127.0.0.1:${srv.port}/p/${i}` });
       await until(async () => (await b.active()).title === `Article ${i}`, { timeout: 20000, what: `tab ${i}` });
@@ -153,7 +153,7 @@ async function benchChrome(srv) {
 (async () => {
   const srv = await startServer();
   const hw = { cpu: os.cpus()[0].model.trim(), logicalCores: os.cpus().length, ramGB: round(os.totalmem() / 2 ** 30), os: `${os.type()} ${os.release()}` };
-  const res = { date: new Date().toISOString(), hardware: hw, tabs: TABS, runs: RUNS, nadir: await benchNadir(srv) };
+  const res = { date: new Date().toISOString(), hardware: hw, tabs: TABS, runs: RUNS, pelorus: await benchPelorus(srv) };
   if (!SKIP_CHROME && fs.existsSync(CHROME)) res.chrome = await benchChrome(srv);
   await srv.close();
   const file = path.join(__dirname, '..', 'docs', 'benchmarks', `results-${res.date.slice(0, 10)}.json`);

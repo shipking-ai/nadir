@@ -1,4 +1,18 @@
-# Trademark check for "Nadir" — what was found (not legal advice, not clearance)
+# Trademark checks — "Nadir" (former name) and "Pelorus" (current name)
+
+**Outcome (2026-10-13):** the project was originally called Nadir. A USPTO search found live pending marks near its field, so it was **renamed to Pelorus**. The Pelorus search is in the first section; the original Nadir findings follow unchanged as the record of why. Neither search is legal advice or clearance.
+
+## Pelorus (current name)
+
+**Searched:** 2026-10-13, USPTO Trademark Search, wordmark `pelorus`, no filters; 20 records. US federal register only; EUIPO, WIPO, UK IPO, state registers and common-law use were not searched, and a lawyer's search would also cover similar-sounding marks.
+
+- **Classes 009 (downloadable software) and 042 (software services): no LIVE records.** Every software-related PELORUS record is dead (abandoned or cancelled): simulation software (009), computer software for monitoring/tracking (009), fibre-optic electronics (009), software development tools (009), a SaaS service (042), and others. Dead records create no current register rights, though past use can still matter.
+- **LIVE Pelorus marks exist in unrelated fields:** wines (class 033, a New Zealand winery), medical and health services (044), wood mouldings (019), business consulting agency services (035), financial asset management (036), freight and shipping (039).
+- **Other uses outside the register (web, GitHub, npm, 2026-10-13):** no browser named Pelorus found. GitHub has unrelated projects of that name, notably a DevOps metrics tool (`dora-metrics/pelorus`, 254 stars), a marine chartplotter, a terminal file manager and an agentic Linux-desktop tool; npm has an unrelated package `pelorus` (a GraphQL adapter). A software product in the same space could still be argued to be related to some of these.
+- **Risk summary:** lower than the old name in the register classes that matter for a browser, but not zero, and not checked outside the US. The word is also a descriptive-ish navigation term, which can make a mark weaker rather than safer. Get an attorney opinion before a wide launch.
+
+## Nadir (former name) — original findings
+
 
 **Searched:** 2026-10-13, USPTO Trademark Search (<https://tmsearch.uspto.gov/>), wordmark search for `nadir`, no filters. 21 records matched. Only the **US federal register** was searched. EUIPO, WIPO, UK IPO, state registrations, and **unregistered ("common-law") use** were not. A search by a lawyer also looks at similar-sounding and similar-looking marks, translations and design marks; this one did not.
 

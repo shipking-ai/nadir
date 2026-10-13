@@ -1,6 +1,6 @@
 # Feature matrix
 
-As of 2026-10-13, Nadir 0.2.0 (73 unit + 51 e2e tests). Status vocabulary: **Implemented & tested** · **Implemented, not fully tested** · **Partially implemented** · **Planned** · **Blocked**
+As of 2026-10-13, Pelorus 0.3.0 (73 unit + 51 e2e tests). Status vocabulary: **Implemented & tested** · **Implemented, not fully tested** · **Partially implemented** · **Planned** · **Blocked**
 "Tested" means an automated test exercises the behaviour (unit = plain Node, e2e = the real app driven by Playwright against a local server). Test names are in `test/`.
 
 ## Implemented and tested
@@ -27,10 +27,10 @@ As of 2026-10-13, Nadir 0.2.0 (73 unit + 51 e2e tests). Status vocabulary: **Imp
 | Keyboard shortcuts from page / chrome / overlay; plain typing not hijacked | unit (map) + e2e (`sendInputEvent`) |
 | Session save/restore (lazy: only the active tab loads) | e2e |
 | Settings persistence + validation | unit + e2e |
-| IPC trust boundaries; web pages have no privileged API; no navigation into `nadir://` | e2e (8 channels from a raw-`ipcRenderer` window rejected) |
-| `nadir://` server: host allowlist, traversal-safe, CSP without inline script | unit `security.test.js` |
+| IPC trust boundaries; web pages have no privileged API; no navigation into `pelorus://` | e2e (8 channels from a raw-`ipcRenderer` window rejected) |
+| `pelorus://` server: host allowlist, traversal-safe, CSP without inline script | unit `security.test.js` |
 | Internal ↔ web renderer swap | e2e |
-| Global Privacy Control header on every request; UA free of Electron/app tokens | e2e (found and fixed a `Nadir/0.1.0` UA leak) |
+| Global Privacy Control header on every request; UA free of Electron/app tokens | e2e (found and fixed a `Pelorus/0.1.0` UA leak) |
 | Packaged build launches and browses (unsigned) | `scripts/verify-package.js` (manual/CI step, not part of `npm test`) |
 | Certificate errors (expired, self-signed, wrong host, untrusted root): plain error page, no bypass, no script | e2e `tls.test.js` against badssl.com (needs internet; skips offline) |
 | Background tabs are hidden and render no frames; foreground renders at frame rate | e2e `background.test.js` (un-attached launcher) |

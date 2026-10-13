@@ -25,7 +25,7 @@ const PRIV = 'Ad / tracker blocking, filter lists, DNS';
 const AI = 'Translation / on-device AI in browsers';
 const STEALTH = 'Anti-detect / stealth browsers (excluded by policy)';
 
-const STEALTH_NOTE = 'Built to defeat bot detection / spoof fingerprints per its description. Nadir does not do detection evasion; catalogued for completeness only';
+const STEALTH_NOTE = 'Built to defeat bot detection / spoof fingerprints per its description. Pelorus does not do detection evasion; catalogued for completeness only';
 const m = {
   // --- engines & from-scratch browsers
   'gosub-io/gosub-engine': E(ENGINE, 'Reference', 'Rust, from-scratch engine (per description); active. Watch-list item next to Ladybird/Servo for a future engine host'),
@@ -48,7 +48,7 @@ const m = {
   'jansc/ncgopher': E(DEC, 'Reference', 'Gopher + Gemini TUI client'),
   'xvxx/phetch': E(DEC, 'Reference', 'Gopher TUI client (stale since 2023)'),
   'jankammerath/gophie': E(DEC, 'Rejected', 'Gopher GUI client; no pushes since 2023-12, redundant with Kristall'),
-  'zenbu-labs/terminal-browser': E(TEXT, 'Reference', 'A browser rendered inside a terminal (per description); interesting for SSH/remote use, not for Nadir'),
+  'zenbu-labs/terminal-browser': E(TEXT, 'Reference', 'A browser rendered inside a terminal (per description); interesting for SSH/remote use, not for Pelorus'),
   // --- Chromium-based
   'alex313031/thorium-win': E(CHROMIUM, 'Reference', 'Windows build repo for Thorium (Thorium itself already catalogued)'),
   'robrich999/chromium_clang': E(CHROMIUM, 'Reference', 'Chromium built with Clang/LLVM; build-pipeline reference only (no licence field)'),
@@ -62,7 +62,7 @@ const m = {
   'mogoweb/chromium_webview': E(MOBILE, 'Rejected', 'Android WebView wrapper, last push 2015'),
   'equodev/chromium': E(SHELLS, 'Out-of-scope', 'Chromium inside Java SWT/Swing (GPL-3.0); embedding toolkit'),
   'henrypp/chrlauncher': E(CHROMIUM, 'Reference', 'Portable updater/launcher for Chromium (MIT); update-flow reference'),
-  'responsively-org/responsively-app': E(SHELLS, 'Reference', 'Electron-based multi-viewport dev browser (AGPL-3.0); AGPL means no code reuse in Nadir; UX reference for responsive testing'),
+  'responsively-org/responsively-app': E(SHELLS, 'Reference', 'Electron-based multi-viewport dev browser (AGPL-3.0); AGPL means no code reuse in Pelorus; UX reference for responsive testing'),
   'corbindavenport/just-the-browser': E(PRIV, 'Reference', 'Scripts that apply enterprise policies to strip AI/telemetry/sponsored content from desktop browsers (MIT); policy list is a hardening checklist'),
   'chaoticsi1ence/slimbrave-neo': E(PRIV, 'Reference', 'Hardens Brave through Chromium enterprise policies (GPL-3.0); same idea as above'),
   'rknf404/chromium-hardening-guide': E(PRIV, 'Reference', 'Hardening notes for Chromium (licence field says ms-pl); a checklist to cross-read, not authority'),
@@ -101,7 +101,7 @@ const m = {
   'agregoreweb/agregore-browser': E(DEC, 'Reference', 'Electron browser for the distributed web: IPFS, Hypercore, BitTorrent (AGPL-3.0, active); closest "alt-protocol Electron" prior art'),
   'p2plabsxyz/peersky-browser': E(DEC, 'Reference', 'Local-first P2P browser (MIT, active)'),
   'dbrowser/dbrowser': E(DEC, 'Rejected', 'Web3 browser (IPFS/SSB/Hypercore), no pushes since 2022-10'),
-  'goddv/zervo': E(ENGINE, 'Experimental', 'Workspace-oriented browser on the Servo engine (MPL-2.0, active); the same idea as Nadir workspaces on a different engine - worth following'),
+  'goddv/zervo': E(ENGINE, 'Experimental', 'Workspace-oriented browser on the Servo engine (MPL-2.0, active); the same idea as Pelorus workspaces on a different engine - worth following'),
   'catalystdevorg/catalyst': E(SHELLS, 'Reference', 'Minimal customizable browser (MIT, active); did not read the code to see which engine it uses'),
   'elzabrowser/elza': E(SHELLS, 'Rejected', 'Electron privacy browser, no pushes since 2023-05'),
   'raluvy95/felidabrowser': E(SHELLS, 'Rejected', 'Archived Electron browser'),
@@ -110,7 +110,7 @@ const m = {
   'sharpbrowser/sharpbrowser': E(SHELLS, 'Reference', 'C#/CefSharp browser (MIT); pattern for a CEF-based Windows shell'),
   'tbrowser/turbo-browser': E(CHROMIUM, 'Reference', 'Chinese-market Chromium-based browser with vertical tabs, split view, mouse gestures per its description; no licence declared, so code cannot be reused'),
   'cba85/electron-webview': E(SHELLS, 'Out-of-scope', 'Simple Electron webview demo'),
-  'niutech/splitbrowser': E(SHELLS, 'Reference', 'Minimal split-view browser (MIT); relevant to Nadir split view'),
+  'niutech/splitbrowser': E(SHELLS, 'Reference', 'Minimal split-view browser (MIT); relevant to Pelorus split view'),
   'beamlegacy/beam': E(SHELLS, 'Reference', 'Beam: note-taking browser; licence NOASSERTION so cannot be assumed reusable'),
   'nilbuild/pennywise': E(SHELLS, 'Reference', 'Floating mini-window for any site/media (MIT; formerly kamranahmedse/pennywise)'),
   'pichillilorenzo/flutter_browser_app': E(MOBILE, 'Reference', 'Flutter browser app on InAppWebView (Apache-2.0); last push 2024-10'),
@@ -122,12 +122,12 @@ const m = {
   'rebel-root/omni-browser': E(MOBILE, 'Reference', 'Android browser on Gecko (GPL-3.0)'),
   'sk2andy/candy-browser': E(MOBILE, 'Reference', 'Gesture-first Android browser with local privacy tools (MPL-2.0, active)'),
   // --- containers / tab / extension prior art
-  'mozilla/multi-account-containers': E(EXT, 'Reference', 'Prior art for Nadir workspaces (cookie/storage isolation per context); MPL-2.0'),
-  'stoically/temporary-containers': E(EXT, 'Reference', 'Disposable containers; analogue of Nadir private tabs'),
+  'mozilla/multi-account-containers': E(EXT, 'Reference', 'Prior art for Pelorus workspaces (cookie/storage isolation per context); MPL-2.0'),
+  'stoically/temporary-containers': E(EXT, 'Reference', 'Disposable containers; analogue of Pelorus private tabs'),
   'josh-berry/tab-stash': E(EXT, 'Reference', 'Tabs saved as bookmarks (MPL-2.0); informs tab groups'),
   'projectdelphai/panorama-tab-groups': E(EXT, 'Reference', 'Tab Groups for Firefox (MPL-2.0, stale since 2023)'),
   'eoger/tabcenter-redux': E(EXT, 'Reference', 'Vertical tabs extension for Firefox (stale since 2020)'),
-  'robbendebiene/gesturefy': E(EXT, 'Optional', 'Mouse gestures extension (GPL-3.0, active); gestures could become a Nadir setting'),
+  'robbendebiene/gesturefy': E(EXT, 'Optional', 'Mouse gestures extension (GPL-3.0, active); gestures could become a Pelorus setting'),
   'filips123/pwasforfirefox': E(EXT, 'Reference', 'PWA install/manage for Firefox (MPL-2.0, active); informs a future PWA mode'),
   'salarcode/smartproxy': E(EXT, 'Reference', 'Per-site proxy switching extension (GPL-3.0, active); per-workspace proxy is a candidate feature'),
   'darkreader/darkreader': E(EXT, 'Reference', 'Dark mode extension (MIT, active); algorithm reference for a built-in forced-dark option'),
@@ -135,9 +135,9 @@ const m = {
   'ublock-llc/ublock': E(PRIV, 'Rejected', 'Not the upstream uBlock Origin (gorhill/uBlock); no pushes since 2022-09 - do not rely on it'),
   'pyllyukko/user.js': E(PRIV, 'Reference', 'Firefox hardening prefs (MIT, active); a checklist for Gecko-side hardening'),
   'celenityy/phoenix': E(PRIV, 'Reference', 'Firefox hardening configs (GPL-3.0, active)'),
-  'omegaee/my-fingerprint': E(FP, 'Reference', 'Extension that protects against browser fingerprinting (Apache-2.0, active); candidate approach for future Nadir fingerprint work, to be evaluated against Mullvad-style uniformity'),
+  'omegaee/my-fingerprint': E(FP, 'Reference', 'Extension that protects against browser fingerprinting (Apache-2.0, active); candidate approach for future Pelorus fingerprint work, to be evaluated against Mullvad-style uniformity'),
   // --- standards / devtools / testing oracles
-  'chromium/badssl.com': E(STD, 'High-value', 'Test site for bad TLS configurations (Apache-2.0, active) - should back Nadir certificate-error e2e tests'),
+  'chromium/badssl.com': E(STD, 'High-value', 'Test site for bad TLS configurations (Apache-2.0, active) - should back Pelorus certificate-error e2e tests'),
   'chromium/hstspreload.org': E(STD, 'Reference', 'HSTS preload list submission site; the preload list is relevant to HTTPS-first'),
   'webkit/standards-positions': E(STD, 'Reference', 'WebKit positions on emerging specs, for compatibility planning'),
   'chromedevtools/debugger-protocol-viewer': E(DEV, 'Reference', 'Chrome DevTools Protocol docs viewer'),
@@ -151,7 +151,7 @@ const m = {
   'nerdyslacker/desktop-web-browsers': E(STD, 'Reference', 'Curated list of desktop browsers; used as a cross-check source in SWEEP.md'),
   'alrra/browser-logos': E(STD, 'Out-of-scope', 'Logo asset collection'),
   // --- automation / agents
-  'puppeteer/puppeteer': E(AUTO, 'Reference', 'Apache-2.0; Chrome and Firefox automation. Nadir tests use Playwright instead'),
+  'puppeteer/puppeteer': E(AUTO, 'Reference', 'Apache-2.0; Chrome and Firefox automation. Pelorus tests use Playwright instead'),
   'chromedp/chromedp': E(AUTO, 'Out-of-scope', 'Go CDP driver (MIT, active)'),
   'hardkoded/puppeteer-sharp': E(AUTO, 'Out-of-scope', '.NET Puppeteer port'),
   'chrome-php/chrome': E(AUTO, 'Out-of-scope', 'PHP headless Chrome driver'),
@@ -180,7 +180,7 @@ const m = {
   'browser-use/terminal': E(AUTO, 'Out-of-scope', 'Terminal UI for browser-use'),
   'sawyerhood/dev-browser': E(AUTO, 'Reference', 'MIT; a Claude skill giving an agent browser access - threat-model reference for the agent features'),
   'lexmount/moli': E(AUTO, 'Reference', 'Rust headless browser for agents (Apache-2.0, very active). Claims in its README were not verified'),
-  'citrolabs/ego-lite': E(AUTO, 'Reference', 'MIT; browser automation sharing a logged-in session - exactly the capability that needs strict consent in Nadir; claims not verified'),
+  'citrolabs/ego-lite': E(AUTO, 'Reference', 'MIT; browser automation sharing a logged-in session - exactly the capability that needs strict consent in Pelorus; claims not verified'),
   'platonai/browser4': E(AUTO, 'Reference', 'Apache-2.0, active; "AI-native browser engine" for agents per description'),
   'webbrain-one/webbrain': E(AI, 'Reference', 'Browser-agent extension for Chrome/Firefox (licence "other")'),
   'browseroperator/browser-operator-core': E(AI, 'Reference', 'BSD-3-Clause; AI browser with a multi-agent platform; last push 2026-03'),
@@ -193,7 +193,7 @@ const m = {
   'versotile-org/verso': E(ENGINE, 'Reference', 'Servo-based browser; GitHub copy is an archived mirror of the GitLab project (gitlab.com/verso-browser/verso). Superseded in spirit by goddv/Zervo and Servo itself'),
   'atlas-engineer/nyxt': E(TEXT, 'Reference', 'Programmable keyboard-driven browser in Lisp (11k stars); strongest "browser as a programmable environment" prior art'),
   'fanglingsu/vimb': E(WEBKITQT, 'Reference', 'Vim-like WebKitGTK browser, active'),
-  'igalia/cog': E(WEBKITQT, 'Optional', 'WPE launcher / web-app container for embedded kiosks; relevant if Nadir ever targets embedded displays'),
+  'igalia/cog': E(WEBKITQT, 'Optional', 'WPE launcher / web-app container for embedded kiosks; relevant if Pelorus ever targets embedded displays'),
   'webkit/speedometer': E(DEV, 'High-value', 'The standard responsiveness benchmark; planned for scripts/bench.js alongside JetStream/MotionMark (ROADMAP 0.2)'),
   'webkit/jetstream': E(DEV, 'High-value', 'JavaScript/WASM benchmark from the WebKit org'),
   'webkit/motionmark': E(DEV, 'High-value', 'Graphics benchmark from the WebKit org'),
@@ -201,7 +201,7 @@ const m = {
   'tutao/tutanota': E('Sync, passwords, auth', 'Out-of-scope', 'Encrypted email service; not browser-related beyond privacy ethos'),
   'ggml-org/whisper.cpp': E(AI, 'Optional', 'Local speech-to-text (MIT); would power local dictation / media transcripts'),
   'go-shiori/shiori': E('Sync, passwords, auth', 'Reference', 'Self-hosted bookmark manager (Go); a possible sync target'),
-  'sienori/tab-session-manager': E(EXT, 'Reference', 'Save/restore window and tab sessions; informs Nadir session snapshots'),
+  'sienori/tab-session-manager': E(EXT, 'Reference', 'Save/restore window and tab sessions; informs Pelorus session snapshots'),
   'alex313031/mercury': E(GECKO, 'Reference', 'Firefox fork with compiler optimisations plus patches from LibreWolf/Waterfox/others'),
   'nativefier/nativefier': E(SHELLS, 'Rejected', 'Archived; wrapped sites into Electron apps'),
   'ahwxorg/librey': E('Search / local indexing / metasearch', 'Reference', 'JS-free privacy metasearch; candidate custom search endpoint'),
@@ -210,7 +210,7 @@ const m = {
   'marginaliasearch/marginaliasearch': E('Search / local indexing / metasearch', 'Optional', 'Independent index of text-oriented sites; interesting provider for the search list'),
   'blackboardsh/electrobun': E(SHELLS, 'Experimental', 'Bun-based desktop app framework (12.9k stars); the "Electron alternative" to watch for the shell layer, not engine'),
   'apache/cordova': E(MOBILE, 'Out-of-scope', 'Hybrid mobile app framework'),
-  'quickwit-oss/tantivy': E('Search / local indexing / metasearch', 'Optional', 'Rust full-text search library; FTS5 is enough for Nadir history today'),
+  'quickwit-oss/tantivy': E('Search / local indexing / metasearch', 'Optional', 'Rust full-text search library; FTS5 is enough for Pelorus history today'),
   'mattsse/chromiumoxide': E(AUTO, 'Out-of-scope', 'Rust CDP client'),
   'ferdium/ferdium-app': E(SHELLS, 'Reference', 'Community successor to Ferdi/Franz multi-service app; workspace UX reference'),
   'holepunchto/hyperbeam': E(DEC, 'Out-of-scope', 'E2E-encrypted pipe over Hyperswarm; a building block for sync transports, no browser role'),
@@ -230,7 +230,7 @@ const STALE_DESKTOP = ['kingbri1/asobi', 'bonbon-exchange/bonbon-browser', 'piop
 const STALE_HEADLESS = ['joshbuddy/ghostbuster', 'spacenick/jedi-crawler', 'stanangeloff/lotte', 'schickling/chromeless', 'angrykoala/wendigo', 'safrizal/cdp4j',
   'briankircho/browserjet', 'alexandernst/headless_browser', 'jabbalaci/jabba-webkit', 'makinacorpus/spynner', 'mkoehnke/wkzombie', 'youpy/grope',
   'andyjansson/specterjs', 'pszyller/guillotine', 'artsy/benv', 'tmp8/browser-rb', 'damonjs/damon', 'roryprimrose/headless', 'clubajax/headlessbrowser', 'seebigs/node-as-browser'];
-for (const k of STALE_DESKTOP) m[k] = E(SHELLS, 'Rejected', 'Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Nadir needs that better-maintained projects do not already show');
+for (const k of STALE_DESKTOP) m[k] = E(SHELLS, 'Rejected', 'Small desktop-browser project from a curated list; archived or no pushes in over a year, nothing Pelorus needs that better-maintained projects do not already show');
 for (const k of STALE_HEADLESS) m[k] = E(AUTO, 'Rejected', 'Old headless-browser/automation library from a curated list (PhantomJS-era or unmaintained); superseded by Playwright/Puppeteer/CDP clients');
 m['leonaaraujo/companion'] = E(SHELLS, 'Reference', 'Tiny floating mini-browser (MIT, active); quick-lookup window idea');
 m['v38armageddon/websm'] = E(TEXT, 'Reference', '"Simply minimalist" browser (active in 2026, licence NOASSERTION so not reusable as-is)');
@@ -254,12 +254,12 @@ Object.assign(m, {
   'antoniond/bunjalloo': E(TEXT, 'Out-of-scope', 'Browser for the Nintendo DS (GPL-3.0, active) - curiosity'),
   'stjanovitz/tilefinch': E(TEXT, 'Out-of-scope', 'Experimental browser for the Sony PSP - curiosity'),
   'kageroumado/refrax-browser': E(WEBKITQT, 'Reference', 'macOS "maximalist" browser by one developer (GPL-3.0, active)'),
-  'ysamed/yalqen': E(SHELLS, 'Reference', 'Vertical tabs + command bar browser (MIT, active) - the same UX shape as Nadir, so a useful comparison'),
+  'ysamed/yalqen': E(SHELLS, 'Reference', 'Vertical tabs + command bar browser (MIT, active) - the same UX shape as Pelorus, so a useful comparison'),
   'kaykcaputo/hermes-browser': E(ENGINE, 'Reference', 'Rust desktop browser (MPL-2.0, active)'),
   'vastsea0/hilal-browser': E(GECKO, 'Reference', 'Hilal Browser (MPL-2.0); description is one line, so nothing else is claimed'),
   'slt-world/slbr': E(CHROMIUM, 'Reference', 'WPF C# browser (GPL-3.0, active) - Windows shell on CEF'),
   'startechnology1994/uewebbrowser': E(SHELLS, 'Out-of-scope', 'Enterprise Web UI / Chromium browser control for Unreal Engine'),
-  'internet4000/find': E(EXT, 'Reference', 'URL- and local-first omnibox actions (GPL-3.0); related to Nadir command palette ideas'),
+  'internet4000/find': E(EXT, 'Reference', 'URL- and local-first omnibox actions (GPL-3.0); related to Pelorus command palette ideas'),
   'unmodeled-tyler/vessel-browser': E(AUTO, 'Reference', 'Open-source browser built "from the ground-up for agents" (MIT, active)'),
   'aduermael/wb': E(AUTO, 'Reference', 'macOS 26+ browser CLI for agents (MIT)'),
   'prirai/nira-browser': E(MOBILE, 'Reference', 'Android Gecko browser with profiles, PWAs and tab groups (MPL-2.0, active)'),
@@ -307,7 +307,7 @@ Object.assign(m, {
   'ricky9090/easybrowser': E(MOBILE, 'Rejected', 'Teaching Android browser, last push 2022'),
   'vladthodo/behe-explorer': E(MOBILE, 'Rejected', 'Small Android browser, last push 2021'),
   'jameszaghini/floaty': E(WEBKITQT, 'Rejected', 'macOS float-on-top browser, last push 2022'),
-  'ghostery/user-agent-android': E(MOBILE, 'Rejected', 'Archived Ghostery Android browser; Ghostery now ships extensions and the adblocker library Nadir uses'),
+  'ghostery/user-agent-android': E(MOBILE, 'Rejected', 'Archived Ghostery Android browser; Ghostery now ships extensions and the adblocker library Pelorus uses'),
   'b0o/surfingkeys-conf': E(EXT, 'Reference', 'Config for the SurfingKeys extension (MIT); keybinding ideas'),
   'do-say-go/puppetromium': E(AUTO, 'Reference', 'Single-tab browser driven by Puppeteer with no client-side JS - novelty / remote-isolation idea'),
   'therealglazou/bluegriffon': E(ENGINE, 'Out-of-scope', 'Gecko-based web editor, last push 2021'),

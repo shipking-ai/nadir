@@ -1,4 +1,4 @@
-// Launches a VISIBLE Nadir window against a local demo server and keeps it open for screenshots.
+// Launches a VISIBLE Pelorus window against a local demo server and keeps it open for screenshots.
 // Usage: node scripts/live-demo.js [seconds]   (default 90)
 const { launch, startServer, until, sleep } = require('../test/e2e/helpers');
 const http = require('node:http');
@@ -26,7 +26,7 @@ const http = require('node:http');
   };
   await shot('composite-1.png');
   await b.ctl('c.runCommand("command-palette")'); await sleep(900);
-  const ov = await b.page('nadir://overlay'); await ov.fill('.palette input', 'set'); await sleep(700);
+  const ov = await b.page('pelorus://overlay'); await ov.fill('.palette input', 'set'); await sleep(700);
   await shot('composite-palette.png');
   await b.ctl('c.hideOverlay()');
   await b.ctl('c.setSetting("theme","dark")'); await sleep(1200);

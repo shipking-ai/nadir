@@ -105,7 +105,7 @@ async function npmSearch(q) {
 
 async function cratesSearch(q) {
   try {
-    const res = await fetch(`https://crates.io/api/v1/crates?q=${encodeURIComponent(q)}&per_page=40&sort=downloads`, { headers: { 'user-agent': 'nadir-research (open-source browser research)' } });
+    const res = await fetch(`https://crates.io/api/v1/crates?q=${encodeURIComponent(q)}&per_page=40&sort=downloads`, { headers: { 'user-agent': 'pelorus-research (open-source browser research)' } });
     const j = await res.json();
     for (const c of j.crates || []) note(`crates:${c.name}`, { src: 'crates.io', name: c.name, stars: '', license: '', pushed: (c.updated_at || '').slice(0, 10), archived: '', lang: 'rust', desc: (c.description || '').replace(/[\t\n\r]+/g, ' ').slice(0, 160), hits: new Set([`crates:${q}`]), downloads: c.downloads });
   } catch (e) { errors.push(`crates ${q}: ${e.message}`); }
