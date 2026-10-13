@@ -48,7 +48,10 @@ async function launch({ userData, downloadDir, args = [], headless = true, env =
         await Promise.race([app.close(), new Promise((_, rej) => { timer = setTimeout(() => rej(new Error('close timed out')), 20000); })]);
       } catch (e) {
         console.error(`[helpers] ${e.message}; open windows: ${JSON.stringify(app.windows().map((w) => w.url()))}; pid ${proc.pid} exitCode ${proc.exitCode}`);
-        try { proc.kill('SIGKILL'); } catch { /* already gone */ }
+        try {
+          if (process.platform === 'win32') require('node:child_process').execFileSync('taskkill', ['/PID', String(proc.pid), '/T', '/F'], { stdio: 'ignore' });
+          else proc.kill('SIGKILL');
+        } catch { /* already gone */ }
       } finally { clearTimeout(timer); }
     },
   };

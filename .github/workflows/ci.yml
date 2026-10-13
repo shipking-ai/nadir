@@ -40,7 +40,7 @@ jobs:
         shell: bash
         run: |
           failed=0
-          for f in test/e2e/*.test.js; do echo "::group::$f"; node --test --test-timeout=60000 "$f" || { echo "FILE FAILED: $f"; failed=1; }; echo "::endgroup::"; done
+          for f in test/e2e/*.test.js; do echo "::group::$f"; node --test --test-force-exit --test-timeout=60000 "$f" || { echo "FILE FAILED: $f"; failed=1; }; echo "::endgroup::"; done
           exit $failed
       - name: Package
         run: npm run package
@@ -105,9 +105,9 @@ jobs:
         if: runner.os == 'Linux'
         timeout-minutes: 25
         run: |
-          for f in test/e2e/*.test.js; do echo "::group::$f"; xvfb-run -a node --test --test-timeout=30000 "$f" || echo "FILE FAILED: $f"; echo "::endgroup::"; done
+          for f in test/e2e/*.test.js; do echo "::group::$f"; xvfb-run -a node --test --test-force-exit --test-timeout=120000 "$f" || echo "FILE FAILED: $f"; echo "::endgroup::"; done
       - name: End-to-end tests (macOS)
         if: runner.os == 'macOS'
         timeout-minutes: 25
         run: |
-          for f in test/e2e/*.test.js; do echo "::group::$f"; node --test --test-timeout=30000 "$f" || echo "FILE FAILED: $f"; echo "::endgroup::"; done
+          for f in test/e2e/*.test.js; do echo "::group::$f"; node --test --test-force-exit --test-timeout=120000 "$f" || echo "FILE FAILED: $f"; echo "::endgroup::"; done

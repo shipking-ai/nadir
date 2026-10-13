@@ -109,6 +109,7 @@ test('accessibility tree of the browser chrome: names, roles and states a screen
   for (const wanted of ['New tab', 'Reload']) assert.ok(names('button').some((n) => new RegExp(wanted, 'i').test(n)), `a "${wanted}" button is exposed`);
   assert.ok(names('group').includes('Workspaces'), 'workspace switcher is a named group');
   assert.ok(named('button').filter((n) => (n.properties || []).some((p) => p.name === 'pressed')).length >= 1, 'workspace buttons expose their pressed state');
+  await cdp.send('Accessibility.disable'); // leaving accessibility mode on made app quit hang on CI runners
   await cdp.detach();
 }));
 
