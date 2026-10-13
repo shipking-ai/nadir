@@ -45,4 +45,18 @@ Nadir is **not** completely secure or completely private, and nothing in this do
 
 ## Reporting
 
-Security issues: open a private advisory on the project repository *(repository URL to be set at publication)*.
+**Repository:** <https://github.com/shipking-ai/nadir>
+
+**Report a vulnerability privately:** use GitHub's private vulnerability reporting at
+<https://github.com/shipking-ai/nadir/security/advisories/new>. Only you and the maintainers can see the report. Please do **not** open a public issue, pull request or discussion for a suspected vulnerability.
+
+A useful report contains: the Nadir version (About page, or `package.json`), the operating system, the steps to reproduce, what you expected and what happened, and the impact you believe it has. A minimal proof of concept helps; please do not include real personal data.
+
+**What to expect, honestly:**
+- Nadir is a pre-release project (0.1.0) with a very small maintainer team. There is **no guaranteed response time** and **no bug bounty**.
+- Only the latest commit on `main` is supported; there are no maintained older versions yet and no signed release builds (see [RELEASE.md](RELEASE.md)).
+- Reports are triaged, fixed in private where practical, and disclosed in a GitHub security advisory once a fix exists. Reporters are credited if they wish.
+
+**In scope:** Nadir's own code in this repository (the `nadir://` pages, IPC boundaries, permission and download handling, URL handling, storage). **Out of scope here, report upstream instead:** vulnerabilities in Chromium, Electron, Node.js or the Ghostery adblocker library. If you are unsure, report it here and we will route it. Nadir tracks Electron releases to pick up Chromium fixes, and the gap to upstream Chromium is a known risk (see "Known gaps" above).
+
+Testing guidance: please test only against your own installation and profile. Do not test against other people's data or third-party services, and do not run denial-of-service tests.

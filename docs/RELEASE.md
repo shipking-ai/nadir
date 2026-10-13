@@ -7,9 +7,9 @@
 
 ## What is missing (cannot be done from inside the repository)
 1. **A code-signing certificate.** Without one, Windows SmartScreen shows "unknown publisher" warnings on download. Options, none verified by me against current pricing or terms:
-   - **SignPath Foundation** offers certificates to open-source projects. Per its published terms (checked 2026-10-12): OSI-approved licence with no commercial dual-licensing, no proprietary components, project already released and actively maintained, public repository, free downloads, a published code-signing policy on the project home page, and a fully automated build with origin verification. The Foundation, not the project, is the named publisher. Nadir is GPL-3.0 and has no proprietary components of its own, but **cannot apply yet**: there is no public repository or release.
+   - **SignPath Foundation** offers certificates to open-source projects. Per its published terms (checked 2026-10-12): OSI-approved licence with no commercial dual-licensing, no proprietary components, project already released and actively maintained, public repository, free downloads, a published code-signing policy on the project home page, and a fully automated build with origin verification. The Foundation, not the project, is the named publisher. Nadir is GPL-3.0 and has no proprietary components of its own, but **cannot apply yet**: the repository is public now, but there is no tagged release, no published code-signing policy and no automated build that can be origin-verified.
    - An **OV/EV certificate** from a commercial CA, or **Azure Trusted Signing** (availability and eligibility vary by region and organisation type; check Microsoft's current terms).
-2. **A public repository and release process.** SECURITY.md still says "repository URL to be set at publication".
+2. **A release process.** The public repository exists (<https://github.com/shipking-ai/nadir>, made public 2026-10-13) and SECURITY.md names a private reporting channel. Still missing: tagged releases, a published code-signing policy page, and a build pipeline that GitHub Actions or SignPath can verify.
 3. **An installer** (MSI/NSIS/MSIX) and **auto-update**. Neither is started; both interact with signing (installers must be signed too, and update payloads need an integrity check that does not rely on TLS alone).
 
 ## Using `scripts/sign.ps1`
