@@ -36,6 +36,7 @@ Rules that apply regardless of who holds the roles:
 Nadir does **not** send telemetry, crash reports, usage statistics or identifiers to the maintainers or anyone else. The only network requests Nadir makes by itself are:
 - downloading ad/tracker filter lists from Ghostery's CDN (no user identifiers; switch blocking off to stop it);
 - DNS-over-HTTPS lookups to the resolver the user configures, if the user turns that on;
+- **only when the user presses "Check for updates" on the About page:** one request to `api.github.com` for the project's public release list (no cookies, no identifiers beyond the IP address and a fixed `Nadir-update-check` user agent). Nadir never checks in the background and never downloads or installs an update by itself;
 - requests the user asks for by browsing (including favicons for pages they visit and search-engine pages they choose).
 
 Nadir stores history, bookmarks and settings locally on the user's computer; it does not upload them. Details and the known gaps are in [SECURITY.md](SECURITY.md).

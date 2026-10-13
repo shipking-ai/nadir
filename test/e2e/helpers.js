@@ -39,7 +39,18 @@ async function launch({ userData, downloadDir, args = [], headless = true, env =
     active: async () => { const s = await api.state(); return s.tabs.find((t) => t.id === s.activeId); },
     main: (fn, arg) => app.evaluate(fn, arg),
     ctl: (expr, arg) => app.evaluate((_e, [code, a]) => { const f = new Function('c', 'a', `return (${code})`); return f(global.__nadir, a); }, [expr, arg]),
-    close: () => app.close(),
+    // Bounded close: a quit that never finishes must not stall the whole test run. If it times out, say what was open
+    // (so the cause can be found) and kill the process.
+    close: async () => {
+      const proc = app.process();
+      let timer;
+      try {
+        await Promise.race([app.close(), new Promise((_, rej) => { timer = setTimeout(() => rej(new Error('close timed out')), 20000); })]);
+      } catch (e) {
+        console.error(`[helpers] ${e.message}; open windows: ${JSON.stringify(app.windows().map((w) => w.url()))}; pid ${proc.pid} exitCode ${proc.exitCode}`);
+        try { proc.kill('SIGKILL'); } catch { /* already gone */ }
+      } finally { clearTimeout(timer); }
+    },
   };
   await until(async () => (await api.state()).tabs.length >= 1, { what: 'first tab' });
   return api;
