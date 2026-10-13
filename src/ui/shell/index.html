@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nadir</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="nadir://assets/tokens.css">
+<link rel="stylesheet" href="nadir://assets/shell.css">
+</head>
+<body>
+  <aside id="sidebar" aria-label="Tabs and workspaces">
+    <div class="side-head drag">
+      <span class="brand" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 5h16L12 20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.2 9.5h7.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <span class="brand-name">Nadir</span>
+    </div>
+    <div id="workspaces" class="workspaces" role="group" aria-label="Workspaces"></div>
+    <button id="new-tab" class="new-tab" aria-label="New tab" title="New tab (Ctrl+T)"><span class="ico" data-icon="plus"></span><span class="label">New tab</span><kbd class="label" aria-hidden="true" data-t="Ctrl T"></kbd></button>
+    <div id="pinned" class="pinned" role="group" aria-label="Pinned tabs"></div>
+    <div id="tabs" class="tabs" role="tablist" aria-label="Open tabs" aria-orientation="vertical"></div>
+    <nav class="side-foot" aria-label="Library">
+      <button data-cmd="history" aria-label="History" title="History (Ctrl+H)"><span class="ico" data-icon="history"></span><span class="label">History</span></button>
+      <button data-cmd="bookmarks" aria-label="Bookmarks" title="Bookmarks (Ctrl+Shift+B)"><span class="ico" data-icon="bookmark"></span><span class="label">Bookmarks</span></button>
+      <button data-cmd="downloads" aria-label="Downloads" title="Downloads (Ctrl+J)"><span class="ico" data-icon="download"></span><span class="label">Downloads</span><span id="dl-badge" class="badge" hidden></span></button>
+      <button data-cmd="settings" aria-label="Settings" title="Settings (Ctrl+,)"><span class="ico" data-icon="settings"></span><span class="label">Settings</span></button>
+      <button id="collapse" aria-label="Collapse sidebar" title="Collapse sidebar (Ctrl+B)"><span class="ico" data-icon="sidebar"></span><span class="label">Collapse</span></button>
+    </nav>
+  </aside>
+
+  <header id="toolbar" class="drag">
+    <div class="nav no-drag">
+      <button id="back" aria-label="Back" title="Back (Alt+Left)"><span class="ico" data-icon="back"></span></button>
+      <button id="forward" aria-label="Forward" title="Forward (Alt+Right)"><span class="ico" data-icon="forward"></span></button>
+      <button id="reload" aria-label="Reload" title="Reload (Ctrl+R)"><span class="ico" data-icon="reload"></span></button>
+    </div>
+    <form id="omni-form" class="omni no-drag" autocomplete="off" role="search">
+      <span id="site-info" class="site-info" aria-hidden="true"></span>
+      <input id="omni" type="text" role="combobox" aria-label="Search or enter address" aria-expanded="false" aria-autocomplete="list" aria-controls="none" spellcheck="false" placeholder="Search or enter address">
+      <button id="bookmark" type="button" class="star" aria-label="Bookmark this page" aria-pressed="false" title="Bookmark this page (Ctrl+D)"><span class="ico" data-icon="star"></span></button>
+    </form>
+    <div class="tools no-drag">
+      <button id="shield" aria-label="Privacy: 0 requests blocked on this page" title="Blocked on this page"><span class="ico" data-icon="shield"></span><span id="shield-n" class="shield-n" hidden>0</span></button>
+      <button id="split" aria-label="Split view" aria-pressed="false" title="Split view (Ctrl+\)"><span class="ico" data-icon="split"></span></button>
+      <button id="palette" aria-label="Command palette" title="Command palette (Ctrl+K)"><span class="ico" data-icon="command"></span></button>
+    </div>
+    <div class="caption-space" aria-hidden="true"></div>
+  </header>
+  <div id="live" class="sr-only" aria-live="polite"></div>
+  <script src="nadir://assets/icons.js"></script>
+  <script src="nadir://assets/shell.js"></script>
+</body>
+</html>

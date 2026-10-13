@@ -1,0 +1,27 @@
+{
+  "name": "nadir-browser",
+  "version": "0.1.0",
+  "description": "Nadir — a privacy-first, workspace-centric browser shell on Chromium (via Electron).",
+  "main": "src/main/main.js",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/unit",
+    "test:e2e": "node --test --test-concurrency=1 --test-timeout=240000 test/e2e",
+    "audit": "npm audit --omit=dev",
+    "package": "electron-packager . Nadir --platform=win32 --arch=x64 --out=out --overwrite --prune=true --ignore=\"^/(docs|test|scripts|out|\\.smoke|\\.git|README\\.md)\" --extra-resource=LICENSE --app-copyright=\"GPL-3.0-or-later\"",
+    "sign": "powershell -NoProfile -File scripts/sign.ps1",
+    "package:signed": "npm run package && npm run sign"
+  },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "2.20.1",
+    "@ghostery/adblocker-electron-preload": "2.20.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "axe-core": "^4.14.0",
+    "electron": "44.7.0",
+    "playwright-core": "1.64.0"
+  }
+}

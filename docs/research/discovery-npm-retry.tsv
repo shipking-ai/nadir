@@ -1,0 +1,1058 @@
+source	name	stars	license	last_push	archived	language	queries_matched	description	query
+npm	angulartics2		MIT	2024-08-05		js	1	Vendor-agnostic web analytics for Angular2 applications	url tracking params
+npm	serialize-query-params		ISC	2025-11-27		js	1	A library for simplifying encoding and decoding URL query parameters.	url tracking params
+npm	@umijs/use-params		MIT	2021-11-22		js	1	[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/rudyhuynh/use-url-search-params/blob/master/License)	url tracking params
+npm	url		MIT	2024-07-26		js	1	The core `url` packaged standalone for use with Browserify.	url tracking params
+npm	third-party-capital		ISC	2024-09-25		js	1	<img alt="Third Party Capital Logo" title="Third Party Capital Logo" src="https://user-images.githubusercontent.com/12476932/229881508-f9ef68db-8ee7-4795-8de8-8	url tracking params
+npm	@ungap/url-search-params		ISC	2020-06-21		js	1	The URLSearchParams polyfill.	url tracking params
+npm	postcss-minify-params		MIT	2026-10-10		js	1	Minify at-rule params with PostCSS	url tracking params
+npm	use-query-params		ISC	2025-11-22		js	1	React Hook for managing state in URL query parameters with easy serialization.	url tracking params
+npm	@amplitude/plugin-page-view-tracking-browser		MIT	2026-10-09		js	1		url tracking params
+npm	whatwg-url-minimum		MIT	2026-07-15		js	1	Derivative of whatwg-url without unicode handling and optimized for Expo	url tracking params
+npm	node-match-path		MIT	2021-04-09		js	1	Dependency-free request URI matcher	url tracking params
+npm	universal-analytics		MIT	2026-05-12		js	1	A node module for Google's Universal Analytics tracking	url tracking params
+npm	url-search-params-polyfill		MIT	2023-09-05		js	1	a simple polyfill for javascript URLSearchParams	url tracking params
+npm	vite-svg-loader		MIT	2026-09-01		js	1	Vite plugin to load SVG files as Vue components	url tracking params
+npm	mdurl		MIT	2026-07-22		js	1	URL utilities for markdown-it	url tracking params
+npm	append-query		MIT	2021-05-13		js	1	Append querystring params to a URL.	url tracking params
+npm	@remix-run/route-pattern		MIT	2026-10-01		js	1	Match and generate URLs with strong typing	url tracking params
+npm	next-query-params		MIT	2025-01-05		js	1	Convenient state management of query parameters in Next.js apps.	url tracking params
+npm	@piwikpro/tracking-base-library		MIT	2026-08-17		js	1	Piwik PRO basic tracking library for the frontend.	url tracking params
+npm	@datadog/native-iast-taint-tracking		Apache-2.0	2026-08-13		js	1	Datadog IAST tant tracking support for NodeJS	url tracking params
+npm	tracking-params		MIT	2020-10-11		js	1	Easily get and remove unwanted tracking parameters from URLs.	url tracking params
+npm	autolinker		MIT	2025-05-01		js	1	Utility to automatically link the URLs, email addresses, phone numbers, hashtags, and mentions (Twitter, Instagram) in a given block of text/HTML	url tracking params
+npm	expo-tracking-transparency		MIT	2026-09-11		js	1	A library for tracking app users and managing tracking permissions	url tracking params
+npm	next-typesafe-url		MIT	2025-10-24		js	1	Fully typesafe, JSON serializable, and zod validated URL search params, dynamic route params, and routing for NextJS pages directory	url tracking params
+npm	@usebruno/schema		MIT	2026-09-23		js	1	The schema definition for collections	url tracking params
+npm	cssnano-preset-default		MIT	2026-10-10		js	1	Safe defaults for cssnano which require minimal configuration.	url tracking params
+npm	new-github-issue-url		MIT	2025-03-09		js	1	Generate a URL for opening a new GitHub issue with prefilled title, body, and other fields	url tracking params
+npm	encodeurl		MIT	2024-03-29		js	1	Encode a URL to a percent-encoded form, excluding already-encoded sequences	url tracking params
+npm	@openreplay/network-proxy		MIT	2026-10-06		js	1	this library helps us to create proxy objects for fetch, XHR and beacons for proper request tracking.	url tracking params
+npm	rest-facade		MIT	2023-01-30		js	1	Simple abstraction for consuming REST API endpoints	url tracking params
+npm	@seamapi/url-search-params-serializer		MIT	2026-08-12		js	1	Serializes JavaScript objects to URLSearchParams.	url tracking params
+npm	@salesforce/source-tracking		Apache-2.0	2026-09-28		js	1	API for tracking local and remote Salesforce metadata changes	url tracking params
+npm	use-url-search-params		MIT	2022-01-16		js	1	[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/rudyhuynh/use-url-search-params/blob/master/License)	url tracking params
+npm	react-tracking		Apache-2.0	2023-05-25		js	1	Declarative tracking for React apps.	url tracking params
+npm	url-parse		MIT	2022-02-22		js	1	Small footprint URL parser that works seamlessly across Node.js and browser environments	url tracking params
+npm	lru-memoizer		MIT	2024-10-14		js	1	Memoize functions results using an lru-cache.	url tracking params
+npm	tanstack-table-search-params		MIT	2025-11-03		js	1	React Hook for syncing TanStack Table state with URL search params	url tracking params
+npm	request-cookies		MIT	2014-01-28		js	1	Cookie management for the node request libary	url tracking params
+npm	normalize-url		MIT	2026-05-20		js	1	Normalize a URL	url tracking params
+npm	tldts		MIT	2026-10-07		js	1	Library to work against complex domain names, subdomains and URIs.	url tracking params
+npm	@flatfile/utils-debugger		ISC	2024-05-02		js	1	A helper for logging useful messages to the console	url tracking params
+npm	search-params		MIT	2021-04-26		js	1	A module to manipulate search part of URLs (querystring)	url tracking params
+npm	storybook-addon-rtl		MIT	2026-05-16		js	1	Right-to-left addon for Storybook.	url tracking params
+npm	@oozcitak/url		MIT	2026-02-03		js	1	An implementation of the URL Living Standard	url tracking params
+npm	ocache		MIT	2026-08-18		js	1	Composable caching primitives with TTL, SWR, and HTTP response caching	url tracking params
+npm	html-url-attributes		MIT	2024-09-27		js	1	Map of URL attributes in HTML	url tracking params
+npm	@aftership/tracking-sdk		ISC	2026-07-13		js	1	Tracking NodeJS SDK	url tracking params
+npm	@types/url-search-params		MIT	2023-11-07		js	1	TypeScript definitions for url-search-params	url tracking params
+npm	postcss-normalize-url		MIT	2026-10-10		js	1	Normalize URLs with PostCSS	url tracking params
+npm	url-okam		MIT	2023-07-24		js	1	The core `url` packaged standalone for use with Browserify.	url tracking params
+npm	swagger2openapi		BSD-3-Clause	2021-07-07		js	1	Convert Swagger 2.0 definitions to OpenApi 3.0 and validate	url tracking params
+npm	registry-url		MIT	2025-04-15		js	1	Get the set npm registry URL	url tracking params
+npm	terminal-link		MIT	2025-09-08		js	1	Create clickable links in the terminal	url tracking params
+npm	chromium-bidi		Apache-2.0	2026-10-11		js	1	An implementation of the WebDriver BiDi protocol for Chromium implemented as a JavaScript layer translating between BiDi and CDP, running inside a Chrome tab.	url tracking params
+npm	@ngneat/bind-query-params		MIT	2023-05-08		js	1	Sync URL Query Params with Angular Form Controls	url tracking params
+npm	connection-string		MIT	2025-08-24		js	1	Advanced URL Connection String parser + generator.	url tracking params
+npm	@exodus/asset-json-rpc		MIT	2026-04-23		js	1	For all assets	url tracking params
+npm	express-caja-sanitizer		MIT	2015-10-15		js	1	An express middleware inspired from express-sanitizer but additionally sanitizes URL params. It also gives an option to provide a preprocessor function to decid	url tracking params
+npm	react-router-typesafe-routes		MIT	2025-07-21		js	1	Enhanced type safety via validation for all route params in React Router v7.	url tracking params
+npm	get-params		MIT	2015-05-13		js	1	Get a list of function's argument variable names	url tracking params
+npm	psl		MIT	2024-12-02		js	1	Domain name parser based on the Public Suffix List	public suffix
+npm	@imput/psl		MIT	2024-11-02		js	1	Domain name parser based on the Public Suffix List	public suffix
+npm	better-psl		MIT	2026-09-20		js	1	Modern JavaScript domain name parser based on the Public Suffix List	public suffix
+npm	@pipeworx/mcp-public-suffix-list		MIT	2026-09-26		js	1	Public Suffix List MCP.	public suffix
+npm	extract-tld		ISC	2022-08-01		js	1	Extract the TLD from a URL against the [public suffix list](https://publicsuffix.org/).	public suffix
+npm	publicsuffix			2015-01-01		js	1	JavaScript version of the Public Suffix List	public suffix
+npm	@structured-world/structured-public-domains		Apache-2.0	2026-10-07		js	1	Compact Public Suffix List (PSL) as a native TypeScript package: embedded ~108KB binary trie, synchronous zero-dependency lookups, ESM + CommonJS. Checked daily	public suffix
+npm	@1-/psl		MulanPSL-2.0	2026-08-18		js	1	Public Suffix List implementation for domain suffix extraction.	public suffix
+npm	@gorhill/publicsuffixlist		Apache-2.0	2022-02-23		js	1	JavaScript utility to handle Public Suffix List from Mozilla Foundation	public suffix
+npm	@alphatr/publicsuffix		MIT	2026-06-23		js	1	The Public Suffix List	public suffix
+npm	@substrat-run/psl		AGPL-3.0-only	2026-09-15		js	1	Vendored Public Suffix List + the canonical matching algorithm — the registrable-suffix guard behind cookie-domain and custom-hostname validation (D-35). The li	public suffix
+npm	tld-parse		MIT	2025-10-30		js	1	Accurately extracts the subdomain, domain, and public suffix from a URL.	public suffix
+npm	@bitt/psl		MIT	2019-12-12		js	1	Domain name parser based on the Public Suffix List	public suffix
+npm	pslplus		MIT	2020-01-15		js	1	Domain name parser based on the Public Suffix List	public suffix
+npm	parse-hostname		MIT	2018-02-12		js	1	Parse a hostname into three parts: subdomain, domain and public suffix.	public suffix
+npm	publicsuffix-data		MIT	2023-03-29		js	1	Wrapper around the Public Suffix List https://publicsuffix.org/	public suffix
+npm	normalize-url-lang		Avast	2019-11-01		js	1	extract public suffix and non-locale path parts out of a URL	public suffix
+npm	get-apex-domain		MIT	2020-03-29		js	1	Returns the apex domain (aka base, bare, naked, root apex, or zone apex domain) of the current web page without the use of a public suffix list. The apex domain	public suffix
+npm	get-etld		MIT	2020-03-29		js	1	Returns the effective top-level domain (eTLD) of the current web page without the use of a public suffix list.	public suffix
+npm	turbo-psl		ISC	2024-09-06		js	1	Fast public suffix list parser	public suffix
+npm	env-paths		MIT	2026-01-24		js	1	Get paths for storing things like data, config, cache, etc	public suffix
+npm	tldts		MIT	2026-10-07		js	1	Library to work against complex domain names, subdomains and URIs.	public suffix
+npm	mnemonist		MIT	2026-09-22		js	1	Curated collection of data structures for the JavaScript/TypeScript.	public suffix
+npm	tldkit		MIT	2026-08-06		js	1	A zero-dependency, ESM-first drop-in replacement for tldts and psl. Same API, same Public Suffix List, a fraction of the install size.	public suffix
+npm	suffix-thumb		MIT	2026-09-23		js	1	learn transformations between two sets of words	public suffix
+npm	tldjs		MIT	2025-07-11		js	1	JavaScript API to work against complex domain names, subdomains and URIs.	public suffix
+npm	@tunnelmindai/checks		Apache-2.0	2026-07-04		js	1	Pure deterministic checks for the agentic internet — IAB ads.txt v1.1 + OpenRTB sellers.json parsers, Public Suffix List resolution, and ads.txt diffs. Text-in,	public suffix
+npm	tldts-icann		MIT	2026-10-07		js	1	Library to work against complex domain names, subdomains and URIs. Only contains ICANN section.	public suffix
+npm	temp-suffix		MIT	2026-09-12		js	1	Adds a unique suffix to a string with process and thread uniqueness guarantees. Adapted from https://github.com/npm/write-file-atomic	public suffix
+npm	suffix		MIT	2018-03-08		js	1	Add suffix to a filename.	public suffix
+npm	media-typer		MIT	2026-05-27		js	1	Simple RFC 6838 media type parser and formatter	public suffix
+npm	temp-file		MIT	2021-05-11		js	1	```typescript export function getTempName(prefix?: string | null | undefined): string;	public suffix
+npm	@mukundakatta/domain-mcp		MIT	2026-05-16		js	1	MCP server: extract eTLD, eTLD+1, subdomain from a domain name using the Public Suffix List.	public suffix
+npm	fast-uri		BSD-3-Clause	2026-10-10		js	1	Dependency-free RFC 3986 URI toolbox	public suffix
+npm	uri-js		BSD-2-Clause	2021-01-10		js	1	An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.	public suffix
+npm	jsurlparser		ISC	2020-05-08		js	1	URLParser is a JavaScript library that helps seperate urls into their individual components, such as hostname, domain, public suffix domain, tld, and path.	public suffix
+npm	street-suffix		MIT	2019-02-05		js	1	Expands and Abbreviates USPS Street Suffixes	public suffix
+npm	@deepseek-ai/dsh-util-code-language		MIT	2026-09-24		js	1	Single file-extension to syntax-highlighting language table shared by Client code surfaces and the Host read card	public suffix
+npm	eslint-plugin-svelte		MIT	2026-10-09		js	1	ESLint plugin for Svelte using AST	public suffix
+npm	postcss-discard-unused		MIT	2026-10-10		js	1	Discard unused counter styles, keyframes and fonts.	public suffix
+npm	react-currency-input-field		MIT	2026-10-11		js	1	React <input/> component for formatting currency and numbers.	public suffix
+npm	@cspell/dict-public-licenses		MIT	2026-10-01		js	1	Common Public Licenses dictionary for cspell.	public suffix
+npm	eslint-import-resolver-typescript		ISC	2026-06-01		js	1	This plugin adds `TypeScript` support to `eslint-plugin-import`	public suffix
+npm	synckit		MIT	2026-10-11		js	1	Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.	public suffix
+npm	napi-postinstall		MIT	2025-10-04		js	1	The `postinstall` script helper for handling native bindings in legacy `npm` versions	public suffix
+npm	atomically		MIT	2026-02-08		js	1	Read and write files atomically and reliably.	public suffix
+npm	format-number		BSD-3-Clause	2017-06-29		js	1	Formats numbers with separators every 3 digits and currency etc. Highly configurable.	public suffix
+npm	parse-domain		MIT	2026-08-12		js	1	Splits a hostname into subdomains, domain and (effective) top-level domains	public suffix
+npm	public-suffix			2012-07-05		js	1	publicsuffix written in nodejs ==============================	public suffix
+npm	react-native-app-clip		MIT	2026-06-12		js	1	Config plugin to add an App Clip to a React Native iOS app	public suffix
+npm	public-ip		MIT	2025-09-21		js	1	Get your public IP address — very fast!	public suffix
+npm	tweetnacl		Unlicense	2020-02-10		js	1	Port of TweetNaCl cryptographic library to JavaScript	public suffix
+npm	browserify-wrap		ISC	2016-11-05		js	1	browserify-wrap, a _very simple_ browserify plugin to wrap your output bundle with a prefix or a suffix (or both)	public suffix
+npm	humanparser		MIT	2023-05-20		js	1	Parse a human name string into salutation, first name, middle name, last name, suffix. Parse an address into address, city, state, zip	public suffix
+npm	@fontsource/public-sans		OFL-1.1	2026-07-19		js	1	Self-host the Public Sans font in a neatly bundled NPM package.	public suffix
+npm	@fontsource-variable/public-sans		OFL-1.1	2026-07-19		js	1	Self-host the Public Sans font in a neatly bundled NPM package.	public suffix
+npm	hpkp		MIT	2024-10-10		js	1	HTTP Public Key Pinning (HPKP) middleware	public suffix
+npm	@quartz-community/utils		MIT	2026-09-16		js	1	Shared utility functions for Quartz community plugins.	public suffix
+npm	stable-hash-x		MIT	2025-06-25		js	1	Stable JS value hash.	public suffix
+npm	eslint-import-context		MIT	2025-08-19		js	1	Provide context info for eslint-plugin-import-x, so no extra arguments need to be added.	public suffix
+npm	@vaadin/cookie-consent		SEE LICENSE IN LICENSE	2026-10-07		js	1	vaadin-cookie-consent	cookie consent
+npm	react-cookie-consent		MIT	2026-08-02		js	1	A small, simple and customizable cookie consent bar for use in React applications.	cookie consent
+npm	@vaadin/vaadin-cookie-consent		https://vaadin.com/commercial-license-and-service-terms	2026-09-30		js	1	vaadin-cookie-consent	cookie consent
+npm	cookieconsent		MIT	2019-05-23		js	1	Osano cookie consent tool.	cookie consent
+npm	vanilla-cookieconsent		MIT	2025-02-04		js	1	🍪 Simple cross-browser cookie-consent plugin written in vanilla js.	cookie consent
+npm	@finsweet/cookie-consent			2024-04-19		js	1	GDPR and CCPA compliant Cookie Consent solution for Webflow.	cookie consent
+npm	@use-cookie-consent/core		MIT	2022-05-29		js	1	React hook for managing GDPR cookie consent state.	cookie consent
+npm	@beyonk/gdpr-cookie-consent-banner		MIT	2025-07-16		js	1	GDPR Cookie Consent Banner for Svelte/Kit	cookie consent
+npm	@probo/cookie-banner		MIT	2026-10-09		js	1	Probo cookie consent banner SDK	cookie consent
+npm	django-cookie-consent		BSD-2-Clause	2026-02-04		js	1	Frontend code for django-cookie-consent	cookie consent
+npm	@68publishers/cookie-consent		MIT	2026-10-04		js	1	Cookie consent wrapper based on orestbida/cookieconsent with GTM integration.	cookie consent
+npm	@commercetools-frontend/cookie-consent		MIT	2026-08-14		js	1	A package integrating with OneTrust cookie consent	cookie consent
+npm	docusaurus-plugin-cookie-consent		MIT	2026-08-25		js	1	A cookie consent modal/toast component for Docusaurus sites with configurable text, links, and preference management.	cookie consent
+npm	@meowwolf/cookie-consent-utils		ISC	2026-09-28		js	1	A collection of utilities for managing cookie consent. Used to manage cookie consent across meow wolf sites.	cookie consent
+npm	@commercetools-frontend/cypress-cookie-consent		MIT	2026-08-14		js	1	Cypress package to set a cookie consent cookie	cookie consent
+npm	@porscheofficial/cookie-consent-banner		MIT	2026-02-17		js	1	<div align="center">   <a target="_blank" rel="noopener noreferrer" href="https://github.com/porscheofficial/cookie-consent-banner/">     <img src="https://gith	cookie consent
+npm	@demos-europe/dp-consent		MIT	2024-08-06		js	1	A cookie consent solution.	cookie consent
+npm	consent-rr		GPL-3.0-or-later	2026-10-09		js	1	Cookie-consent resource replacements for uBlock Origin	cookie consent
+npm	@lmc-eu/cookie-consent-manager		MIT	2024-04-10		js	1	Cookie Consent Manager mainly for Alma Career products	cookie consent
+npm	@doraverse/cookie-consent		MIT	2025-10-08		js	1	Cookie consent component for Doraverse applications	cookie consent
+npm	@types/beyonk__gdpr-cookie-consent-banner		MIT	2023-11-06		js	1	TypeScript definitions for @beyonk/gdpr-cookie-consent-banner	cookie consent
+npm	@fremtind/jkl-cookie-consent-react		MIT	2025-12-11		js	1	Jøkul react cookie consent component	cookie consent
+npm	nuxt-simple-cookie-consent		MIT	2026-05-27		js	1	A lightweight, headless Nuxt 3 module for managing GDPR-compliant cookie consent — with full control over categories, script injection, and UI.	cookie consent
+npm	svelte-cookie-consent		MIT	2026-10-07		js	1	A Svelte cookie-consent component for customizable privacy choices	cookie consent
+npm	@expo/styleguide-cookie-consent			2026-08-21		js	1	Cookie consent provider for Expo websites with c15t integration.	cookie consent
+npm	@code-202/cookie-consent		MIT	2026-10-01		js	1	Rich cookie consent with react/mobx and bootstrap design	cookie consent
+npm	@talixo-ds/cookie-consent			2026-08-07		js	1	```bash npm install @talixo-ds/cookie-consent ```	cookie consent
+npm	react-cookie-manager		MIT	2026-08-27		js	1	🍪 The ultimate React cookie consent solution. Automatically block trackers, manage consent preferences, and protect user privacy with an elegant UI. Perfect fo	cookie consent
+npm	@plasmicpkgs/vanilla-cookieconsent		MIT	2026-09-09		js	1	Plasmic cookie consent banner component.	cookie consent
+npm	better-auth-cookie-consent		MIT	2026-09-18		js	1	Better Auth Cookie Consent plugin for GDPR-compliant consent management	cookie consent
+npm	astro-cookie-consent		MIT	2026-09-29		js	1	A tiny, dependency-free, GDPR compliant cookie consent banner and script-gating helper for Astro sites.	cookie consent
+npm	@grrr/cookie-consent		MIT	2025-10-21		js	1	Cookie consent with accessible dialog, agnostic tag triggers and conditional content, script and embed hooks.	cookie consent
+npm	@vstx/vxcookies		MIT	2026-06-16		js	1	Cookie consent via init() only (<vx-cookies> web component).	cookie consent
+npm	@localia/ngx-cookie-consent		MIT	2026-06-29		js	1	Angular module to display a cookie consent banner without other dependencies.	cookie consent
+npm	@onyourmarks/cookie-consent		MIT	2026-06-04		js	1	Cookie consent manager	cookie consent
+npm	@cabonline/cookie-consent		ISC	2025-08-19		js	1	A simple cookie consent modal for various Cabonline frontend services	cookie consent
+npm	@ohos-ports/vaadin-cookie-consent		https://vaadin.com/commercial-license-and-service-terms	2026-09-20		js	1	vaadin-cookie-consent	cookie consent
+npm	@fremtind/jkl-cookie-consent		MIT	2025-12-11		js	1	Jøkul style for cookie consent solutions	cookie consent
+npm	@freshjuice/zest		MIT	2026-09-28		js	1	Lightweight cookie consent toolkit for GDPR/CCPA compliance	cookie consent
+npm	@artus-engineering/react-gdpr-cookie-consent		PolyForm-Noncommercial-1.0.0	2026-09-09		js	1	A simple and customizable GDPR cookie consent component for React.	cookie consent
+npm	@trustarc/react-cookie-consent-manager		Apache-2.0	2026-07-23		js	1	React components to integrate TrustArc Cookie Consent Manager into React Frameworks	cookie consent
+npm	@twenty-twenty/cookie-consent		GPL-2.0-or-later	2026-09-14		js	1	Cookie consent banner + Google Consent Mode v2 for headless (React / Next.js / vanilla) and classic WordPress sites.	cookie consent
+npm	@porscheofficial/cookie-consent-banner-react		MIT	2026-02-17		js	1	<div align="center">   <a target="_blank" rel="noopener noreferrer" href="https://github.com/porscheofficial/cookie-consent-banner/">     <img src="https://gith	cookie consent
+npm	@cacic-fct/account-manager-cookie-banner		AGPL-3.0-only	2026-10-03		js	1	CACiC cookie consent banner with vanilla and Angular entry points.	cookie consent
+npm	@enter-pro/cookie-management			2026-07-07		js	1	Public Enter cookie consent SDK wrapper.	cookie consent
+npm	@robertlyall/crumbs		MIT	2025-09-22		js	1	A cookie consent plugin	cookie consent
+npm	nextjs-cookie-consent		MIT	2025-08-04		js	1	A GDPR/DSGVO-compliant cookie consent banner for Next.js	cookie consent
+npm	@cookiefirst/cookiefirst-react		MIT	2025-05-12		js	1	Our React helper component for [react cookie consent](https://cookiefirst.com/react-cookie-consent/), built with integration capabilities from CookieFirst, prov	cookie consent
+npm	@chiiya/haven		MIT	2021-07-24		js	1	GDPR-ready cookie consent manager with type definitions and zero dependencies	cookie consent
+npm	@jflavan/pulumi-osano		MIT	2026-10-08		js	1	Pulumi provider for Osano Cookie Consent and Unified Consent APIs.	cookie consent
+npm	@klaxit/cookie-consent		MIT	2021-07-08		js	1	A simple dialog to handle cookie consent and comply with data privacy laws. Fully compliant with European GDPR & California CCPA.	cookie consent
+npm	@isomorph-agency/cookie-consent		MIT	2026-08-11		js	1	GDPR cookie consent banner for React / Next.js — Google Consent Mode V2, CNIL-compliant, WCAG 2.1 AA accessible	cookie consent
+npm	ez-consent		MIT	2025-03-04		js	1	🍪 A minimal, vanilla JavaScript cookie consent banner with no dependencies.	cookie consent
+npm	@oslokommune/cookie-consent		MIT	2025-07-09		js	1	Cookie consent for Oslo kommune	cookie consent
+npm	@corvesta/cookie-consent-lib		MIT	2026-06-08		js	1	Framework-agnostic cookie consent library for OneTrust integration	cookie consent
+npm	@ecomconsult/consentkit		MIT	2026-10-05		js	1	GDPR cookie consent core with blocking engine, Shadow DOM UI and Google Consent Mode v2. Zero dependencies, no build step.	cookie consent
+npm	@modernconsent/widget		MIT	2026-09-14		js	1	Web Component cookie consent widget — standalone IIFE bundle	cookie consent
+npm	@mihilista/cookie-consent		ISC	2026-09-30		js	1	GDPR-compliant cookie consent manager for React on the web (Next.js, Expo web, Vite) with Google Consent Mode v2 and Meta Pixel integration. Ships English and C	cookie consent
+npm	@admmedia/adam-cookie-consent		UNLICENSED	2026-09-29		js	1	ADM Media Consulting SA cookie consent banner: vanilla-cookieconsent preconfigured for GDPR opt-in, wired to Google Consent Mode v2.	cookie consent
+npm	@alexpricedev/billet-cookie-consent		MIT	2026-06-05		js	1	Standalone, GDPR-friendly cookie consent banner. Zero dependencies, vanilla DOM, scoped CSS tokens. Designed for Billet but framework-agnostic.	cookie consent
+npm	@hyperwatch/useragent		Apache-2.0	2026-10-09		js	1	User Agent parser	user agent parser
+npm	ua-parser			2014-11-30		js	1	A port of Browserscope's user agent parser.	user agent parser
+npm	ua-parser2		(MIT OR Apache-2.0)	2021-01-28		js	1	An improved user agent parser.	user agent parser
+npm	uap-core			2023-05-20		js	1	The regex file necessary to build language ports of Browserscope's user agent parser.	user agent parser
+npm	jquery-client		MIT	2020-09-09		js	1	Minimal client-side user-agent parser.	user agent parser
+npm	prx-podagent		MIT	2025-12-08		js	1	User-agent parser for common podcast clients	user agent parser
+npm	buster-user-agent-parser			2012-06-20		js	1	Simple user agent parser that gets browser, platform and version	user agent parser
+npm	@pipeworx/mcp-useragent		MIT	2026-09-25		js	1	User-Agent parser MCP.	user agent parser
+npm	useragent-parser			2012-07-24		js	1	A NodeJS User Agent Parser.	user agent parser
+npm	lightua		MIT	2025-09-28		js	1	Lightweight, fast user-agent parser (TypeScript, zero deps).	user agent parser
+npm	@litejs/ua		MIT	2023-04-20		js	1	Simple User-Agent parser	user agent parser
+npm	trie-uaparser		MIT	2018-06-03		js	1	Yet another user agent parser	user agent parser
+npm	npm-config-user-agent-parser		MIT	2018-07-07		js	1	Parser for process.env.npm_config_user_agent	user agent parser
+npm	@journyio/user-agent-parser		MIT	2021-11-15		js	1	User-agent string parser written in TypeScript	user agent parser
+npm	custom-device-detect		ISC	2022-04-26		js	1	custom-device-detect is a user agent parser. custom-device-detect will pars your custom user agent and detect your device.	user agent parser
+npm	handset-detect		ISC	2017-10-05		js	1	browser user agent parser based on the handsetdetection database	user agent parser
+npm	@exortek/ua		MIT	2026-08-06		js	1	User-Agent parser — browser, OS, device, engine, CPU detection + bot/AI crawler taxonomy + Client Hints + request fingerprinting. Tree-shakeable, ESM+CJS. Full-	user agent parser
+npm	@iamsquare/ua		MIT	2026-09-06		js	1	User-Agent parser for browsers and Node.js. Detect browsers, OS, devices, bots, apps, and AI crawlers.	user agent parser
+npm	@amplitude/ua-parser-js		MIT	2023-04-04		js	1	Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment	user agent parser
+npm	ua			2011-09-30		js	1	Dirt cheap User-Agent: parser	user agent parser
+npm	@apiverve/useragentparser		MIT	2026-07-15		js	1	User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.	user agent parser
+npm	robots-parser		MIT	2023-02-21		js	1	A specification compliant robots.txt parser with wildcard (*) matching support.	user agent parser
+npm	cw-user-agent		MIT	2015-07-08		js	1	User agent parser.	user agent parser
+npm	useragent		MIT	2018-01-30		js	1	Fastest, most accurate & effecient user agent string parser, uses Browserscope's research for parsing	user agent parser
+npm	@babel/parser		MIT	2026-10-07		js	1	A JavaScript parser	user agent parser
+npm	@handsetdetection/apikit		ISC	2017-10-09		js	1	browser user agent parser based on the handsetdetection database	user agent parser
+npm	@welkinwong/uap-core			2025-05-03		js	1	The regex file necessary to build language ports of Browserscope's user agent parser.	user agent parser
+npm	yargs-parser		ISC	2025-05-26		js	1	the mighty option parser used by yargs	user agent parser
+npm	ua-parser3		GPL-3.0	2018-05-02		js	1	simple user agent parser	user agent parser
+npm	range-parser		MIT	2026-06-25		js	1	Range header field string parser	user agent parser
+npm	@typescript-eslint/parser		MIT	2026-10-05		js	1	An ESLint custom parser which leverages TypeScript ESTree	user agent parser
+npm	node-user-agent-parser		MIT	2025-05-07		js	1	A lightweight user agent parser for browser, OS, and device detection	user agent parser
+npm	ua-compass		MIT	2026-07-17		js	1	A secure, MIT-licensed User-Agent parser for modern TypeScript.	user agent parser
+npm	fast-xml-parser		MIT	2026-09-29		js	1	Validate XML, Parse XML, Build XML without C/C++ based libraries	user agent parser
+npm	@song940/ua-parser		GPL-3.0	2018-05-02		js	1	simple user agent parser	user agent parser
+npm	nagent		GPL-3.0	2018-05-31		js	1	simple user agent parser	user agent parser
+npm	@csstools/css-parser-algorithms		MIT	2026-10-01		js	1	Algorithms to help you parse CSS from an array of tokens.	user agent parser
+npm	uzag		MIT	2025-07-16		js	1	A user-agent parser with zero dependencies.	user agent parser
+npm	inline-style-parser		MIT	2026-07-06		js	1	An inline style parser.	user agent parser
+npm	ua-parser-js		AGPL-3.0-or-later	2026-05-21		js	1	Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment	user agent parser
+npm	@csstools/css-color-parser		MIT	2026-10-02		js	1	Parse CSS color values	user agent parser
+npm	set-cookie-parser		MIT	2026-10-08		js	1	Parses set-cookie headers into objects	user agent parser
+npm	@oxc-parser/binding-linux-x64-gnu		MIT	2026-10-05		js	1	Oxc Parser Node API	user agent parser
+npm	@webassemblyjs/wasm-parser		MIT	2024-11-06		js	1	WebAssembly binary format parser	user agent parser
+npm	conventional-commits-parser		MIT	2026-10-05		js	1	Parse raw conventional commits.	user agent parser
+npm	error-stack-parser		MIT	2022-06-06		js	1	Extract meaning from JS Errors	user agent parser
+npm	@oxc-parser/binding-linux-x64-musl		MIT	2026-10-05		js	1	Oxc Parser Node API	user agent parser
+npm	parse5-parser-stream		MIT	2025-07-09		js	1	Streaming HTML parser with scripting support.	user agent parser
+npm	oniguruma-parser		MIT	2026-04-19		js	1	Parse, validate, traverse, transform, and optimize Oniguruma regular expressions	user agent parser
+npm	u-agent		MIT	2015-10-26		js	1	Modular browser user agent parser	user agent parser
+npm	oxc-parser		MIT	2026-10-05		js	1	Oxc Parser Node API	user agent parser
+npm	jsdoc-type-pratt-parser		MIT	2026-09-17		js	1	[![Npm Package](https://badgen.net/npm/v/jsdoc-type-pratt-parser)](https://www.npmjs.com/package/jsdoc-type-pratt-parser) [![Test Status](https://github.com/jsd	user agent parser
+npm	postcss-safe-parser		MIT	2026-09-04		js	1	Fault-tolerant CSS parser for PostCSS	user agent parser
+npm	my-ua-parser		MIT	2024-10-31		js	1	Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment	user agent parser
+npm	stacktrace-parser		MIT	2025-02-18		js	1	Parses every stack trace into a nicely formatted array of hashes.	user agent parser
+npm	cron-parser		MIT	2026-10-09		js	1	Node.js library for parsing crontab instructions	user agent parser
+npm	bplist-parser		MIT	2026-09-05		js	1	Binary plist parser.	user agent parser
+npm	@mermaid-js/parser		MIT	2026-10-02		js	1	MermaidJS parser	user agent parser
+npm	comment-parser		MIT	2026-09-08		js	1	Generic JSDoc-like comment parser	user agent parser
+npm	node-html-parser		MIT	2026-09-07		js	1	A very fast HTML parser, generating a simplified DOM, with basic element query support.	user agent parser
+npm	puppeteer		Apache-2.0	2026-10-08		js	1	A high-level API to control headless Chrome over the DevTools Protocol	puppeteer
+npm	puppeteer-extra-plugin		MIT	2023-03-01		js	1	Base class for puppeteer-extra plugins.	puppeteer
+npm	puppeteer-extra		MIT	2023-03-01		js	1	Teach puppeteer new tricks through plugins.	puppeteer
+npm	puppeteer-extra-plugin-user-preferences		MIT	2023-03-01		js	1	Launch puppeteer with arbitrary user preferences.	puppeteer
+npm	expect-puppeteer		MIT	2024-12-21		js	1	Assertion toolkit for Puppeteer.	puppeteer
+npm	puppeteer-cluster		MIT	2025-11-13		js	1	Cluster management for puppeteer	puppeteer
+npm	puppeteer-extra-plugin-user-data-dir		MIT	2023-03-01		js	1	Custom user data directory for puppeteer.	puppeteer
+npm	jest-environment-puppeteer		MIT	2024-12-21		js	1	Puppeteer environment for Jest.	puppeteer
+npm	@cloudflare/puppeteer		Apache-2.0	2026-08-20		js	1	Puppeteer fork for Cloudflare Browser Run (formerly Browser Rendering)	puppeteer
+npm	jest-puppeteer		MIT	2024-12-21		js	1	Run your tests using Jest & Puppeteer.	puppeteer
+npm	puppeteer-extra-plugin-stealth		MIT	2023-03-01		js	1	Stealth mode: Applies various techniques to make detection of headless puppeteer harder.	puppeteer
+npm	@types/expect-puppeteer		MIT	2023-11-07		js	1	TypeScript definitions for expect-puppeteer	puppeteer
+npm	@ghostery/adblocker-puppeteer		MPL-2.0	2026-10-09		js	1	Ghostery adblocker Puppeteer wrapper	puppeteer
+npm	@types/jest-environment-puppeteer		MIT	2023-11-07		js	1	TypeScript definitions for jest-environment-puppeteer	puppeteer
+npm	puppeteer-extra-plugin-recaptcha		MIT	2023-03-01		js	1	A puppeteer-extra plugin to solve reCAPTCHAs and hCaptchas automatically.	puppeteer
+npm	puppeteer-har		MIT	2020-01-06		js	1	Generate HAR file with Puppeteer	puppeteer
+npm	@zorilla/puppeteer-extra-plugin-anonymize-ua		MIT	2026-07-21		js	1	Anonymize User-Agent in puppeteer.	puppeteer
+npm	@axe-core/puppeteer		MPL-2.0	2026-08-11		js	1	Provides a chainable axe API for Puppeteer and automatically injects into all frames	puppeteer
+npm	@zorilla/puppeteer-extra-plugin		MIT	2026-07-21		js	1	Base class for puppeteer-extra plugins.	puppeteer
+npm	puppeteer-extra-plugin-anonymize-ua		MIT	2023-03-01		js	1	Anonymize User-Agent in puppeteer.	puppeteer
+npm	@web/test-runner-puppeteer		MIT	2026-07-27		js	1	Puppeteer browser launcher for Web Test Runner	puppeteer
+npm	nestjs-puppeteer		MIT	2026-05-10		js	1	Puppeteer module for NestJS	puppeteer
+npm	@prerenderer/renderer-puppeteer		MIT	2024-05-01		js	1	A renderer for @prerenderer/prerenderer that uses puppeteer to prerender pages.	puppeteer
+npm	puppeteer-extra-plugin-adblocker		MIT	2023-03-01		js	1	A puppeteer-extra plugin to block ads and trackers.	puppeteer
+npm	puppeteer-proxy		BSD-3-Clause	2024-08-28		js	1	Proxies Puppeteer Page requests.	puppeteer
+npm	@hint/connector-puppeteer		Apache-2.0	2024-08-29		js	1	hint connector for browsers supported by Puppeteer	puppeteer
+npm	pptr-testing-library		MIT	2024-03-07		js	1	puppeteer + dom-testing-library	puppeteer
+npm	rebrowser-puppeteer-core		Apache-2.0	2025-05-09		js	1	A drop-in replacement for puppeteer-core patched with rebrowser-patches. It allows to pass modern automation detection tests.	puppeteer
+npm	puppeteer-loadtest		ISC	2021-10-04		js	1	loadtest puppeteer (Headless Chrome API) script using node	puppeteer
+npm	puppeteer-autoscroll-down		MIT	2025-09-18		js	1	Handle infinite scroll on websites with puppeteer	puppeteer
+npm	puppeteer-extra-plugin-block-resources		MIT	2023-03-01		js	1	Block resources (images, media, etc.) in puppeteer.	puppeteer
+npm	puppeteer-report		MIT	2025-08-30		js	1	create pdf report with header, footer and page number with puppeteer	puppeteer
+npm	nest-puppeteer		MIT	2026-01-18		js	1	Puppeteer (Headless Chrome) provider for Nest.js	puppeteer
+npm	find-chrome-bin		MIT	2025-09-17		js	1	Finds local Chromium binary to use it with puppeteer-core	puppeteer
+npm	@cypress/puppeteer		MIT	2026-09-30		js	1	Plugin for enhancing Cypress tests with Puppeteer	puppeteer
+npm	@hisma/server-puppeteer		MIT	2025-06-28		js	1	Fork and update (v0.6.5) of the original @modelcontextprotocol/server-puppeteer MCP server for browser automation using Puppeteer.	puppeteer
+npm	puppeteer-extra-plugin-proxy		MIT	2019-07-24		js	1	A puppeteer-extra plugin to add convenient proxy support to puppeteer	puppeteer
+npm	puppeteer-mcp-server		MIT	2025-03-14		js	1	Experimental MCP server for browser automation using Puppeteer (inspired by @modelcontextprotocol/server-puppeteer)	puppeteer
+npm	rebrowser-puppeteer		Apache-2.0	2025-05-08		js	1	A drop-in replacement for puppeteer patched with rebrowser-patches. It allows to pass modern automation detection tests.	puppeteer
+npm	puppeteer-select		MIT	2019-08-08		js	1	advanced css selectors for puppeteer	puppeteer
+npm	@daisy/puppeteer-utils		MIT	2026-04-24		js	1	Utilities for Google Puppeteer	puppeteer
+npm	@zorilla/puppeteer-extra		MIT	2026-07-21		js	1	Teach puppeteer new tricks through plugins.	puppeteer
+npm	@puppeteer/ng-schematics		Apache-2.0	2026-05-12		js	1	Puppeteer Angular schematics	puppeteer
+npm	idcac-playwright		GPL-3.0-only	2025-11-26		js	1	I Don't Care About Cookies for Playwright/Puppeteer	puppeteer
+npm	puppeteer-capture		MIT	2026-08-07		js	1	A Puppeteer plugin for capturing page as a video with ultimate quality.	puppeteer
+npm	@types/aws-synthetics-puppeteer		MIT	2026-01-22		js	1	TypeScript definitions for aws-synthetics-puppeteer	puppeteer
+npm	puppeteer-screen-recorder		MIT	2024-10-27		js	1	A puppeteer Plugin that uses the native chrome devtool protocol for capturing video frame by frame. Also supports an option to follow pages that are opened by t	puppeteer
+npm	puppeteer-real-browser		ISC	2025-09-03		js	1	This package is designed to bypass puppeteer's bot-detecting captchas such as Cloudflare. It acts like a real browser and can be managed with puppeteer.	puppeteer
+npm	testcafe-browser-provider-puppeteer		MIT	2020-01-19		js	1	puppeteer TestCafe browser provider plugin.	puppeteer
+npm	puppeteer-stream		MIT	2026-07-06		js	1	An Extension for Puppeteer to retrieve audio and/or video streams of a page	puppeteer
+npm	storycrawler		MIT	2024-09-04		js	1	Utilities to build Storybook crawling tools with Puppeteer	puppeteer
+npm	puppeteer-intercept-and-modify-requests		Apache-2.0	2024-01-29		js	1	The `puppeteer-intercept-and-modify-requests` TypeScript library allows you to intercept and modify network requests and responses using Puppeteer. It supports 	puppeteer
+npm	n8n-nodes-puppeteer		MIT	2026-01-23		js	1	n8n node for browser automation using Puppeteer	puppeteer
+npm	fingerprint-injector		Apache-2.0	2026-08-05		js	1	Browser fingerprint injection library for Playwright and Puppeteer.	puppeteer
+npm	devtools		MIT	2025-02-12		js	1	A Chrome DevTools protocol binding that maps WebDriver commands into Chrome DevTools commands using Puppeteer	puppeteer
+npm	puppeteer-core		Apache-2.0	2026-10-08		js	1	A high-level API to control headless Chrome over the DevTools Protocol	puppeteer
+npm	@hyperframes/engine			2026-10-11		js	1	Seekable web page to video rendering engine (Puppeteer + FFmpeg)	puppeteer
+npm	@scullyio/scully-plugin-puppeteer		MIT	2022-09-21		js	1	Scully Puppeteer render plugin	puppeteer
+npm	@tramvai/test-puppeteer		Apache-2.0	2026-09-03		js	1	Set of helpers for using [puppeteer](https://github.com/puppeteer/puppeteer) in the integration tests	puppeteer
+npm	@zorilla/puppeteer-extra-plugin-user-preferences		MIT	2026-07-21		js	1	Launch puppeteer with arbitrary user preferences.	puppeteer
+npm	@siteimprove/alfa-aria		MIT	2026-07-22		js	1	Functionality for working with ARIA and the accessibility tree	accessibility tree
+npm	obix-driver-accessibility-tree		MIT	2026-09-30		js	1	OBIX Accessibility Tree Driver - ARIA/live region management and screen reader bridge	accessibility tree
+npm	aria-snapshot		Apache-2.0	2026-07-04		js	1	Playwright's ariaSnapshot (accessibility-tree walk + YAML renderer) as a standalone, pure-DOM package. Runs in any page context — no CDP, no Playwright runtime.	accessibility tree
+npm	baremobile		Apache-2.0	2026-08-31		js	1	ADB-direct Android control for autonomous agents. Accessibility tree in, pruned snapshot out.	accessibility tree
+npm	@real-a11y-dev/inspector		MIT	2026-10-04		js	1	Framework-agnostic interactive accessibility tree panel — embed into any app with Shadow DOM isolation	accessibility tree
+npm	@opena11y/tree		Apache-2.0	2026-09-10		js	1	Compact accessibility-tree dump (markdown + JSON). npm @opena11y — not affiliated with OpenA11y on GitHub.	accessibility tree
+npm	@shapea11y/tree		Apache-2.0	2026-09-11		js	1	Compact accessibility-tree dump (markdown + JSON). npm @shapea11y.	accessibility tree
+npm	@shapea11y/headings		Apache-2.0	2026-09-11		js	1	Heading outline from an accessibility tree. npm @shapea11y.	accessibility tree
+npm	@opena11y/headings		Apache-2.0	2026-09-10		js	1	Heading outline from an accessibility tree. npm @opena11y — not affiliated with OpenA11y on GitHub.	accessibility tree
+npm	eslint-plugin-jsx-a11y		MIT	2024-10-26		js	1	Static AST checker for accessibility rules on JSX elements.	accessibility tree
+npm	recipes-cli		MIT	2026-09-13		js	1	Drive websites through their accessibility tree instead of screenshots — real logged-in Chrome, auditable JSON recipes, in-page replay.	accessibility tree
+npm	dom-accessibility-api		MIT	2025-11-27		js	1	Implements https://w3c.github.io/accname/	accessibility tree
+npm	@nuvin/computer-use		MIT	2026-09-19		js	1	Drive the macOS desktop from a CLI — accessibility-tree actions (snapshot → press/set-value) and pixel actions (screenshot → click/move/drag). Foreground automa	accessibility tree
+npm	pinchtab-mcp		MIT	2026-03-06		js	1	MCP server for PinchTab browser automation — control Chrome via accessibility tree snapshots	accessibility tree
+npm	axe-core		MPL-2.0	2026-10-05		js	1	Accessibility engine for automated Web UI testing	accessibility tree
+npm	dsh-click		Apache-2.0	2026-10-10		js	1	Cross-platform native desktop control tools for DeepSeek Harness (Windows first): screen_shot, screen_read (accessibility tree + pixel description for text-only	accessibility tree
+npm	@storybook/addon-a11y		MIT	2026-09-29		js	1	Storybook Addon A11y: Test UI component compliance with WCAG web accessibility standards	accessibility tree
+npm	mcp-accessibility-bridge		MIT	2026-02-21		js	1	MCP server that exposes browser accessibility tree via Chrome CDP	accessibility tree
+npm	selenium-ai-agent		MIT	2026-07-05		js	1	AI-powered Selenium MCP server for browser automation — 74 tools with accessibility tree discovery, test generation, self-healing, and Selenium Grid parallel ex	accessibility tree
+npm	mac-control-mcp		MIT	2026-09-16		js	1	Native Swift macOS automation over MCP — 153 tools: Accessibility tree, screen capture, OCR, browser DOM, EventKit, voice, undo. Ships a Developer ID signed, no	accessibility tree
+npm	aly-browser		MIT	2026-03-27		js	1	Lightweight browser SDK for AI agents — accessibility tree snapshots with @eN ref IDs via Chrome Extension bridge	accessibility tree
+npm	a11ydriver-mcp		MIT	2026-08-13		js	1	Zero-UI MCP Server connecting AI Agents directly to Chrome browser via DevTools CDP & Accessibility Tree	accessibility tree
+npm	pi-jev-browser		Apache-2.0	2026-09-23		js	1	Browser and macOS desktop agent for pi: Jev (TypeSafe System One) chooses each action from a structured observation in a bounded, surface-agnostic loop. Isolate	accessibility tree
+npm	sutradhar		FSL-1.1-ALv2	2026-10-04		js	1	AI-agent browser automation, in one package: an MCP server (npx sutradhar-mcp), a terminal CLI (npx sutradhar), and an embeddable Node SDK (import { launch } fr	accessibility tree
+npm	@bun-win32/uia		MIT	2026-06-18		js	1	Playwright for the Windows desktop, from Bun — drive the UI Automation accessibility tree (find by name, invoke, type, assert), plus synthetic input, full-scree	accessibility tree
+npm	@dnd-kit/accessibility		MIT	2024-11-23		js	1	A generic toolkit to help with accessibility	accessibility tree
+npm	@devtools-ds/tree		MIT	2022-12-27		js	1	A versatile expanding `Tree` component, with full keyboard navigation following the [Tree View Design Pattern](https://www.w3.org/TR/wai-aria-practices/examples	accessibility tree
+npm	dsh-computer-control		MIT	2026-08-20		js	1	dsh bundle for computer-control: desktop control (screen capture, pointer/keyboard injection, accessibility-tree semantic actions, safety guards) bridged to the	accessibility tree
+npm	@zibokapi/dsh-codex-computer-use		MIT	2026-08-16		js	1	Desktop computer use for DeepSeek Harness (DSH): macOS app listing, accessibility-tree window capture, screenshots, and synthesized input — the seam, the local 	accessibility tree
+npm	@headless-tree/core		MIT	2026-05-17		js	1	The definitive tree component for the Web	accessibility tree
+npm	@antimatter-web/compiler		Apache-2.0	2026-07-15		js	1	Compiles a rendered page's accessibility tree (via Chromium/CDP) into signed, typed Antimatter MCP tool schemas. Deterministic and LLM-free.	accessibility tree
+npm	@headless-tree/react		MIT	2026-05-17		js	1	The definitive tree component for the Web	accessibility tree
+npm	eslint-plugin-vuejs-accessibility		MIT	2026-10-07		js	1	An eslint plugin for checking Vue.js files for accessibility	accessibility tree
+npm	@iflow-mcp/yashpreetbathla-mcp-accessibility-bridge		MIT	2026-03-10		js	1	MCP server that exposes browser accessibility tree via Chrome CDP	accessibility tree
+npm	highcharts		https://www.highcharts.com/license	2026-09-20		js	1	JavaScript charting framework	accessibility tree
+npm	@wordpress/a11y		GPL-2.0-or-later	2026-10-07		js	1	Accessibility (a11y) utilities for WordPress.	accessibility tree
+npm	@playwright/mcp		Apache-2.0	2026-09-28		js	1	Playwright Tools for MCP	accessibility tree
+npm	@angular-eslint/eslint-plugin-template		MIT	2026-10-11		js	1	ESLint plugin for Angular Templates	accessibility tree
+npm	ax-grep		MIT	2026-06-22		js	1	A browser-native semantic accessibility tree extractor that runs without DevTools or CDP.	accessibility tree
+npm	ios-sim-mcp		MIT	2026-05-18		js	1	MCP server that drives the iOS Simulator via semantic accessibility-tree snapshots with stable refs. Includes an injectable dylib for in-process view introspect	accessibility tree
+npm	@pinchtab/semantic		MIT	2026-04-28		js	1	Zero-dependency semantic matching for accessibility tree elements	accessibility tree
+npm	expo-vitest		MIT	2026-09-20		js	1	Vitest for Expo code on every platform it runs on: one project each for iOS, Android, web and Windows, picked by a test file's name, and a harness that drives t	accessibility tree
+npm	browse-mcp		MIT	2026-06-13		js	1	Headless-browser MCP server for any MCP-capable agent (Claude, Codex, Gemini CLI, Cursor, ...). Playwright-based, with accessibility-tree refs, Readability, sea	accessibility tree
+npm	@zag-js/cascade-select		MIT	2026-10-11		js	1	Core logic for the cascade-select widget implemented as a state machine	accessibility tree
+npm	axe-sarif-converter		MIT	2026-05-08		js	1	Convert axe-core accessibility scan results to the SARIF format	accessibility tree
+npm	app-screen-mcp		MIT	2026-02-28		js	1	MCP server for iOS Simulator automation — accessibility tree, screenshot, tap/swipe/type, and AI screen perception tools	accessibility tree
+npm	@unooo/polarize		MIT OR Apache-2.0	2026-08-27		js	1	polarize MCP server: a stdio Model Context Protocol server that automates real native macOS AppKit applications (screenshot, accessibility-tree inspection, synt	accessibility tree
+npm	@ebay/ebayui-core		MIT	2026-10-01		js	1	Collection of core eBay components; considered to be the building blocks for all composite structures, pages & apps.	accessibility tree
+npm	parse5-htmlparser2-tree-adapter		MIT	2026-04-19		js	1	htmlparser2 tree adapter for parse5.	accessibility tree
+npm	@lexical/a11y		MIT	2026-09-28		js	1	Framework-agnostic accessibility helpers (ARIA live regions, focus management, roving tab index, focus trap) usable with Lexical from React, Svelte, Vue, Solid,	accessibility tree
+npm	accessibility-developer-tools		Apache-2.0	2017-03-08		js	1	This is a library of accessibility-related testing and utility code.	accessibility tree
+npm	accented		MIT	2026-09-27		js	1	A frontend library for continuous accessibility testing and issue highlighting	accessibility tree
+npm	unist-util-visit		MIT	2026-01-22		js	1	unist utility to visit nodes	accessibility tree
+npm	mdast-util-to-markdown		MIT	2026-10-03		js	1	mdast utility to serialize markdown	accessibility tree
+npm	mdast-util-from-markdown		MIT	2026-10-03		js	1	mdast utility to parse markdown	accessibility tree
+npm	@flatina/browser-ctl		MIT	2026-03-30		js	1	CDP browser automation with accessibility-tree refs (@e1, @e2, …)	accessibility tree
+npm	pdfkit		MIT	2026-08-30		js	1	A JavaScript PDF generation library	accessibility tree
+npm	unist-util-visit-parents		MIT	2025-10-16		js	1	unist utility to recursively walk over nodes, with ancestral information	accessibility tree
+npm	@flighthq/accessibility		MIT	2026-08-27		js	1	Assistive-technology (ARIA) bridge over a swappable web/native backend (a visually-hidden ARIA DOM overlay by default)	accessibility tree
+npm	@pixi/accessibility		MIT	2025-03-06		js	1	Accessibility Plugin for visually impaired users	accessibility tree
+npm	openfox		MIT	2026-10-05		js	1	Local-LLM-first agentic coding assistant	local llm
+npm	@origintrail-official/dkg-local-llm		Apache-2.0	2026-10-09		js	1	Bounded local-LLM tool runtime for the DKG MCP surface.	local llm
+npm	@antseed/provider-local-llm			2026-10-08		js	1	Local LLM provider plugin for Antseed	local llm
+npm	@tanstack/ai-ollama		MIT	2026-10-09		js	1	Ollama adapter for TanStack AI local LLM chat, tool calling, and structured outputs.	local llm
+npm	@dsh-enhanced/llm-route-capabilities		MIT	2026-09-26		js	1	Runtime-local LLM route tool-call projection metadata for DeepSeek Harness integrations.	local llm
+npm	@ragfoundry/adapter-llm-ollama		MIT	2026-09-16		js	1	Ollama local LLM adapter for RAGFoundry.	local llm
+npm	dsh-local-llm		MIT	2026-10-01		js	1	Local LLM runner profiles for dsh - name reserved; first release in development.	local llm
+npm	@nanomind/engine		MIT	2026-03-25		js	1	Core inference backend — llamafile wrapper for local LLM inference	local llm
+npm	@getsigit/sigit		Apache-2.0	2026-10-11		js	1	AI coding agent powered by local LLM via Onde Inference.	local llm
+npm	llmpt		MIT	2026-07-14		js	1	LLM Proxy Trace - local LLM proxy that captures full traces with real-time Web dashboard	local llm
+npm	jervis-llm		MIT	2026-09-10		js	1	Universal local LLM lifecycle CLI	local llm
+npm	llm-fw		SEE LICENSE IN LICENSE.md	2026-08-20		js	1	Local LLM prompt injection firewall	local llm
+npm	local-llm-worker		MIT	2026-10-06		js	1	Local LLM does Claude's bulk work: reads logs and files, researches the web, writes test-gated code.	local llm
+npm	@smbcloud/sigit		Apache-2.0	2026-10-11		js	1	Previous name for @getsigit/sigit. AI coding agent powered by local LLM via Onde Inference.	local llm
+npm	ai-edge		MIT	2026-08-09		js	1	Local LLM routing server with OpenAI compatibility	local llm
+npm	@reaatech/media-pipeline-mcp-ollama		MIT	2026-05-21		js	1	Ollama provider — local LLM text completion, embeddings, and image description via Ollama API	local llm
+npm	ellmos-homebase-mcp		MIT	2026-09-19		js	1	Alpha MCP server for local LLM memory, knowledge, state, routing, testing, and orchestration.	local llm
+npm	expo-local-llm		MIT	2026-09-28		js	1	Expo module for on-device LLM inference via Apple Foundation Models (iOS) and Gemini Nano (Android)	local llm
+npm	llmstatus		MIT	2026-09-22		js	1	Local LLM Status CLI: current code ownership by AI tool and model, repository token usage, and a README badge	local llm
+npm	@holoscript/llm-provider		MIT	2026-09-25		js	1	Unified LLM provider SDK for HoloScript - OpenAI, Anthropic, Gemini, OpenRouter, xAI, and local LLM adapters	local llm
+npm	@paiart/clipal		MIT	2026-09-23		js	1	Clipal CLI installer for the local LLM API gateway	local llm
+npm	clipal		MIT	2026-09-23		js	1	Clipal CLI installer for the local LLM API gateway	local llm
+npm	@monroewilliams/pi-local		MIT	2026-09-06		js	1	Pi extension for configuring multiple local LLM inference engine connections.	local llm
+npm	jev-gateway		MIT	2026-10-06		js	1	Local LLM gateway that lets TypeSafe's Jev model pick the tool for coding agents. Launchers for Codex, Claude Code, OpenCode, Kilo, Gemini and Devin, with a mon	local llm
+npm	@caphtech/casegraph-worker-local-llm		Apache-2.0	2026-04-17		js	1	Local LLM worker plugin for CaseGraph.	local llm
+npm	@capacitor/local-llm		MIT	2026-05-11		js	1	A Capacitor plugin for running on-device LLMs, with support for text generation, image generation, and session management on iOS and Android.	local llm
+npm	pi-ghost-autocomplete		SSPL-1.0	2026-10-11		js	1	Inline ghost-text autocomplete extension for the Pi coding agent (pi.dev). Cloud and local LLM providers, zero-flicker rendering, no popup interference.	local llm
+npm	@tonyclaw/llm-inspector		MIT	2026-06-20		js	1	Local LLM API inspector for AI coding tools, with real-time request and response capture.	local llm
+npm	whatcanirun			2026-04-13		js	1	Standardized local LLM inference benchmarks.	local llm
+npm	@marktoflow/integrations		AGPL-3.0-only	2026-02-16		js	1	39 service integrations and AI agent adapters with tool calling, structured output, and local LLM support	local llm
+npm	local-llm-readiness		MIT	2026-08-31		js	1	Is this machine ready to run local-LLM agents unattended? Checks distilled from a real 115-agent, 24/7 Ollama operation.	local llm
+npm	llm-pulse		MIT	2026-09-13		js	1	Zero-config CLI for monitoring your local LLM hardware, runtimes, and model compatibility	local llm
+npm	local-llm-js-core		MIT	2026-07-14		js	1	Shared core runtime and native contract for local-llm packages	local llm
+npm	turbollm		FSL-1.1-ALv2	2026-10-04		js	1	TurboLLM — local LLM platform: run any inference engine auto-tuned to your GPU, with a web UI and OpenAI/Anthropic-compatible API. Point Claude Code at your own	local llm
+npm	mcp-local-llm		MIT	2026-01-22		js	1	MCP server that uses a local LLM to respond to queries - Binary distribution	local llm
+npm	@execuro-sw-ecosystem/sw-dev-knowledge-base-mcp		MIT	2026-09-17		js	1	ShopwareDevKnowledgeBase - read-only STDIO MCP server over a local LLM wiki (list_docs, grep_docs, read_doc, kb_status)	local llm
+npm	claude-token-saver-mcp		Apache-2.0	2026-03-31		js	1	MCP server that offloads coding tasks to local LLM (Ollama) to save Claude API tokens	local llm
+npm	@tencentdb-agent-memory/memory-tencentdb		MIT	2026-09-22		js	1	Four-layer local memory system plugin for OpenClaw — auto-captures, structures, and profiles conversational knowledge using local LLM + SQLite vector search (L0	local llm
+npm	dsh-slot-health		MIT	2026-10-02		js	1	Live health pane for local LLM endpoints (llama.cpp slots + Ollama models) in the DeepSeek Harness web UI.	local llm
+npm	llm-usage-metrics		MIT	2026-10-10		js	1	CLI for aggregating local LLM usage metrics from pi, codex, gemini, droid, opencode, openclaw, claude, copilot, goose, amp, qwen, kimi, cline, roocode, kilocode	local llm
+npm	@shrkcrft/ai		MIT	2026-09-13		js	1	SharkCraft local LLM provider abstraction: Ollama (HTTP) + llama.cpp (in-process) + multi-pass enhancement pipeline.	local llm
+npm	create-local-llm-app		MIT	2026-08-31		js	1	Scaffold a local-LLM (Ollama) app with output contracts, a human approval queue, and watchdogs pre-wired — the guardrails distilled from 8,000+ logged agent fai	local llm
+npm	@tiens.nguyen/gonext-local-worker		MIT	2026-07-24		js	1	Polls GoNext cloud API for async local LLM jobs and runs them against Ollama/OpenAI-compatible servers on this Mac	local llm
+npm	@anjieyang/uncommon-route		MIT	2026-05-07		js	1	OpenClaw plugin for UncommonRoute, the local LLM router that cuts premium-model spend	local llm
+npm	@altronis/tokenmark-mcp		MIT	2026-10-11		js	1	TokenMark MCP server: expose local-LLM benchmark configs + hardware-aware model recommendations to Claude and other agents.	local llm
+npm	prism-coder		Apache-2.0	2026-10-12		js	1	Prism Coder — Local LLM fleet + MCP cognitive memory for AI agents. Wraps prism-mcp-server with the prism-coder brand CLI. Install once, run anywhere.	local llm
+npm	fitllm-engine		MIT	2026-09-22		js	1	Auditable local-LLM memory estimates for GPUs and Macs. Models sliding-window, hybrid/linear, MLA compressed-KV and MoE architectures. Zero deps, single file, c	local llm
+npm	@st-gr/sail-proxy		AGPL-3.0	2026-09-23		js	1	SAP AI Core Local LLM Proxy - A command-line tool to run a local proxy for SAP AI Core Foundation Models	local llm
+npm	fitllm		MIT	2026-09-22		js	1	Auditable local-LLM memory estimates for GPUs and Macs. Models sliding-window, hybrid/linear, MLA compressed-KV and MoE architectures. Zero deps, single file, c	local llm
+npm	@zeiq/locca		MIT	2026-07-09		js	1	TUI for managing local LLM inference with llama.cpp	local llm
+npm	dsh-local-llm-controller		MIT	2026-10-01		js	1	DSH plugin: start/stop a local llama.cpp llama-server from the settings → plugins page — two model slots (A/B) with per-slot model-file selection, eight editabl	local llm
+npm	@pikku/addon-ollama			2026-08-21		js	1	Local LLM inference via Ollama.	local llm
+npm	cqai-dsh-plugin-wiki		GPL-3.0-only	2026-10-11		js	1	Local LLM Wiki ingestion, document parsing, RAG chat and durable tasks for DSH and ebao Studio	local llm
+npm	llmxray		Apache-2.0	2026-10-11		js	1	Local LLM Observatory — See what your AI is actually doing, token by token.	local llm
+npm	@kaleidorg/create-mind		Apache-2.0	2026-10-09		js	1	Scaffold a local-LLM agent for an RGB Lightning Node with @kaleidorg/mind: npm create @kaleidorg/mind my-agent	local llm
+npm	research-chad		MIT	2026-09-23		js	1	A plugin for Opencode to scan an LLM generated table of contents for data retrieval from local LLM distilled files.	local llm
+npm	ctxfile		Apache-2.0	2026-09-26		js	1	Local-first MCP server that snapshots your project's working state (files, git, Notion, local-LLM summary) into a structured context object for any MCP client.	local llm
+npm	@wecko-ai/modelfit		MIT	2026-10-03		js	1	Detect your machine and get THE best local LLM (Ollama) it can run — from the ModelFit hardware database. Embeddable library + CLI. Offline, zero-dependency.	local llm
+npm	@wasmagent/model-local		Apache-2.0	2026-10-08		js	1	Embedded local LLM provider for wasmagent — node-llama-cpp adapter with grammar-constrained tool calling, multi-mirror download (HF/hf-mirror/ModelScope), and c	local llm
+npm	@local-llm/win32-x64			2026-07-14		js	1	local-llm native binary for Windows x64	local llm
+npm	@lenml/tokenizers		Apache-2.0	2025-09-06		js	1	a lightweight no-dependency fork of transformers.js (only tokenizers)	transformers.js
+npm	@huggingface/transformers-structured-output		Apache-2.0	2026-10-06		js	1	Dependency-free constrained generation for Transformers.js	transformers.js
+npm	@xsai-transformers/embed		MIT	2026-04-01		js	1	Transformers.js wrapper makes it easy to use with xsai	transformers.js
+npm	@browser-ai/transformers-js		Apache-2.0	2026-10-01		js	1	Transformers.js provider for Vercel AI SDK - Run 🤗 Transformers directly in the browser.	transformers.js
+npm	@workglow/huggingface-transformers		Apache-2.0	2026-10-02		js	1	HuggingFace Transformers.js provider for @workglow/ai.	transformers.js
+npm	@xsai-transformers/shared		MIT	2026-04-01		js	1	Transformers.js wrapper makes it easy to use with xsai	transformers.js
+npm	@xsai-transformers/transcription		MIT	2026-04-01		js	1	Transformers.js wrapper makes it easy to use with xsai	transformers.js
+npm	sts-whisper-small		Apache-2.0	2026-09-17		js	1	whisper-small ONNX models (transformers.js q8 format) for sts Lab, served via npmmirror	transformers.js
+npm	@anvia/transformers		MIT	2026-10-05		js	1	Transformers.js embedding model adapter for Anvia.	transformers.js
+npm	@babycommando/entity-db		Apache-2.0	2025-05-08		js	1	EntityDB is an in-browser vector database wrapping indexedDB and Transformers.js	transformers.js
+npm	@localmode/transformers		MIT	2026-09-28		js	1	Transformers.js provider for @localmode - implements all ML model interfaces	transformers.js
+npm	@claude-flow/embeddings		MIT	2026-05-18		js	1	V3 Embedding Service - OpenAI, Transformers.js, Agentic-Flow (ONNX), Mock providers with hyperbolic embeddings, normalization, and chunking	transformers.js
+npm	@gsalgadotoledo/rt-app-choice-transformers		UNLICENSED	2026-09-26		js	1	Local zero-shot classification through an injected Transformers.js pipeline. Scores are uncalibrated.	transformers.js
+npm	sts-whisper-tiny		Apache-2.0	2026-09-17		js	1	whisper-tiny ONNX models (transformers.js q8 format) for sts Lab, served via npmmirror	transformers.js
+npm	@delali/narsil-embeddings-transformers		Apache-2.0	2026-09-27		js	1	Transformers.js embedding adapter for Narsil search engine	transformers.js
+npm	prompt-api-polyfill		Apache-2.0	2026-10-06		js	1	Polyfill for the Prompt API (`LanguageModel`) backed by Firebase AI Logic, Gemini API, OpenAI API, or Transformers.js.	transformers.js
+npm	@nationaldesignstudio/rampart		CC-BY-4.0	2026-06-30		js	1	Rampart — client-side PII redaction for AI assistants: deterministic recognizers + a 14.7 MB ONNX classifier (transformers.js), default-deny policy, and reversi	transformers.js
+npm	open-jev		MIT	2026-09-21		js	1	Typed decisions in the browser: run the open-jev model (a Jev-shaped System One model) with Transformers.js.	transformers.js
+npm	@chroma-core/sentence-transformer			2025-11-18		js	1	Sentence Transformer embedding provider for Chroma using transformers.js	transformers.js
+npm	sts-whisper-base		Apache-2.0	2026-09-17		js	1	whisper-base ONNX models (transformers.js q8 format) for sts Lab, served via npmmirror	transformers.js
+npm	@agentick/huggingface		MIT	2026-08-18		js	1	HuggingFace adapter for Agentick — local embeddings via transformers.js	transformers.js
+npm	@nodetool-ai/transformers-js-nodes		MIT	2026-10-07		js	1	Hugging Face Transformers.js nodes for nodetool — run NLP, vision, and audio models locally via ONNX Runtime	transformers.js
+npm	@siddicky/anonymizerts		MIT	2026-02-19		js	1	TypeScript implementation of Microsoft Presidio using transformers.js for PII detection and anonymization	transformers.js
+npm	@antv/context		MIT	2026-07-30		js	1	A local context retrieval library that enables semantic search over your documentation. It loads documents (Markdown, JSON, Text), vectorizes them using [Transf	transformers.js
+npm	@huggingface/transformers		Apache-2.0	2026-10-06		js	1	State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!	transformers.js
+npm	@vivantel/virage-embedder-transformers		MIT	2026-08-20		js	1	Local transformers.js embedding provider for @vivantel/rag-core	transformers.js
+npm	@ai-agent-memory/embeddings		MIT	2026-09-20		js	1	Embedding providers for @ai-memory (OpenAI-compatible APIs, Ollama, transformers.js)	transformers.js
+npm	@statewalker/ai-local-models.browser		MIT	2026-10-06		js	1	Browser engine for local models: registers transformers.js on an ai-agent.core ModelManager.	transformers.js
+npm	@easbot/local-model-sdk		MIT	2026-10-09		js	1	Complete local model SDK for EASBot - Transformers.js + ONNX implementation supporting both Language Model (text generation) and Embedding (text embedding) with	transformers.js
+npm	wandler		MIT	2026-04-30		js	1	transformers.js inference server — OpenAI-compatible API for ONNX models	transformers.js
+npm	use-pipeline		MIT	2025-06-01		js	1	A react hook that wraps the transformers.js pipeline API	transformers.js
+npm	@xenova/transformers		Apache-2.0	2024-05-29		js	1	State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!	transformers.js
+npm	@axe-dev/transformers		Apache-2.0	2025-07-02		js	1	transformers.js mod for react-native	transformers.js
+npm	use-transformers		MIT	2024-12-31		js	1	Easily use transformers.js with react in browser	transformers.js
+npm	whisper-api		AGPL-3.0-or-later	2026-06-28		js	1	Self-hostable, OpenAI-compatible Whisper speech-to-text API server you can run anywhere with npx. Local inference via whisper.cpp or ONNX (transformers.js).	transformers.js
+npm	@aparte/provider-transformers		MIT	2026-10-11		js	1	Run LLMs 100% in the browser via Transformers.js (WebGPU/WASM) — a local, keyless AI provider for aparté. Streams tokens off the main thread in a Web Worker.	transformers.js
+npm	@nodd/node		MIT	2026-09-28		js	1	Run nodd task-specific classifiers in Node (transformers.js on onnxruntime-node, native CPU).	transformers.js
+npm	@psraghuveer/memento-embedder-local		Apache-2.0	2026-05-17		js	1	Local-only embedding provider for Memento, backed by transformers.js (bge-base-en-v1.5). Lazy-loaded.	transformers.js
+npm	kokoro-js-jp		Apache-2.0	2026-08-09		js	1	Browser-based English + Japanese TTS: kokoro-js (Kokoro-82M via transformers.js/ONNX) + openjtalkjs (Open JTalk G2P, WASM). No server or container required.	transformers.js
+npm	@nodd/browser		MIT	2026-09-28		js	1	Run nodd task-specific classifiers in the browser (transformers.js on onnxruntime-web, WASM or WebGPU).	transformers.js
+npm	koishi-plugin-transformers		AGPL-3.0	2025-01-28		js	1	transformers.js service | 在 koishi 运行 onnx 模型	transformers.js
+npm	@eclipse-docks/extension-in-browser-ml		EPL-2.0	2026-10-10		js	1	In-browser machine learning service using transformers.js for specialized tasks (zero-shot classification, embeddings, etc.)	transformers.js
+npm	@leuria/web-embed		Apache-2.0	2026-10-02		js	1	A small embedding model that runs in the page (Transformers.js), as a Leuria provider: search by meaning for visitors without their own model.	transformers.js
+npm	ngx-transformers		MIT	2026-09-16		js	1	Run Hugging Face Transformers.js models in Angular - on-device ML with a signals API: text classification, zero-shot classification, embeddings, semantic search	transformers.js
+npm	@lokvis/engine-ai		Apache-2.0	2026-08-03		js	1	Lokvis AI Engine Adapter - Transformers.js / Cloud AI proxy	transformers.js
+npm	opencode-episodic-memory		MIT	2026-09-28		js	1	Semantic search over past OpenCode conversations — local embeddings (Transformers.js), SQLite index, native plugin tools. Inspired by obra/episodic-memory, rebu	transformers.js
+npm	@lemmaoracle/parser		Apache-2.0	2026-07-21		js	1	Natural language query parser for the Lemma protocol. Converts natural language into structured attribute queries using on-device LLM inference via [Transformer	transformers.js
+npm	@amemhq/core		MIT	2026-09-25		js	1	The agentic memory engine — notes that construct, link, and evolve like a Zettelkasten, on Qdrant + Transformers.js. No Python. Framework-agnostic.	transformers.js
+npm	@mnemora/local-embedding		MIT	2026-10-07		js	1	EmbeddingProvider の、外部サービスへ繋がない実装。ruri v3 30m (ONNX/q8) を transformers.js でプロセス内推論する。256次元・対称 prefix（docs/architecture.md §5.5）。	transformers.js
+npm	transformers-llguidance		MIT	2026-01-14		js	1	Structured output generation for transformers.js using llguidance	transformers.js
+npm	toolnexus-web		MIT	2026-09-23		js	1	Run LLMs in the browser — GPU or CPU, same API. Tool calling, embeddings, RAG, offline knowledge bundles, and metrics. Hooks-style TypeScript over Transformers.	transformers.js
+npm	@sparkleideas/embeddings		MIT	2026-03-11		js	1	V3 Embedding Service - OpenAI, Transformers.js, Agentic-Flow (ONNX), Mock providers with hyperbolic embeddings, normalization, and chunking	transformers.js
+npm	@huggingface/tokenizers		Apache-2.0	2026-09-07		js	1	🤗 Tokenizers.js: A pure JS/TS implementation of today's most used tokenizers	transformers.js
+npm	sts-rmbg-modnet		Apache-2.0	2026-09-22		js	1	modnet ONNX model (transformers.js format) for sts Lab background removal, served via npmmirror	transformers.js
+npm	@reviewpipe/provider-local		Apache-2.0	2026-09-23		js	1	Local transformers.js sentiment + embedding provider for reviewpipe (Tier 0). Runs models on-device with no API key.	transformers.js
+npm	transformers-js-custom		Apache-2.0	2025-12-13		js	1	State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!	transformers.js
+npm	generate-embedding		Unlicense	2026-09-02		js	1	Browser-native sentence embeddings as a custom element (all-MiniLM-L6-v2, Transformers.js, Web Worker)	transformers.js
+npm	@molecule/api-ai-embeddings-local		Apache-2.0	2026-09-20		js	1	Local (offline) ai-embeddings provider for molecule.dev — runs a small sentence-embedding model in-process via Transformers.js (onnxruntime); no API key and no 	transformers.js
+npm	@itsrajeshthota/retrievalops-local		Apache-2.0	2026-08-10		js	1	Local embedding provider using transformers.js for RetrievalOps	transformers.js
+npm	browser-ai-engine		MIT	2026-09-09		js	1	Offline-first LLM + STT/TTS engine for the browser. WebGPU inference via WebLLM, audio via Transformers.js, tool calling with Zod validation.	transformers.js
+npm	@hivelore/embeddings		Apache-2.0	2026-10-06		js	1	Hivelore embeddings - local semantic ranking for agent briefings and code search	embeddings local
+npm	@hiveai/embeddings		Apache-2.0	2026-06-09		js	1	hAIve embeddings - local semantic ranking for agent briefings and code search	embeddings local
+npm	@molecule/api-ai-embeddings-local		Apache-2.0	2026-09-20		js	1	Local (offline) ai-embeddings provider for molecule.dev — runs a small sentence-embedding model in-process via Transformers.js (onnxruntime); no API key and no 	embeddings local
+npm	@supabase/storage-js		MIT	2026-10-07		js	1	Isomorphic storage client for Supabase.	embeddings local
+npm	ruvector-onnx-embeddings-wasm		MIT	2025-12-31		js	1	Portable WASM embedding generation with SIMD and parallel workers - run text embeddings in browsers, Cloudflare Workers, Deno, and Node.js	embeddings local
+npm	@openclaw/llama-cpp-provider			2026-10-10		js	1	OpenClaw provider for managed and external llama.cpp servers	embeddings local
+npm	harper-fabric-embeddings		MIT	2026-07-19		js	1	Minimal llama.cpp embedding wrapper for Harper Fabric. Talks directly to the native addon — no build tools, no CLI, no chat wrappers.	embeddings local
+npm	@sap-ux/fiori-docs-embeddings		Apache-2.0	2026-10-05		js	1	SAP Fiori documentation indexing	embeddings local
+npm	import-local		MIT	2024-07-22		js	1	Let a globally installed package use a locally installed version of itself if available	embeddings local
+npm	vectra		MIT	2026-05-24		js	1	A lightweight, file-backed vector database for Node.js and browsers with Pinecone-compatible filtering and hybrid BM25 search.	embeddings local
+npm	@copilotkit/aimock		MIT	2026-10-10		js	1	Mock infrastructure for AI application testing — point your SDK at one local port and every provider, protocol, and service answers deterministically.	embeddings local
+npm	@chroma-core/ai-embeddings-common			2026-03-26		js	1	Common utilities for ChromaDB AI embedding packages	embeddings local
+npm	pgvector		MIT	2026-05-31		js	1	pgvector support for Node.js, Deno, and Bun (and TypeScript)	embeddings local
+npm	@veryfront/ext-llm-openai		Apache-2.0	2026-10-11		js	1	Veryfront first-party extension package for ext-llm-openai	embeddings local
+npm	@oh-my-pi/pi-mnemopi		MIT	2026-10-12		js	1	Local SQLite memory engine for omp agents	embeddings local
+npm	wink-nlp		MIT	2025-06-30		js	1	Developer friendly Natural Language Processing ✨	embeddings local
+npm	@claude-flow/embeddings		MIT	2026-05-18		js	1	V3 Embedding Service - OpenAI, Transformers.js, Agentic-Flow (ONNX), Mock providers with hyperbolic embeddings, normalization, and chunking	embeddings local
+npm	@expo/local-build-cache-provider		MIT	2026-08-26		js	1	Local build cache provider for Expo	embeddings local
+npm	@memberjunction/ai-local-embeddings		BUSL-1.1	2026-10-06		js	1	MemberJunction AI Provider - Local Embeddings Models	embeddings local
+npm	state-local		MIT	2021-01-07		js	1	Tiny, simple, and robust technique for defining and acting with local states	embeddings local
+npm	@sanity/embeddings-index-ui		MIT	2026-10-08		js	1	Various Sanity Studio plugins for integrating with the embeddings index API	embeddings local
+npm	@elyracode/semantic-index		MIT	2026-10-10		js	1	Local semantic code search for Elyra -- embed your codebase and find relevant code by meaning, not just keywords	embeddings local
+npm	foundry-local-sdk		MIT	2026-09-29		js	1	Foundry Local SDK for Node.js (v2). Native bindings on top of the foundry_local C++ SDK.	embeddings local
+npm	@wllama/wllama		MIT	2026-10-02		js	1	WebAssembly binding for llama.cpp - Enabling on-browser LLM inference	embeddings local
+npm	@lobu/connector-worker		BUSL-1.1	2026-10-04		js	1	Self-hosted worker for Lobu memory — connectors and embedding generation	embeddings local
+npm	@lmstudio/sdk		MIT	2026-09-21		js	1	LM Studio SDK	embeddings local
+npm	@lobu/cli		Apache-2.0	2026-10-04		js	1	CLI for deploying and managing AI agents on Lobu	embeddings local
+npm	@sanity/embeddings-index-cli		MIT	2026-04-13		js	1	CLI for creating and managing embeddings indexes	embeddings local
+npm	langchain		MIT	2026-10-08		js	1	Typescript bindings for langchain	embeddings local
+npm	@tensorflow-models/universal-sentence-encoder		Apache-2.0	2021-06-01		js	1	Universal Sentence Encoder lite in TensorFlow.js	embeddings local
+npm	@veryfront/ext-llm-google		Apache-2.0	2026-10-11		js	1	Veryfront first-party extension package for ext-llm-google	embeddings local
+npm	@langchain/google-common		MIT	2026-09-12		js	1	Core types and classes for Google services.	embeddings local
+npm	@jerome-benoit/sap-ai-provider		Apache-2.0	2026-09-14		js	1	SAP AI Provider for Vercel AI SDK (powered by @sap-ai-sdk/orchestration and @sap-ai-sdk/foundation-models)	embeddings local
+npm	browserstack-local		MIT	2026-10-06		js	1	Nodejs bindings for BrowserStack Local	embeddings local
+npm	@chroma-core/chroma-cloud-splade			2026-03-26		js	1	Chroma Cloud Splade sparse embedding function	embeddings local
+npm	opencode-codebase-index		MIT	2026-10-09		js	1	Host-neutral semantic codebase search with embeddings, symbol discovery, and call-graph tooling	embeddings local
+npm	@themaximalist/embeddings.js		MIT	2024-02-23		js	1	Simple text embeddings library	embeddings local
+npm	@xsai/embed		MIT	2026-10-10		js	1	extra-small AI SDK: text embeddings.	embeddings local
+npm	use-local-storage-state		MIT	2026-07-16		js	1	React hook that persist data in localStorage	embeddings local
+npm	passport-local			2014-03-08		js	1	Local username and password authentication strategy for Passport.	embeddings local
+npm	indexer-cli		MIT	2026-10-07		js	1	Local-first semantic code search and repository discovery for AI coding agents	embeddings local
+npm	n8n-nodes-embeddings-local-api		MIT	2025-10-29		js	1	N8N Community Node for local text embeddings - use your own models instead of cloud APIs	embeddings local
+npm	@pinecone-database/pinecone		Apache-2.0	2026-09-09		js	1	The official Pinecone TypeScript SDK for building full-text and vector search applications.	embeddings local
+npm	lambda-local		MIT	2024-04-13		js	1	Commandline tool and API to run Lambda functions on your local machine.	embeddings local
+npm	@vpxa/aikit		MIT	2026-09-30		js	1	Local-first AI developer toolkit — knowledge base, code analysis, context management, and developer tools for LLM agents	embeddings local
+npm	@ruvector/rabitq-wasm		MIT OR Apache-2.0	2026-04-26		js	1	RaBitQ 1-bit quantized vector index in WebAssembly — 32× embedding compression with high-recall rerank, for browsers, Cloudflare Workers, Deno, and Bun	embeddings local
+npm	postcss-modules-local-by-default		MIT	2024-12-11		js	1	A CSS Modules transform to make local scope the default	embeddings local
+npm	@yarflam/potion-base-8m		MIT	2026-03-28		js	1	Fast Model2Vec inference for potion-base-8M embeddings without ONNX or heavy ML frameworks	embeddings local
+npm	@bpinternal/gravity		MIT	2026-06-30		js	1	Generic density-based clustering (UMAP + HDBSCAN), compiled from Rust to WebAssembly.	embeddings local
+npm	@energetic-ai/embeddings		Apache-2.0	2023-06-11		js	1	Fast, easy-to-use AI text embeddings, optimized for serverless functions.	embeddings local
+npm	@ai-agent-memory/embeddings		MIT	2026-09-20		js	1	Embedding providers for @ai-memory (OpenAI-compatible APIs, Ollama, transformers.js)	embeddings local
+npm	@langchain/nomic		MIT	2025-11-24		js	1	Nomic integration for LangChain.js	embeddings local
+npm	@venturekit-pro/ai		SEE LICENSE IN ../LICENSE	2026-10-10		js	1	AI utilities for VentureKit - embeddings, RAG, agents, chat completion, and image generation	embeddings local
+npm	ollama-ai-provider-v2		Apache-2.0	2026-07-08		js	1	Use Ollama with the Vercel AI SDK, implementing the official Ollama API. This provider has minimal dependencies and is web-compatible out of the box.	embeddings local
+npm	opencode-mem		MIT	2026-10-10		js	1	OpenCode plugin that gives coding agents persistent memory using local Turso/libSQL vector search	embeddings local
+npm	@ssmeo/mcp-local-rag		MIT	2026-09-22		js	1	Local RAG MCP Server - Easy-to-setup document search with minimal configuration (fork with remote embedding server support)	embeddings local
+npm	grepmax		Apache-2.0	2026-10-10		js	1	Semantic code search for coding agents. Local embeddings, call graph tracing, compact code context.	embeddings local
+npm	@ggui-ai/embedding-local		Apache-2.0	2026-10-08		js	1	Local-model text embeddings for self-hosted ggui. A `@huggingface/transformers`-backed embedding provider running entirely on-device — no embedding API key requ	embeddings local
+npm	@openclaw/mistral-provider		MIT	2026-10-10		js	1	OpenClaw Mistral provider plugin	embeddings local
+npm	@verdaccio/local-storage-legacy		MIT	2026-10-08		js	1	Local storage implementation	embeddings local
+npm	@dinglebear/cortex		AGPL-3.0-only	2026-10-01		js	1	Self-hosted log aggregation and investigation for homelabs: syslog, Docker, OTLP, and AI transcripts in SQLite/FTS, exposed over MCP, CLI, and REST.	sqlite fts
+npm	gmail-imap-agent-skill		MIT	2026-09-14		js	1	Agent skill: read-only Gmail access over IMAP with a local SQLite FTS cache (gmmail CLI, Python stdlib only).	sqlite fts
+npm	calendar-agent-skill		MIT	2026-09-14		js	1	Agent skill for ICS feeds, local calendar editing and safe CalDAV operations, with SQLite FTS search and resumable backfill.	sqlite fts
+npm	protonmail-bridge-agent-skill		MIT	2026-09-14		js	1	Agent skill: read-only Proton Mail access via Proton Mail Bridge IMAP with a local SQLite FTS cache (pmail CLI, Python stdlib only).	sqlite fts
+npm	@akashabot/openclaw-mem		MIT	2026-02-10		js	1	CLI for OpenClaw Offline Memory (SQLite FTS + optional embeddings)	sqlite fts
+npm	@akashabot/openclaw-memory-offline-core		MIT	2026-02-10		js	1	Core library for OpenClaw Offline Memory (SQLite FTS + optional embeddings)	sqlite fts
+npm	dsh-session-browser		MIT	2026-08-15		js	1	DSH plugin: same-workspace cross-session read-only browsing for models — list_sessions / read_session / search_sessions tools with strict cwd scoping, UNTRUSTED	sqlite fts
+npm	sqlite-fts			2012-03-16		js	1	SQLite3 bindings for Node with FTS4 enabled	sqlite fts
+npm	@crvouga/mockingbird-service-sqlite		MIT	2026-10-09		js	1	Pure TypeScript in-memory SQLite implementation with zero WASM/native dependencies	sqlite fts
+npm	sql.js		MIT	2026-08-14		js	1	SQLite library with support for opening and writing databases, prepared statements, and more. This SQLite library is in pure javascript (compiled with emscripte	sqlite fts
+npm	expo-sqlite		MIT	2026-10-06		js	1	Provides access to a database using SQLite (https://www.sqlite.org/). The database is persisted across restarts of your app.	sqlite fts
+npm	@op-engineering/op-sqlite		MIT	2026-09-20		js	1	Fastest SQLite for React Native (with node.js support)	sqlite fts
+npm	@tobilu/qmd		MIT	2026-08-16		js	1	Query Markup Documents - On-device hybrid search for markdown files with BM25, vector search, and LLM reranking	sqlite fts
+npm	@sqlite.org/sqlite-wasm		Apache-2.0	2026-10-02		js	1	SQLite Wasm conveniently wrapped as an ES Module.	sqlite fts
+npm	@capacitor-community/sqlite		MIT	2026-08-06		js	1	Community plugin for native & electron SQLite databases	sqlite fts
+npm	drizzle-orm		Apache-2.0	2026-10-08		js	1	Drizzle ORM package for SQL databases	sqlite fts
+npm	sqlite		MIT	2023-11-01		js	1	SQLite client for Node.js applications with SQL-based migrations API written in Typescript	sqlite fts
+npm	@tanstack/db-sqlite-persistence-core		MIT	2026-10-10		js	1	SQLite persisted collection core for TanStack DB	sqlite fts
+npm	sqlite-fts-util		MIT	2024-06-29		js	1	utility functions to help generate SQLite fts5 schema and indexing	sqlite fts
+npm	@deepseek-ai/dsh-session-reference		BSD-3-Clause	2026-08-10		js	1	Cross-session snapshot references and durable untrusted model context (ctx.sessionReferences)	sqlite fts
+npm	better-sqlite3		MIT	2026-08-05		js	1	The fastest and simplest library for SQLite in Node.js.	sqlite fts
+npm	@cap-js/sqlite		Apache-2.0	2026-09-15		js	1	CDS database service for SQLite	sqlite fts
+npm	@tanstack/browser-db-sqlite-persistence		MIT	2026-10-10		js	1	Browser wa-sqlite persisted collection adapter for TanStack DB	sqlite fts
+npm	@mikro-orm/core		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@mikro-orm/postgresql		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	mikro-orm		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	sql.js-httpvfs		Apache-2.0	2022-09-23		js	1	See my blog post for an introduction: https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/	sqlite fts
+npm	@effect/sql-sqlite-do		MIT	2026-10-10		js	1	A SQLite toolkit for Effect	sqlite fts
+npm	cordova-sqlite-storage		MIT	2025-01-28		js	1	Native interface to SQLite for PhoneGap / Cordova - cordova-sqlite-storage plugin version	sqlite fts
+npm	@mikro-orm/migrations		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@journeyapps/wa-sqlite			2026-10-05		js	1	[![wa-sqlite CI](https://github.com/powersync-ja/wa-sqlite/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/powersync-ja/wa-sqlite/actions/	sqlite fts
+npm	@mikro-orm/cli		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	cordova-sqlite-storage-dependencies		MIT	2025-01-28		js	1	Cordova sqlite storage dependencies	sqlite fts
+npm	rtree-sql.js		MIT	2022-06-03		js	1	SQLite library with support for opening and writing databases, prepared statements, and more. This SQLite library is in pure javascript (compiled with emscripte	sqlite fts
+npm	sqlite-level		Apache-2.0	2026-05-31		js	1	sqlite backed abstract-level database for Node.js	sqlite fts
+npm	@mikro-orm/reflection		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@appland/sql-parser		MIT	2022-03-07		js	1	JavaScript implementation of SQLite 3 query parser	sqlite fts
+npm	sequelize		MIT	2026-03-07		js	1	Sequelize is a promise-based Node.js ORM tool for Postgres, MySQL, MariaDB, SQLite, Microsoft SQL Server, Amazon Redshift and Snowflake’s Data Cloud. It feature	sqlite fts
+npm	kysely-bun-sqlite		MIT	2025-05-12		js	1	Use kysely with `bun:sqlite`, for an example please see the [Simple Example](https://github.com/dylanblokhuis/kysely-bun-sqlite/tree/master/examples/simple) in 	sqlite fts
+npm	@mikro-orm/mysql		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@mikro-orm/sqlite		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@mikro-orm/mariadb		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@capgo/capacitor-data-storage-sqlite		MPL-2.0	2026-10-09		js	1	SQLite Storage of key/value strings pair	sqlite fts
+npm	sqlstring-sqlite		MIT	2018-05-01		js	1	Simple SQL escape and format for SQLite	sqlite fts
+npm	@mikro-orm/nestjs		MIT	2026-08-31		js	1	NestJS module for MikroORM	sqlite fts
+npm	tldr-docs		MIT	2026-03-24		js	1	AI-native documentation platform. Index GitHub repos, search with SQLite FTS, serve via MCP.	sqlite fts
+npm	@mikro-orm/mssql		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@mikro-orm/decorators		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@mikro-orm/sql		MIT	2026-10-09		js	1	TypeScript ORM for Node.js based on Data Mapper, Unit of Work and Identity Map patterns. Supports MongoDB, MySQL, PostgreSQL and SQLite databases as well as usa	sqlite fts
+npm	@evidence-dev/sqlite		MIT	2026-02-06		js	1	SQLite driver for Evidence projects	sqlite fts
+npm	@effect/sql-sqlite-bun		MIT	2026-10-10		js	1	A SQLite toolkit for Effect	sqlite fts
+npm	sqlite-wasm-http		ISC	2023-12-12		js	1	HTTP backend for SQLite3-WASM VFS	sqlite fts
+npm	react-native-sqlite-storage		MIT	2021-10-01		js	1	SQLite3 bindings for React Native (Android & iOS)	sqlite fts
+npm	@mikro-orm/seeder		MIT	2026-10-09		js	1	Seeder package for MikroORM.	sqlite fts
+npm	openclaw-plugin-memory-engine		MIT	2026-10-11		js	1	Native Memory Engine for OpenClaw: 45 memory tools (recall, working set, curator, semantic, backup, learning) + session ingest/digest + Control UI	sqlite fts
+npm	sqlite3		BSD-3-Clause	2026-03-12		js	1	Asynchronous, non-blocking SQLite3 bindings	sqlite fts
+npm	@awesome-cordova-plugins/sqlite		MIT	2026-09-07		js	1	SQLite plugin for Cordova and Ionic. Access SQLite databases on the device.	sqlite fts
+npm	@veryfront/ext-db-sqlite		Apache-2.0	2026-10-11		js	1	Veryfront first-party extension package for ext-db-sqlite	sqlite fts
+npm	@agimon-ai/log-sink-mcp		MIT	2026-10-10		js	1	Log sink MCP server with HTTP ingestion and AI analysis	sqlite fts
+npm	@titan-design/retrieval		MIT	2026-10-09		js	1	FTS + vector + graph retrieval with RRF fusion, rerank cascade, and fail-open	sqlite fts
+npm	doh			2012-09-17		js	1	upgrade any http(s) server with error handling via domains	doh
+npm	iso-web		MIT	2026-09-27		js	1	Isomorphic web apis utilities for fetch, event target, signals, crypto and doh.	doh
+npm	dns-worker		AGPL-3.0-or-later	2026-10-10		js	1	Privacy-first DNS & DoH Resolver with modern Web Dashboard, built for Cloudflare Workers & Node.js	doh
+npm	dojo-util			2022-08-13		js	1	Dojo utilities including build system for optimizing JavaScript application performance, and DOH testing tool	doh
+npm	domainstat		MIT	2026-08-15		js	1	Extremely fast domain status checker library using DoH, RDAP and WHOIS API.	doh
+npm	@benkovy/doh		MIT	2026-04-05		js	1	DOH OpenClaw channel plugin	doh
+npm	@benkovy/doh-host		MIT	2026-04-07		js	1	Host-side connector that bridges OpenClaw and DOH backend	doh
+npm	@trellisorg/dns-validator		MIT	2025-08-22		js	1	Directive that can be attached to a form control (`input` or `textarea`) that will validate the domain entered in using Googles public DNS-over-HTTP (DoH) JSON 	doh
+npm	@99apps-id/doh-mcp		Apache-2.0	2026-10-01		js	1	MCP server for DNS-over-HTTPS: resolve names and fetch URLs through DoH, keyless.	doh
+npm	@js0.site/edns		MulanPSL-2.0	2025-12-21		js	1	Geo-aware CNAME flattening via DoH + ECS / 基于 DoH + ECS 的地理感知 CNAME 扁平化	doh
+npm	cf-doh		ISC	2025-09-02		js	1	Typed Cloudflare DNS Over HTTP Resolver	doh
+npm	@benkovy/doh-protocol		MIT	2026-04-07		js	1	Shared protocol schemas and envelope types for DOH	doh
+npm	@ascii-kit/font-doh		GPL-3.0	2025-05-31		js	1	Figfont "doh" for be imported as a JS module	doh
+npm	tangerine		MIT	2026-03-07		js	1	Tangerine is the best Node.js drop-in replacement for dns.promises.Resolver using DNS over HTTPS ("DoH") via undici with built-in retries, timeouts, smart serve	doh
+npm	dohnut		ISC	2020-07-02		js	1	DNS to DNS-over-HTTPS (DoH) proxy server	doh
+npm	grade-doh-model		MIT	2026-04-14		js	1	Implementation of the the Government Revenue And Development Estimators Determinants Of Health (GRADE-DOH) economic model.	doh
+npm	@stableness/wabble		GPL-3.0	2022-11-03		js	1	http/socks5 proxy client with rules filtering and DoH support in Node.js	doh
+npm	dynsdjs-plugin-doh-dot		MIT	2021-09-18		js	1	Dynsd DoH/DoT Plugin	doh
+npm	doh-mcp		MIT	2026-09-27		js	1	DNS lookups, email records and reverse DNS - no API key.	doh
+npm	@sdxc/doh		MIT	2026-10-10		js	1	Typed DNS over HTTPS lookups	doh
+npm	@aoxborrow/dns-client		MIT	2026-08-27		js	1	Fully-typed DNS resolver with support for UDP, TCP, and DNS-over-HTTPS (DoH) transports	doh
+npm	@commonshost/resolvers		ISC	2020-05-05		js	1	DNS over HTTPS (DoH) resolvers	doh
+npm	undns		MIT	2025-12-17		js	1	Unified DNS library with multi-driver support, DoH server, and comprehensive record management	doh
+npm	@kybernesis/arp-resolver		MIT	2026-04-25		js	1	ARP resolver — HNS DoH + did:web resolution with LRU cache. Used by runtime/transport for agent-to-agent lookups.	doh
+npm	dns-relay		MIT	2021-11-17		js	1	DNS relay for UDP and DoH requests	doh
+npm	doh-resolver		MIT	2023-10-24		js	1	DNS-over-HTTPS resolver for Node.js	doh
+npm	@dnspect/doh-worker		MIT	2023-06-12		js	1	A TypeScript library for building DNS over HTTPS reverse proxies that make DNS servers speak DoH, using Cloudflare Workers.	doh
+npm	@atproto-labs/handle-resolver		MIT	2026-09-29		js	1	Isomorphic ATProto handle to DID resolver	doh
+npm	fast-domain-status		ISC	2025-09-06		js	1	Extremely fast domain status checker library using DoH, RDAP and WHOIS API.	doh
+npm	lombokdns		Apache-2.0	2026-09-24		js	1	Complete DNS protocol library — 65+ record types, all transports (UDP/TCP/DoT/DoH/DoQ), DNSSEC, EDNS(0), mDNS/DNS-SD, zone files, TSIG, DANE, RPZ. Zero dependen	doh
+npm	dns-query		MIT	2022-07-20		js	1	Node & Browser tested, Non-JSON DNS over HTTPS fetching with minimal dependencies.	doh
+npm	dns-firewall		MIT	2025-05-20		js	1	A DNS proxy firewall with domain blocking, caching, DoH support, and YAML-based configuration.	doh
+npm	doh-js-client		MIT	2023-04-22		js	1	DNS-over-HTTPS/DNS-over-TLS client for nodejs.	doh
+npm	react-native-nitro-dns		ISC	2026-03-16		js	1	Blazing-fast Node.js `dns` for React Native. Built with Nitro (JSI) & Rust, supporting DoH/DoT/DoQ and global native network interception.	doh
+npm	@oxog/dns		MIT	2026-01-04		js	1	Zero-dependency DNS lookup library with DoH, caching, and DNSSEC validation	doh
+npm	dohjs		GPL-3.0+	2022-11-03		js	1	DNS over HTTPS lookups from web apps	doh
+npm	universal-doh		MIT	2026-04-13		js	1	DNS over HTTPS universal TypeScript library	doh
+npm	super-dns		ISC	2026-07-21		js	1	DNS 代理，白名单域名走 DoH 防劫持，其余透传上游 DNS	doh
+npm	dohdec		MIT	2026-03-06		js	1	DNS over HTTPS and DNS over TLS	doh
+npm	@marcocusano/dns-resolver			2025-07-14		js	1	A TypeScript library for DNS resolution using DNS over HTTPS (DoH).	doh
+npm	@3-/doh		MulanPSL-2.0	2025-12-08		js	1	[English](#en) | [中文](#zh)	doh
+npm	@gibme/dns		MIT	2026-04-03		js	1	TypeScript DNS packet encoder/decoder with support for 46+ record types, DNSSEC, mDNS, UDP, TCP, DoT, and DoH	doh
+npm	@mrhansamala/cf-bypass		MIT	2026-06-30		js	1	Complete Cloudflare bypass engine with JS deobfuscation, hidden element detection, password extraction, and link decoding. Quantum TLS/HTTP2/DoH fingerprint spo	doh
+npm	doh-query		MIT	2021-07-04		js	1	Node & Browser tested, Non-JSON DNS over HTTPS fetching with minimal dependencies.	doh
+npm	grade-doh-data		MIT	2026-04-14		js	1	Core base data for the GRADE Determinants of Health model	doh
+npm	@push.rocks/smartdns		MIT	2026-10-02		js	1	A robust TypeScript library providing advanced DNS management and resolution capabilities including support for DNSSEC, custom DNS servers, and integration with	doh
+npm	@capitalthought/marc-zone-check		MIT	2026-05-15		js	1	Lightning-fast domain-registration check via ICANN CZDS zone files. Used by the /domain-search Claude Code skill as Tier 1.5 between DoH NS scans and WHOIS+RDAP	doh
+npm	ju-solfege		MIT	2026-03-26		js	1	Ju Solfège Chromatic — A fixed-doh chromatic solfège system invented by Paisan Chamnong (JiewJumnong). Sharps use the 'i' vowel, flats use the 'u' vowel. Design	doh
+npm	@pektin/toluol-wasm-nodejs			2022-02-02		js	1	Send DOH(DNS over Http(s)) queries with the binary "content-type": "application/dns-message" and decode the response in the browser!	doh
+npm	dnsbench		MIT	2026-06-10		js	1	Benchmark DNS-over-HTTPS (DoH) providers by latency, consistency, and success rate	doh
+npm	@wenathlan/argan		GPL-3.0-only	2026-10-10		js	1	argan is the DNS and gateway library of the wenathlan family: zones, records, dnssec and handshake — the system network library whose site shares the unified da	doh
+npm	dah-doh		SEE LICENSE IN LICENSE	2023-03-28		js	1		doh
+npm	doh-sql		MIT	2016-02-10		js	1	SQL dumps parsing tool	doh
+npm	@gucheen/doh-js-client		MIT	2024-12-19		js	1	DNS-over-HTTPS/DNS-over-TLS client for nodejs.	doh
+npm	dns-over-http		MIT	2019-03-22		js	1	DNS client and server over HTTP	doh
+npm	@sagi.io/doh		MIT	2018-11-20		js	1	RFC-8484 Compliant DNS-over-HTTPS Command Line Tool	doh
+npm	@push.rocks/smartnetwork		MIT	2026-10-02		js	1	A toolkit for network diagnostics including speed tests, port availability checks, and more.	doh
+npm	dns-chk-https-get		MIT	2020-03-12		js	1	This is a library that performs a DNS lookup and then verifies the queried IP address with other DoH services to better ensure that the IP address that the doma	doh
+npm	@relaycorp/dnssec		MIT	2025-04-05		js	1	Resolver-agnostic DNSSEC library	doh
+npm	@visulima/email-provider-mx		MIT	2026-08-02		js	1	Classify the email provider (mailbox host or secure email gateway) behind an MX record.	doh
+npm	tor		MIT	2015-01-21		js	1	Simple Project Generator	tor
+npm	tor-proxy-agent		MIT	2026-02-09		js	1	A lightweight Node.js wrapper for routing HTTP(S) traffic through Tor, including optional ControlPort circuit rotation.	tor
+npm	tor-control-ts		MIT	2022-12-23		js	1	communicate tor-control	tor
+npm	react-native-tor		MIT	2022-02-09		js	1	Tor for React Native	tor
+npm	@browser-logos/tor			2020-07-12		js	1	Tor browser logo	tor
+npm	tor-request		MIT	2019-03-23		js	1	send http/https requests through Tor.	tor
+npm	react-native-nitro-tor		MIT	2026-09-01		js	1	Tor Daemon and Onion Routing Client for React-Native	tor
+npm	tor-js		MIT OR Apache-2.0	2026-10-07		js	1	TypeScript Tor client using arti via WASM	tor
+npm	node-tor-control		ISC	2017-03-24		js	1	A node library to communicate with tor-control	tor
+npm	tor-axios		MIT	2026-01-09		js	1	use axios with tor	tor
+npm	kmp-tor.resource-exec-tor.linux-android		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor binary resources (`Linux Android` compilations)  for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	kmp-tor.resource-exec-tor.linux-libc		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor binary resources (`Linux Libc` compilations)  for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	pi-tor-proxy		MIT	2026-09-21		js	1	Pi extension that routes pi agent requests through Tor. It downloads and manages its own Tor binary, so nothing needs to be installed on the system.	tor
+npm	kmp-tor.resource-exec-tor.macos		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor binary resources (`macOS` compilations)  for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	kmp-tor.resource-exec-tor.all		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor binary resources (**ALL** compilations)  for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	@corpus-core/colibri-tor		MIT	2026-10-07		js	1	Tor network transport for Colibri Stateless. Routes RPC requests through Tor for enhanced privacy -- via Arti WASM in browsers, via SOCKS5 proxy in Node.js.	tor
+npm	tor-control		ISC	2018-03-28		js	1	A node library to communicate with tor-control	tor
+npm	kmp-tor.resource-exec-tor-gpl.linux-android		GPL v3	2026-02-15		js	1	NPM distribution of Tor binary resources (`Linux Android` compilations compiled with flag `--enable-gpl`)  for Kotlin Multiplatform Tor. See: https://github.com	tor
+npm	tor-test		MIT	2016-11-15		js	1	Nodejs tool to check if a request comes from Tor	tor
+npm	kmp-tor.resource-geoip		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor `geoip` & `geoip6` files for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	@hazae41/echalote		MIT	2024-09-06		js	1	Zero-copy Tor protocol for the web	tor
+npm	kmp-tor.resource-exec-tor.mingw		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor binary resources (`Windows` compilations)  for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	@browser-logos/tor-nightly			2020-07-12		js	1	Tor Nightly browser logo	tor
+npm	vpndetection		MIT	2026-10-10		js	1	Official Node.js client library for the VPNDetection API. Detect VPNs, proxies, Tor, hosting and CDN IPs.	tor
+npm	@sugarcube/plugin-tor		GPL-3.0	2021-07-13		js	1	Use SugarCube using the Tor project.	tor
+npm	kmp-tor.resource-exec-tor-gpl.linux-libc		GPL v3	2026-02-15		js	1	NPM distribution of Tor binary resources (`Linux Libc` compilations compiled with flag `--enable-gpl`)  for Kotlin Multiplatform Tor. See: https://github.com/05	tor
+npm	kmp-tor.resource-exec-tor-gpl.macos		GPL v3	2026-02-15		js	1	NPM distribution of Tor binary resources (`macOS` compilations compiled with flag `--enable-gpl`)  for Kotlin Multiplatform Tor. See: https://github.com/05nelso	tor
+npm	tor-detect-middleware		AGPL-3.0	2020-12-27		js	1	Tor detect middleware for Express	tor
+npm	tor-master		MIT	2019-03-28		js	1	spawn tor demons and make requests over tor	tor
+npm	tor-ctrl		MIT	2025-10-17		js	1	Node.js library for accessing the Tor control port	tor
+npm	@browser-logos/tor-alpha			2020-07-12		js	1	Tor Alpha browser logo	tor
+npm	kmp-tor.resource-exec-tor-gpl.mingw		GPL v3	2026-02-15		js	1	NPM distribution of Tor binary resources (`Windows` compilations compiled with flag `--enable-gpl`)  for Kotlin Multiplatform Tor. See: https://github.com/05nel	tor
+npm	tor-detect		MIT	2020-04-04		js	1	Detect whether an IP address belongs to a Tor exit node.	tor
+npm	tor-speech		ISC	2022-02-08		js	1	Text speech api Yandex & Google + Tor	tor
+npm	tor-control-promise		MIT	2019-03-22		js	1	communicate tor-control	tor
+npm	kmp-tor.resource-exec-tor-gpl.all		GPL v3	2026-02-15		js	1	NPM distribution of Tor binary resources (**ALL** compilations compiled with flag `--enable-gpl`)  for Kotlin Multiplatform Tor. See: https://github.com/05nelso	tor
+npm	@worldwideview/wwv-plugin-tor-exit-nodes		ISC	2026-08-21		js	1	WorldWideView plugin — Tor exit node IPs geolocated worldwide	tor
+npm	react-native-lnd-tor		MIT	2024-10-11		js	1	Tor daemon for react-native	tor
+npm	request-on-steroids		MIT	2021-08-24		js	1	An HTTP client with rate limiter, retry, circuit-breaker and tor support out-of-the-box	tor
+npm	ths		MIT	2015-03-23		js	1	A module that lets you start a Tor instance, use bridges and create Tor hidden services from node.js	tor
+npm	vpndetection-fastify		MIT	2026-10-10		js	1	Official Fastify plugin for the VPNDetection API. Detect VPNs, proxies, Tor, hosting and CDN visitors on every request.	tor
+npm	vpndetection-mcp		MIT	2026-10-10		js	1	Official MCP server for the VPNDetection API. Gives an LLM agent VPN, proxy, Tor, hosting and CDN detection for any IP address.	tor
+npm	is-tor		Apache-2.0	2021-09-07		js	1	🔍 Detects whether a user is using a Tor exit node to hide their IP address.	tor
+npm	tor-hazae41		MIT	2025-10-29		js	1	A TypeScript Tor client library for making anonymous HTTP requests through the Tor network via Snowflake bridges	tor
+npm	kmp-tor.resource-exec-tor.linux-musl		Apache 2.0	2026-02-15		js	1	NPM distribution of Tor binary resources (`Linux Musl` compilations)  for Kotlin Multiplatform Tor. See: https://github.com/05nelsonm/kmp-tor-resource	tor
+npm	tor-router		Apache-2.0	2019-11-24		js	1	A SOCKS, HTTP and DNS proxy for distributing traffic across multiple instances of Tor	tor
+npm	onionoo		MIT	2018-01-21		js	1	Node.js client library for the Tor Onionoo API	tor
+npm	vpndetection-express		MIT	2026-10-10		js	1	Official Express middleware for the VPNDetection API. Detect VPNs, proxies, Tor, hosting and CDN visitors on every request.	tor
+npm	vpndetection-next		MIT	2026-10-10		js	1	Official Next.js proxy/middleware for the VPNDetection API. Detect VPNs, proxies, Tor, hosting and CDN visitors on every request.	tor
+npm	ssb-onion		MIT	2019-05-10		js	1	secret-stack plugin for Tor connections	tor
+npm	tor-network-launcher		SEE LICENSE IN LICENSE file	2020-10-15		js	1	TOR networks launcher.	tor
+npm	tor-exits		BSD	2014-12-08		js	1	Deal with Tor exit nodes	tor
+npm	tor-cli		MIT	2017-03-24		js	1	Tor command line control for tor process	tor
+npm	tor-block		SEE LICENSE IN LICENSE	2019-12-18		js	1	Secure your app from tor requests!	tor
+npm	axios-tor-interceptor		MIT	2021-12-26		js	1	Axios Tor Interceptor	tor
+npm	@stayradiated/toragent		MIT	2019-11-21		js	1	Easily create and manage Tor requests	tor
+npm	tor-manager		MIT	2020-12-16		js	1	Hidden service manager for Tor	tor
+npm	webveil		AGPL-3.0-or-later	2026-10-01		js	1	Anonymous-capable, self-hosted, account-free web search and fetch for agents. CLI + MCP (built on incur), pi-agnostic. Swappable backend and egress (direct, htt	tor
+npm	tornet		ISC	2026-08-14		js	1	esta es una herramienta de fuerza bruta usando rotación de ip (concretamente la que brinda la red tor), es un hydra pero con tor, solo compatible con linux o gi	tor
+npm	connecttor		GPL-3.0	2016-01-17		js	1	Connect to Tor. Discovery and connective tissue for interacting with a local tor binary.	tor
+npm	bookmarks			2014-01-22		js	1	Searchable collection of bookmarks in a webpage	bookmarks
+npm	@fluid-topics/ft-reader-saved-bookmarks		ISC	2026-10-06		js	1	Display the list of saved bookmarks	bookmarks
+npm	@mapbox/gazetteer		ISC	2025-01-22		js	1	Place bookmarks for maps	bookmarks
+npm	netscape-bookmarks			2019-01-23		js	1	Create a netscape format bookmarks file (works with Chrome)	bookmarks
+npm	bookmarks-parser		ISC	2019-05-18		js	1	Parse Firefox/Chrome HTML bookmarks files	bookmarks
+npm	leaflet-bookmarks		MIT	2023-02-17		js	1	Leaflet plugin for user-generated bookmarks	bookmarks
+npm	bookmarks-but-better		MIT	2026-09-20		js	1	Installs and looks after the Bookmarks But Better daemon: status, install, uninstall, and the vaults it serves.	bookmarks
+npm	dsh-bookmarks		MIT	2026-09-30		js	1	Bookmark assistant replies in DeepSeek Harness: per-message bookmarks with notes and tags, a cross-session bookmark center, and one-click Markdown export.	bookmarks
+npm	browser-bookmarks		MIT	2016-12-29		js	1	Retrieve bookmarks from different browsers.	bookmarks
+npm	node-bookmarks-parser		MIT	2019-07-29		js	1	Parse bookmarks files	bookmarks
+npm	@plone-collective/volto-bookmarks		MIT	2026-07-05		js	1	Manage bookmarks / favorites in Plone Volto	bookmarks
+npm	@domicile-desktop/system-apps		MIT	2026-10-12		js	1	Installed applications and bookmarks for a Domicile shell's launcher, read through @domicile-desktop/sdk/system.	bookmarks
+npm	@glitchwerks/bookmarks-plus-mcp		MIT	2026-09-20		js	1	MCP server exposing Bookmarks Plus's workspace bookmarks to Claude Desktop / Claude Code.	bookmarks
+npm	bookmarks-mcp		MIT	2026-08-06		js	1	Your bookmarks, wherever they live, readable by your AI. Local read-only MCP server for Chrome, Edge, Brave, Arc, Vivaldi, Firefox, Safari (incl. Reading List) 	bookmarks
+npm	tinker-search-all			2026-09-28		js	1	Unified search across files, apps, plugins, and bookmarks	bookmarks
+npm	@open-pioneer/spatial-bookmarks		Apache-2.0	2026-09-17		js	1	This package provides a UI component that allows the user to store, manage, and easily navigate between different map extents by creating bookmarks.	bookmarks
+npm	@s-hiroshi/bks		MIT	2023-10-08		js	1	Cli bookmarks application	bookmarks
+npm	chrome-bookmarks-mcp		MIT	2026-10-04		js	1	MCP server that lets Claude Code and other MCP clients read and write Chrome bookmarks via a companion Chrome extension	bookmarks
+npm	@remnic/connector-x		MIT	2026-09-07		js	1	X (Twitter) connector for Remnic — remember the user's posts and bookmarks via the official X MCP, a local corpus, or a CLI	bookmarks
+npm	@lethevimlet/sshift		MIT	2026-09-24		js	1	Web-based SSH + SFTP terminal client with tabs and bookmarks	bookmarks
+npm	static-marks		MIT	2023-06-24		js	1	Shareable bookmarks	bookmarks
+npm	alfred-youtube-bookmarks		MIT	2019-08-05		js	1	youtube-bookmarks-dashboard	bookmarks
+npm	@oblax/bookmarks		MIT	2026-09-23		js	1	Oblax SDK — bookmarks module	bookmarks
+npm	birdclaw		MIT	2026-09-22		js	1	Local Twitter memory in SQLite for archives, DMs, likes, bookmarks, and moderation	bookmarks
+npm	ai-bookmarks-mcp		MIT	2026-09-12		js	1	Model Context Protocol server exposing your Chrome bookmarks (keyword search over tags and AI summaries) to AI agents like Claude Desktop, Antigravity, Cursor, 	bookmarks
+npm	pi-session-bookmark		MIT	2026-09-10		js	1	Browser-style session bookmarks for pi — /bookmarks, /bookmark-add, /bookmark-remove	bookmarks
+npm	nosdav-bookmarks		MIT	2023-04-28		js	1	nosdav bookmarks	bookmarks
+npm	@pikku/addon-raindrop			2026-10-04		js	1	Consume the Raindrop bookmarks API	bookmarks
+npm	@mrfentmen/raindrop-mcp		MIT	2026-09-28		js	1	Query Raindrop.io (token; set RAINDROP_TOKEN, Bearer): user, collections, bookmarks.	bookmarks
+npm	@wyattjoh/zen-bookmarks		MIT	2026-09-21		js	1	Browse saved and sidebar bookmarks and safely manage Zen workspaces from one command-line interface.	bookmarks
+npm	fieldtheory		MIT	2026-06-15		js	1	Field Theory CLI for bookmarks, Library, commands, app install, and agent workflows.	bookmarks
+npm	@emulators/slack		Apache-2.0	2026-10-02		js	1	Fully stateful Slack Web API emulation with channels, messages, threads, reactions, user profiles, presence, modern file uploads, pins, bookmarks, views, OAuth 	bookmarks
+npm	@cgdsoftware/bookmarks		ISC	2023-01-28		js	1	Basic bookmarks package	bookmarks
+npm	@internetarchive/ia-bookmarks-list		AGPL-3.0-only	2021-02-02		js	1	Bookmarks list component for ia-menu-slider	bookmarks
+npm	@k8slens/bookmarks		MIT	2026-09-30		js	1	Bookmark lists and resources of your clusters and web pages under a Bookmarks item in the Lens navigator, and pin them to the hotbar.	bookmarks
+npm	@herd-labs/sdk			2026-10-09		js	1	The public SDK exports `makeHerdClient` for listing, saving, relabeling, and deleting bookmarks.	bookmarks
+npm	firefox-bookmarks			2014-01-22		js	1	Extract information from your Firefox bookmarks	bookmarks
+npm	@lapis-notes/bookmarks		AGPL-3.0-or-later	2026-08-29		js	1	Lapis Notes bookmarks plugin	bookmarks
+npm	@liberu-ui/bookmarks		ISC	2023-10-07		js	1	Basic bookmarks package	bookmarks
+npm	alfred-coursehunters-bookmarks		MIT	2019-05-04		js	1	alfred-coursehunters-bookmarks	bookmarks
+npm	electron-bookmarks		MIT	2017-09-17		js	1	Access to macOS Security-Scoped bookmarks in an electron application	bookmarks
+npm	react-vertical-timeline		MIT	2018-06-04		js	1	vertical timeline bar with bookmarks support	bookmarks
+npm	better-bookmark		MIT	2026-09-21		js	1	A local, private bookmark manager that mirrors your Chrome bookmarks.	bookmarks
+npm	@beaker/bookmarks-app		MIT	2019-04-08		js	1	The Beaker "Bookmarks" app 	bookmarks
+npm	bookmarks-to-json		MIT	2023-07-08		js	1	Convert browser-exported HTML bookmarks to JSON format	bookmarks
+npm	bookmarks-lifecycle		MIT	2026-08-06		js	1	Give your saved bookmarks a lifecycle: 24 hours to decide, 30 days to watch, or keep. Nothing is ever deleted — lapsed items just leave your attention, not your	bookmarks
+npm	bookworms		MIT	2022-10-28		js	1	A cli tool for centralising and generating bookmarks	bookmarks
+npm	athena-tui		CC-BY-NC-4.0	2026-08-16		js	1	Terminal UI for Athena Search — dump your browser bookmarks into your Athena brain from the command line.	bookmarks
+npm	dsh-chat-toc		MIT	2026-09-30		js	1	DSH web GUI chat table-of-contents: native Turn Rail enhancer with rich previews, bookmarks, search, and Markdown outline export.	bookmarks
+npm	hatebu-mydata-parser		MIT	2015-08-18		js	1	Parser for Hatena Bookmarks	bookmarks
+npm	@axon-protocol/bookmarks-manager-server		MIT	2026-03-16		js	1	AXON Bookmarks Manager Server — Automate Chrome's built-in bookmarks manager via Puppeteer with Shadow DOM piercing and OCRS integration	bookmarks
+npm	@unchainedshop/core-bookmarks		EUPL-1.2	2026-09-29		js	1	User bookmark and wishlist module for the Unchained Engine	bookmarks
+npm	supasidebar-mcp		MIT	2026-05-02		js	1	MCP server for SupaSidebar - lets AI assistants interact with your bookmarks, spaces, and tabs. Open source. Zero telemetry.	bookmarks
+npm	@mindstone/mcp-server-slack		FSL-1.1-MIT	2026-08-06		js	1	Slack workspace MCP server — channels, messages, threads, reactions, users, files, bookmarks, scheduling via Slack Web API	bookmarks
+npm	@slashgear/team-bookmarks		MIT	2026-04-12		js	1	A lightweight open source web app to manage and share team bookmarks via YAML files.	bookmarks
+npm	@mcp-b/extension-tools		MIT	2026-07-02		js	1	62+ Chrome Extension API tools for Model Context Protocol (MCP) - Let AI agents control tabs, bookmarks, history, storage, and more	bookmarks
+npm	tinker-map			2026-09-27		js	1	Search places, get current location and manage bookmarks	bookmarks
+npm	creepjs		MIT	2016-10-17		js	1	A simple nodeJS bookmarks creeper.	bookmarks
+npm	pinmark		MIT	2026-09-24		js	1	Mirror Pinboard bookmarks into an Obsidian vault, enriched with extracted page content.	bookmarks
+npm	utags-utils		MIT	2025-10-01		js	1	Common utility functions for utags and utags-bookmarks	bookmarks
+npm	@tearleads/client-sdk		UNLICENSED	2026-10-11		js	1	React-free Tearleads client runtime: local SQLite persistence, keys, sync, encrypted blobs, and domain workflows.	sync encrypted
+npm	@viyuni/cookie-sync-client		MIT	2026-03-10		js	1	Sync encrypted cookies to login-sync server and fetch decoded cookies.	sync encrypted
+npm	openclaw-workspace-sync		MIT	2026-03-17		js	1	Workspace cloud sync & encrypted backup via rclone — mailbox, mirror, bisync + AES-256 snapshots (Dropbox, S3, R2, 70+ providers)	sync encrypted
+npm	deepseek-harness-wallet		MIT	2026-09-09		js	1	Local-first DeepSeek Harness control center for balance monitoring, usage accounting, time-aware custom third-party API pricing, a 365-day local token ledger, Z	sync encrypted
+npm	@liqteq/envvault		MIT	2026-08-03		js	1	VAULTRA CLI — sync encrypted environment variables with your workspace.	sync encrypted
+npm	@thibautrey/chatons-channel-signal		MIT	2026-03-10		js	1	Signal bridge for Chatons. Connect via Signal CLI REST API to sync encrypted messages.	sync encrypted
+npm	deepseek-harness-wallet-patched		MIT	2026-09-23		js	1	Local-first DeepSeek Harness control center for balance monitoring, usage accounting, time-aware custom third-party API pricing, a 365-day local token ledger, Z	sync encrypted
+npm	@aparajita/capacitor-secure-storage		MIT	2026-09-23		js	1	Capacitor 8+ plugin that provides secure storage for the iOS and Android	sync encrypted
+npm	sync-fetch		MIT	2026-09-15		js	1	Synchronous version of the Fetch API	sync encrypted
+npm	quansync		MIT	2025-12-04		js	1	Create sync/async APIs with usable logic	sync encrypted
+npm	klaw-sync		MIT	2026-06-19		js	1	Recursive, synchronous, and fast file system walker	sync encrypted
+npm	http_ece		MIT	2024-08-08		js	1	Encrypted Content-Encoding for HTTP	sync encrypted
+npm	workbox-background-sync		MIT	2026-05-04		js	1	Queues failed requests and uses the Background Sync API to replay them when the network is available	sync encrypted
+npm	@iserp/envvault		MIT	2026-08-05		js	1	EnvVault CLI — sync encrypted env files with your hub	sync encrypted
+npm	cloudns-cloudformation-sync		MIT	2026-10-01		js	1	Generate ClouDNS DNS records from AWS CloudFormation exports	sync encrypted
+npm	use-sync-external-store		MIT	2026-09-09		js	1	Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.	sync encrypted
+npm	events-sync		MIT	2026-06-10		js	1	Node's event emitter for all engines.	sync encrypted
+npm	a-sync-waterfall		MIT	2018-08-31		js	1	Runs a list of async tasks, passing the results of each into the next one	sync encrypted
+npm	fs-exists-sync		MIT	2016-04-09		js	1	Drop-in replacement for `fs.existsSync` with zero dependencies. Other libs I found either have crucial differences from fs.existsSync, or unnecessary dependenci	sync encrypted
+npm	@metamask/profile-sync-controller		MIT	2026-10-08		js	1	The profile sync helps developers synchronize data across multiple clients and devices in a privacy-preserving way. All data saved in the user storage database 	sync encrypted
+npm	@ardatan/sync-fetch		MIT	2022-06-22		js	1	Synchronous version of the Fetch API	sync encrypted
+npm	escalade		MIT	2024-08-29		js	1	A tiny (183B to 210B) and fast utility to ascend parent directories	sync encrypted
+npm	stripe-experiment-sync			2026-03-24		js	1	DEPRECATED - This package has moved to https://github.com/stripe/sync-engine	sync encrypted
+npm	sync-request		MIT	2019-03-17		js	1	Make synchronous web requests	sync encrypted
+npm	@metamask-previews/profile-sync-controller		MIT	2024-05-16		js	1	The profile sync helps developers synchronize data across multiple clients and devices in a privacy-preserving way. All data saved in the user storage database 	sync encrypted
+npm	typeorm-encrypted		MIT	2022-07-28		js	1	encrypted typeorm fields	sync encrypted
+npm	@hapi/iron		BSD-3-Clause	2023-02-11		js	1	Encapsulated tokens (encrypted and mac'ed objects)	sync encrypted
+npm	output-file-sync		ISC	2018-02-15		js	1	Synchronously write a file and create its ancestor directories if needed	sync encrypted
+npm	@types/use-sync-external-store		MIT	2026-09-09		js	1	TypeScript definitions for use-sync-external-store	sync encrypted
+npm	graceful-fs		ISC	2023-03-16		js	1	A drop-in replacement for fs, making various improvements.	sync encrypted
+npm	totalist		MIT	2023-04-03		js	1	A tiny (195B to 220B) utility to recursively list all (total) files in a directory	sync encrypted
+npm	findup-sync		MIT	2021-10-31		js	1	Find the first file matching a given pattern in the current directory or the nearest ancestor directory.	sync encrypted
+npm	sync-message-port		MIT	2026-01-28		js	1	A Node.js communication port that can pass messages synchronously between workers	sync encrypted
+npm	pngjs		MIT	2023-02-20		js	1	PNG encoder/decoder in pure JS, supporting any bit size & interlace, async & sync with full test suite.	sync encrypted
+npm	archiver-zip-encrypted		MIT	2024-03-23		js	1	AES-256 and legacy Zip 2.0 encryption for Zip files	sync encrypted
+npm	@metamask/gator-permissions-controller		MIT	2026-09-24		js	1	Controller for managing gator permissions with profile sync integration	sync encrypted
+npm	isexe		BlueOak-1.0.0	2026-02-09		js	1	Minimal module to check if a file is executable.	sync encrypted
+npm	encrypted-attr		MIT	2017-10-06		js	1	Encrypted model attributes in your favourite ORM.	sync encrypted
+npm	node-rsa		MIT	2026-05-24		js	1	RSA library for Node.js and browsers	sync encrypted
+npm	mindoodb		Apache-2.0	2026-10-09		js	1	End-to-End Encrypted, Local-first Sync Database	sync encrypted
+npm	varsync-cli			2026-08-03		js	1	Sync encrypted environment variables across a team without exposing secrets.	sync encrypted
+npm	sync-child-process		MIT	2024-11-04		js	1	Run a subprocess synchronously and interactively in Node.js	sync encrypted
+npm	s3-sync-client		MIT	2023-07-03		js	1	AWS CLI s3 sync for Node.js provides a modern client to perform S3 sync operations between file systems and S3 buckets in the spirit of the official AWS CLI com	sync encrypted
+npm	redux-state-sync		ISC	2022-07-12		js	1	A middleware for redux to sync state in different tabs	sync encrypted
+npm	@hasna/secrets		Apache-2.0	2026-10-10		js	1	Hosted-first secrets vault client for AI agents — CLI, MCP server and SDK against the Hasna secrets API (credentials via @hasna/contracts), with an explicit opt	sync encrypted
+npm	@quartz-community/encrypted-pages		MIT	2026-09-14		js	1	Password-protected encrypted pages for Quartz. Encrypts page content at build time with AES-256-GCM and decrypts client-side using the Web Crypto API.	sync encrypted
+npm	browser-sync		Apache-2.0	2025-04-02		js	1	Live CSS Reload & Browser Syncing	sync encrypted
+npm	@terreno/syncdb		Apache-2.0	2026-10-12		js	1	Local-first data layer with TinyBase, durable outbox, and delta sync — part of Terreno, the batteries-included TypeScript framework for universal apps.	sync encrypted
+npm	cacheable		MIT	2026-06-27		js	1	High Performance Layer 1 / Layer 2 Caching with Keyv Storage	sync encrypted
+npm	@askexenow/exe-os		SEE LICENSE IN LICENSE	2026-10-03		js	1	AI employee operating system — persistent memory, task management, and multi-agent coordination for Claude Code.	sync encrypted
+npm	dotenv-vault		MIT	2025-06-25		js	1	A secrets manager for .env files – from the same people that pioneered dotenv.	sync encrypted
+npm	omnius-fabric		MIT	2026-06-05		js	1	Omnius Fabric: install-to-node encrypted cooperative routing fabric with automatic UPnP, bootstrap discovery, peerbook/DHT building, relay fallback, QR-based co	sync encrypted
+npm	pnpm-sync-lib		MIT	2026-08-25		js	1	API library for integrating "pnpm-sync" with your toolchain	sync encrypted
+npm	klaw		MIT	2022-12-30		js	1	File system walker with Readable stream interface.	sync encrypted
+npm	walk-sync		MIT	2026-05-16		js	1	Get an array of recursive directory contents	sync encrypted
+npm	stripe-replit-sync			2025-11-24		js	1	Stripe Sync Engine to sync Stripe data to Postgres	sync encrypted
+npm	envsyncs-cli		MIT	2026-02-11		js	1	Sync encrypted .env files with GitHub - works seamlessly across teams	sync encrypted
+npm	astrojs-compiler-sync		MIT	2025-04-12		js	1	@astrojs/compiler to process synchronously.	sync encrypted
+npm	degenerator		MIT	2026-04-06		js	1	Compiles sync functions into async generator functions	sync encrypted
+npm	@types/readline-sync		MIT	2023-11-22		js	1	TypeScript definitions for readline-sync	sync encrypted
+npm	@syncfusion/ej2-pdfviewer		SEE LICENSE IN license	2026-10-07		js	1	Essential JS 2 PDF viewer Component	pdf viewer
+npm	@vue-pdf-viewer/shared		See license section	2026-07-03		js	1	A shared library of vue-pdf-viewer for Vue and Nuxt.	pdf viewer
+npm	@vue-pdf-viewer/viewer		See license section	2026-09-17		js	1	A vue-pdf-viewer component for Vue and Nuxt. Suitable for vue-pdf document.	pdf viewer
+npm	@llamaindex/pdf-viewer		MIT	2025-02-24		js	1	React PDF viewer for LLM applications	pdf viewer
+npm	vue-pdf		MIT	2021-06-17		js	1	vue.js pdf viewer	pdf viewer
+npm	@vaadin-component-factory/vcf-pdf-viewer		Apache-2.0	2026-08-22		js	1	Lit element providing pdf viewer	pdf viewer
+npm	@toeverything/pdf-viewer-types		MPL-2.0	2024-11-08		js	1	PDF Viewer types	pdf viewer
+npm	@syncfusion/ej2-react-pdfviewer		SEE LICENSE IN license	2026-10-07		js	1	Essential JS 2 PDF viewer Component for React	pdf viewer
+npm	stimulus-pdf-viewer		(MIT AND Apache-2.0)	2026-09-22		js	1	PDF viewer with annotation support for Stimulus and Hotwire	pdf viewer
+npm	@jupyterlab/pdf-extension		BSD-3-Clause	2026-09-21		js	1	JupyterLab - PDF Viewer	pdf viewer
+npm	vue3-pdf-app		MIT	2023-01-03		js	1	Vue 3 PDF viewer	pdf viewer
+npm	@anaralabs/lector		MIT	2026-10-02		js	1	A headless PDF viewer for React	pdf viewer
+npm	pdf-viewer-reactjs		MIT	2021-02-15		js	1	Simple react PDF viewer component with controls based on PDF.js.	pdf viewer
+npm	pdf-viewer-vue		MIT	2022-01-27		js	1	PDF viewer component for Vue 2 and Vue 3	pdf viewer
+npm	@syncfusion/ej2-angular-pdfviewer		SEE LICENSE IN license	2026-10-07		js	1	Essential JS 2 PDF viewer Component for Angular	pdf viewer
+npm	@types/pdf-viewer-reactjs		MIT	2023-11-07		js	1	TypeScript definitions for pdf-viewer-reactjs	pdf viewer
+npm	@syncfusion/ej2-vue-pdfviewer		SEE LICENSE IN license	2026-10-07		js	1	Essential JS 2 PDF viewer Component for Vue	pdf viewer
+npm	react-native-pdf-light		MIT	2026-05-14		js	1	Minimalist PDF viewer for React Native	pdf viewer
+npm	vue-pdf-app		MIT	2021-06-05		js	1	Vue 2 pdf viewer	pdf viewer
+npm	@accusoft/pdf-viewer		SEE LICENSE IN LICENSE.md	2022-05-09		js	1	Accusoft PDF Viewer	pdf viewer
+npm	@teckel/vue-pdf		MIT	2023-04-07		js	1	vue.js pdf viewer	pdf viewer
+npm	@grapecity/gcpdfviewer		Commercial	2024-10-09		js	1	GcDocs PDF Viewer	pdf viewer
+npm	simple-pdf-viewer		MIT	2018-12-18		js	1	<h1 align="center">Simple PDF Viewer</h1>	pdf viewer
+npm	react-native-view-pdf		MIT	2022-08-15		js	1	React native Pdf viewer implementation	pdf viewer
+npm	@react-pdf-kit/viewer		See license section	2026-10-01		js	1	A react-pdf-viewer component for React and Next.js. Suitable for react-pdf document.	pdf viewer
+npm	@mescius/dspdfviewer		SEE LICENSE IN LICENSE	2026-09-15		js	1	Document Solutions PDF Viewer	pdf viewer
+npm	vue-instant-pdf-viewer			2017-02-25		js	1	Vue PDF Viewer based on PDF Object	pdf viewer
+npm	@progress/kendo-vue-pdf-viewer		SEE LICENSE IN LICENSE.md	2026-10-07		js	1	Kendo UI for Vue PDF Viewer	pdf viewer
+npm	pdfvuer		MIT	2022-08-10		js	1	A PDF viewer for Vue using Mozilla's PDF.js	pdf viewer
+npm	@pdf-tools/four-heights-pdf-web-viewer		See LICENSE.md	2025-08-20		js	1	JavaScript PDF Viewer	pdf viewer
+npm	@cannymindstech/pdf-viewer		MIT	2026-10-03		js	1	A React Headless PDF viewer component built with @embedpdf	pdf viewer
+npm	@orca-fe/pdf-viewer		MIT	2025-07-05		js	1	PDF Viewer	pdf viewer
+npm	@kishannareshpal/expo-pdf		MIT	2026-03-24		js	1	A cross-platform, performant PDF viewer component for React Native and Expo	pdf viewer
+npm	pdfviewer		MIT	2021-09-13		js	1	PDF Viewer using Mozila PDF JS.	pdf viewer
+npm	@nadlowebagentur/capacitor-pdf-viewer		MIT	2026-03-11		js	1	Native PDF viewer	pdf viewer
+npm	@epam/pdf-highlighter-kit		Apache-2.0	2026-09-11		js	1	High-performance PDF viewer with intelligent highlighting and text selection capabilities	pdf viewer
+npm	@grapecity-software/gcdocs.pdfviewer		Commercial	2026-09-16		js	1	GcDocs PDF Viewer	pdf viewer
+npm	ng2-pdfjs-viewer		Apache-2.0	2026-10-02		js	1	The most comprehensive Angular PDF viewer, powered by Mozilla PDF.js 6 — view, annotate, sign, fill forms, search, and read aloud from one component. 9M+ downlo	pdf viewer
+npm	ng2-pdf-viewer		MIT	2024-12-01		js	1	Angular 5+ component for rendering PDF	pdf viewer
+npm	vue-pdf-signature		MIT	2022-06-01		js	1	vue.js pdf viewer	pdf viewer
+npm	@intinyagroup/pdf-viewer		MIT	2026-09-18		js	1	PDF viewer component with annotations, form filling, and editing	pdf viewer
+npm	ngx-extended-pdf-viewer		Apache-2.0	2026-10-10		js	1	Embedding PDF files in your Angular application. Highly configurable viewer including the toolbar, sidebar, and all the features you're used to.	pdf viewer
+npm	@letter-ai/lector		MIT	2026-06-01		js	1	Headless PDF viewer for React	pdf viewer
+npm	vue3-pdf		MIT	2020-12-02		js	1	vue.js pdf viewer	pdf viewer
+npm	@embedpdf/react-pdf-viewer		MIT	2026-09-16		js	1	React component for embedding PDF documents	pdf viewer
+npm	web-pdf-viewer		MIT	2020-03-30		js	1	pdf viewer for web base on pdf.js	pdf viewer
+npm	@tbib-pdf-viewer/react		MIT	2026-10-09		js	1	React wrapper for TBiB PDF Viewer	pdf viewer
+npm	react-pdf-viewer-wasm		MIT	2026-10-03		js	1	A React PDF viewer powered by Rust + WebAssembly, using pdfium as the rendering backend.	pdf viewer
+npm	@libresign/pdf-elements		AGPL-3.0-or-later	2026-09-28		js	1	Vue 3 PDF viewer with draggable and resizable overlay elements for document workflows	pdf viewer
+npm	@jbtje/vue3pdf		MIT	2022-06-16		js	1	vue.js pdf viewer	pdf viewer
+npm	teamsync-pdf-viewer		CPAL-1.0	2026-09-19		js	1	TeamSync PDF Viewer SDK — client-side PDF viewing, annotation, search, redaction and watermarking for React.	pdf viewer
+npm	@aleph-alpha/lib-pdf-viewer		Apache-2.0	2026-08-10		js	1	Reusable PDF viewer component for Vue.js applications.	pdf viewer
+npm	adex-react-pdf-viewer		MIT	2025-04-20		js	1	A simple React PDF viewer component using react-pdf.	pdf viewer
+npm	pdf-vue3		MIT	2026-05-19		js	1	A high-performance Vue 3 PDF viewer with virtual scrolling, supporting large PDFs, zoom, print, and more.	pdf viewer
+npm	@changiapp/react-native-pdf-viewer		MIT	2026-09-29		js	1	Native PDF viewer for React Native (Pdfium/PDFKit) with range-chunk download for large CloudFront PDFs	pdf viewer
+npm	@northslopetech/altitude-pdf-viewer		MIT	2026-08-28		js	1	PDF viewer component for the Altitude design system.	pdf viewer
+npm	@pdftools/four-heights-pdf-web-viewer		See LICENSE.md	2026-06-04		js	1	JavaScript PDF Viewer	pdf viewer
+npm	@firesoon/plugin-pdf-viewer		ISC	2025-03-31		js	1	@firesoon/plugin-pdf-viewer	pdf viewer
+npm	@sunsetglow/vue-pdf-viewer		ISC	2025-12-03		js	1	vue pdf viewer	pdf viewer
+npm	pdf-generator-api-pdfviewer		MIT	2026-08-21		js	1	PDF viewer by PDF Generator API	pdf viewer
+npm	modern-screenshot		MIT	2026-04-16		js	1	Quickly generate image from DOM node using HTML5 canvas and SVG	screenshot webpage
+npm	grapesjs-preset-webpage		BSD-3-Clause	2023-06-13		js	1	GrapesJS Plugin Webpage Preset	screenshot webpage
+npm	dom-to-svg		MIT	2021-07-03		js	1	Take SVG screenshots of DOM elements	screenshot webpage
+npm	@calcom/embed-core		SEE LICENSE IN LICENSE	2025-04-30		js	1	This is the vanilla JS core script that embeds Cal Link	screenshot webpage
+npm	geo-three		MIT	2024-10-13		js	1	geo-three is library for tile based geographic map layers in with three.js supporting selective loading/unloading of real-time generated 3D tiles	screenshot webpage
+npm	highlightjs-vue		CC0-1.0	2019-11-18		js	1	Highlight Single-File Components of Vue.js Framework	screenshot webpage
+npm	re-resizable		MIT	2025-02-24		js	1	Resizable component for React.	screenshot webpage
+npm	screenshot-desktop		MIT	2026-10-08		js	1	Capture a screenshot of your local machine	screenshot webpage
+npm	@magnit-ce/browser-mockup		CC0-1.0	2024-11-30		js	1	A custom html element that adds browser chrome around its content to simulate the appearance of a browser in a document.	screenshot webpage
+npm	rc-dropdown		MIT	2024-12-11		js	1	dropdown ui component for react	screenshot webpage
+npm	react-rnd		MIT	2026-03-10		js	1	A draggable and resizable React Component	screenshot webpage
+npm	react-native-screenshot-aware		MIT	2026-09-05		js	1	React Native module for real-time screenshot detection on Android and iOS	screenshot webpage
+npm	extract-webpage		rights.institute/PROSPER	2026-09-29		js	1	Search, extract, cite, and outline the web for a topic with AI Research Agent.	screenshot webpage
+npm	react-day-picker		MIT	2026-09-30		js	1	Customizable Date Picker for React	screenshot webpage
+npm	rc-tooltip		MIT	2025-01-07		js	1	React Tooltip	screenshot webpage
+npm	rc-dialog		MIT	2025-01-09		js	1	dialog ui component for react	screenshot webpage
+npm	@mzxrai/mcp-webresearch		MIT	2024-12-18		js	1	MCP server for web research	screenshot webpage
+npm	rc-tabs		MIT	2025-07-23		js	1	tabs ui component for react	screenshot webpage
+npm	@ytspar/sweetlink		MIT	2026-07-28		js	1	Autonomous development toolkit for AI agents - screenshots, DOM queries, console logs, and JavaScript execution via WebSocket and Chrome DevTools Protocol	screenshot webpage
+npm	dom-align		MIT	2022-11-15		js	1	Align DOM Node Flexibly 	screenshot webpage
+npm	@rc-component/dialog		MIT	2026-06-05		js	1	dialog ui component for react	screenshot webpage
+npm	html2canvas		MIT	2022-01-22		js	1	Screenshots with JavaScript	screenshot webpage
+npm	@nightwatch/nightwatch-inspector		MIT	2024-12-04		js	1	Nightwatch Inspector that allows you to tests command directly from the browser	screenshot webpage
+npm	vite-plugin-mkcert		MIT	2026-06-03		js	1	Provide certificates for vite's https dev service	screenshot webpage
+npm	storycap		MIT	2024-09-04		js	1	A Storybook addon, Save the screenshot image of your stories! via puppeteer.	screenshot webpage
+npm	@storycap-testrun/browser		MIT	2026-10-11		js	1	Screenshot capture for Storybook addon-vitest - Provides stable visual testing functionality and Vitest plugin for Storybook stories running in browser environm	screenshot webpage
+npm	@react-native-community/slider		MIT	2026-08-21		js	1	React Native component used to select a single value from a range of values.	screenshot webpage
+npm	babel-plugin-transform-hook-names		MIT	2021-03-22		js	1	Babel plugin to add hook names for Preact devtools	screenshot webpage
+npm	protractor-jasmine2-screenshot-reporter		MIT	2023-03-23		js	1	Use the screenshot reporter to capture screenshots after each executed Protractor test case.	screenshot webpage
+npm	@opentok/client		https://www.vonage.com/legal/communications-apis/terms-of-use/	2026-10-06		js	1	The OpenTok.js library lets you use OpenTok-powered video sessions on the web	screenshot webpage
+npm	webpage		MIT	2015-05-01		js	1	Webpage Boilerplate Component	screenshot webpage
+npm	@renoun/screenshot		MIT	2026-03-24		js	1	Screenshot DOM elements as a canvas, blob, or URL.	screenshot webpage
+npm	screenshotone-api-sdk		MIT	2026-09-27		js	1	Use ScreenshotOne.com API to generate screenshots of any website.	screenshot webpage
+npm	use-react-screenshot		MIT	2024-01-10		js	1	hook which allows to create screenshots	screenshot webpage
+npm	urlbox		ISC	2024-05-15		js	1	Generate website screenshots, PDFs and other renders from URLs or HTML using the urlbox website screenshot API	screenshot webpage
+npm	jest-mock-console		MIT	2022-06-01		js	1	Jest utility to mock the console	screenshot webpage
+npm	@html-css-to-image/n8n-nodes-html-css-to-image		MIT	2026-09-30		js	1	Generate images, website screenshots, PDFs, and signed image URLs with the HTML/CSS to Image API in n8n.	screenshot webpage
+npm	@storycap-testrun/node		MIT	2026-10-11		js	1	Node.js screenshot capture for Storybook Test Runner - Provides stable screenshot functionality using Playwright for visual regression testing	screenshot webpage
+npm	@applitools/core		SEE LICENSE IN LICENSE	2026-10-01		js	1		screenshot webpage
+npm	react-native-qrcode-svg		MIT	2026-09-22		js	1	A QR Code generator for React Native based on react-native-svg and javascript-qrcode.	screenshot webpage
+npm	insight		BSD-2-Clause	2025-01-26		js	1	Understand how your tool is being used by anonymously reporting usage metrics to Google Analytics or Yandex.Metrica	screenshot webpage
+npm	smartbanner.js		GPL-3.0	2026-08-02		js	1	Customisable smart app banner for iOS and Android	screenshot webpage
+npm	@formsort/constants		MIT	2026-03-31		js	1	Constants used across Formsort projects. Not intended to be used directly	screenshot webpage
+npm	sonner-native		MIT	2026-08-15		js	1	An opinionated toast component for React Native. A port of @emilkowalski's sonner.	screenshot webpage
+npm	@alwaysmeticulous/debug-workspace		ISC	2026-10-08		js	1	Shared debug workspace pipeline for investigating Meticulous diffs and replays	screenshot webpage
+npm	react-secure-link		MIT	2023-11-01		js	1	A TypeScript compatible, zero dependency React component to avoid security exploits when opening a link in a new tab.	screenshot webpage
+npm	puppeteer-screenshot-cli		ISC	2021-01-29		js	1	Simple wrapper around Puppeteer to take screenshot from command line	screenshot webpage
+npm	@substrate/light-client-extension-helpers		MIT	2025-05-19		js	1	<br /><br />	screenshot webpage
+npm	@uiw/react-codemirror		MIT	2026-09-24		js	1	CodeMirror component for React.	screenshot webpage
+npm	@uiw/codemirror-extensions-basic-setup		MIT	2026-09-24		js	1	Basic configuration for the CodeMirror6 code editor.	screenshot webpage
+npm	@vscode/component-explorer-cli		MIT	2026-03-18		js	1	Command-line tool for capturing, comparing, and managing component fixture screenshots.	screenshot webpage
+npm	@supabase/realtime-js		MIT	2026-10-07		js	1	Listen to realtime updates to your PostgreSQL database	screenshot webpage
+npm	react-multi-date-picker		MIT	2024-06-15		js	1	A simple React datepicker component for working with gregorian, persian, arabic and indian calendars with the ability to select the date by single, multiple, ra	screenshot webpage
+npm	ace-builds		BSD-3-Clause	2026-05-11		js	1	Ace (Ajax.org Cloud9 Editor)	screenshot webpage
+npm	n8n-nodes-playwright		MIT	2026-01-02		js	1	n8n-community-node-package for browser automation using Playwright	screenshot webpage
+npm	terminal-kit		MIT	2026-07-19		js	1	256 colors, keys and mouse, input field, progress bars, screen buffer (including 32-bit composition and image loading), text buffer, and many more... Whether yo	screenshot webpage
+npm	screenshot-ftw		MIT	2023-01-24		js	1	take screenshots of windows or the screen across OSes	screenshot webpage
+npm	hydra-synth		AGPL	2025-09-14		js	1	base synth for hydra-editor	screenshot webpage
+npm	capture-website-cli		MIT	2025-11-01		js	1	Capture screenshots of websites from the command-line	screenshot webpage
+npm	capture-website		MIT	2025-10-31		js	1	Capture screenshots of websites	screenshot webpage
+npm	wry		MIT	2018-01-11		js	1	An elegant build system based on composable async functions	wry
+npm	@wry/equality		MIT	2023-10-24		js	1	Structural equality checking for JavaScript values	wry
+npm	@wry/caches		MIT	2023-11-28		js	1	Various cache implementations	wry
+npm	@wry/trie		MIT	2023-10-24		js	1	https://en.wikipedia.org/wiki/Trie	wry
+npm	@wry/context		MIT	2023-10-24		js	1	Manage contextual information needed by (a)synchronous tasks without explicitly passing objects around	wry
+npm	@bobfrankston/rust-builder		MIT	2026-06-09		js	1	Shared build tooling for Rust/wry WebView projects (msger, mailx, etc.)	wry
+npm	wry-wallet		ISC	2021-03-09		js	1	minimal wallet for sending and receiving Wrapped Ycash (Wry)	wry
+npm	@z2net/bunframe		MIT	2026-09-21		js	1	The desktop application shell for Bun: native wry windows, typed schema-first RPC and the CLI - one package, platform binaries resolved automatically.	wry
+npm	@murasakijs/native		MIT	2026-08-13		js	1	Native binding for murasaki (wry + tao + muda) exposed via napi-rs.	wry
+npm	@corelauncher/rod		MIT	2026-01-18		js	1	Webview for bun based on tauri's tao and wry.	wry
+npm	@wry-smile/utils		MIT	2026-06-04		js	1	Utility helpers for everyday TypeScript and JavaScript work.	wry
+npm	@hyper.fun/fluentui-emoji-cat-with-wry-smile-flat		MIT	2022-08-12		js	1	👉  https://hyper.fun/c/fluentui-emoji-cat-with-wry-smile-flat/2.0.0	wry
+npm	@wry/task		MIT	2023-11-10		js	1	Promise-compatible asynchronous computation primitive	wry
+npm	@hyper.fun/fluentui-emoji-cat-with-wry-smile-color		MIT	2022-08-12		js	1	👉  https://hyper.fun/c/fluentui-emoji-cat-with-wry-smile-color/2.0.0	wry
+npm	@hyper.fun/fluentui-emoji-cat-with-wry-smile-high-contrast		MIT	2022-08-12		js	1	👉  https://hyper.fun/c/fluentui-emoji-cat-with-wry-smile-high-contrast/2.0.0	wry
+npm	@wry/record		MIT	2021-08-05		js	1	Immutable record objects with constant-time equality testing (===) and no hidden memory leaks	wry
+npm	@wry/tuple		MIT	2021-08-05		js	1	Immutable finite list objects with constant-time equality testing (===) and no hidden memory leaks	wry
+npm	@webviewjs/webview		MIT	2026-09-24		js	1	Robust cross-platform webview library for Node.js written in Rust. It also works with deno and bun.	wry
+npm	taowry		ISC	2026-06-23		js	1	基于 tao + wry 的跨平台 WebView 窗口库，支持 Node.js 和 Bun	wry
+npm	sfdx-wry-plugin		MIT	2019-11-16		js	1	Utilities for SFDX JSON data files	wry
+npm	wry-ui			2026-02-19		js	1	This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script set	wry
+npm	sfdx-wry-plugin-rebuilt		MIT	2022-09-07		js	1	Utilities for SFDX JSON data files	wry
+npm	@depup/apollo__client		MIT	2026-10-08		js	1	A fully-featured caching GraphQL client. (with updated dependencies)	wry
+npm	@wry-smile/vite-plugin-global-variable		MIT	2024-08-27		js	1	vite-plugin, global variable	wry
+npm	@wry-smile/release-kit		MIT	2022-11-03		js	1	## Mimicking the [bumpp](https://www.npmjs.com/package/bumpp) implementation	wry
+npm	@nativewindow/webview		MIT	2026-04-04		js	1	Native OS webview windows for Bun & Node.js (beta)	wry
+npm	@wry-smile/eslint-plugin-simple-tailwindcss		MIT	2026-06-05		js	1	ESLint plugin that keeps Tailwind CSS class usage consistent across Vue, JSX, and utility helpers.	wry
+npm	@wry-smile/vite-plugin-runtime-env		MIT	2026-07-07		js	1	vite-plugin, runtime env	wry
+npm	@leptonjs/native-win32-x64-msvc		MIT	2026-10-08		js	1	LeptonJS native addon (Windows x64 MSVC).	wry
+npm	@wry-smile/xgplayer-ws-fmp4		MIT	2026-06-12		js	1	XGPlayer WebSocket MP4 Streaming Plugin	wry
+npm	@leptonjs/native		MIT	2026-10-08		js	1	LeptonJS native addon loader.	wry
+npm	@wry-smile/gridster			2024-10-30		js	1	vue3 implementation of angular-gridster2	wry
+npm	@wry-smile/vite-plugin-antd-style-import		MIT	2022-11-03		js	1	vite plugin import antd library style	wry
+npm	@wry-smile/vite-plugin-antd-use-dayjs		MIT	2022-11-03		js	1	replace moment to dayjs	wry
+npm	@wry-smile/flowup		MIT	2026-07-13		js	1	CLI for scaffolding, building, and assembling Node-RED nodes and plugins with Vite	wry
+npm	@bobfrankston/msgview		ISC	2026-09-17		js	1	Cross-platform HTML message display using Electron	wry
+npm	@glacier-app/webview		MIT	2025-08-29		js	1	NAPI bindings for webview	wry
+npm	@inflector-oss/webview		MIT	2026-08-28		js	1	Native OS webview windows for Bun & Node.js (beta)	wry
+npm	@depup/wry__caches		MIT	2026-03-17		js	1	[DepUp] Various cache implementations	wry
+npm	@bobfrankston/msgapidefs		ISC	2026-09-17		js	1	TypeScript definitions for msgapi JavaScript API (msgview/msger)	wry
+npm	wry-pro-cli		ISC	2023-05-13		js	1	该脚手架主要是快速创建一个基于webpack配置的vue/react项目	wry
+npm	@wry-smile/react-sketch-ruler		MIT	2023-02-09		js	1		wry
+npm	@bobfrankston/mdview		MIT	2026-09-17		js	1	Render a markdown file and display it via msger or msgview	wry
+npm	@letta-ai/sprite		Apache-2.0	2026-07-15		js	1	A tiny persistent pet for your Letta agent — hatches from your agent-id, lives below the statusline, gains XP from real work (zero token cost), grows stats that	wry
+npm	@ai-rpg-engine/starter-merchant		MIT	2026-09-21		js	1	AI RPG Engine mercantile starter: Salt Road Ledger	wry
+npm	@wry-smile/utils-is		MIT	2023-09-27		js	1	type judage kit	wry
+npm	backtoyou		SEE LICENSE IN LICENSE	2026-09-09		js	1	A quiet voice for Claude Code — says "Back to you." when a task finishes. Voices by elevenlabs.io.	wry
+npm	native-webview		Apache2.0/MIT	2022-07-23		js	1	Native WebView for all platforms.	wry
+npm	tauri-plugin-webproxy-api			2026-10-05		js	1	JavaScript API for tauri-plugin-webproxy	wry
+npm	gelectron-core		MIT	2026-08-31		js	1	Firefox-engine alternative to Electron, powered by Servo	wry
+npm	detail-page-create		ISC	2018-03-03		js	1	A component for react to help quickly generate details page	wry
+npm	@ionyx-apps/cli		MIT	2026-03-14		js	1	Ionyx Framework CLI - High-performance desktop apps with Rust and WebGPU, featuring detailed template architectures	wry
+npm	@bunlet/native		MIT	2026-05-20		js	1	Rust native bindings for the Bunlet desktop framework — cross-platform WebView, window management, and OS APIs via NAPI-RS	wry
+npm	webview-napi		MIT	2026-08-22		js	1	Robust cross-platform webview library for Node.js written in Rust. It also works with deno and bun.	wry
+npm	pdf_read_down_load_the_diamond_eye_by_kate_quinn_on_au		ISC	2023-04-09		js	1	Download or Read epub/pdF EPUB [Download] The Diamond Eye By Kate Quinn on Audiobook New Volumes	wry
+npm	react-native-gpui		MIT	2026-07-02		js	1	Write React Native components, render them natively with GPUI (Zed's GPU UI framework).	wry
+npm	tauri-plugin-axum-api		MIT	2026-05-24		js	1	Call your Axum router directly — just like a local database, not a remote server.	wry
+npm	miracle_man_movie_free_fixed_9iemj		ISC	2023-04-05		js	1	miracle man movie free  fixed	wry
+npm	vokex.app		MIT	2026-05-09		js	1	超轻量级桌面应用构建库 - Vite 构建后一键打包为原生可执行文件	wry
+npm	@wdio/dioxus-bridge		MIT	2026-08-05		js	1	Guest-side JS bundle for the wdio-dioxus-bridge Rust crate. Installs window.__WDIO_DIOXUS__.invoke for use by @wdio/dioxus-service.	wry
+npm	@empathize/framework		GPL-3.0	2022-08-31		js	1	Framework for Neutralino	neutralino
+npm	neutralino-appimage-bundler		MIT	2022-04-11		js	1	Bundles your Neutralino project in AppImage	neutralino
+npm	@miguelmazetto/svelte-neutralino-adapter		MIT	2024-01-15		js	1	Svelte Adapter for Neutralino (Desktop)	neutralino
+npm	neukit		MIT	2025-06-10		js	1	A Neutralino development stack	neutralino
+npm	web2app-cli		MIT	2026-01-04		js	1	CLI to generate Neutralino apps from any URL	neutralino
+npm	@baaqar/artifact-to-pwa		MIT	2026-08-14		js	1	Convert any Claude artifact (HTML/React/JSX) into a native .exe — ~5 MB output via Neutralino + WebView2	neutralino
+npm	@fto-consult/neut		MIT	2024-01-12		js	1	cli for Neutralino js app generator and builder	neutralino
+npm	neutralinojs-ext-sqlite3		MIT	2026-02-25		js	1	SQLite extension for Neutralino apps with bundled SQLite and an async Promise-based API.	neutralino
+npm	vite-plugin-neutralino		MIT	2025-07-17		js	1	A Vite plugin for seamless integration with Neutralinojs.	neutralino
+npm	@neu-extend/extendify		MIT	2022-05-06		js	1	CLI tool to add node extensions to your Neutralino application	neutralino
+npm	node-neutralino		MIT	2024-08-27		js	1	Wrapper project for Neutralinojs backend	neutralino
+npm	neu-appimage-bundler		ISC	2022-05-30		js	1	A cli tool to turn your neutralino binaries to an AppImage	neutralino
+npm	@neutralinojs/lib		MIT	2026-10-06		js	1	JavaScript API for Neutralinojs	neutralino
+npm	neu2		GPL-3.0	2020-12-23		js	1	A rework of the NeutralinoJS client, which add and patch many functions, and make creating a Neutralino app better.	neutralino
+npm	neutralino-installer		MIT	2026-05-21		js	1	跨平台桌面应用打包工具 - 一键打包 macOS/Windows/Linux 安装包	neutralino
+npm	thorino-ipc		ISC	2023-09-14		js	1	Le module `@thorino/ipc` facilite l'interaction entre le backend et le frontend dans le contexte d'une application créée avec le framework Thorium et Neutralino	neutralino
+npm	@macfja/svelte-adapter-neutralino		MIT	2022-01-22		js	1	SvelteKit adapter to generate a Neutralinojs application	neutralino
+npm	create-react-neutralino-app		MIT	2023-10-26		js	1	Neutralinojs app with reactjs	neutralino
+npm	@warp-js/ipc-server		ISC	2024-11-17		js	1	Le module `@thorino/ipc` facilite l'interaction entre le backend et le frontend dans le contexte d'une application créée avec le framework Thorium et Neutralino	neutralino
+npm	neutralino-config-cli		MIT	2026-04-27		js	1	CLI tool for Neutralinojs lightweight desktop app configuration	neutralino
+npm	buntralino-client		MIT	2025-02-09		js	1	Neutralino.js library for Buntralino. Buntralino unites Bun and Neutralino.js to make a simpler, lighter alternative to Electron and NW.js. Use Neutralino.js AP	neutralino
+npm	@radiantabyss/neutralino		ISC	2025-12-26		js	1		neutralino
+npm	create-ziko		MIT	2026-09-30		js	1	Easily create Ziko apps without any complicated build setup.	neutralino
+npm	@horizon-ark-studio/arkware		GPL-3.0-or-later	2026-09-10		js	1	Package any SPA as a thin native shell. One `arkware` CLI: `arkware android emit-flavor` authors Gradle config for main's Android WebView shell, `arkware linux 	neutralino
+npm	crossunion		MIT	2026-08-17		js	1	CLI tool to scaffold Vite + Svelte projects and package them into cross-platform desktop apps with Neutralinojs	neutralino
+npm	create-neureact-app		MIT	2024-06-28		js	1	Neutralinojs app with reactjs	neutralino
+npm	plugin-explorer		ISC	2025-02-26		js	1	This plugin allows developer to find all availble plugins for neu cli.	neutralino
+npm	@gbdx/devis		AGPL-3.0-or-later	2026-09-15		js	1	Local development dashboard for pnpm monorepos — workspace scanning, process management, HTTPS proxy, Docker, and more.	neutralino
+npm	buntralino		MIT	2024-12-23		js	1	Bun library for Buntralino. Buntralino unites Bun and Neutralino.js to make a simpler, lighter alternative to Electron and NW.js. Use Neutralino.js API at clien	neutralino
+npm	neutralinojs-templates		ISC	2025-01-30		js	1	Adds functionality to manage and reuse locally saved templates in Neutralinojs CLI, eliminating the need to repeatedly download or clone remote templates.	neutralino
+npm	salihu-neutralinojs-builder		ISC	2022-06-14		js	1	A complete solution to make Neutralinojs app distribution packages	neutralino
+npm	create-neutralinojs-vite-app		MIT	2026-06-30		js	1	Create a Neutralinojs + Vite app with one command — React templates with JS or TypeScript, pre-configured and ready to run.	neutralino
+npm	adv-installer		MIT	2026-06-18		js	1	An interactive CLI for scaffolding modern projects with presets, add-ons, and smart defaults.	neutralino
+npm	@involvex/chaos-create		MIT	2026-05-06		js	1	🎲 Create random apps with chaos and creativity! A CLI tool that generates random application scaffolds using various frameworks, libraries, and features.	neutralino
+npm	@neutralinojs-contrib/builder		MIT	2026-10-06		js	1	A standalone Neutralinojs CLI plugin for packaging and installer generation	neutralino
+npm	buntralino-cli		MIT	2025-02-09		js	1	Buntralino unites Bun and Neutralino.js to make a simpler, lighter alternative to Electron and NW.js. Use Neutralino.js API at client and send harder tasks to B	neutralino
+npm	openchamber-desktop		GPL-3.0	2026-01-30		js	1	Desktop launcher for OpenChamber - Cross-platform OpenCode GUI	neutralino

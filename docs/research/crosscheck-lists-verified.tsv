@@ -1,0 +1,87 @@
+category	repo	status	note	stars	license	last_push	created	language	fork	description
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	AgregoreWeb/agregore-browser	ok		925	AGPL-3.0	2026-07-13	2020	JavaScript		A minimal browser for the distributed web (Desktop version)
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	rmottola/Arctic-Fox	ok		504	NOASSERTION	2026-10-11	2018	C++		Web Browser for Mac OS X 10.6+, Linux (PowerPC, x86, amd64, ARM, MIPS), NetBSD, OpenBSD, and Windows XP.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	bdashore3/Asobi	ok	RENAMED→kingbri1/Asobi	31	Apache-2.0	2024-10-04	2021	Swift		An immersive browser app for iPhones, iPads, and MacCatalyst
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	beamlegacy/beam	ok		71	NOASSERTION	2026-10-09	2023	Swift		A new way to experience the Internet.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	BonBon-exchange/bonbon-web-browser	ok	RENAMED→BonBon-exchange/bonbon-browser	26	GPL-3.0	2024-11-20	2022	TypeScript		BonBon browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	Malcer/Borneo	ok	RENAMED→pioplo/Borneo	5	NOASSERTION	2013-12-23	2013	C++		Simple and minimalist web browser using QtWebKit.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	cachyos/cachyos-browser-settings	ARCHIVED		66	MPL-2.0	2025-03-05	2021	JavaScript		All the settings files that form the core of Cachy Browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	CatalystDevOrg/Catalyst	ok		81	MIT	2026-08-13	2021	JavaScript		A minimal, functional, and customizable user-focused FOSS web browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	deemru/Chromium-Gost	ok		621	MIT	2026-10-01	2017	C++		Chromium с поддержкой алгоритмов ГОСТ
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	brunurd/companion	ok	RENAMED→leonaaraujo/companion	63	MIT	2026-09-12	2018	JavaScript		Did you know Compy, The Companion? They are a friendly mini browser to pin on top of any other desktop app and keep doing your stuff while enjoying a 
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	dBrowser/dbrowser	ok		9	NOASSERTION	2022-10-04	2020	TypeScript		dBrowser is a web browser for Web3, integrated with IPFS, SSB, Hypercore, Unstoppable Domains and more.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	gab-ai-inc/defiant-browser	ARCHIVED		108	MPL-2.0	2021-08-12	2019	JavaScript		Welcome to the free speech Internet.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	elzabrowser/elza	ok		81	GPL-3.0	2023-05-14	2020	SCSS		Private, fast and minimal web browser based on electron with built-in tor.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	raluvy95/FelidaBrowser	ARCHIVED		43	GPL-3.0	2025-02-07	2020	JavaScript		A lightweight Chromium Browser using Electron.js!
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	snaildos/Fifo-Browser	ok		70	GPL-3.0	2026-09-30	2021	TypeScript		Fifo Browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	dr460nf1r3/firedragon-browser	ok	RENAMED→garuda-linux/firedragon	401	MPL-2.0	2026-10-08	2021	CSS		FireDragon is a cross-platform, feature-rich and privacy-focused web browser (mirrored from GitLab)
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	revblaze/Glow	ok		12		2019-11-13	2017	Swift		A light-weight web browser built for speed, performance and above all, beauty.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	pulse-browser/experiment	ok		52	MPL-2.0	2024-04-26	2023	JavaScript		Another Gecko browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	wicknix/InterWebSnow	ARCHIVED		31	NOASSERTION	2022-10-18	2021			Web browser for  OS X 10.6.8 Snow Leopard 
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	RicardoCA/JupiterBrowser	NOT_FOUND								gh: Not Found (HTTP 404)
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	azer/kaktus	ARCHIVED		412		2024-10-09	2016	JavaScript		Experimental web browser with minimalistic design
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	raphipod/LightBrowser-2020	ARCHIVED		4	MIT	2020-12-18	2020	C#		🌎 An open-source web browser built with CefSharp.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	lirios/browser	ok		219	NOASSERTION	2024-06-28	2016	QML		:earth_africa: Cross-platform Material design web browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	LoboEvolution/LoboEvolution	ok		96	MIT	2026-10-11	2014	Java		Lobo Evolution Java Web Browser. Forks welcome! 
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	NetworkNeighborhood/Marble	ok	RENAMED→Erizur/Marble	56	NOASSERTION	2026-09-18	2025	JavaScript	fork	Firefox fork that aims to restore the Photon user interface, along with native controls that were removed in newer versions of Firefox. 
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	cprussin/minichrome	ok		32		2019-02-17	2018	PureScript		A minimal web browser built for tiling window managers
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	octalmage/minum	ok		44		2018-07-02	2015	JavaScript		A new minimal web browsing experience.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	zaqas/Mitra	ok	RENAMED→crucial-synthesis/Mitra	1		2021-06-28	2021	Python		Minimalist Web Browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	makdosx/nexus-browser	ok		9	AGPL-3.0	2021-08-19	2020	Visual Basic .NET		:lollipop:  nexus-browser is a private browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	MystPi/ninetails	ARCHIVED		69	MIT	2022-06-18	2021	JavaScript		A private, fast, and beautiful web browser.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	octalmage/Ninja-Browser	ok		24	GPL-3.0	2018-09-28	2014	JavaScript		A browser for ninjas?
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	p2plabsxyz/peersky-browser	ok		88	MIT	2026-10-11	2023	JavaScript		A local-first, peer-to-peer web browser for a surveillance-free internet.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	kamranahmedse/pennywise	ok	RENAMED→nilbuild/pennywise	3863	MIT	2025-12-22	2018	JavaScript		Cross-platform application to open any website or media in a floating window
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	torvic9/plasmafox	ARCHIVED		51	NOASSERTION	2021-05-31	2019	JavaScript		Plasmafox web browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	PocketStudios/Pocket-Browser	ok		11	MIT	2023-02-05	2020	JavaScript		An open-source browser made for privacy and going towards security.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	PolySuite/PolyBrowser	ok		81	NOASSERTION	2016-11-25	2014	JavaScript		PolyBrowser, the "Panoramic" Web Browser.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	Jazzzny/powerfox-browser	ok	RENAMED→Jazzzny/powerfox-classic	174	NOASSERTION	2026-09-01	2026	C++		A secure, modern, and open-source web browser for Mac OS X 10.6 Snow Leopard, 10.5 Leopard, 10.4 Tiger, and 10.3 Panther for Intel and PowerPC.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	wicknix/SeaLion	ok		60	MPL-2.0	2026-06-14	2023	JavaScript		Web browser for MacOS 10.7 - 14.8 and Linux.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	sharpbrowser/SharpBrowser	ok		1032	MIT	2025-04-22	2016	C#		A full featured web-browser built using C# and CefSharp
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	skyebrowser/skye	ok		52	GPL-3.0	2023-07-29	2021	TypeScript	fork	Modern and feature-rich web browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	niutech/splitbrowser	ok		138	MIT	2026-02-11	2022	C		Split Browser - a minimalistic, ultra-lightweight, open source web browser based on WebKit/Ultralight/native webview with a split screen (tiled) view
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	LimePotato/Sputnik-Browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	vicr123/theweb	ok		3	GPL-3.0	2021-03-09	2019	C++		Web Browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	kevinjosethomas/turbo	ARCHIVED		42	NOASSERTION	2023-04-22	2021	TypeScript		⚡ Turbo - the browser for developers
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	gonzazoid/Ultimatum	ok		1390	BSD-3-Clause	2026-06-30	2021	C++	fork	Ultimatum is a chromium fork with webextensions support on Android, anti-detect browser capabilities, web3.0 support and much more
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	unstoppabledomains/unstoppable-demo-browser	ARCHIVED		53	MIT	2022-03-02	2019	TypeScript		Demo Browser For Developer
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	v38armageddon/WebSM	ok		10	NOASSERTION	2026-02-10	2022	C#		A simply minimalist web browser.
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	bengl/yaeb	ok		1	MIT	2020-07-07	2016	JavaScript		Minimalist web browser
+Desktop browsers (list: nerdyslacker/desktop-web-browsers)	goddv/Zervo	ok		38	MPL-2.0	2026-08-23	2026	Rust		A calm, workspace-oriented browser built on the Servo engine.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	machinepublishers/jbrowserdriver	ok	RENAMED→hollingsworthd/jBrowserDriver	818	NOASSERTION	2024-07-29	2015	Java		A programmable, embeddable web browser driver compatible with the Selenium WebDriver spec -- headless, WebKit-based, pure Java
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	headzoo/surf	ok		1545	MIT	2024-01-24	2014	Go		Stateful programmatic web browsing in Go.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	casperjs/casperjs	ARCHIVED		7153	MIT	2020-04-03	2011	JavaScript		CasperJS is no longer actively maintained. Navigation scripting and testing utility for PhantomJS and SlimerJS
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	joshbuddy/ghostbuster	ok		276		2012-04-10	2011	CoffeeScript		Integration testing ftw
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	spacenick/jedi-crawler	ok		36		2013-10-03	2013	JavaScript		Lightsabing Node/PhantomJS crawler; scrape dynamic content : without the hassle
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	StanAngeloff/lotte	ARCHIVED		99	NOASSERTION	2019-10-23	2011	JavaScript		Automated, headless browser testing (using PhantomJS).
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	niwinz/phantompy	ok		611	BSD-3-Clause	2017-05-17	2013	C++		Phantompy is a headless WebKit engine with powerful pythonic api build on top of Qt5 Webkit
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	lapwinglabs/x-ray	ok	RENAMED→matthewmueller/x-ray	5905	MIT	2026-08-31	2015	JavaScript		The next web scraper. See through the <html> noise.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	GoogleChrome/puppeteer	ok	RENAMED→puppeteer/puppeteer	95680	Apache-2.0	2026-10-11	2017	TypeScript		JavaScript API for Chrome and Firefox
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	kblok/puppeteer-sharp	ok	RENAMED→hardkoded/puppeteer-sharp	3924	MIT	2026-10-11	2017	C#		Headless Chrome .NET API
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	knq/chromedp	ok	RENAMED→chromedp/chromedp	13307	MIT	2026-10-11	2017	Go		A faster, simpler way to drive browsers supporting the Chrome DevTools Protocol.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	graphcool/chromeless	ARCHIVED	RENAMED→schickling/chromeless	13215	MIT	2018-11-13	2017	TypeScript		🖥  Chrome automation made simple. Runs locally or headless on AWS Lambda.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	chrome-php/headless-chromium-php	ok	RENAMED→chrome-php/chrome	2681	MIT	2026-07-06	2017	PHP		Instrument headless chrome/chromium instances from PHP
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	angrykoala/wendigo	ok		151	MIT	2024-03-08	2017	JavaScript		A proper monster for front-end automated testing
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	safrizal/cdp4j	ok		35	MIT	2017-05-22	2017	Java		cdp4j - Chrome DevTools Protocol for Java
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	briankircho/browserjet	ok		74		2011-07-18	2011	C++		headless webkit browser with node.js interface
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	jeanphix/Ghost.py	ok		2753		2024-02-24	2011	Python		Webkit based scriptable web browser for python. 
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	alexandernst/headless_browser	ok		23		2021-05-29	2012	C++		Headless browser based on WebKit
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	jabbalaci/Jabba-Webkit	ok		91		2014-10-23	2012	Python		Jabba's headless webkit browser for scraping AJAX-powered webpages.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	makinacorpus/spynner	ok		62		2020-09-01	2018	Python	fork	Programmatic web browsing module with AJAX support for Python
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	sourcegraph/webloop	ok		1369	BSD-3-Clause	2024-04-01	2013	Go		WebLoop: Scriptable, headless WebKit with a Go API. Like PhantomJS, but for Go.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	mkoehnke/WKZombie	ok		1186	MIT	2020-09-28	2015	Swift		WKZombie is a Swift framework for iOS/OSX to navigate within websites and collect data without the need of User Interface or API, also known as Headle
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	youpy/grope	ok		16	MIT	2017-02-21	2010	Ruby		A non-GUI library to represent headless browser environment
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	andyjansson/specterjs	ARCHIVED		19	MIT	2017-08-15	2016	C#		Scriptable Headless Internet Explorer
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	pszyller/Guillotine	ok		8	LGPL-3.0	2014-03-18	2014	C#		A .NET headless browser, written in C#
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	artsy/benv	ok		74	MIT	2017-10-22	2013	JavaScript		Stub a browser environment in node.js and headlessly test your client-side code.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	tmp8/browser-rb	ok		11		2011-01-04	2010	JavaScript		Headless Ruby browser on top of Nokogiri and TheRubyRacer
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	symfony/browser-kit	ok		3007	MIT	2026-08-22	2011	PHP		Simulates the behavior of a web browser, allowing you to make requests, click on links and submit forms programmatically
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	damonjs/damon	ok		22	Apache-2.0	2016-11-23	2016	JavaScript		:bust_in_silhouette: Bot navigating urls and doing tasks.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	roryprimrose/Headless	ok		85	MIT	2022-06-22	2013	C#		Headless browser support for fast web acceptance testing in .Net
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	clubajax/HeadlessBrowser	ok		21		2014-05-25	2014	JavaScript		A very miniature headless browser, for testing the DOM on Node.js
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	tmpvar/jsdom	ok	RENAMED→jsdom/jsdom	21704	MIT	2026-10-07	2010	JavaScript		A JavaScript implementation of various web standards, for use with Node.js
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	hickford/MechanicalSoup	ok	RENAMED→MechanicalSoup/MechanicalSoup	4896	MIT	2026-10-07	2014	Python		A Python library for automating interaction with websites.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	seebigs/node-as-browser	ok		16		2018-09-01	2016	JavaScript		Create a browser-like environment within a NodeJS context
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	jmcarp/robobrowser	ok		3689	BSD-3-Clause	2020-09-10	2014	Python		
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	SimpleBrowserDotNet/SimpleBrowser	ok		365	NOASSERTION	2023-11-26	2010	C#		A flexible and intuitive web browser engine designed for automation tasks. Built on .NET Standard 2.1.
+Headless browsers (list: dhamaniasad/HeadlessBrowsers)	substack/browser-launcher	NOT_FOUND								gh: Not Found (HTTP 404)

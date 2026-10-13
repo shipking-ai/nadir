@@ -1,0 +1,31 @@
+{
+  "tool": "axe-core 4.14.0",
+  "date": "2026-10-12",
+  "violations": {
+    "newtab": [],
+    "history": [],
+    "bookmarks": [],
+    "downloads": [],
+    "privacy": [],
+    "settings": [],
+    "about": [],
+    "shell": [
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "help": "Document should have one main landmark",
+        "nodes": [
+          "html"
+        ]
+      },
+      {
+        "id": "page-has-heading-one",
+        "impact": "moderate",
+        "help": "Page should contain a level-one heading",
+        "nodes": [
+          "html"
+        ]
+      }
+    ]
+  }
+}

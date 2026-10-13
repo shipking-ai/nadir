@@ -1,0 +1,18 @@
+npm url tracking params: Unexpected token '<', "<!doctype "... is not valid JSON
+npm public suffix: Unexpected token '<', "<!doctype "... is not valid JSON
+npm cookie consent: Unexpected token '<', "<!doctype "... is not valid JSON
+npm user agent parser: Unexpected token '<', "<!doctype "... is not valid JSON
+npm puppeteer: Unexpected token '<', "<!doctype "... is not valid JSON
+npm accessibility tree: Unexpected token '<', "<!doctype "... is not valid JSON
+npm local llm: Unexpected token '<', "<!doctype "... is not valid JSON
+npm transformers.js: Unexpected token '<', "<!doctype "... is not valid JSON
+npm embeddings local: Unexpected token '<', "<!doctype "... is not valid JSON
+npm sqlite fts: Unexpected token '<', "<!doctype "... is not valid JSON
+npm doh: Unexpected token '<', "<!doctype "... is not valid JSON
+npm tor: Unexpected token '<', "<!doctype "... is not valid JSON
+npm bookmarks: Unexpected token '<', "<!doctype "... is not valid JSON
+npm sync encrypted: Unexpected token '<', "<!doctype "... is not valid JSON
+npm pdf viewer: Unexpected token '<', "<!doctype "... is not valid JSON
+npm screenshot webpage: Unexpected token '<', "<!doctype "... is not valid JSON
+npm wry: Unexpected token '<', "<!doctype "... is not valid JSON
+npm neutralino: Unexpected token '<', "<!doctype "... is not valid JSON

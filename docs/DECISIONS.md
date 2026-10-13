@@ -1,0 +1,39 @@
+# Decision log
+
+Newest last. Each entry: what was decided, why, and what evidence changed our mind (if anything). Architecture-level decisions live in [ADR-0001](adr/0001-architecture.md).
+
+| Date | Decision | Why / evidence |
+|---|---|---|
+| 2026-10-11 | Do **not** build Chromium/Gecko from source | Environment has no cmake/ninja, 100+ GB and many hours per build, and a fork needs a permanent rebase team. Research ledger §1. |
+| 2026-10-11 | Foundation = Chromium via **Electron 44.7.0** behind a `TabHost` seam | Only option with per-tab views, session partitions, request interception and downloads available *today*; Tauri's multi-webview is still `unstable`; Servo is a "tech demo"; Ladybird has no Windows build. |
+| 2026-10-11 | Product name **Nadir** (user-specified) | Checked GitHub/npm for collisions; no trademark search performed (not possible with the tools here). |
+| 2026-10-11 | Licence **GPL-3.0-or-later** | Optional extension helper is GPL-3.0; GPL-3.0 can include MIT/BSD/Apache-2.0/MPL-2.0 dependencies. Not legal advice. |
+| 2026-10-11 | Use `node:sqlite` (+FTS5) instead of `better-sqlite3` | Verified working inside Electron's Node 24.21.0 with SQLite 3.53.4; avoids a native-module build on machines without Python/VS. Risk: Node marks the module non-stable on some versions. |
+| 2026-10-11 | Wrap Ghostery's engine with our own `webRequest` handler instead of `enableBlockingInSession` | Read the source: it registers global `ipcMain.handle` channels (throws on the 2nd workspace session) and monopolises the single `onBeforeRequest` slot we need for HTTPS-first, parameter stripping and per-tab counts. |
+| 2026-10-11 | One Chromium **partition per workspace**; private tabs use a memory-only partition | Gives real cookie/cache/IndexedDB isolation instead of UI-level grouping. Verified by e2e (cookie set in workspace A is invisible in B). |
+| 2026-10-11 | Internal pages served from a privileged `nadir://` scheme with CSP, and **internal↔web navigation swaps the renderer** | A preload is bound to a WebContents, not an origin; without swapping, a web page navigated from an internal tab would inherit the preload. |
+| 2026-10-11 | Suggestions are **local only** — never sent to a search provider | Privacy-first; also removes a latency source. |
+| 2026-10-11 | Fuzzy matching: removed loose subsequence matching for queries < 4 chars | Palette ranked "Close tab" for "set" (seen in a real screenshot). Added tests for the regression. |
+| 2026-10-11 | Web tabs get an opaque white background | Seen in a real capture: transparent tab views showed chrome-grey for pages that set no background. |
+| 2026-10-11 | Keyboard e2e uses `webContents.sendInputEvent`, not Playwright keys or OS injection | CDP-synthesised keys bypass Electron's `before-input-event` (test failed while the app was fine); OS-level injection could land in the user's other windows. |
+| 2026-10-11 | Screen captures are taken **per window by HWND** (`PrintWindow`), never of the whole desktop | A first full-screen capture also contained unrelated windows; it was deleted and the method replaced. |
+| 2026-10-11 | Reject WebView2/Tauri for the core, keep Servo/Ladybird/CEF as watch-list | See ledger. Revisit triggers in ADR-0001. |
+| 2026-10-12 | Catalog: wide sweep, no claim of completeness | No registry of open-source browser projects exists. Method, 772 classified projects and the blind spots (150-star floor, GitHub-only, ~5,000 unread low-signal candidates) are in docs/research/SWEEP.md. |
+| 2026-10-12 | Anti-detect / stealth browsers are catalogued once as Rejected; credential-stealer and DRM-key tools are not catalogued | Nadir will not integrate detection evasion; fingerprint uniformity and test oracles remain on the roadmap. |
+| 2026-10-12 | Added the canonical GPL-3.0 text as LICENSE; GPL text also ships as resources/LICENSE in packaged builds | User approved the download. The root LICENSE of a packaged build is Electron's MIT file, so the GPL text needs its own location (packager --extra-resource). SHA-256 3972dc97…6986. |
+| 2026-10-12 | Never take memory/CPU/timing numbers from Playwright-driven runs; benchmark with test/e2e/plain.js (CDP to the shell page only) | Playwright attaches to every tab renderer, so background tabs report visible, render at 60 fps and keep GPU surfaces. The first benchmark (1.45× Chrome) was wrong because of it; fair runs give 0.93×–1.11×. |
+| 2026-10-12 | Close buttons on tabs are mouse-only aria-hidden spans; workspace switcher is a group of toggle buttons; decorative glyphs are drawn with CSS | axe-core flagged nested-interactive, aria-required-children and label-content-name-mismatch in the browser chrome. Keyboard users close tabs with Delete or the context menu. |
+| 2026-10-12 | Certificate-error tests run against badssl.com and skip when offline | Real bad certificates are better evidence than a local fake; the other e2e tests stay offline. |
+| 2026-10-12 | Signing pipeline built without a certificate (scripts/sign.ps1) | No certificate can be obtained from inside the repo. Tested with a throwaway self-signed cert on a copy of the exe; real signing untested. See docs/RELEASE.md. |
+
+## Bugs found by tests/inspection and fixed (kept for the record)
+
+1. `[::1]:8080` was treated as a public host and upgraded to https (host extraction split on the first `:`). — unit test.
+2. `Store` used its statement cache before it was constructed. — unit tests (14 failures).
+3. `'__proto__' in DEFAULT_SETTINGS` is true, so the "unknown setting" guard let prototype keys through. Now `Object.hasOwn`. — unit test.
+4. "Clear last hour" deleted everything *older* than an hour. Added `clearHistorySince`. — found in review, test added.
+5. `registerIpc` read `c.tabs` before `create()` built it. — first launch.
+6. `hidden` attribute overridden by `display:grid` (phantom "0" badges). — screenshot.
+7. The benchmark harness inflated Nadir's memory (background tabs stayed "visible" under Playwright); first reported as a Nadir problem, then traced to the harness. — found by measuring document.visibilityState and requestAnimationFrame in background tabs; regression test `background.test.js`.
+8. Three serious/critical accessibility violations in the browser chrome (nested interactive control in a tab, tablist containing a non-tab button, visible text not in the accessible name). — found by axe-core, test `a11y.test.js`.
+9. My first `tls.test.js` passed vacuously: the tab still showed the previous test's error page. Fixed by waiting for the specific host's page.

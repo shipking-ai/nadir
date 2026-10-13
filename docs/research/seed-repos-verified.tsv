@@ -1,0 +1,540 @@
+category	repo	status	note	stars	license	last_push	created	language	fork	description
+Browser engines & from-scratch browsers	servo/servo	ok		38126	MPL-2.0	2026-10-12	2012	Rust		Servo aims to empower developers with a lightweight, high-performance alternative for embedding web technologies in applications.
+Browser engines & from-scratch browsers	servo/stylo	ok		340		2026-10-11	2024	Rust		CSS engine that powers Servo and Firefox
+Browser engines & from-scratch browsers	servo/webrender	ok		3378	MPL-2.0	2026-10-11	2015	Rust		A GPU-based renderer for the web
+Browser engines & from-scratch browsers	servo/html5ever	ok		2637	NOASSERTION	2026-10-05	2014	Rust		High-performance browser-grade HTML5 parser
+Browser engines & from-scratch browsers	servo/rust-cssparser	ok		874	MPL-2.0	2026-10-08	2013	Rust		Rust implementation of CSS Syntax Level 3
+Browser engines & from-scratch browsers	servo/rust-selectors	ARCHIVED		40		2024-05-28	2015			CSS Selectors matching for Rust
+Browser engines & from-scratch browsers	versotile/verso	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser engines & from-scratch browsers	LadybirdBrowser/ladybird	ok		66484	BSD-2-Clause	2026-10-11	2024	C++		Truly independent web browser
+Browser engines & from-scratch browsers	SerenityOS/serenity	ok		33898	BSD-2-Clause	2026-10-08	2018	C++		The Serenity Operating System 🐞
+Browser engines & from-scratch browsers	ZeroX-DG/moon	ok		435	MIT	2026-05-31	2020	Rust		:earth_americas: :moon: A hobby web browser developed from scratch
+Browser engines & from-scratch browsers	twilco/kosmonaut	ok		1718	MPL-2.0	2025-11-24	2019	Rust		A web browser engine for the space age :rocket:
+Browser engines & from-scratch browsers	danfragoso/thdwb	ok		1140	MIT	2023-03-07	2019	Go		🌭 The hotdog web browser and browser engine 🌭
+Browser engines & from-scratch browsers	maekawatoshiki/naglfar	ARCHIVED		592	MIT	2022-12-24	2018	Rust		A toy web browser implemented in Rust from scratch
+Browser engines & from-scratch browsers	quittle/wowser	ok		12		2024-03-01	2020	Rust		An (un)impressive browser being written from scratch in Rust
+Browser engines & from-scratch browsers	gantonious/browser	ok		14		2023-09-20	2021	Kotlin		A web browser engine + frontend built in Kotlin from mostly scratch
+Browser engines & from-scratch browsers	MQuy/mbrowser	ok		47	MIT	2021-12-27	2021	Rust		A toy web browser developed from scratch
+Browser engines & from-scratch browsers	DioxusLabs/blitz	ok		4256	Apache-2.0	2026-10-11	2022	Rust		A radically modular HTML/CSS rendering engine
+Browser engines & from-scratch browsers	DioxusLabs/taffy	ok		3622	MIT	2026-10-11	2022	Rust		A high performance rust-powered UI layout library
+Browser engines & from-scratch browsers	DioxusLabs/dioxus	ok		39363	Apache-2.0	2026-10-09	2021	Rust		Fullstack app framework for web, desktop, and mobile.
+Browser engines & from-scratch browsers	litehtml/litehtml	ok		2460	BSD-3-Clause	2026-10-11	2014	C++		Fast and lightweight HTML/CSS rendering engine
+Browser engines & from-scratch browsers	linebender/vello	ok		4411	Apache-2.0	2026-10-11	2020	Rust		A GPU compute-centric 2D renderer.
+Browser engines & from-scratch browsers	linebender/parley	ok		753	Apache-2.0	2026-10-09	2021	Rust		Rich text layout library
+Browser engines & from-scratch browsers	google/skia	ok		10979	BSD-3-Clause	2026-10-11	2014	C++		Skia is a complete 2D graphic library for drawing Text, Geometries, and Images.  See documentation for contribution instructions.
+Browser engines & from-scratch browsers	parcel-bundler/lightningcss	ok		7704	MPL-2.0	2026-10-08	2021	Rust		An extremely fast CSS parser, transformer, bundler, and minifier written in Rust.
+Browser engines & from-scratch browsers	lexbor/lexbor	ok		2101	Apache-2.0	2026-09-28	2018	C		Lexbor is development of an open source HTML Renderer library. https://lexbor.com
+Browser engines & from-scratch browsers	cloudflare/lol-html	ok		2073	BSD-3-Clause	2026-07-29	2019	Rust		Low output latency streaming HTML parser/rewriter with CSS selector-based API
+Browser engines & from-scratch browsers	html5lib/html5lib-python	ok		1224	MIT	2026-04-21	2013	Python		Standards-compliant library for parsing and serializing HTML documents and fragments in Python
+Browser engines & from-scratch browsers	AngleSharp/AngleSharp	ok		5541	MIT	2026-10-09	2013	C#		:angel: The ultimate angle brackets parser library parsing HTML5, MathML, SVG and CSS to construct a DOM based on the official W3C specifications.
+Browser engines & from-scratch browsers	cheeriojs/cheerio	ok		30515	MIT	2026-10-10	2011	TypeScript		The fast, flexible, and elegant library for parsing and manipulating HTML and XML.
+Browser engines & from-scratch browsers	jsdom/jsdom	ok		21704	MIT	2026-10-07	2010	JavaScript		A JavaScript implementation of various web standards, for use with Node.js
+Browser engines & from-scratch browsers	capricorn86/happy-dom	ok		4699	MIT	2026-10-12	2019	TypeScript		A JavaScript implementation of a web browser without its graphical user interface
+Browser engines & from-scratch browsers	fen-browser/Fen	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser engines & from-scratch browsers	sanwuyu/starling	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser engines & from-scratch browsers	h4ckf0r0day/obscura	ok		28776	Apache-2.0	2026-10-10	2026	Rust		The headless browser for AI agents and web scraping
+Browser engines & from-scratch browsers	dillo-browser/dillo	ok		1163	GPL-3.0	2026-04-19	2019	C++		NO LONGER UPDATED!, see https://dillo-browser.org/news/migration-from-github/. New repo at https://git.dillo-browser.org/dillo/
+Browser engines & from-scratch browsers	nordstjernen/nordstjernen-browser	NOT_FOUND								gh: Not Found (HTTP 404)
+JavaScript engines	v8/v8	ok		25266	NOASSERTION	2026-10-11	2014	C++		The official mirror of the V8 Git repository
+JavaScript engines	nodejs/node	ok		122314	NOASSERTION	2026-10-11	2014	JavaScript		Node.js JavaScript runtime ✨🐢🚀✨
+JavaScript engines	denoland/deno	ok		108756	MIT	2026-10-07	2018	Rust		A modern runtime for JavaScript and TypeScript.
+JavaScript engines	boa-dev/boa	ok		7600	MIT	2026-10-11	2018	Rust		Boa is an embeddable Javascript engine written in Rust.
+JavaScript engines	trynova/nova	ok		1952	MPL-2.0	2026-09-09	2022	Rust		JS engine lolz
+JavaScript engines	bellard/quickjs	ok		11028	NOASSERTION	2026-10-10	2020	C		Public repository of the QuickJS Javascript Engine.
+JavaScript engines	quickjs-ng/quickjs	ok		3938	MIT	2026-10-11	2023	C		QuickJS, the Next Generation: a mighty JavaScript engine
+JavaScript engines	facebook/hermes	ok		11365	MIT	2026-10-10	2018	JavaScript		A JavaScript engine optimized for running React Native.
+JavaScript engines	Moddable-OpenSource/moddable	ok		1562		2026-10-09	2017	C		Tools for developers to create truly open IoT products using standard JavaScript on low cost microcontrollers.
+JavaScript engines	engine262/engine262	ok		950	MIT	2026-10-03	2018	TypeScript		An implementation of ECMA-262 in JavaScript
+JavaScript engines	mozilla-spidermonkey/spidermonkey-embedding-examples	ok		228	NOASSERTION	2026-09-05	2018	Shell		Documentation and examples for embedding the SpiderMonkey JavaScript / WebAssembly engine in their applications.
+JavaScript engines	nicbarker/clay	ok		18245	Zlib	2026-05-20	2024	C		High performance UI layout library in C.
+JavaScript engines	WebAssembly/wabt	ok		8152	Apache-2.0	2026-10-11	2015	C++		The WebAssembly Binary Toolkit
+JavaScript engines	bytecodealliance/wasmtime	ok		18713	Apache-2.0	2026-10-12	2017	Rust		A lightweight WebAssembly runtime that is fast, secure, and standards-compliant
+JavaScript engines	wasm3/wasm3	ok		8046	MIT	2026-09-30	2019	C		🚀 A fast WebAssembly interpreter and the most universal WASM runtime
+Chromium-based browsers & patchsets	chromium/chromium	ok		25008	BSD-3-Clause	2026-10-12	2018			The official GitHub mirror of the Chromium source
+Chromium-based browsers & patchsets	brave/brave-browser	ok		23864	MPL-2.0	2026-10-12	2017			Brave browser for Android, iOS, Linux, macOS, Windows.
+Chromium-based browsers & patchsets	brave/brave-core	ok		3665	MPL-2.0	2026-10-12	2017	C++		Core engine for the Brave browser for mobile and desktop. For issues https://github.com/brave/brave-browser/issues
+Chromium-based browsers & patchsets	ungoogled-software/ungoogled-chromium	ok		27953	BSD-3-Clause	2026-10-08	2015	Python		Google Chromium, sans integration with Google
+Chromium-based browsers & patchsets	Alex313031/thorium	ok		7558	BSD-3-Clause	2026-10-11	2021	C++		Chromium fork named after radioactive element No. 90. Source code and Linux releases. Windows/MacOS/ARM builds served in different repos, links are to
+Chromium-based browsers & patchsets	imputnet/helium	ok		21494	GPL-3.0	2026-10-11	2025	C++		Private, fast, and honest web browser
+Chromium-based browsers & patchsets	win32ss/supermium	ok		4823		2026-10-09	2023		fork	Chromium fork for Windows XP/2003 and up
+Chromium-based browsers & patchsets	uazo/cromite	ok		8341	GPL-3.0	2026-10-11	2020	C++	fork	Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
+Chromium-based browsers & patchsets	GrapheneOS/Vanadium	ok		2216	NOASSERTION	2026-10-08	2016	Python		Privacy and security enhanced releases of Chromium for GrapheneOS. Vanadium provides the WebView and standard user-facing browser on GrapheneOS. It de
+Chromium-based browsers & patchsets	bromite/bromite	ok		6320	GPL-3.0	2024-01-24	2017			Bromite is a Chromium fork with ad blocking and privacy enhancements; take back your browser!
+Chromium-based browsers & patchsets	iridiumbrowser/iridium-browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Chromium-based browsers & patchsets	Eloston/ungoogled-chromium	ok	RENAMED→ungoogled-software/ungoogled-chromium	27953	BSD-3-Clause	2026-10-08	2015	Python		Google Chromium, sans integration with Google
+Chromium-based browsers & patchsets	ungoogled-software/ungoogled-chromium-windows	ok		2586	BSD-3-Clause	2026-10-08	2019	Python		Windows packaging for ungoogled-chromium
+Chromium-based browsers & patchsets	ungoogled-software/ungoogled-chromium-macos	ok		704	BSD-3-Clause	2026-10-08	2019	Python		macOS packaging for ungoogled-chromium
+Chromium-based browsers & patchsets	nicolo-ribaudo/chromium-with-patches	NOT_FOUND								gh: Not Found (HTTP 404)
+Chromium-based browsers & patchsets	foutrelis/chromium-launcher	ok		21	ISC	2021-11-10	2015	C		Chromium launcher with support for custom user flags
+Chromium-based browsers & patchsets	duckduckgo/Android	ok		4850	Apache-2.0	2026-10-11	2017	Kotlin		DuckDuckGo Android App
+Chromium-based browsers & patchsets	duckduckgo/iOS	ARCHIVED		1951	Apache-2.0	2025-02-19	2017	HTML		DuckDuckGo iOS Application
+Chromium-based browsers & patchsets	duckduckgo/duckduckgo-privacy-extension	ok		1501	Apache-2.0	2026-10-09	2017	JavaScript		DuckDuckGo Privacy Essentials browser extension for Firefox, Chrome.
+Chromium-based browsers & patchsets	browseros-ai/BrowserOS	ok		13875	AGPL-3.0	2026-10-11	2025	TypeScript		🌐 The open-source Agentic browser; alternative to ChatGPT Atlas, Perplexity Comet, Dia.
+Chromium-based browsers & patchsets	MultiboxLabs/flow-browser	ok		1079	GPL-3.0	2026-05-30	2025	TypeScript		A modern, privacy-focused browser with a minimalistic design.
+Chromium-based browsers & patchsets	fathyb/carbonyl	ok		19508	BSD-3-Clause	2024-07-01	2023	Rust		Chromium running inside your terminal
+Chromium-based browsers & patchsets	nicedoc/chromium-browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Chromium-based browsers & patchsets	vivaldi/vivaldi-bundle	NOT_FOUND								gh: Not Found (HTTP 404)
+Chromium-based browsers & patchsets	adobe/brackets	ARCHIVED		32982	MIT	2022-06-12	2011	JavaScript		An open source code editor for the web, written in JavaScript, HTML and CSS.
+Chromium-based browsers & patchsets	GoogleChromeLabs/chromium-bidi	ok		171	Apache-2.0	2026-10-09	2021	TypeScript		Implementation of WebDriver BiDi for Chromium
+Chromium-based browsers & patchsets	ChromeDevTools/devtools-frontend	ok		4070	BSD-3-Clause	2026-10-11	2015	TypeScript		The Chrome DevTools UI
+Chromium-based browsers & patchsets	chromiumembedded/cef	ok		4824	NOASSERTION	2026-10-10	2017	C++		Chromium Embedded Framework (CEF). A simple framework for embedding Chromium-based browsers in other applications.
+Chromium-based browsers & patchsets	chromiumembedded/java-cef	ok		887	NOASSERTION	2026-09-09	2017	Java		Java Chromium Embedded Framework (JCEF). A simple framework for embedding Chromium-based browsers in other applications using the Java programming lan
+Chromium-based browsers & patchsets	cefsharp/CefSharp	ok		10268	NOASSERTION	2026-10-11	2010	C#		.NET (WPF and Windows Forms) bindings for the Chromium Embedded Framework
+Chromium-based browsers & patchsets	cztomczak/cefpython	ok		3237	NOASSERTION	2026-10-09	2015	C++		Python bindings for the Chromium Embedded Framework (CEF)
+Chromium-based browsers & patchsets	CefGlue/CefGlue	NOT_FOUND								gh: Not Found (HTTP 404)
+Chromium-based browsers & patchsets	chromedp/chromedp	ok		13307	MIT	2026-10-11	2017	Go		A faster, simpler way to drive browsers supporting the Chrome DevTools Protocol.
+Chromium-based browsers & patchsets	go-rod/rod	ok		7130	MIT	2026-08-11	2020	Go		A Chrome DevTools Protocol driver for web automation and scraping.
+Chromium-based browsers & patchsets	atroche/rust-headless-chrome	ok		27	MIT	2024-03-08	2024		fork	A high-level API to control headless Chrome or Chromium over the DevTools Protocol. It is the Rust equivalent of Puppeteer, a Node library maintained 
+Chromium-based browsers & patchsets	mdsrosa/chromiumoxide	NOT_FOUND								gh: Not Found (HTTP 404)
+Chromium-based browsers & patchsets	mattsse/chromiumoxide	ok		1404	Apache-2.0	2026-04-03	2020	Rust		Chrome Devtools Protocol rust API
+Gecko / Firefox-based	mozilla-firefox/firefox	ok		13438	NOASSERTION	2026-10-12	2024	JavaScript		The official repository of Mozilla's Firefox web browser.
+Gecko / Firefox-based	mozilla/gecko-dev	ARCHIVED		3692	NOASSERTION	2025-07-09	2013	JavaScript		SUPERSEDED by https://github.com/mozilla-firefox/firefox.  Read-only Git mirror of the Mercurial gecko repositories at https://hg.mozilla.org
+Gecko / Firefox-based	zen-browser/desktop	ok		44881	MPL-2.0	2026-10-11	2024	C++		Welcome to a calmer internet
+Gecko / Firefox-based	Floorp-Projects/Floorp	ok		8440	MPL-2.0	2026-10-10	2021	TypeScript		All of source code of Floorp 12, the most Advanced and Fastest Firefox derivative 🦊
+Gecko / Firefox-based	BrowserWorks/waterfox	ok		6358	NOASSERTION	2026-10-08	2014	JavaScript		The official Waterfox 💧 source code repository
+Gecko / Firefox-based	mullvad/mullvad-browser	ok		2597		2026-10-01	2022	Shell		Privacy-focused browser for Linux, macOS and Windows. Made in collaboration between @torproject and @mullvad
+Gecko / Firefox-based	arkenfox/user.js	ok		12880	MIT	2026-09-09	2017	JavaScript		Firefox privacy, security and anti-tracking: a comprehensive user.js template for configuration and hardening
+Gecko / Firefox-based	yokoffing/Betterfox	ok		10920	MIT	2026-09-07	2020	JavaScript		Firefox user.js for optimal privacy and security. Your favorite browser, but better.
+Gecko / Firefox-based	librewolf-community/browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	LibreWolf/librewolf	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	ironfox-oss/IronFox	ok		1053	AGPL-3.0	2026-10-11	2024	Shell		Private, secure, user first web browser for Android. This is a read-only mirror of https://gitlab.com/ironfox-oss/IronFox.
+Gecko / Firefox-based	Divested-Mobile/Mull-fdroid	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	mercury-browser/mercury	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	Alex313031/Mercury	ok		1541	MPL-2.0	2026-08-09	2022	JavaScript		Firefox fork with compiler optimizations and patches from Librewolf, Waterfox, and GNU IceCat.
+Gecko / Firefox-based	mozilla-mobile/firefox-android	ARCHIVED		1837	MPL-2.0	2024-06-17	2022	Kotlin		:warning: This repository hosts the Firefox for Android (Fenix), Focus for Android, and Mozilla Android Components projects. It is now developed and m
+Gecko / Firefox-based	mozilla-mobile/focus-android	ARCHIVED		2089	MPL-2.0	2022-12-13	2016	Kotlin		⚠️ Firefox Focus (Android) moved to a new repository. It is now developed and maintained as part of: https://github.com/mozilla-mobile/firefox-android
+Gecko / Firefox-based	mozilla-mobile/firefox-ios	ok		13052	MPL-2.0	2026-10-11	2014	Swift		Firefox for iOS
+Gecko / Firefox-based	mozilla/geckoview	ok		552		2026-10-11	2017	HTML		GeckoView is a set of components for embedding Gecko in Android apps
+Gecko / Firefox-based	nickvdyck/geckoview	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	tpo/applications/tor-browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	torproject/tor	ok		5071		2024-03-05	2013			unofficial git repo -- report bugs/issues/pull requests on https://gitlab.torproject.org/ --
+Gecko / Firefox-based	torproject/arti	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	Pale-Moon-Browser/Pale-Moon	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	MoonchildProductions/UXP	NOT_FOUND								gh: Not Found (HTTP 404)
+Gecko / Firefox-based	Feodor2/Mypal	ok		138		2022-04-07	2021			
+Gecko / Firefox-based	kuhhh/mypal68	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	WebKit/WebKit	ok		10228		2026-10-12	2020	JavaScript		Home of the WebKit project, the browser engine used by Safari, Mail, App Store and many other applications on macOS, iOS and Linux.
+WebKit / Qt / GTK / other-engine desktop browsers	OtterBrowser/otter-browser	ok		1988	GPL-3.0	2026-10-11	2013	C++		Otter Browser aims to recreate the best aspects of the classic Opera (12.x) UI using Qt5
+WebKit / Qt / GTK / other-engine desktop browsers	qutebrowser/qutebrowser	ok		11727	GPL-3.0	2026-10-05	2014	Python		A keyboard-driven, vim-like browser based on Python and Qt.
+WebKit / Qt / GTK / other-engine desktop browsers	luakit/luakit	ok		2319	GPL-3.0	2026-06-01	2010	Lua		Fast, small, webkit based browser framework extensible by Lua.
+WebKit / Qt / GTK / other-engine desktop browsers	uzbl/uzbl	ok		1044	GPL-3.0	2018-12-28	2009	C		A web browser that adheres to the unix philosophy.
+WebKit / Qt / GTK / other-engine desktop browsers	KDE/falkon	ok		492	GPL-3.0	2026-10-10	2017	C++		Cross-platform Qt-based web browser
+WebKit / Qt / GTK / other-engine desktop browsers	KDE/konqueror	ok		108		2026-10-11	2016	C++		Web browser and Swiss Army knife for any kind of file management and previewing
+WebKit / Qt / GTK / other-engine desktop browsers	GNOME/epiphany	ok		401	GPL-3.0	2026-10-11	2012	C		Read-only mirror of https://gitlab.gnome.org/GNOME/epiphany
+WebKit / Qt / GTK / other-engine desktop browsers	bluetech/surf	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	nicolas-ptn/surf	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	tpm-org/surf	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	DavidWood-gh/vimb	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	fanglingsu/vimb	ok		1480	GPL-3.0	2026-09-04	2012	C		Vimb - the vim like browser is a webkit based web browser that behaves like the vimperator plugin for the firefox and usage paradigms from the great e
+WebKit / Qt / GTK / other-engine desktop browsers	nyxt/nyxt	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	atlas-engineer/nyxt	ok		11031		2026-02-26	2017	Common Lisp		Nyxt - the hacker's browser.
+WebKit / Qt / GTK / other-engine desktop browsers	qt/qtwebengine	ok		441	BSD-3-Clause	2026-10-09	2013	C++		Qt WebEngine
+WebKit / Qt / GTK / other-engine desktop browsers	qt/qtwebkit	ok		212	NOASSERTION	2020-09-24	2013	C++		Qt Webkit
+WebKit / Qt / GTK / other-engine desktop browsers	annulen/webkit	ok	RENAMED→qtwebkit/qtwebkit	487		2024-05-27	2015		fork	Code in this repository is obsolete. Use this fork: https://github.com/movableink/webkit
+WebKit / Qt / GTK / other-engine desktop browsers	WebKitGTK/WebKitGTK	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	cogwheel/cog	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	Igalia/cog	ok		348	MIT	2026-09-01	2018	C		WPE launcher and webapp container
+WebKit / Qt / GTK / other-engine desktop browsers	Igalia/wpewebkit	NOT_FOUND								gh: Not Found (HTTP 404)
+WebKit / Qt / GTK / other-engine desktop browsers	WebPlatformForEmbedded/WPEWebKit	ok		251		2026-10-10	2014	JavaScript	fork	WPE WebKit port (downstream)
+Text-mode & minimalist	rkd77/elinks	ok		640	NOASSERTION	2026-10-10	2017	C		Fork of elinks
+Text-mode & minimalist	browsh-org/browsh	ok		19090	LGPL-2.1	2025-07-11	2016	JavaScript		A fully-modern text-based browser, rendering to TTY and browsers
+Text-mode & minimalist	tats/w3m	ok		1083	NOASSERTION	2024-08-19	2014	C		Debian's w3m: WWW browsable pager
+Text-mode & minimalist	nicksherron/w3m	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	CMB/edbrowse	ok	RENAMED→edbrowse/edbrowse	481	NOASSERTION	2026-10-11	2011	C		A command-line editor and web browser.
+Text-mode & minimalist	ThomasDickey/lynx-snapshots	ok		184	NOASSERTION	2026-05-31	2016	C		snapshots of releases and interim labels for "lynx"https://invisible-island.net/personal/git-exports.html (no pull requests)
+Text-mode & minimalist	dillo-plus/dillo-plus	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	nicolasstrobbe/links	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	netsurf-browser/netsurf	ok		186	NOASSERTION	2026-02-26	2014	C		Mirror
+Text-mode & minimalist	NetSurf/netsurf	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	minbrowser/min	ok		9203	Apache-2.0	2026-08-30	2015	JavaScript		A fast, minimal browser that protects your privacy
+Text-mode & minimalist	Jelmerro/Vieb	ok		1623	GPL-3.0	2026-08-22	2019	JavaScript		Vim Inspired Electron Browser - Vim bindings for the web by design
+Text-mode & minimalist	beakerbrowser/beaker	ARCHIVED		6740	MIT	2022-12-27	2016	JavaScript		An experimental peer-to-peer Web browser
+Text-mode & minimalist	beakerbrowser/hyperbeam	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	wexond/browser-base	ARCHIVED		2717		2023-06-04	2017	TypeScript		Modern and feature-rich web browser base based on Electron
+Text-mode & minimalist	wexond/wexond	ARCHIVED	RENAMED→wexond/browser-base	2717		2023-06-04	2017	TypeScript		Modern and feature-rich web browser base based on Electron
+Text-mode & minimalist	LulumiProject/lulumi-browser	ok		442	Apache-2.0	2022-12-10	2017	JavaScript		Lulumi-browser is a lightweight browser coded with Vue.js 2 and Electron.
+Text-mode & minimalist	antfu/broz	ok		1136		2026-07-22	2021	TypeScript		A simple, frameless browser for screenshots
+Text-mode & minimalist	samuelmaddock/electron-browser-shell	ok		739	GPL-3.0	2026-09-01	2020	TypeScript		A minimal, tabbed web browser with support for Chrome extensions—built on Electron.
+Text-mode & minimalist	hulufei/electron-as-browser	ok		249	MIT	2024-01-09	2019	JavaScript		Make electron like browser easy and flexible.
+Text-mode & minimalist	tholian-network/stealth	ok		1149	GPL-3.0	2023-10-05	2019	JavaScript		:rocket: Stealth - Secure, Peer-to-Peer, Private and Automateable Web Browser/Scraper/Proxy
+Text-mode & minimalist	yokoffing/filterlists	ok		3615		2026-09-07	2021			Collection of blocklists to fill in the gaps
+Text-mode & minimalist	OnionBrowser/OnionBrowser	ok		2691	NOASSERTION	2026-10-09	2012	Swift		An open-source, privacy-enhancing web browser for iOS, utilizing the Tor anonymity network
+Text-mode & minimalist	guardianproject/orbot	ok	RENAMED→guardianproject/orbot-android	3616	NOASSERTION	2026-10-09	2014	Kotlin		The Github home of Orbot: Tor on Android (Also available on gitlab!)
+Text-mode & minimalist	guardianproject/fennec	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	anthonycr/Lightning-Browser	ok		2438	MPL-2.0	2026-10-10	2013	Kotlin		A lightweight Android browser with modern navigation
+Text-mode & minimalist	scopely/lightning	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	nicodemus/mycel	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	mycel/mycel	NOT_FOUND								gh: Not Found (HTTP 404)
+Text-mode & minimalist	adamschwartz/chrome-tabs	ok		1791	MIT	2023-12-28	2013	JavaScript		Chrome-style tabs in HTML/CSS.
+Browser-like Electron/Tauri/etc. app shells & multi-service	ferdium/ferdium-app	ok		4677	Apache-2.0	2026-10-08	2022	TypeScript		All your services in one place, built by the community
+Browser-like Electron/Tauri/etc. app shells & multi-service	getferdi/ferdi	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser-like Electron/Tauri/etc. app shells & multi-service	meetfranz/franz	ok		4724	Apache-2.0	2026-06-12	2017	JavaScript		Franz is a free messaging app for services like WhatsApp, Slack, Messenger and many more.
+Browser-like Electron/Tauri/etc. app shells & multi-service	ramboxapp/community-edition	ARCHIVED		6381	GPL-3.0	2022-04-21	2016	JavaScript		Free and Open Source messaging and emailing app that combines common web applications into one.
+Browser-like Electron/Tauri/etc. app shells & multi-service	jiahaog/nativefier	ARCHIVED	RENAMED→nativefier/nativefier	35236	MIT	2023-09-29	2015	TypeScript		Make any web page a desktop application
+Browser-like Electron/Tauri/etc. app shells & multi-service	will-stone/browserosaurus	ARCHIVED		2010	GPL-3.0	2025-08-02	2017	TypeScript		🦖 The browser prompter for macOS
+Browser-like Electron/Tauri/etc. app shells & multi-service	Rajaniraiyn/awesome-electron-browsers	ok		96	CC0-1.0	2026-10-06	2022			An awesome list of Web browsers based on Electron.js framework
+Browser-like Electron/Tauri/etc. app shells & multi-service	nicedoc/electron-browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser-like Electron/Tauri/etc. app shells & multi-service	electron/electron	ok		123283	MIT	2026-10-11	2013	C++		:electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS
+Browser-like Electron/Tauri/etc. app shells & multi-service	nwjs/nw.js	ok		41140	MIT	2026-10-10	2012	JavaScript		Call all Node.js modules directly from DOM/WebWorker and enable a new way of writing applications with all Web technologies.
+Browser-like Electron/Tauri/etc. app shells & multi-service	wailsapp/wails	ok		36518	MIT	2026-10-12	2018	Go		Create beautiful applications using Go
+Browser-like Electron/Tauri/etc. app shells & multi-service	tauri-apps/tauri	ok		111772	Apache-2.0	2026-10-12	2019	Rust		Build smaller, faster, and more secure desktop and mobile applications with a web frontend.
+Browser-like Electron/Tauri/etc. app shells & multi-service	tauri-apps/wry	ok		4999	Apache-2.0	2026-10-10	2020	Rust		Cross-platform WebView library in Rust for Tauri.
+Browser-like Electron/Tauri/etc. app shells & multi-service	tauri-apps/tao	ok		2214	Apache-2.0	2026-10-11	2021	Rust		The TAO of cross-platform windowing. A library in Rust built for Tauri.
+Browser-like Electron/Tauri/etc. app shells & multi-service	neutralinojs/neutralinojs	ok		8664	NOASSERTION	2026-10-12	2018	C		Portable and lightweight cross-platform desktop application development framework
+Browser-like Electron/Tauri/etc. app shells & multi-service	webview/webview	ok		14274	MIT	2026-03-09	2017	C++		Tiny cross-platform webview library for C/C++. Uses WebKit (GTK/Cocoa) and Edge WebView2 (Windows).
+Browser-like Electron/Tauri/etc. app shells & multi-service	webview/webview_rust	ok		122	MIT	2022-05-14	2020	Rust		[wip] Rust Bindings to webview
+Browser-like Electron/Tauri/etc. app shells & multi-service	Boscop/web-view	ok		1953	MIT	2024-05-09	2018	JavaScript		Rust bindings for webview, a tiny cross-platform library to render web-based GUIs for desktop applications
+Browser-like Electron/Tauri/etc. app shells & multi-service	zserge/webview	ok	RENAMED→webview/webview	14274	MIT	2026-03-09	2017	C++		Tiny cross-platform webview library for C/C++. Uses WebKit (GTK/Cocoa) and Edge WebView2 (Windows).
+Browser-like Electron/Tauri/etc. app shells & multi-service	saucer/saucer	ok		949	MIT	2026-09-06	2021	C++		🛸 A modern, cross-platform C++ webview library
+Browser-like Electron/Tauri/etc. app shells & multi-service	nicolo/saucer	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser-like Electron/Tauri/etc. app shells & multi-service	sciter-sdk/sciter-js-sdk	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser-like Electron/Tauri/etc. app shells & multi-service	ultralight-ux/Ultralight	ok		5020		2024-04-22	2018	CMake		Lightweight, high-performance HTML renderer for game and app developers.
+Browser-like Electron/Tauri/etc. app shells & multi-service	flutter/flutter	ok		179807	BSD-3-Clause	2026-10-11	2015	Dart		Flutter makes it easy and fast to build beautiful apps for mobile and beyond
+Browser-like Electron/Tauri/etc. app shells & multi-service	pichillilorenzo/flutter_inappwebview	ok		3784	Apache-2.0	2026-02-10	2018	Dart		A Flutter plugin that allows you to add an inline webview, to use a headless webview, and to open an in-app browser window.
+Browser-like Electron/Tauri/etc. app shells & multi-service	react-native-webview/react-native-webview	ok		7195	MIT	2026-09-20	2018	TypeScript		React Native Cross-Platform WebView
+Browser-like Electron/Tauri/etc. app shells & multi-service	cordova/cordova	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser-like Electron/Tauri/etc. app shells & multi-service	ionic-team/capacitor	ok		16835	MIT	2026-10-09	2017	TypeScript		Build cross-platform Native Progressive Web Apps for iOS, Android, and the Web ⚡️
+Browser-like Electron/Tauri/etc. app shells & multi-service	electrobun/electrobun	NOT_FOUND								gh: Not Found (HTTP 404)
+Browser-like Electron/Tauri/etc. app shells & multi-service	blackboardsh/electrobun	ok		12907	MIT	2026-10-12	2024	TypeScript		Build ultra fast, tiny, and cross-platform desktop apps with Typescript.
+Browser-like Electron/Tauri/etc. app shells & multi-service	nicbarker/electrobun	NOT_FOUND								gh: Not Found (HTTP 404)
+Ad / tracker blocking, filter lists, DNS	gorhill/uBlock	ok		68486	GPL-3.0	2026-10-11	2015	JavaScript		uBlock Origin - An efficient blocker for Chromium and Firefox. Fast and lean.
+Ad / tracker blocking, filter lists, DNS	uBlockOrigin/uBlock-issues	ok		1157		2026-09-19	2018			This is the community-maintained issue tracker for uBlock Origin
+Ad / tracker blocking, filter lists, DNS	uBlockOrigin/uAssets	ok		6065	GPL-3.0	2026-10-12	2016	Adblock Filter List		Filter lists for uBlock Origin & uBlock Origin Lite
+Ad / tracker blocking, filter lists, DNS	uBlockOrigin/uBOL-home	ok		3879	GPL-3.0	2026-10-11	2022	JavaScript		uBO Lite home (MV3)
+Ad / tracker blocking, filter lists, DNS	brave/adblock-rust	ok		2861	MPL-2.0	2026-10-07	2019	Rust		Brave's Rust-based adblock engine
+Ad / tracker blocking, filter lists, DNS	cliqz-oss/adblocker	ok	RENAMED→ghostery/adblocker	1014	MPL-2.0	2026-10-11	2017	TypeScript		Efficient embeddable adblocker library
+Ad / tracker blocking, filter lists, DNS	ghostery/adblocker	ok		1014	MPL-2.0	2026-10-11	2017	TypeScript		Efficient embeddable adblocker library
+Ad / tracker blocking, filter lists, DNS	ghostery/ghostery-extension	ok		1754	GPL-3.0	2026-10-09	2018	JavaScript		Ghostery Browser Extension for Firefox, Chrome, Opera, Edge and Safari
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/AdguardBrowserExtension	ok		4495	GPL-3.0	2026-09-30	2015	TypeScript		AdGuard browser extension
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/AdGuardHome	ok		37365	GPL-3.0	2026-10-08	2016	TypeScript		Network-wide ads & trackers blocking DNS server
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/dnsproxy	ok		3360	Apache-2.0	2026-10-09	2018	Go		Simple DNS proxy with DoH, DoT, DoQ and DNSCrypt support
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/FiltersRegistry	ok		366	LGPL-3.0	2026-10-12	2018	Adblock Filter List		Known filters subscriptions transformed for better compatibility with AdGuard
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/AdguardFilters	ok		4546	GPL-3.0	2026-10-12	2014	Adblock Filter List		AdGuard Content Blocking Filters
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/tsurlfilter	ok		82	GPL-3.0	2026-10-05	2020	TypeScript		AdGuard content blocking library
+Ad / tracker blocking, filter lists, DNS	AdguardTeam/CoreLibs	ok		49	Apache-2.0	2024-05-17	2016			Core Adguard libraries
+Ad / tracker blocking, filter lists, DNS	adblockplus/adblockpluschrome	ARCHIVED		547	GPL-3.0	2021-02-21	2015	JavaScript		Mirrored from https://gitlab.com/eyeo/adblockplus/adblockpluschrome
+Ad / tracker blocking, filter lists, DNS	adblockplus/adblockpluscore	ok		116	GPL-3.0	2023-10-04	2015	JavaScript		Mirrored from https://gitlab.com/eyeo/adblockplus/adblockpluscore
+Ad / tracker blocking, filter lists, DNS	easylist/easylist	ok		3161		2026-10-12	2016	Adblock Filter List		EasyList filter subscription (EasyList, EasyPrivacy, EasyList Cookie, Fanboy's Social/Annoyances/Notifications Blocking List)
+Ad / tracker blocking, filter lists, DNS	EFForg/privacybadger	ok		3863	NOASSERTION	2026-10-09	2013	JavaScript		Privacy Badger is a browser extension that automatically learns to block hidden trackers
+Ad / tracker blocking, filter lists, DNS	EFForg/https-everywhere	ARCHIVED		3354	NOASSERTION	2023-01-25	2013	JavaScript		A browser extension that encrypts your communications with many websites that offer HTTPS but still allow unencrypted connections.
+Ad / tracker blocking, filter lists, DNS	EFForg/cookieblocker	NOT_FOUND								gh: Not Found (HTTP 404)
+Ad / tracker blocking, filter lists, DNS	duckduckgo/tracker-radar	ok		1737	NOASSERTION	2026-10-09	2020	JavaScript		Data set of top third party web domains with rich metadata about them
+Ad / tracker blocking, filter lists, DNS	duckduckgo/tracker-radar-collector	ok		169	NOASSERTION	2026-10-08	2020	JavaScript		🕸 Modular, multithreaded, puppeteer-based crawler
+Ad / tracker blocking, filter lists, DNS	duckduckgo/privacy-grade	ARCHIVED		12	NOASSERTION	2023-03-10	2018	JavaScript		
+Ad / tracker blocking, filter lists, DNS	ClearURLs/Addon	ok		5066	LGPL-3.0	2025-07-27	2017	JavaScript		ClearURLs is an add-on based on the new WebExtensions technology and will automatically remove tracking elements from URLs to help protect your privac
+Ad / tracker blocking, filter lists, DNS	Rob--W/clearurls	NOT_FOUND								gh: Not Found (HTTP 404)
+Ad / tracker blocking, filter lists, DNS	nobody42/localcdn	NOT_FOUND								gh: Not Found (HTTP 404)
+Ad / tracker blocking, filter lists, DNS	Synzvato/decentraleyes	ARCHIVED		1464	MPL-2.0	2019-02-23	2015	JavaScript		This repository has a new home: https://git.synz.io/Synzvato/decentraleyes
+Ad / tracker blocking, filter lists, DNS	kkapsner/CanvasBlocker	ok		1524	MPL-2.0	2026-09-07	2014	JavaScript		A Firefox extension to protect from being fingerprinted.
+Ad / tracker blocking, filter lists, DNS	polcak/jsrestrictor	ok		268	GPL-3.0	2026-10-06	2019	JavaScript		JavaScript Restrictor web extension
+Ad / tracker blocking, filter lists, DNS	hackademix/noscript	ok		1162	GPL-3.0	2026-10-05	2018	JavaScript		The popular NoScript Security Suite browser extension.
+Ad / tracker blocking, filter lists, DNS	Cookie-AutoDelete/Cookie-AutoDelete	ok		2016	MIT	2025-12-26	2017	TypeScript		Firefox and Chrome WebExtension that deletes cookies and other browsing site data as soon as the tab closes, domain changes, browser restarts, or a co
+Ad / tracker blocking, filter lists, DNS	cavi-au/Consent-O-Matic	ok		4272	NOASSERTION	2026-02-07	2019	JavaScript		Browser extension that automatically fills out cookie popups based on your preferences
+Ad / tracker blocking, filter lists, DNS	OhMyGuus/I-Don-t-Care-About-Cookies	NOT_FOUND								gh: Not Found (HTTP 404)
+Ad / tracker blocking, filter lists, DNS	StevenBlack/hosts	ok		31209	MIT	2026-10-07	2012	Python		🔒 Consolidating and extending hosts files from several well-curated sources. Optionally pick extensions for porn, social media, and other categories.
+Ad / tracker blocking, filter lists, DNS	hagezi/dns-blocklists	ok		27278	GPL-3.0	2026-10-11	2022	Text		DNS-Blocklists: For a better internet - keep the internet clean!
+Ad / tracker blocking, filter lists, DNS	pi-hole/pi-hole	ok		61242	NOASSERTION	2026-10-11	2014	Shell		A black hole for Internet advertisements
+Ad / tracker blocking, filter lists, DNS	pi-hole/FTL	ok		1714	NOASSERTION	2026-10-11	2017	C		The Pi-hole FTL engine
+Ad / tracker blocking, filter lists, DNS	DNSCrypt/dnscrypt-proxy	ok		13730	ISC	2026-10-10	2018	Go		dnscrypt-proxy 2 - A flexible DNS proxy, with support for encrypted DNS protocols.
+Ad / tracker blocking, filter lists, DNS	0xERR0R/blocky	ok		7024	Apache-2.0	2026-10-09	2019	Go		Fast and lightweight DNS proxy as ad-blocker for local network with many features
+Ad / tracker blocking, filter lists, DNS	cloudflare/cloudflared	ok		16105	Apache-2.0	2026-10-08	2017	Go		Cloudflare Tunnel client
+Ad / tracker blocking, filter lists, DNS	NLnetLabs/unbound	ok		4978	BSD-3-Clause	2026-10-09	2017	C		Unbound is a validating, recursive, and caching DNS resolver.
+Ad / tracker blocking, filter lists, DNS	coredns/coredns	ok		14366	Apache-2.0	2026-10-09	2016	Go		CoreDNS is a DNS server that chains plugins
+Ad / tracker blocking, filter lists, DNS	mullvad/mullvadvpn-app	ok		7654	GPL-3.0	2026-10-11	2017	Rust		The Mullvad VPN client app for desktop and mobile
+Ad / tracker blocking, filter lists, DNS	WireGuard/wireguard-go	ok		4445	MIT	2026-10-06	2018	Go		Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go
+Ad / tracker blocking, filter lists, DNS	SagerNet/sing-box	ok		38767	NOASSERTION	2026-10-11	2022	Go		The universal proxy platform
+Ad / tracker blocking, filter lists, DNS	MetaCubeX/mihomo	ok		34803	MIT	2026-10-11	2021	Python		A simple Python Pydantic model for Honkai: Star Rail parsed data from the Mihomo API.
+Ad / tracker blocking, filter lists, DNS	XTLS/Xray-core	ok		42061	MPL-2.0	2026-10-12	2020	Go		Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.
+Ad / tracker blocking, filter lists, DNS	v2fly/v2ray-core	ok		34673	MIT	2026-10-09	2019	Go		A platform for building proxies to bypass network restrictions.
+Ad / tracker blocking, filter lists, DNS	shadowsocks/shadowsocks-rust	ok		10928	MIT	2026-10-12	2014	Rust		A Rust port of shadowsocks
+Ad / tracker blocking, filter lists, DNS	mitmproxy/mitmproxy	ok		45424	MIT	2026-10-05	2010	Python		An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
+Ad / tracker blocking, filter lists, DNS	httptoolkit/httptoolkit	ok		3652		2026-02-04	2018			HTTP Toolkit is a beautiful & open-source tool for debugging, testing and building with HTTP(S) on Windows, Linux & Mac  :tada:  Open an issue here to
+Ad / tracker blocking, filter lists, DNS	zaproxy/zaproxy	ok		15917	Apache-2.0	2026-10-08	2015	Java		The ZAP by Checkmarx Core project
+Ad / tracker blocking, filter lists, DNS	projectdiscovery/katana	ok		17647	MIT	2026-10-08	2021	Go		A next-generation crawling and spidering framework.
+Ad / tracker blocking, filter lists, DNS	EnableSecurity/wafw00f	ok		6574	BSD-3-Clause	2026-04-19	2014	Python		WAFW00F allows one to identify and fingerprint Web Application Firewall (WAF) products protecting a website.
+Fingerprinting research / testing	fingerprintjs/fingerprintjs	ok		28565	MIT	2026-10-07	2015	TypeScript		The most advanced free and open-source browser fingerprinting library
+Fingerprinting research / testing	abrahamjuliot/creepjs	ok		2522	MIT	2026-06-11	2020	TypeScript		Creepy device and browser fingerprinting
+Fingerprinting research / testing	niespodd/browser-fingerprinting	ok		5154		2026-07-27	2021	JavaScript		Analysis of Bot Protection systems with available countermeasures 🚿. How to defeat anti-bot system 👻 and get around browser fingerprinting scripts �
+Fingerprinting research / testing	apify/fingerprint-suite	ok		2629	Apache-2.0	2026-10-07	2022	TypeScript		Browser fingerprinting tools for anonymizing your scrapers. Developed by Apify.
+Fingerprinting research / testing	daijro/camoufox	ok		12474	MPL-2.0	2026-10-11	2024	Python		🦊 Anti-detect browser
+Fingerprinting research / testing	nicedoc/camoufox	NOT_FOUND								gh: Not Found (HTTP 404)
+Fingerprinting research / testing	berstend/puppeteer-extra	ok		7409	MIT	2024-07-18	2018	JavaScript		💯  Teach puppeteer new tricks through plugins.
+Fingerprinting research / testing	ultrafunkamsterdam/undetected-chromedriver	ok		12867	GPL-3.0	2025-07-05	2019	Python		Custom Selenium Chromedriver | Zero-Config | Passes ALL bot mitigation systems (like Distil / Imperva/ Datadadome / CloudFlare IUAM)
+Fingerprinting research / testing	Kaliiiiiiiiii-Vinyzu/patchright	ok		4828	Apache-2.0	2026-10-11	2023	TypeScript		Undetected version of the Playwright testing and automation library.
+Fingerprinting research / testing	rebrowser/rebrowser-patches	ok		1441		2025-05-09	2024	JavaScript		Collection of patches for puppeteer and playwright to avoid automation detection and leaks. Helps to avoid Cloudflare and DataDome CAPTCHA pages. Easy
+Fingerprinting research / testing	CheshireCaat/playwright-with-fingerprints	ok	RENAMED→bablosoft/playwright-with-fingerprints	343	MIT	2026-09-22	2022	JavaScript		Anonymous automation via playwright with fingerprint replacement technology.
+Fingerprinting research / testing	adryfish/fingerprint-chromium	ok		3130	BSD-3-Clause	2026-10-02	2024			An open source fingerprint browser based on Ungoogled Chromium. 指纹浏览器 隐私浏览器
+Fingerprinting research / testing	nicedoc/fingerprint-chromium	NOT_FOUND								gh: Not Found (HTTP 404)
+Extensions: tooling and platforms	mozilla/web-ext	ok		3146	MPL-2.0	2026-10-10	2016	JavaScript		A command line tool to help build, run, and test web extensions
+Extensions: tooling and platforms	mozilla/webextension-polyfill	ARCHIVED		3067	MPL-2.0	2026-07-30	2016	JavaScript		A lightweight polyfill library for Promise-based WebExtension APIs in Chrome
+Extensions: tooling and platforms	mozilla/addons-server	ok		903	BSD-3-Clause	2026-10-09	2014	Python		🕶 addons.mozilla.org Django app and API 🎉
+Extensions: tooling and platforms	PlasmoHQ/plasmo	ok		13166	MIT	2026-10-11	2022	TypeScript		🧩 The Browser Extension Framework
+Extensions: tooling and platforms	wxt-dev/wxt	ok		10597	MIT	2026-10-11	2023	TypeScript		⚡ Next-gen Web Extension Framework
+Extensions: tooling and platforms	crxjs/chrome-extension-tools	ok		4182		2026-10-06	2019	TypeScript		Build cross-browser extensions with native HMR and zero-config setup
+Extensions: tooling and platforms	extension-js/extension.js	ok		5189	MIT	2026-10-10	2020	TypeScript		The cross-browser extension framework.
+Extensions: tooling and platforms	GoogleChrome/chrome-extensions-samples	ok		17809	Apache-2.0	2026-10-06	2012	JavaScript		Chrome Extensions Samples
+Extensions: tooling and platforms	mdn/webextensions-examples	ok		4475	MPL-2.0	2026-10-05	2015	JavaScript		Example Firefox add-ons created using the WebExtensions API
+Extensions: tooling and platforms	violentmonkey/violentmonkey	ok		9002	MIT	2026-10-10	2013	JavaScript		Violentmonkey provides userscripts support for browsers. It works on browsers with WebExtensions support.
+Extensions: tooling and platforms	greasemonkey/greasemonkey	ok		2601	NOASSERTION	2026-06-03	2009	JavaScript		Greasemonkey is a user script manager for Firefox.
+Extensions: tooling and platforms	openstyles/stylus	ok		6931	GPL-3.0	2026-10-07	2017	JavaScript		Stylus - Userstyles Manager
+Extensions: tooling and platforms	Tampermonkey/tampermonkey	ok		5787	GPL-3.0	2025-03-30	2015	JavaScript		Tampermonkey is the most popular userscript manager, with over 10 million users. It's available for Chrome, Microsoft Edge, Safari, Opera Next, and Fi
+Extensions: tooling and platforms	Jelmerro/nativefier-extensions	NOT_FOUND								gh: Not Found (HTTP 404)
+Extensions: tooling and platforms	getstation/electron-chrome-extension	ok		154		2023-02-03	2017	TypeScript		Implementation of Chrome extension APIs for Electron
+Extensions: tooling and platforms	MarshallOfSound/electron-devtools-installer	ok		1221	MIT	2025-11-15	2016	TypeScript		An easy way to ensure Chrome DevTools extensions into Electron
+Extensions: tooling and platforms	sindresorhus/awesome-electron	ok		27306	CC0-1.0	2026-05-03	2015			Useful resources for creating apps with Electron [SUBMISSIONS ARE TEMPORARILY PAUSED BECAUSE I'M TIRED OF REVIEWING LOW-QUALITY STUFF]
+Extensions: tooling and platforms	thamara/awesome-browser-extensions	ok		6	CC0-1.0	2020-07-13	2019			An awesome list of browser's extensions
+Keyboard-driven / productivity extensions	philc/vimium	ok		27057	MIT	2026-07-25	2009	JavaScript		The hacker's browser.
+Keyboard-driven / productivity extensions	brookhong/Surfingkeys	ok		6181	MIT	2026-10-02	2015	JavaScript		Map your keys for web surfing, expand your browser with javascript and keyboard.
+Keyboard-driven / productivity extensions	tridactyl/tridactyl	ok		6373	NOASSERTION	2026-10-07	2017	TypeScript		A Vim-like interface for Firefox, inspired by Vimperator/Pentadactyl.
+Keyboard-driven / productivity extensions	gdh1995/vimium-c	ok		4606	NOASSERTION	2026-02-03	2015	TypeScript		A keyboard shortcut browser extension for keyboard-based navigation and tab operations with an advanced omnibar
+Keyboard-driven / productivity extensions	lusakasa/saka	ARCHIVED		220	MIT	2023-02-13	2017	JavaScript		Elegant tab, bookmark and history search
+Keyboard-driven / productivity extensions	piroor/treestyletab	ok		3785	NOASSERTION	2026-10-09	2010	JavaScript		Tree Style Tab, Show tabs like a tree.
+Keyboard-driven / productivity extensions	mbnuqw/sidebery	ok		4716	MIT	2026-09-18	2018	TypeScript		Firefox extension for managing tabs and bookmarks in sidebar.
+Keyboard-driven / productivity extensions	rNeomy/auto-tab-discard	ok		1222	MPL-2.0	2026-10-11	2017	JavaScript		Use native tab discarding method to automatically reduce memory usage of inactive tabs
+Keyboard-driven / productivity extensions	tabwrangler/tabwrangler	ok		654	GPL-3.0	2026-10-12	2012	TypeScript		A browser extension that automatically closes your unused tabs so you can focus on the tabs that matter
+Keyboard-driven / productivity extensions	Tab-Session-Manager/Tab-Session-Manager	NOT_FOUND								gh: Not Found (HTTP 404)
+Keyboard-driven / productivity extensions	sissbruecker/linkding	ok		11294	MIT	2026-10-01	2019	Python		Self-hosted bookmark manager that is designed be to be minimal, fast, and easy to set up using Docker.
+Keyboard-driven / productivity extensions	floccusaddon/floccus	ok		8559	MPL-2.0	2026-10-11	2016	TypeScript		:cloud: Sync your bookmarks privately across browsers and devices
+Keyboard-driven / productivity extensions	gildas-lormeau/SingleFile	ok		22580	AGPL-3.0	2026-10-11	2010	JavaScript		Web Extension for saving a faithful copy of a complete web page in a single HTML file
+Keyboard-driven / productivity extensions	gildas-lormeau/single-file-cli	ok		1654	AGPL-3.0	2026-10-10	2022	JavaScript		CLI tool for saving a faithful copy of a complete web page in a single HTML file (based on SingleFile)
+Keyboard-driven / productivity extensions	ArchiveBox/ArchiveBox	ok		28736	MIT	2026-10-12	2017	Python		🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more...
+Keyboard-driven / productivity extensions	webrecorder/browsertrix-crawler	ok		1159	AGPL-3.0	2026-10-08	2020	TypeScript		Run a high-fidelity browser-based web archiving crawler in a single Docker container
+Keyboard-driven / productivity extensions	webrecorder/replayweb.page	ok		994	AGPL-3.0	2026-09-03	2019	TypeScript		Serverless replay of web archives directly in the browser
+Keyboard-driven / productivity extensions	webrecorder/pywb	ok		1708	GPL-3.0	2026-10-09	2013	JavaScript		Core Python Web Archiving Toolkit for replay and recording of web archives
+Keyboard-driven / productivity extensions	webrecorder/archiveweb.page	ok		1595	AGPL-3.0	2026-09-04	2020	TypeScript		A High-Fidelity Web Archiving Extension for Chrome and Chromium based browsers!
+Keyboard-driven / productivity extensions	gildas-lormeau/zip.js	ok		3899	BSD-3-Clause	2026-10-03	2011	JavaScript		JavaScript library to zip and unzip files supporting parallel compression, web streams, pluggable compression engines, zip64, split files, data encryp
+Keyboard-driven / productivity extensions	wallabag/wallabag	ok		13007	MIT	2026-10-07	2013	PHP		wallabag is a self hostable application for saving web pages: Save and classify articles. Read them later. Freely.
+Keyboard-driven / productivity extensions	omnivore-app/omnivore	ok		16279	AGPL-3.0	2026-10-11	2022	TypeScript		Omnivore is a complete, open source read-it-later solution for people who like reading.
+Keyboard-driven / productivity extensions	karakeep-app/karakeep	ok		29607	AGPL-3.0	2026-10-11	2024	TypeScript		A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search
+Keyboard-driven / productivity extensions	hoarder-app/hoarder	ok	RENAMED→karakeep-app/karakeep	29607	AGPL-3.0	2026-10-11	2024	TypeScript		A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search
+Keyboard-driven / productivity extensions	linkwarden/linkwarden	ok		20059	AGPL-3.0	2026-10-11	2022	TypeScript		⚡️⚡️⚡️ Self-hosted collaborative bookmark manager to collect, read, annotate, and fully preserve what matters, all in one place.
+Keyboard-driven / productivity extensions	shiori-dev/shiori	NOT_FOUND								gh: Not Found (HTTP 404)
+Keyboard-driven / productivity extensions	go-shiori/shiori	ok		11669	MIT	2026-10-11	2018	Go		Simple bookmark manager built with Go
+Keyboard-driven / productivity extensions	go-shiori/go-readability	ARCHIVED		939	MIT	2025-12-05	2018	HTML		Go package that cleans a HTML page for better readability.
+Keyboard-driven / productivity extensions	postlight/parser	ok		5787	Apache-2.0	2024-07-10	2016	JavaScript		📜 Extract meaningful content from the chaos of a web page
+Keyboard-driven / productivity extensions	postlight/mercury-parser	ok	RENAMED→postlight/parser	5787	Apache-2.0	2024-07-10	2016	JavaScript		📜 Extract meaningful content from the chaos of a web page
+Keyboard-driven / productivity extensions	adbar/trafilatura	ok		6957	Apache-2.0	2026-10-06	2019	Python		Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML
+Keyboard-driven / productivity extensions	kepano/defuddle	ok		9652	MIT	2026-10-10	2025	TypeScript		Get the main content of any page as Markdown.
+Keyboard-driven / productivity extensions	mozilla/readability	ok		11491	Apache-2.0	2026-08-04	2015	JavaScript		A standalone version of the readability lib
+Keyboard-driven / productivity extensions	deathau/markdownload	ok		4038	Apache-2.0	2025-06-11	2020	JavaScript	fork	A Firefox and Google Chrome extension to clip websites and download them into a readable markdown file.
+Keyboard-driven / productivity extensions	obsidianmd/obsidian-clipper	ok		5322	MIT	2026-09-22	2024	TypeScript		Highlight and capture the web in your favorite browser. The official Web Clipper extension for Obsidian.
+Keyboard-driven / productivity extensions	zotero/zotero	ok		15556	NOASSERTION	2026-10-09	2011	JavaScript		Zotero is a free, easy-to-use tool to help you collect, organize, annotate, cite, and share your research sources.
+Keyboard-driven / productivity extensions	zotero/translators	ok		1711		2026-10-09	2011	JavaScript		Zotero Translators
+Keyboard-driven / productivity extensions	hypothesis/client	ok		737	NOASSERTION	2026-10-04	2016	Mustache		The Hypothesis web-based annotation client.
+Keyboard-driven / productivity extensions	hypothesis/h	ok		3189	BSD-2-Clause	2026-10-09	2012	Python		Annotate with anyone, anywhere.
+Keyboard-driven / productivity extensions	mixmark-io/turndown	ok		11470	MIT	2026-09-03	2011	HTML		🛏 An HTML to Markdown converter written in JavaScript
+Keyboard-driven / productivity extensions	igrigorik/videospeed	ok		4458	MIT	2026-09-29	2014	JavaScript		HTML5 video speed controller (for Google Chrome)
+Keyboard-driven / productivity extensions	yt-dlp/yt-dlp	ok		196946	Unlicense	2026-10-10	2020	Python		A feature-rich command-line audio/video downloader
+Keyboard-driven / productivity extensions	mpv-player/mpv	ok		37343	NOASSERTION	2026-10-11	2012	C		🎥 Command line media player
+Keyboard-driven / productivity extensions	videolan/vlc	ok		19946	GPL-2.0	2026-10-11	2012	C		VLC media player - plays everything, runs anywhere. Code here: https://code.videolan.org/videolan/vlc
+Keyboard-driven / productivity extensions	ajayyy/SponsorBlock	ok		13916	GPL-3.0	2026-10-03	2019	TypeScript		Skip YouTube video sponsors (browser extension)
+Keyboard-driven / productivity extensions	iv-org/invidious	ok		25282	AGPL-3.0	2026-10-11	2018	Crystal		Invidious is an alternative front-end to YouTube
+Keyboard-driven / productivity extensions	TeamPiped/Piped	ok		10281	AGPL-3.0	2026-10-10	2020	Vue		An alternative privacy-friendly YouTube frontend which is efficient by design.
+Keyboard-driven / productivity extensions	sindresorhus/refined-github	ok	RENAMED→refined-github/refined-github	32287	MIT	2026-10-09	2016	TypeScript		:octocat: Browser extension that simplifies the GitHub interface and adds useful features
+Translation / on-device AI in browsers	browsermt/bergamot-translator	ok		551	MPL-2.0	2024-05-12	2020	C++		Cross platform C++ library focusing on optimized machine translation on the consumer-grade device. 
+Translation / on-device AI in browsers	mozilla/firefox-translations	ARCHIVED		568	MPL-2.0	2023-09-04	2021	JavaScript		Firefox Translations is a webextension that enables client side translations for web browsers.
+Translation / on-device AI in browsers	mozilla/translations	ok		363	MPL-2.0	2026-09-25	2021	C++		The code, training pipeline, and models that power Firefox Translations
+Translation / on-device AI in browsers	LibreTranslate/LibreTranslate	ok		17044	AGPL-3.0	2026-09-28	2020	Python		Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.
+Translation / on-device AI in browsers	argosopentech/argos-translate	ok		6550	MIT	2026-08-08	2020	Python		Open-source offline translation library written in Python
+Translation / on-device AI in browsers	xenova/transformers.js	ok	RENAMED→huggingface/transformers.js	16342	Apache-2.0	2026-10-11	2023	JavaScript		State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!
+Translation / on-device AI in browsers	huggingface/transformers.js	ok		16342	Apache-2.0	2026-10-11	2023	JavaScript		State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!
+Translation / on-device AI in browsers	mlc-ai/web-llm	ok		19255	Apache-2.0	2026-10-11	2023	TypeScript		High-performance In-browser LLM Inference Engine 
+Translation / on-device AI in browsers	mlc-ai/mlc-llm	ok		23226	Apache-2.0	2026-10-06	2023	Python		Universal LLM Deployment Engine with ML Compilation
+Translation / on-device AI in browsers	ggml-org/llama.cpp	ok		130861	MIT	2026-10-11	2023	C++		LLM inference in C/C++
+Translation / on-device AI in browsers	ggerganov/llama.cpp	ok	RENAMED→ggml-org/llama.cpp	130861	MIT	2026-10-11	2023	C++		LLM inference in C/C++
+Translation / on-device AI in browsers	ollama/ollama	ok		182785	MIT	2026-10-11	2023	Go		Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.
+Translation / on-device AI in browsers	n4ze3m/page-assist	ok		8249	MIT	2026-10-11	2023	TypeScript		Use your locally running AI models to assist you in your web browsing
+Translation / on-device AI in browsers	andrewnguonly/Lumos	ok		1512	MIT	2025-01-26	2023	TypeScript		A RAG LLM co-pilot for browsing the web, powered by local LLMs
+Translation / on-device AI in browsers	nanobrowser/nanobrowser	ok		14068	Apache-2.0	2026-10-02	2024	TypeScript		Open-Source Chrome extension for AI-powered web automation. Run multi-agent workflows using your own LLM API key. Alternative to OpenAI Operator.
+Translation / on-device AI in browsers	lencx/ChatGPT	ok		54598		2024-08-29	2022	Rust		❄️ ChatGPT Desktop Application (Mac, Windows and Linux)
+Translation / on-device AI in browsers	ChatGPTBox-dev/chatGPTBox	ok		10758	MIT	2026-10-08	2023	JavaScript		Integrating ChatGPT into your browser deeply, everything you need is here
+Translation / on-device AI in browsers	mozilla-ai/any-agent	ok		1242	Apache-2.0	2026-10-01	2025	Python		A single interface to use and evaluate different agent frameworks 
+Translation / on-device AI in browsers	mozilla/pdf.js	ok		53994	Apache-2.0	2026-10-11	2011	JavaScript		PDF Reader in JavaScript
+Translation / on-device AI in browsers	Mozilla-Ocho/llamafile	ok	RENAMED→mozilla-ai/llamafile	26224	NOASSERTION	2026-10-12	2023	C++		Distribute and run LLMs with a single file.
+Translation / on-device AI in browsers	whisper/whisper.cpp	NOT_FOUND								gh: Not Found (HTTP 404)
+Translation / on-device AI in browsers	ggml-org/whisper.cpp	ok		54301	MIT	2026-10-11	2022	C++		Port of OpenAI's Whisper model in C/C++
+Translation / on-device AI in browsers	rhasspy/piper	ARCHIVED		11297	MIT	2025-08-26	2023	C++		A fast, local neural text to speech system
+Translation / on-device AI in browsers	LAION-AI/Open-Assistant	ok		37378	Apache-2.0	2024-08-17	2022	Python		OpenAssistant is a chat-based assistant that understands tasks, can interact with third-party systems, and retrieve information dynamically to do so.
+Translation / on-device AI in browsers	openai/whisper	ok		110333	MIT	2026-08-31	2022	Python		Robust Speech Recognition via Large-Scale Weak Supervision
+Translation / on-device AI in browsers	asg017/sqlite-vec	ok		8178	Apache-2.0	2026-05-18	2024	C		A vector search SQLite extension that runs anywhere!
+Translation / on-device AI in browsers	asg017/sqlite-lembed	ok		265		2024-11-24	2024	C		A SQLite extension for generating text embeddings from GGUF models using llama.cpp
+Translation / on-device AI in browsers	nmslib/hnswlib	ok		5347	Apache-2.0	2026-09-15	2017	C++		Header-only C++/python library for fast approximate nearest neighbors
+Translation / on-device AI in browsers	qdrant/qdrant	ok		35039	Apache-2.0	2026-10-11	2020	Rust		Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://c
+Translation / on-device AI in browsers	lancedb/lancedb	ok		11642	Apache-2.0	2026-10-11	2023	Rust		Developer-friendly OSS embedded retrieval library for multimodal AI. Search More; Manage Less.
+Translation / on-device AI in browsers	chroma-core/chroma	ok		29482	Apache-2.0	2026-10-10	2022	Rust		Search infrastructure for AI
+Translation / on-device AI in browsers	facebookresearch/faiss	ok		41131	MIT	2026-10-11	2017	C++		A library for efficient similarity search and clustering of dense vectors.
+Automation, agents, testing	microsoft/playwright	ok		97497	Apache-2.0	2026-10-11	2019	TypeScript		Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. 
+Automation, agents, testing	microsoft/playwright-mcp	ok		38032	Apache-2.0	2026-10-08	2025	TypeScript		Playwright MCP server
+Automation, agents, testing	microsoft/playwright-python	ok		15031	Apache-2.0	2026-10-09	2020	Python		Python version of the Playwright testing and automation library.
+Automation, agents, testing	microsoft/playwright-java	ok		1558	Apache-2.0	2026-10-08	2020	Java		Java version of the Playwright testing and automation library
+Automation, agents, testing	microsoft/playwright-dotnet	ok		3016	MIT	2026-10-08	2020	C#		.NET version of the Playwright testing and automation library.
+Automation, agents, testing	puppeteer/puppeteer	ok		95680	Apache-2.0	2026-10-11	2017	TypeScript		JavaScript API for Chrome and Firefox
+Automation, agents, testing	SeleniumHQ/selenium	ok		34532	Apache-2.0	2026-10-12	2013	Java		A browser automation framework and ecosystem.
+Automation, agents, testing	webdriverio/webdriverio	ok		9844	MIT	2026-10-12	2011	TypeScript		Next-gen browser and mobile automation test framework for Node.js
+Automation, agents, testing	cypress-io/cypress	ok		51046	MIT	2026-10-11	2015	TypeScript		Fast, easy and reliable testing for anything that runs in a browser.
+Automation, agents, testing	DevExpress/testcafe	ok		9897	MIT	2026-10-07	2015	JavaScript		A Node.js tool to automate end-to-end web testing.
+Automation, agents, testing	nightwatchjs/nightwatch	ok		11949	MIT	2026-05-25	2012	JavaScript		Integrated end-to-end testing framework written in Node.js and using W3C Webdriver API. Developed at @browserstack
+Automation, agents, testing	getgauge/taiko	ok		3674	MIT	2026-10-09	2017	JavaScript		A node.js library for testing modern web applications
+Automation, agents, testing	scrapinghub/splash	ok		4188	BSD-3-Clause	2024-08-02	2013	Python		Lightweight, scriptable browser as a service with an HTTP API
+Automation, agents, testing	browser-use/browser-use	ok		117663	MIT	2026-10-09	2024	Python		Agents that use the browser.
+Automation, agents, testing	browser-use/web-ui	ok		16611	MIT	2026-09-25	2025	Python		🖥️ Run AI Agent in your browser.
+Automation, agents, testing	browserbase/stagehand	ok		25629	MIT	2026-10-10	2024	TypeScript		The SDK to extract data and interact with any site on the web. Get started with Claude Code, Codex, Eve, Mastra, and more.
+Automation, agents, testing	Skyvern-AI/skyvern	ok		23182	AGPL-3.0	2026-10-12	2024	Python		Automate browser based workflows with AI
+Automation, agents, testing	lavague-ai/LaVague	ok		6393	Apache-2.0	2025-01-21	2024	Python		Large Action Model framework to develop AI Web Agents
+Automation, agents, testing	steel-dev/steel-browser	ok		7786	Apache-2.0	2026-10-09	2024	TypeScript		🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying
+Automation, agents, testing	browserless/browserless	ok		13806	NOASSERTION	2026-10-09	2017	TypeScript		Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses.
+Automation, agents, testing	BrowserMCP/mcp	ok		7175	Apache-2.0	2025-04-24	2025	TypeScript		Browser MCP is a Model Context Provider (MCP) server that allows AI applications to control your browser
+Automation, agents, testing	magnitudedev/magnitude	ok		6657	Apache-2.0	2026-10-12	2026	Rust		Open source inference engine for agents that optimizes itself for your exact hardware. Compiles and tunes its kernels on your device, so open models r
+Automation, agents, testing	nottelabs/notte	ok		2023	NOASSERTION	2026-10-11	2024	Python		Cloud browser infrastructure and web automation platform for your AI and coding agents
+Automation, agents, testing	hyperbrowserai/hyperbrowser	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	web-arena-x/webarena	ok		1624	Apache-2.0	2025-11-26	2023	Python		Code repo for "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+Automation, agents, testing	MinorJerry/WebVoyager	ok		1127	Apache-2.0	2024-03-04	2024	Python		Code for "WebVoyager: WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models"
+Automation, agents, testing	OSU-NLP-Group/Mind2Web	ok		1032	MIT	2025-11-05	2023	Jupyter Notebook		[NeurIPS'23 Spotlight] "Mind2Web: Towards a Generalist Agent for the Web" -- the first LLM-based web agent and benchmark for generalist web agents
+Automation, agents, testing	All-Hands-AI/OpenHands	ok	RENAMED→OpenHands/OpenHands	90624	MIT	2026-10-12	2024	TypeScript		🙌 OpenHands: AI-Driven Development
+Automation, agents, testing	mendableai/firecrawl	ok	RENAMED→firecrawl/firecrawl	190546	AGPL-3.0	2026-10-12	2024	TypeScript		Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥
+Automation, agents, testing	unclecode/crawl4ai	ok		85263	Apache-2.0	2026-10-11	2024	Python		Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with on
+Automation, agents, testing	apify/crawlee	ok		26113	Apache-2.0	2026-10-11	2016	TypeScript		Crawlee—A web scraping and browser automation library for Node.js to build reliable crawlers. In JavaScript and TypeScript. Extract data for AI, LLMs,
+Automation, agents, testing	scrapy/scrapy	ok		64737	BSD-3-Clause	2026-10-10	2010	Python		Scrapy, a fast high-level web crawling & scraping framework for Python.
+Automation, agents, testing	bda-research/node-crawler	ok		6796	MIT	2026-06-18	2010	TypeScript		Web Crawler/Spider for NodeJS + server-side jQuery ;-)
+Automation, agents, testing	FlareSolverr/FlareSolverr	ok		15870	MIT	2026-09-27	2020	Python		Proxy server to bypass Cloudflare protection
+Automation, agents, testing	cdpdriver/zendriver	ok		1455	AGPL-3.0	2026-10-02	2024	Python		A blazing fast, async-first, undetectable webscraping/web automation framework based on ultrafunkamsterdam/nodriver. Now with Docker support!
+Automation, agents, testing	ultrafunkamsterdam/nodriver	ok		4833	AGPL-3.0	2026-10-08	2024	Python		Successor of Undetected-Chromedriver. Providing a blazing fast framework for web automation, webscraping, bots and any other creative ideas which are 
+Automation, agents, testing	vercel-labs/agent-browser	ok		43823	Apache-2.0	2026-10-11	2026	Rust		Browser automation CLI for AI agents
+Automation, agents, testing	Jarvis-Browser/jarvis	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	thirtyfour/thirtyfour	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	jonhoo/fantoccini	ok		2027	Apache-2.0	2026-10-01	2017	Rust		A high-level API for programmatically interacting with web pages through WebDriver.
+Automation, agents, testing	mozilla/geckodriver	ok		7473	MPL-2.0	2026-08-25	2014			WebDriver Classic proxy for automating Firefox through Marionette
+Automation, agents, testing	SeleniumHQ/docker-selenium	ok		8657	NOASSERTION	2026-10-11	2014	Go		Provides a simple way to run Selenium Grid with Chrome, Firefox, and Edge using Container Platform, making it easier to perform browser automation at 
+Automation, agents, testing	w3c/webdriver-bidi	ok		512		2026-10-08	2020	Bikeshed		Bidirectional WebDriver protocol for browser automation
+Automation, agents, testing	w3c/webdriver	ok		722	NOASSERTION	2026-10-07	2014	HTML		Remote control interface that enables introspection and control of user agents.
+Automation, agents, testing	web-platform-tests/wpt	ok		6221	NOASSERTION	2026-10-12	2012	HTML		Test suites for Web platform specs — including WHATWG, W3C, and others
+Automation, agents, testing	mdn/browser-compat-data	ok		5762	CC0-1.0	2026-10-10	2016	JSON		Browser compatibility data for Web technologies as displayed on MDN
+Automation, agents, testing	browserslist/browserslist	ok		13568	MIT	2026-09-30	2014	JavaScript		🦔 Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env
+Automation, agents, testing	GoogleChrome/lighthouse	ok		30880	Apache-2.0	2026-10-11	2016	JavaScript		Automated auditing, performance metrics, and best practices for the web.
+Automation, agents, testing	GoogleChrome/web-vitals	ok		8641	Apache-2.0	2026-10-11	2020	JavaScript		Essential metrics for a healthy site.
+Automation, agents, testing	WPO-Foundation/webpagetest	ok	RENAMED→catchpoint/WebPageTest	3295	NOASSERTION	2025-09-19	2013	PHP		Official repository for WebPageTest
+Automation, agents, testing	sitespeedio/sitespeed.io	ok		5041	MIT	2026-10-11	2012	JavaScript		sitespeed.io is an open-source tool for comprehensive web performance analysis, enabling you to test, monitor, and optimize your website’s speed using
+Automation, agents, testing	sitespeedio/browsertime	ok		653	Apache-2.0	2026-10-05	2013	JavaScript		Measure and Optimize Web Performance
+Automation, agents, testing	mozilla/mozperftest	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	mozilla/talos	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	speedometer/speedometer	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	WebKit/Speedometer	ok		704	NOASSERTION	2026-09-23	2022	JavaScript		An open source repository for the Speedometer benchmark
+Automation, agents, testing	GoogleChromeLabs/jetstream	NOT_FOUND								gh: Not Found (HTTP 404)
+Automation, agents, testing	nicedoc/jetstream	NOT_FOUND								gh: Not Found (HTTP 404)
+Sync, passwords, auth	bitwarden/clients	ok		13968	NOASSERTION	2026-10-11	2016	TypeScript		Bitwarden client apps (web, browser extension, desktop, and cli).
+Sync, passwords, auth	bitwarden/server	ok		20277	NOASSERTION	2026-10-11	2015	C#		Bitwarden infrastructure/backend (API, database, Docker, etc).
+Sync, passwords, auth	dani-garcia/vaultwarden	ok		68872	AGPL-3.0	2026-10-10	2018	Rust		Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs
+Sync, passwords, auth	keepassxreboot/keepassxc	ok		29178	NOASSERTION	2026-10-10	2016	C++		KeePassXC is a cross-platform community-driven port of the Windows application “KeePass Password Safe”.
+Sync, passwords, auth	keepassxreboot/keepassxc-browser	ok		2354	GPL-3.0	2026-10-10	2017	JavaScript		KeePassXC Browser Extension
+Sync, passwords, auth	buttercup/buttercup-desktop	ARCHIVED		4387	GPL-3.0	2025-03-04	2015	TypeScript		:key: Cross-Platform Passwords & Secrets Vault
+Sync, passwords, auth	passbolt/passbolt_api	ok		6157	AGPL-3.0	2026-10-08	2016	PHP		Passbolt Community Edition (CE) API. The JSON API for the open source password manager for teams!
+Sync, passwords, auth	Psono/psono-client	ok		26	NOASSERTION	2026-10-09	2017	TypeScript		PSONO Client | Please open new issues in our issue tracker on GitLab.com
+Sync, passwords, auth	mozilla-services/syncstorage-rs	ok		1817	MPL-2.0	2026-10-10	2018	Rust		Sync Storage server in Rust
+Sync, passwords, auth	mozilla-services/syncserver	ARCHIVED		1974	MPL-2.0	2023-08-30	2014	Python		Run-Your-Own Firefox Sync Server
+Sync, passwords, auth	mozilla/fxa	ok		686	MPL-2.0	2026-10-10	2015	TypeScript		Monorepo for Mozilla Accounts (formerly Firefox Accounts)
+Sync, passwords, auth	vector-im/element-web	ok	RENAMED→element-hq/element-web	13559	AGPL-3.0	2026-10-11	2015	TypeScript		A glossy Matrix collaboration client for the web.
+Sync, passwords, auth	syncthing/syncthing	ok		89317	MPL-2.0	2026-10-10	2013	Go		Open Source Continuous File Synchronization
+Sync, passwords, auth	sodium-friends/sodium-native	ok		0		2024-10-01	2024			
+Sync, passwords, auth	jedisct1/libsodium	ok		13985	NOASSERTION	2026-10-09	2013	C		A modern, portable, easy to use crypto library.
+Sync, passwords, auth	jedisct1/libsodium.js	ok		1160	NOASSERTION	2026-09-25	2015	HTML		libsodium compiled to Webassembly and pure JavaScript, with convenient wrappers.
+Sync, passwords, auth	Duo-Labs/webauthn.io	ok		746	BSD-3-Clause	2026-08-06	2018	Python		The source code for webauthn.io, a demonstration of WebAuthn.
+Sync, passwords, auth	duo-labs/webauthn	ARCHIVED		1030	BSD-3-Clause	2022-12-05	2017	Go		WebAuthn (FIDO2) server library written in Go 
+Sync, passwords, auth	passkeys-dev/passkeys.dev	NOT_FOUND								gh: Not Found (HTTP 404)
+Sync, passwords, auth	google/tink	ARCHIVED	RENAMED→tink-crypto/tink	13541	Apache-2.0	2024-04-17	2014	Java		Tink is a multi-language, cross-platform, open source library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to
+Devtools, proxies, perf, debugging	facebook/react	ok	RENAMED→react/react	250872	MIT	2026-10-09	2013	JavaScript		The library for web and native user interfaces.
+Devtools, proxies, perf, debugging	reduxjs/redux-devtools	ok		14368	MIT	2026-10-11	2015	TypeScript		DevTools for Redux with hot reloading, action replay, and customizable UI
+Devtools, proxies, perf, debugging	vuejs/devtools	ok		2924	MIT	2026-10-10	2023	TypeScript		⚙️ Devtools for debugging Vue.js applications.
+Devtools, proxies, perf, debugging	GoogleChrome/chrome-launcher	ok		1367	Apache-2.0	2026-10-05	2017	TypeScript		Launch Google Chrome with ease from node.
+Devtools, proxies, perf, debugging	cyrus-and/chrome-remote-interface	ok		4556	MIT	2026-02-09	2013	JavaScript		Chrome Debugging Protocol interface for Node.js
+Devtools, proxies, perf, debugging	ChromeDevTools/awesome-chrome-devtools	ok		7157	CC0-1.0	2026-10-06	2016			Awesome tooling and resources in the Chrome DevTools & DevTools Protocol ecosystem
+Devtools, proxies, perf, debugging	debugger-for-chrome/vscode-chrome-debug	NOT_FOUND								gh: Not Found (HTTP 404)
+Devtools, proxies, perf, debugging	microsoft/vscode-js-debug	ok		1984	MIT	2026-10-08	2019	TypeScript		A DAP-compatible JavaScript debugger. Used in VS Code, VS, + more
+Devtools, proxies, perf, debugging	microsoft/playwright-vscode	ok		489	Apache-2.0	2026-10-08	2021	TypeScript		Playwright Test Visual Studio Code integration
+Search / local indexing / metasearch	searxng/searxng	ok		38239	AGPL-3.0	2026-10-11	2021	Python		SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profil
+Search / local indexing / metasearch	meilisearch/meilisearch	ok		59546	NOASSERTION	2026-10-08	2018	Rust		A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.
+Search / local indexing / metasearch	typesense/typesense	ok		26857	GPL-3.0	2026-10-09	2017	C++		Open Source alternative to Algolia + Pinecone and an Easier-to-Use alternative to ElasticSearch ⚡ 🔍 ✨ Fast, typo tolerant, in-memory fuzzy Search Eng
+Search / local indexing / metasearch	quickwit-oss/tantivy	ok		16206	MIT	2026-10-11	2016	Rust		Tantivy is a full-text search engine library inspired by Apache Lucene and written in Rust
+Search / local indexing / metasearch	nicbarker/tantivy	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	sqlite/sqlite	ok		10648	NOASSERTION	2026-10-11	2019	C		Official Git mirror of the SQLite source tree
+Search / local indexing / metasearch	mattn/go-sqlite3	ok		9248	MIT	2026-09-28	2011	C		sqlite3 driver for go using database/sql
+Search / local indexing / metasearch	WiseLibs/better-sqlite3	ok		7513	MIT	2026-08-10	2016	JavaScript		The fastest and simplest library for SQLite3 in Node.js.
+Search / local indexing / metasearch	nicedoc/sqlite	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	YaCy/yacy_search_server	ok		4062	NOASSERTION	2026-09-23	2015	Java		Distributed Peer-to-Peer Web Search Engine and Intranet Search Appliance
+Search / local indexing / metasearch	edgesearch/edgesearch	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	whoogle-search/whoogle-search	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	benbusby/whoogle-search	ARCHIVED		11566	MIT	2026-08-14	2020	Python		A self-hosted, ad-free, privacy-respecting metasearch engine
+Search / local indexing / metasearch	LibreY-Org/LibreY	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	Metasearch2/metasearch2	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	mat-1/metasearch2	ok		172	CC0-1.0	2026-09-01	2023	Rust		a cute metasearch engine
+Search / local indexing / metasearch	Ahmia/ahmia-site	ok		785	BSD-3-Clause	2026-10-08	2016	Python		Ahmia.fi - Hidden service search engine
+Search / local indexing / metasearch	marginalia-search/marginalia-search	NOT_FOUND								gh: Not Found (HTTP 404)
+Search / local indexing / metasearch	MarginaliaSearch/MarginaliaSearch	ok		2187	NOASSERTION	2026-10-09	2023	Java		Internet search engine for text-oriented websites. Indexing the small, old and weird web. 
+Accessibility / UX / media / misc	GoogleChrome/accessibility-developer-tools	ARCHIVED		2308	Apache-2.0	2022-10-04	2013	JavaScript		This is a library of accessibility-related testing and utility code.
+Accessibility / UX / media / misc	dequelabs/axe-core	ok		7625	MPL-2.0	2026-10-09	2015	HTML		Accessibility engine for automated Web UI testing
+Accessibility / UX / media / misc	pa11y/pa11y	ok		4574	LGPL-3.0	2026-09-28	2013	JavaScript		Pa11y is your automated accessibility testing pal
+Accessibility / UX / media / misc	nvaccess/nvda	ok		2657	NOASSERTION	2026-10-12	2015	Python		NVDA, the free and open source Screen Reader for Microsoft Windows
+Accessibility / UX / media / misc	orcaprojectgnome/orca	NOT_FOUND								gh: Not Found (HTTP 404)
+Accessibility / UX / media / misc	mozilla/gecko-accessibility	NOT_FOUND								gh: Not Found (HTTP 404)
+Accessibility / UX / media / misc	w3c/aria	ok		755	NOASSERTION	2026-10-09	2014	HTML		Accessible Rich Internet Applications (WAI-ARIA)
+Accessibility / UX / media / misc	nicedoc/aria	NOT_FOUND								gh: Not Found (HTTP 404)
+Accessibility / UX / media / misc	sindresorhus/electron-dl	ok		1207	MIT	2026-09-20	2015	JavaScript		Simplified file downloads for your Electron app
+Accessibility / UX / media / misc	sindresorhus/electron-store	ok		5023	MIT	2026-09-20	2016	JavaScript		Simple data persistence for your Electron app or module - Save and load user preferences, app state, cache, etc
+Accessibility / UX / media / misc	sindresorhus/electron-context-menu	ok		1477	MIT	2026-09-20	2016	JavaScript		Context menu for your Electron app
+Accessibility / UX / media / misc	sindresorhus/electron-debug	ok		778	MIT	2026-09-20	2015	JavaScript		Adds useful debug features to your Electron app
+Accessibility / UX / media / misc	electron-userland/electron-builder	ok		14667	MIT	2026-10-11	2015	TypeScript		A complete solution to package and build a ready for distribution Electron app with “auto update” support out of the box
+Accessibility / UX / media / misc	electron/packager	ok		303	BSD-2-Clause	2026-10-10	2015	TypeScript		Customize and package your Electron app with OS-specific bundles (.app, .exe, etc.) via JS or CLI
+Accessibility / UX / media / misc	electron/forge	ok		7154	MIT	2026-10-10	2016	TypeScript		:electron: A complete tool for building and publishing Electron applications
+Accessibility / UX / media / misc	electron/fiddle	ok		7776	MIT	2026-10-09	2018	TypeScript		:electron: 🚀 The easiest way to get started with Electron
+Accessibility / UX / media / misc	electron/security	NOT_FOUND								gh: Not Found (HTTP 404)
+Accessibility / UX / media / misc	doyensec/electronegativity	ok		1052	Apache-2.0	2025-08-23	2017	JavaScript		Electronegativity is a tool to identify misconfigurations and security anti-patterns in Electron applications.
+Accessibility / UX / media / misc	electron/asar	ok		2865	MIT	2026-10-10	2014	TypeScript		Simple extensive tar-like archive format with indexing
+Mobile browsers (separate investigation)	mozilla-mobile/fenix	ARCHIVED		6388	MPL-2.0	2023-02-20	2018	Kotlin		 ⚠️ Fenix (Firefox for Android) moved to a new repository. It is now developed and maintained as part of: https://github.com/mozilla-mobile/firefox-an
+Mobile browsers (separate investigation)	brave/brave-android	NOT_FOUND								gh: Not Found (HTTP 404)
+Mobile browsers (separate investigation)	tuta/tutanota	NOT_FOUND								gh: Not Found (HTTP 404)
+Mobile browsers (separate investigation)	kiwibrowser/src.next	ok		4045	BSD-3-Clause	2025-06-12	2020	C++		Source-code for Kiwi Next, a Kiwi Browser auto-rebased with latest Chromium
+Mobile browsers (separate investigation)	kiwibrowser/src	ARCHIVED		2969	NOASSERTION	2023-11-18	2020			Source-code used in Kiwi Browser for Android
+Mobile browsers (separate investigation)	vivaldi/vivaldi-android	NOT_FOUND								gh: Not Found (HTTP 404)
+Mobile browsers (separate investigation)	nicedoc/android-browser	NOT_FOUND								gh: Not Found (HTTP 404)
+Mobile browsers (separate investigation)	Mozilla-Fenix/fenix	NOT_FOUND								gh: Not Found (HTTP 404)
+Mobile browsers (separate investigation)	TeamNewPipe/NewPipe	ok		40076	GPL-3.0	2026-10-11	2015	Java		A libre lightweight streaming front-end for Android.
+Mobile browsers (separate investigation)	guardianproject/OrWeb	ARCHIVED		96	NOASSERTION	2015-11-25	2010	Java		We are EOL this project. Please use Lightning Browser or wait for Orfox instead
+Mobile browsers (separate investigation)	mozilla/application-services	ok		675	NOASSERTION	2026-10-10	2018	Rust		Firefox Application Services
+Web standards / protocols	whatwg/html	ok		9404	NOASSERTION	2026-10-10	2013	HTML		HTML Standard
+Web standards / protocols	whatwg/dom	ok		1731	NOASSERTION	2026-10-09	2012	HTML		DOM Standard
+Web standards / protocols	whatwg/url	ok		630	NOASSERTION	2026-10-07	2012	HTML		URL Standard
+Web standards / protocols	whatwg/fetch	ok		2256	NOASSERTION	2026-10-06	2012	HTML		Fetch Standard
+Web standards / protocols	w3c/csswg-drafts	ok		4888	NOASSERTION	2026-10-10	2013	Bikeshed		CSS Working Group Editor Drafts
+Web standards / protocols	tc39/ecma262	ok		15689	NOASSERTION	2026-10-09	2014	HTML		Status, process, and documents for ECMA-262
+Web standards / protocols	WICG/proposals	ok		300	NOASSERTION	2024-05-07	2020			A home for well-formed proposed incubations for the web platform. All proposals welcome.
+Web standards / protocols	w3c/permissions	ok		106	NOASSERTION	2026-10-06	2014	HTML		Permissions API
+Web standards / protocols	w3c/webappsec	ok		675	NOASSERTION	2026-06-10	2013	HTML		Web Application Security Working Group repo
+Web standards / protocols	w3c/webappsec-csp	ok		225	NOASSERTION	2026-09-16	2015	HTML		WebAppSec Content Security Policy
+Web standards / protocols	w3c/webextensions	ok		712	NOASSERTION	2026-10-08	2021	Bikeshed		Charter and administrivia for the WebExtensions Community Group (WECG)
+Web standards / protocols	w3c/web-annotation	ok		156	NOASSERTION	2017-05-04	2014	HTML		Web Annotation Working Group repository, see README for links to specs
+Web standards / protocols	quicwg/base-drafts	ok		1664		2026-06-14	2016	Shell		 Internet-Drafts that make up the base QUIC specification
+Web standards / protocols	cloudflare/quiche	ok		12771	BSD-2-Clause	2026-10-09	2018	Rust		🥧 Savoury implementation of the QUIC transport protocol and HTTP/3
+Web standards / protocols	aws/s2n-quic	ok		1374	Apache-2.0	2026-10-09	2020	Rust		An implementation of the IETF QUIC protocol
+Web standards / protocols	mozilla/neqo	ok		2245	Apache-2.0	2026-10-12	2019	Rust		Neqo, the Mozilla Firefox implementation of QUIC in Rust
+Web standards / protocols	ngtcp2/ngtcp2	ok		1526	MIT	2026-10-11	2017	C		ngtcp2 project is an effort to implement IETF QUIC protocol
+Web standards / protocols	curl/curl	ok		43174	NOASSERTION	2026-10-11	2010	C		A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LD
+Web standards / protocols	cloudflare/boringtls	NOT_FOUND								gh: Not Found (HTTP 404)
+Web standards / protocols	google/boringssl	ok		2281	Apache-2.0	2026-10-11	2016	C++		Mirror of BoringSSL
+Web standards / protocols	rustls/rustls	ok		7668	NOASSERTION	2026-10-11	2016	Rust		A modern TLS library in Rust
+Web standards / protocols	openssl/openssl	ok		30927	Apache-2.0	2026-10-11	2013	C		General purpose TLS and crypto library
+Web standards / protocols	publicsuffix/list	ok		2966	MPL-2.0	2026-10-07	2015	Go		The Public Suffix List
+Web standards / protocols	nicedoc/publicsuffix	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	ipfs/ipfs-desktop	ok		6598	MIT	2026-10-01	2015	JavaScript		An unobtrusive and user-friendly desktop application for IPFS on Windows, Mac and Linux. 
+Decentralised / alt-protocol	ipfs/ipfs-companion	ok		2165	CC0-1.0	2026-10-01	2015	JavaScript		Browser extension that routes ipfs:// addresses and content-addressed websites through your own local IPFS node
+Decentralised / alt-protocol	ipfs/kubo	ok		17150	NOASSERTION	2026-10-01	2014	Go		IPFS implementation in Go: a daemon that stores and serves content-addressed data, with a CLI, HTTP Gateway, and RPC API
+Decentralised / alt-protocol	ipfs/js-ipfs	ARCHIVED		7389	NOASSERTION	2023-05-25	2014	JavaScript		IPFS implementation in JavaScript
+Decentralised / alt-protocol	i2p/i2p.i2p	ok		2727	NOASSERTION	2026-10-09	2012	Java		I2P is an anonymizing network, offering a simple layer that identity-sensitive applications can use to securely communicate. All data is wrapped with 
+Decentralised / alt-protocol	nicedoc/gemini	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	makew0rld/amfora	ok		1359	GPL-3.0	2026-10-01	2020	Go		A fancy terminal browser for the Gemini protocol.
+Decentralised / alt-protocol	kensanata/offpunk	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	solderpunk/AV-98	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	skyjake/lagrange	ok		1520	BSD-2-Clause	2026-10-02	2020	C		A Beautiful Gemini Client
+Decentralised / alt-protocol	gopherus/gopherus	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	Anonymous-Gopher/gopher	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	mozilla/mozilla-reality	NOT_FOUND								gh: Not Found (HTTP 404)
+Decentralised / alt-protocol	MozillaReality/FirefoxReality	ARCHIVED		772	MPL-2.0	2023-12-28	2018	Java		INACTIVE - A fast and secure browser for standalone virtual-reality and augmented-reality headsets.
+Decentralised / alt-protocol	nicedoc/firefoxreality	NOT_FOUND								gh: Not Found (HTTP 404)

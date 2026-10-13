@@ -1,0 +1,46 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Nadir design tokens. One accent, warm-neutral surfaces, no gradients, no glass.
+   Text colours meet WCAG AA (4.5:1) on the surfaces they are used on; --fg-3 is for non-essential text only. */
+:root {
+  color-scheme: dark light;
+  --bg-0: #101114;      /* window, sidebar, toolbar */
+  --bg-1: #17181d;      /* raised panels, popovers */
+  --bg-2: #1f2128;      /* fields, hover */
+  --bg-3: #292c35;      /* active / pressed */
+  --line: #2a2d36;
+  --fg: #e7e9ee;
+  --fg-2: #a2a8b4;
+  --fg-3: #8a919d;
+  --accent: #8bd3a8;
+  --accent-fg: #0d1a13;
+  --accent-soft: rgba(139, 211, 168, .14);
+  --danger: #ee8d84;
+  --warn: #e5c07b;
+  --shadow: 0 8px 28px rgba(0, 0, 0, .45), 0 1px 0 rgba(255, 255, 255, .03) inset;
+  --r-sm: 6px; --r-md: 8px; --r-lg: 12px;
+  --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "Cascadia Mono", "SF Mono", Consolas, monospace;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-0: #ecebe7; --bg-1: #f7f6f3; --bg-2: #ffffff; --bg-3: #e1dfd9; --line: #d6d3cb;
+    --fg: #1c1e23; --fg-2: #4d5460; --fg-3: #5f6672;
+    --accent: #2f7d5b; --accent-fg: #ffffff; --accent-soft: rgba(47, 125, 91, .12);
+    --danger: #b3392f; --warn: #8a6410;
+    --shadow: 0 8px 28px rgba(30, 28, 20, .16), 0 0 0 1px rgba(30, 28, 20, .04);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg-0); color: var(--fg); font: 13px/1.45 var(--font); -webkit-font-smoothing: antialiased; overflow: hidden; user-select: none; }
+button, input, select { font: inherit; color: inherit; }
+button { background: none; border: 0; padding: 0; cursor: default; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-radius: var(--r-sm); }
+.drag { -webkit-app-region: drag; }
+.no-drag, .drag button, .drag input, .drag a { -webkit-app-region: no-drag; }
+svg.i { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
+@media (forced-colors: active) { :focus-visible { outline-color: Highlight; } }
+[hidden] { display: none !important; }

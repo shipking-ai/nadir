@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-12T02:13:51.198Z",
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) i9-10980HK CPU @ 2.40GHz",
+    "logicalCores": 16,
+    "ramGB": 31.9,
+    "os": "Windows_NT 10.0.26300"
+  },
+  "tabs": 10,
+  "runs": 3,
+  "nadir": {
+    "runs": [
+      {
+        "startMs": 791,
+        "oneTab": {
+          "processes": 6,
+          "workingSetMB": 515.2,
+          "privateMB": 322,
+          "cpuSeconds": 2.875
+        },
+        "manyTabs": {
+          "tabs": 11,
+          "processes": 16,
+          "workingSetMB": 1527.6,
+          "privateMB": 710,
+          "cpuSeconds": 5.219
+        },
+        "tabSwitchMs": {
+          "p50": 4.4,
+          "p95": 6.1
+        },
+        "suggestMs": {
+          "p50": 2,
+          "p95": 3.4
+        },
+        "idleCpuPctOneCore": 0.27,
+        "afterSleepingOthers": {
+          "processes": 7,
+          "workingSetMB": 648.7,
+          "privateMB": 409.2,
+          "cpuSeconds": 5.172
+        }
+      },
+      {
+        "startMs": 774,
+        "oneTab": {
+          "processes": 7,
+          "workingSetMB": 635,
+          "privateMB": 413.8,
+          "cpuSeconds": 3.797
+        }
+      },
+      {
+        "startMs": 728,
+        "oneTab": {
+          "processes": 6,
+          "workingSetMB": 617,
+          "privateMB": 321.3,
+          "cpuSeconds": 2.922
+        }
+      }
+    ],
+    "listsRefresh": "ok",
+    "listsLoaded": true,
+    "restore": {
+      "ms": 737,
+      "tabs": 11,
+      "loaded": 1
+    }
+  },
+  "chrome": {
+    "version": "154.0.8037.98",
+    "startMs": 750,
+    "oneTab": {
+      "processes": 10,
+      "workingSetMB": 603.2,
+      "privateMB": 350.6,
+      "cpuSeconds": 14.344
+    },
+    "manyTabs": {
+      "tabs": 11,
+      "processes": 23,
+      "workingSetMB": 1435.9,
+      "privateMB": 765.5,
+      "cpuSeconds": 38.828
+    },
+    "idleCpuPctOneCore": 47.95
+  }
+}
