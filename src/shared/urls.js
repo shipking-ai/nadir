@@ -35,7 +35,7 @@ function resolveInput(raw, searchTemplate) {
   const input = String(raw ?? '').trim();
   if (!input) return { kind: 'empty', url: '' };
 
-  const search = () => ({ kind: 'search', url: searchTemplate.replace('%s', encodeURIComponent(input)) });
+  const search = () => ({ kind: 'search', url: searchTemplate.replace('%s', encodeURIComponent(input.toWellFormed())) });
 
   // "localhost:3000", "192.168.1.1:8080", "example.com:8443" parse as a scheme; treat as host:port first.
   if (HOST_PORT_RE.test(input) && !/^(https?|file|about|nadir):/i.test(input)) {
@@ -87,10 +87,12 @@ function shouldUpgrade(url) {
 }
 
 function upgradeUrl(url) {
-  const u = new URL(url);
-  u.protocol = 'https:';
-  if (u.port === '80') u.port = '';
-  return u.href;
+  try {
+    const u = new URL(url);
+    u.protocol = 'https:';
+    if (u.port === '80') u.port = '';
+    return u.href;
+  } catch { return url; }
 }
 
 /** Strip tracking parameters known to carry no page semantics. */

@@ -16,6 +16,8 @@ function sanitizeFilename(name, fallback = 'download') {
   if (n.length > 150) {
     const ext = path.extname(n).slice(0, 20);
     n = n.slice(0, 150 - ext.length) + ext;
+    n = n.replace(/[\s.]+$/g, '');                                // truncation can expose a new trailing dot/space
+    if (!n || RESERVED.test(n)) n = n ? `_${n}` : fallback;
   }
   return n;
 }

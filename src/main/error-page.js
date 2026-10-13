@@ -52,7 +52,7 @@ small{color:var(--mut)}
 <p>${esc(text)}</p>
 <p><code>${esc(url)}</code></p>
 ${fallback}
-<p><a class="btn" href="${esc(url)}">Try again</a></p>
+${/^https?:\/\//i.test(String(url)) ? `<p><a class="btn" href="${esc(url)}">Try again</a></p>` : ''}
 <p><small>${esc(desc)} (${esc(code)})</small></p>
 </main></body></html>`;
 }
