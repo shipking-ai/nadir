@@ -49,3 +49,38 @@ jobs:
             docs/benchmarks/a11y-axe-latest.json
           if-no-files-found: error
           retention-days: 14
+
+  # Linux and macOS: unit + end-to-end tests only. Nadir is developed and packaged on Windows; these jobs exist to find
+  # out what does and does not work elsewhere. Failures here are information, not yet a gate (continue-on-error).
+  other-platforms:
+    name: ${{ matrix.os }} tests (informational)
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Unit tests
+        run: npm test
+      - name: Linux - make Chromium's sandbox usable on the runner
+        if: runner.os == 'Linux'
+        run: |
+          sudo chown root:root node_modules/electron/dist/chrome-sandbox
+          sudo chmod 4755 node_modules/electron/dist/chrome-sandbox
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true
+      - name: End-to-end tests (Linux, virtual display)
+        if: runner.os == 'Linux'
+        run: xvfb-run -a npm run test:e2e
+      - name: End-to-end tests (macOS)
+        if: runner.os == 'macOS'
+        run: npm run test:e2e

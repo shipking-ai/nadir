@@ -13,7 +13,7 @@ const ROOT = path.resolve(__dirname, '..', '..');
  * Chrome is driven the same way (HTTP /json/new, no per-tab attach), so this is the comparable method.
  */
 async function launchPlain({ userData, port = 9555 }) {
-  const exe = path.join(ROOT, 'node_modules', 'electron', 'dist', 'electron.exe');
+  const exe = require('electron'); // the electron package exports the path to the platform's binary
   const child = spawn(exe, ['.', `--remote-debugging-port=${port}`], { cwd: ROOT, env: { ...process.env, NADIR_USER_DATA: userData, NADIR_OFFLINE: '1' }, stdio: 'ignore' });
   let shell;
   await until(async () => { const t = await (await fetch(`http://127.0.0.1:${port}/json`)).json(); shell = t.find((x) => x.url === 'nadir://shell/'); return shell; }, { timeout: 30000, step: 100, what: 'shell target' });
