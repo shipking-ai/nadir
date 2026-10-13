@@ -19,6 +19,7 @@
 |---|---|---|
 | [v0.1.0](https://github.com/shipking-ai/pelorus/releases/tag/v0.1.0) | 2026-10-13 | first pre-release, zip only (391 MB), unsigned |
 | [v0.2.0](https://github.com/shipking-ai/pelorus/releases/tag/v0.2.0) | 2026-10-13 | zip (147 MB, 7-Zip) and per-user installer (147 MB), unsigned. Both verified after publication: SHA-256 matches, and `gh attestation verify` confirms they were built from this repository by `release.yml` at tag `v0.2.0` (commit `429a4a6`). The CI-built installer was then downloaded and run on Windows: silent install, first launch, shortcut and uninstall entry, silent uninstall (4 leftover files removed by hand). Not tested: a clean VM, an upgrade from 0.1.0 (0.1.0 had no installer), SmartScreen behaviour. |
+| [v0.3.0](https://github.com/shipking-ai/pelorus/releases/tag/v0.3.0) | 2026-10-13 | first release under the name **Pelorus**: zip and per-user installer (147 MB each), unsigned. Verified after publication: SHA-256 matches and `gh attestation verify <file> --repo shipking-ai/pelorus` succeeds for both files (built by `release.yml` at tag `v0.3.0`, commit `cf2ae44`). The CI-built installer was downloaded and run on Windows: silent install, first launch, Start Menu shortcut (folder now "Pelorus") and uninstall entry, silent uninstall (4 leftover files removed by hand). Not tested: a clean VM, SmartScreen, upgrade from an older install. Profiles from Nadir builds are not migrated. |
 
 ## Using `scripts/sign.ps1`
 Set one of these environment variables (never put a password on a command line or in the repository):
