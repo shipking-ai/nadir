@@ -147,4 +147,7 @@ test('light theme: every surface has no serious/critical violations', async () =
   check('light-overlay-suggestions', await scan(ov));
   await b.shell.keyboard.press('Escape');
   await b.ctl("c.setSetting('theme', 'system')");
+  // KNOWN ISSUE (docs/DECISIONS.md, bug 14): quitting within about a second of switching the theme back to "system" delays the
+  // app's exit by up to ~53 s (idle, no CPU). Let the change settle so this file does not end with a stuck quit.
+  await new Promise((r) => setTimeout(r, 1500));
 });

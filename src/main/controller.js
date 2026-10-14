@@ -116,7 +116,8 @@ class Controller {
     win.on('enter-full-screen', () => this.layout());
     win.on('leave-full-screen', () => this.layout());
     win.on('closed', () => { this.win = null; });
-    nativeTheme.on('updated', () => this.applyTheme());
+    this._onThemeUpdated = () => this.applyTheme();
+    nativeTheme.on('updated', this._onThemeUpdated);
 
     win.loadURL('pelorus://shell/');
     this.overlay.webContents.loadURL('pelorus://overlay/');
@@ -392,6 +393,7 @@ class Controller {
 
   // ---- settings side effects ------------------------------------------------------------
   applyTheme() {
+    if (this.disposed) return;
     nativeTheme.themeSource = this.cfg.theme;
     const t = nativeTheme.shouldUseDarkColors ? THEME.dark : THEME.light;
     if (this.win && !this.win.isDestroyed()) {
@@ -441,6 +443,8 @@ class Controller {
   }
 
   dispose() {
+    if (this._onThemeUpdated) nativeTheme.removeListener('updated', this._onThemeUpdated); // no theme work while shutting down
+    this.disposed = true;
     clearInterval(this.sleepTimer);
     clearTimeout(this._saveT);
     this.saveSession();
