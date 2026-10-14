@@ -2,7 +2,7 @@
 
 A privacy-first, workspace-centric desktop browser built on Chromium (via Electron). Open source, **GPL-3.0-or-later**.
 
-> **Status: 0.1.0, a working foundation — not a Chrome replacement.** It browses, isolates workspaces, blocks trackers, restores sessions and has a command palette. It has **no extension support, no sync, no password manager, no AI features yet**, and has **not been security-audited or packaged/signed**. [FEATURE-MATRIX](docs/FEATURE-MATRIX.md) says exactly what is built and tested.
+> **Status: 0.3.0 pre-release, a working foundation — not a Chrome replacement.** It browses, isolates workspaces, blocks trackers, restores sessions and has a command palette. It has **no extension support, no sync, no password manager, no AI features yet**, and has **not been security-audited or packaged/signed**. [FEATURE-MATRIX](docs/FEATURE-MATRIX.md) says exactly what is built and tested.
 
 ![Pelorus](docs/screenshots/window-dark.png)
 
@@ -15,9 +15,20 @@ A privacy-first, workspace-centric desktop browser built on Chromium (via Electr
 - **Safe downloads:** sanitised file names, risk flags (including disguised `.pdf.exe`), executables are never launched by the browser.
 - **Hardened architecture:** tab renderers have no IPC at all; the main process re-validates every sender; internal pages are CSP-locked ([SECURITY](docs/SECURITY.md)).
 
+## Download
+
+Pre-release builds for **Windows x64** are on the [Releases page](https://github.com/shipking-ai/pelorus/releases): a per-user installer (`Pelorus-Setup-<version>.exe`, no administrator rights) and a zip you can unpack anywhere. Pelorus is a web browser: it opens websites in tabs and workspaces, blocks ads and trackers, and keeps its data on your computer. Builds are **not code-signed yet**, so Windows SmartScreen will warn about an unknown publisher; verify a download with its `SHA256SUMS.txt` or `gh attestation verify <file> --repo shipking-ai/pelorus`. What the program sends over the network is described in the [privacy policy](docs/PRIVACY.md).
+
+## Code signing policy
+
+Releases are currently **unsigned**. The full policy (what would be signed, from where, who approves) is in [docs/CODE-SIGNING-POLICY.md](docs/CODE-SIGNING-POLICY.md). Free code signing from SignPath.io with a certificate from SignPath Foundation has been **applied for / is planned** (only after approval will this page say "Free code signing provided by SignPath.io, certificate by SignPath Foundation").
+
+- **Authors, reviewers and approvers:** currently one maintainer, [shipking-ai](https://github.com/shipking-ai) (a weakness, stated openly; roles are listed in the policy).
+- **Privacy policy:** [docs/PRIVACY.md](docs/PRIVACY.md). Short form: this program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it; the only things it does on its own are downloading ad-blocker filter lists, and, only if you turn it on, secure-DNS lookups, plus an update check that runs only when you press the button.
+
 ## Requirements
 
-Windows 10/11 (tested on Windows 11). Node.js ≥ 22.12 (developed with 26) and npm. Linux/macOS are expected to work but are **untested**.
+Windows 10/11 (tested on Windows 11). Node.js ≥ 22.12 (developed with 26) and npm. Linux and macOS pass the automated tests in CI but nobody has used them by hand yet.
 
 ## Run
 

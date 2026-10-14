@@ -13,7 +13,10 @@ Every release is built by GitHub Actions from the `shipking-ai` account, so that
 3. **Settings → Sessions**: sign out anything you do not recognise.
 Done when: 2FA shows "Enabled". (Already done for you on the repository: branch protection on `main`, secret scanning with push protection, Dependabot alerts and security updates, release tags `v*` cannot be moved or deleted, private vulnerability reporting.)
 
-## Step 2 — Decide what to do about the name (needs a person)
+## Step 2 — The name (decided: keep Pelorus; one optional follow-up)
+**Decision recorded 2026-10-13: keep Pelorus.** The only thing left is optional but wise before a wide launch: an attorney opinion (option A below). Skip the rest of this step until then.
+
+(Original options, for reference:)
 Read [TRADEMARK.md](TRADEMARK.md). Short version: the old name Nadir was not clear; Pelorus has no live US mark in software classes 009/042 but live marks in other fields, and nothing outside the US was searched.
 1. Choose one:
    - **A. Get a professional opinion (recommended before any wide launch).** Find a trademark attorney (many offer a fixed-fee clearance search). Send them `docs/TRADEMARK.md` and ask: "Is *Pelorus* for a downloadable web browser (class 9) and related software services (class 42) at risk of conflict in the US and in <the countries you will ship to>?"
@@ -22,28 +25,20 @@ Read [TRADEMARK.md](TRADEMARK.md). Short version: the old name Nadir was not cle
 2. Only after an opinion, if you want to register the mark: file with the USPTO yourself or through the attorney (check the current fee schedule at uspto.gov; fees are per class).
 Done when: you can write one line in `docs/TRADEMARK.md` saying which option you chose.
 
-## Step 3 — Get a code-signing route (this removes the Windows "unknown publisher" warning)
-Nothing can be signed without a certificate or a signing service. Choose one path.
+## Step 3 — Code signing: apply to SignPath Foundation (free) — decision made 2026-10-13
+You chose "whatever is free and best". For Windows the only free route is **SignPath Foundation**, and everything needed is prepared in [SIGNPATH-APPLICATION.md](SIGNPATH-APPLICATION.md) (field-by-field answers, the requirements check, and one question to ask them).
 
-### Path A — SignPath Foundation (free for open-source projects, if accepted)
-1. Open <https://signpath.org/terms> and <https://about.signpath.io/product/open-source> and confirm the requirements still read: OSI-approved licence with no commercial dual-licensing; no proprietary components; project already released and **actively maintained**; public repository; free downloads; a published code-signing policy on the project home page; fully automated build with origin verification.
-2. Pelorus already has: GPL-3.0, public repo, three releases, [CODE-SIGNING-POLICY.md](CODE-SIGNING-POLICY.md), a GitHub Actions release build. **Open question:** whether a project this new counts as "actively maintained". Keep committing, and publish another release or two before applying if their page suggests a track record.
-3. Apply on their site. When they accept you, they give you an organisation ID, a project slug, and an API token for their GitHub integration.
-4. Add the token as a repository secret (**Settings → Secrets and variables → Actions → New repository secret**) and tell me the organisation ID and project slug. **Never paste the token into chat or a file.**
-5. I then change `.github/workflows/release.yml` to use their GitHub Action, add their attribution to CODE-SIGNING-POLICY.md, and cut a signed release.
-Note: with SignPath the Foundation is the publisher name users see.
+**Be realistic:** SignPath says it signs only projects with a "verifiable reputation", and Pelorus is days old, so they may say "come back later". Applying is free and takes about 10 minutes, so do it anyway.
 
-### Path B — Azure (Microsoft's cloud signing service)
-1. Check <https://learn.microsoft.com/azure/trusted-signing/> (the service has been renamed; search "Artifact Signing") for current eligibility: it has historically required identity validation and limited regions or entity types.
-2. If eligible: create an Azure subscription → create a signing account → complete identity validation → create a certificate profile → set up GitHub OIDC federation for the repository.
-3. Tell me the account name, endpoint and profile name (not any secret). I then wire the official GitHub Action into `release.yml`.
+1. Open <https://signpath.org/apply>.
+2. Paste the answers from the table in [SIGNPATH-APPLICATION.md](SIGNPATH-APPLICATION.md) into each field. Use the **honest** reputation text; do not exaggerate.
+3. Use your real name and an email you check (they reply there). Read the Code of Conduct (linked on the form), then tick the required boxes and solve the reCAPTCHA yourself, then **Submit**.
+4. Email <support@signpath.io> (or reply to their response) with the one question in SIGNPATH-APPLICATION.md: whether `Pelorus.exe` (re-branded Electron) may be signed or only the installer.
+5. Wait for their answer.
+   - **Approved:** create your SignPath account (turn on multi-factor authentication there), then tell me the *organisation ID* and *project slug*. Store the API token as a GitHub secret yourself (Settings → Secrets and variables → Actions → New repository secret, name `SIGNPATH_API_TOKEN`); never paste it anywhere else. I then do the workflow and documentation changes listed at the bottom of SIGNPATH-APPLICATION.md and cut a signed release. You will approve each signing request in SignPath's dashboard.
+   - **Declined or "later":** tell me. Options, in order: build a genuine track record and reapply; or the paid route (Azure's signing service or a commercial certificate with cloud signing: check current price and eligibility); or stay unsigned and rely on checksums and the provenance attestation.
 
-### Path C — A commercial code-signing certificate (OV or EV)
-1. Know the catch: since 2023 the industry rules require new certificates' private keys to live on **hardware** (a USB token or a cloud HSM). That means you **cannot** export a `.pfx` and paste it into a GitHub secret the way the current `release.yml` expects. You need either the certificate authority's **cloud signing service** (for example DigiCert KeyLocker or SSL.com eSigner; check each one's CI integration) or a self-hosted Windows runner with the token plugged in.
-2. Buy from a reputable CA, complete their identity validation (individuals and organisations are validated differently), and choose the cloud-signing option.
-3. Tell me which CA and service you chose; I will wire its CLI/Action into `release.yml`. Keep all credentials in GitHub **secrets**, never in the repo.
-
-After any path, **how to confirm it worked** (on a Windows machine that has not seen Pelorus before): download the release `.exe`, right-click → **Properties → Digital Signatures** (a signature is listed), or in PowerShell `Get-AuthenticodeSignature .\Pelorus-Setup-<version>.exe | Format-List` shows `Status : Valid`. Be aware SmartScreen may still warn for a while: reputation builds with downloads over time even for validly signed files.
+After signing works, confirm on a clean Windows machine: right-click the installer → Properties → Digital Signatures, or `Get-AuthenticodeSignature .\Pelorus-Setup-<version>.exe | Format-List` shows `Status : Valid`. SmartScreen may still warn for a while: reputation builds with downloads.
 
 ## Step 4 — Tests that need a human or a physical machine
 Do these when you can; send me the results and I will record them in the docs.

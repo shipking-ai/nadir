@@ -22,9 +22,9 @@ Pelorus currently has **one maintainer** (GitHub account `shipking-ai`), who hol
 
 | Role | Responsibility | Held by |
 |---|---|---|
-| Committer | writes and merges changes | `shipking-ai` |
-| Reviewer | reviews changes before a release tag | `shipking-ai` (no independent review yet) |
-| Approver | creates the release tag and approves a signing request | `shipking-ai` |
+| Authors (committers) | trusted to modify the source without extra review | [shipking-ai](https://github.com/shipking-ai) |
+| Reviewers | review every change proposed by someone who is not an author (pull requests) | [shipking-ai](https://github.com/shipking-ai) (no independent reviewer yet) |
+| Approvers | create the release tag and approve each signing request manually | [shipking-ai](https://github.com/shipking-ai) |
 
 Rules that apply regardless of who holds the roles:
 - A release tag is created only after the CI workflow ([`ci.yml`](../.github/workflows/ci.yml)) is green on that commit.
@@ -33,6 +33,8 @@ Rules that apply regardless of who holds the roles:
 - Third-party code is limited to dependencies listed in the SBOM; `scripts/license-inventory.js` fails the build on unknown production licences.
 
 ## Privacy policy for the program
+The stand-alone policy is [PRIVACY.md](PRIVACY.md); this section is the short form.
+
 Pelorus does **not** send telemetry, crash reports, usage statistics or identifiers to the maintainers or anyone else. The only network requests Pelorus makes by itself are:
 - downloading ad/tracker filter lists from Ghostery's CDN (no user identifiers; switch blocking off to stop it);
 - DNS-over-HTTPS lookups to the resolver the user configures, if the user turns that on;

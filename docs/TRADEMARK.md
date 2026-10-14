@@ -2,6 +2,8 @@
 
 **Outcome (2026-10-13):** the project was originally called Nadir. A USPTO search found live pending marks near its field, so it was **renamed to Pelorus**. The Pelorus search is in the first section; the original Nadir findings follow unchanged as the record of why. Neither search is legal advice or clearance.
 
+**Owner decision (2026-10-13): keep the name Pelorus.** No attorney opinion has been obtained yet; it is still recommended before any wide launch or paid promotion (see [OWNER-STEPS.md](OWNER-STEPS.md) step 2).
+
 ## Pelorus (current name)
 
 **Searched:** 2026-10-13, USPTO Trademark Search, wordmark `pelorus`, no filters; 20 records. US federal register only; EUIPO, WIPO, UK IPO, state registers and common-law use were not searched, and a lawyer's search would also cover similar-sounding marks.
