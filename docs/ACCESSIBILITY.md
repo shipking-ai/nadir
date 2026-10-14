@@ -28,5 +28,6 @@ Setup: `npm start` (or the installer), NVDA (free, GPL) or Narrator (Win+Ctrl+En
 | 9 | Use Find in page (Ctrl+F), type a word, press Enter | Field named; match feedback available |
 | 10 | Press Tab repeatedly through the whole window and back with Shift+Tab | Visible focus indicator on every stop, logical order, no trap, no skipped control |
 | 11 | Zoom the UI to 200% (Ctrl+Plus) and enable Windows high-contrast | UI remains usable, no clipped controls, borders still visible |
+| 12 | With the screen reader running and the app used for a few minutes, quit it (Alt+F4 and Ctrl+Shift+Q or the window close button) | The window closes and the process exits within a couple of seconds (an automated test saw a slow quit after accessibility mode on a Windows CI runner; unknown for real users) |
 
 File findings as GitHub issues with the label `accessibility`; include the screen reader, version, steps and what was announced.
